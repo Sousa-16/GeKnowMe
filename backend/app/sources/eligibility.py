@@ -92,7 +92,7 @@ def _has(text: str, words: list[str]) -> bool:
 
 
 def _mutation_patterns(aliases: Aliases) -> list[re.Pattern]:
-    names = {a.name for a in aliases.names if a.type in ("protein_short", "rsid")}
+    names = {a.name for a in aliases.names if a.type in ("protein_short", "rsid", "common")}
     # Codon-level form: V600E -> V600 (trials often say "BRAF V600 mutation")
     names |= {m.group(1) for n in list(names) if (m := re.match(r"^([A-Z]\d+)[A-Z*]$", n))}
     # Only digits are excluded before the name, so "KRASG12C" still matches "G12C"

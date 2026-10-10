@@ -31,6 +31,7 @@ export function TrialsSection({ brief }: { brief: Brief }) {
   }, [trials, phase, status, drug, query, aiOnly, sort]);
 
   const openCount = trials.filter((t) => OPEN_STATUSES.has(t.status ?? "")).length;
+  const diseaseLevel = trials.filter((t) => t.disease_level).length;
   const exportCsv = () => downloadCsv(`${brief.rsid}-trials.csv`,
     ["nct_id", "title", "phase", "status", "randomized", "has_results", "interventions", "conditions", "sponsor", "start_date", "enrollment", "matched_terms", "score", "score_reasons", "sent_to_ai", "url"],
     filtered.map((t) => [t.nct_id, t.title, phaseLabel(t.phases), statusLabel(t.status), t.randomized, t.has_results, t.interventions.join("; "), t.conditions.join("; "), t.sponsor, t.start_date, t.enrollment, t.matched_terms.join("; "), t.score, t.score_reasons.join("; "), t.sent_to_ai, t.url]));
@@ -47,6 +48,13 @@ export function TrialsSection({ brief }: { brief: Brief }) {
       actions={trials.length > 0 && <Button onClick={exportCsv} title="Exports the trials matching the current filters"><DownloadIcon />Trials CSV</Button>}>
       {!trials.length ? <StatusNote status={brief.status.trials ?? "skipped"} emptyText="No trials on ClinicalTrials.gov mention this variant." warnings={brief.warnings.filter((w) => w.startsWith("trials"))} /> : (
         <>
+          {diseaseLevel > 0 && (
+            <p className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+              Few trials name this exact variant, so {diseaseLevel} trial{diseaseLevel === 1 ? "" : "s"} for the same gene and disease
+              {" "}({(brief.aliases?.fallback_trial_terms ?? []).join(", ")}) {diseaseLevel === 1 ? "is" : "are"} included and marked <b>Disease-level match</b>.
+              They aren't specific to this variant and aren't sent to the AI summary.
+            </p>
+          )}
           <div className="grid gap-6 md:grid-cols-3">
             <div>
               <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-500">By phase</p>
@@ -103,6 +111,7 @@ function TrialRow({ t, open, onToggle }: { t: Trial; open: boolean; onToggle: ()
           <div className="mt-1 flex flex-wrap items-center gap-1.5">
             <Badge tone="brand">{phaseLabel(t.phases)}</Badge>
             <Badge tone={statusTone(t.status)}>{statusLabel(t.status)}</Badge>
+            {t.disease_level && <Badge tone="amber" title="Found by a gene + disease search, not by a name of this variant">Disease-level match</Badge>}
             {t.randomized && <Badge>Randomized</Badge>}
             {t.has_results && <Badge tone="violet">Results posted</Badge>}
             {t.sent_to_ai && <Badge tone="amber" title="One of the top 30 trials sent to the AI treatment summary">Sent to AI</Badge>}

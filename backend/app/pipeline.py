@@ -34,14 +34,32 @@ def normalize_rsid(raw: str) -> str:
     return rsid
 
 
+FRIENDLY = {  # section -> what to tell the user when an outside service fails
+    "variant": "MyVariant.info couldn't be reached",
+    "papers": "PubMed couldn't be reached",
+    "paper_scoring": "the papers couldn't be ranked",
+    "trials": "ClinicalTrials.gov couldn't be reached",
+    "eligibility": "the eligibility rules couldn't be read",
+    "treatments": "the AI summary couldn't be generated",
+}
+SERVICE_ERRORS = ("VariantLookupError", "PaperSearchError", "TrialSearchError", "AISummaryError")
+
+
 def _fail(brief: Brief, section: str, exc: BaseException) -> None:
+    """Mark one section as failed with a message a user can act on. Details go to the server log."""
     if isinstance(exc, NotImplementedError):
         brief.status[section] = "skipped"
         brief.warnings.append(f"{section}: not built yet")
+        return
+    brief.status[section] = "error"
+    what = FRIENDLY.get(section, "this section couldn't be built")
+    if type(exc).__name__ in SERVICE_ERRORS:
+        log.warning("%s failed: %s", section, exc)
+        detail = str(exc) if type(exc).__name__ == "AISummaryError" else "please try again in a minute"
+        brief.warnings.append(f"{section}: {what}; {detail}.")
     else:
         log.exception("%s failed", section, exc_info=exc)
-        brief.status[section] = "error"
-        brief.warnings.append(f"{section}: failed ({type(exc).__name__}: {exc})")
+        brief.warnings.append(f"{section}: {what} (unexpected data from the source). The rest of the brief is still valid.")
 
 
 def load_demo(rsid: str) -> Brief | None:

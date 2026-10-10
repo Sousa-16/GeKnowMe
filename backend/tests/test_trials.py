@@ -99,3 +99,45 @@ def test_mutation_only_in_exclusion_is_penalised(braf_aliases):
 ])
 def test_phase_label(phases, label):
     assert tr.phase_label(phases) == label
+
+
+
+def test_disease_level_trials_are_marked_and_not_sent_to_ai(braf_aliases):
+    studies, total = load_fixture("ctgov_braf_v600e.json")
+    res = tr.assemble(["BRAF V600E", "BRAF melanoma"], [(studies[:3], 3), (studies[3:20], 17)], braf_aliases,
+                      disease_terms={"BRAF melanoma"})
+    variant_level = [t for t in res.trials if not t.disease_level]
+    disease_level = [t for t in res.trials if t.disease_level]
+    assert len(variant_level) == 3 and len(disease_level) == 17
+    assert res.trials[:3] == variant_level  # variant matches listed first
+    assert not any(t.sent_to_ai for t in disease_level)
+
+
+async def test_fallback_runs_only_when_few_variant_trials(monkeypatch, braf_aliases):
+    studies, total = load_fixture("ctgov_braf_v600e.json")
+    searched = []
+
+    async def fake_search(client, term):
+        searched.append(term)
+        return (studies[:2], 2) if term in braf_aliases.trial_terms else (studies[2:10], 8)
+    monkeypatch.setattr(tr, "_search", fake_search)
+    braf_aliases.fallback_trial_terms = ["BRAF Melanoma"]
+    res = await tr.fetch_trials(braf_aliases)
+    assert "BRAF Melanoma" in searched and any(t.disease_level for t in res.trials)
+
+    searched.clear()
+    monkeypatch.setattr(tr, "_search", lambda c, t: _ret(searched, t, studies))
+    res = await tr.fetch_trials(braf_aliases)
+    assert "BRAF Melanoma" not in searched and not any(t.disease_level for t in res.trials)
+
+
+async def _ret(searched, term, studies):
+    searched.append(term)
+    return studies[:50], 50
+
+
+
+def test_total_found_is_never_below_trials_shown(braf_aliases):
+    studies, _ = load_fixture("ctgov_braf_v600e.json")
+    res = tr.assemble(["a", "b"], [(studies[:13], 13), (studies[13:20], 7)], braf_aliases)
+    assert res.stats.returned == 20 and res.stats.total_found >= 20

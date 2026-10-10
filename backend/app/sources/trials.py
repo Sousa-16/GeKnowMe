@@ -21,7 +21,8 @@ FIELDS = ",".join([
     "InterventionType", "LeadSponsorName", "StartDate", "EnrollmentCount", "EligibilityCriteria",
     "DesignAllocation", "HasResults",
 ])
-MAX_TERMS = 6
+MAX_TERMS = 10
+MIN_VARIANT_TRIALS = 5  # fewer variant-level matches than this -> also run the disease-level searches
 PAGE_SIZE = 100
 DRUG_TYPES = {"DRUG", "BIOLOGICAL", "COMBINATION_PRODUCT", "GENETIC"}
 ACTIVE_STATUSES = {"RECRUITING", "NOT_YET_RECRUITING", "ENROLLING_BY_INVITATION", "ACTIVE_NOT_RECRUITING"}
@@ -96,7 +97,9 @@ def parse_study(study: dict) -> tuple[Trial, list[str]]:
 # ---------- B8: scoring (PLAN.md section 4) ----------
 
 def _mutation_names(aliases: Aliases) -> list[str]:
-    return [a.name for a in aliases.names if a.type == "protein_short"]
+    """Names that identify this exact variant in text: short protein names and nicknames/literature
+    names (e.g. 'Factor V Leiden', 'C677T')."""
+    return [a.name for a in aliases.names if a.type in ("protein_short", "common")]
 
 
 def _mentions(text: str, names: list[str]) -> bool:
@@ -190,15 +193,23 @@ def build_stats(trials: list[Trial], drugs_by_trial: dict[str, list[str]], total
 
 async def fetch_trials(aliases: Aliases) -> TrialResults:
     """Search, merge, score (sets score, score_reasons, sent_to_ai for the top 30) and build stats."""
-    terms = aliases.trial_terms[:MAX_TERMS]
-    if not terms:
+    terms = list(dict.fromkeys(aliases.trial_terms + aliases.extra_trial_terms))[:MAX_TERMS]
+    fallback = [t for t in aliases.fallback_trial_terms if t not in terms]
+    if not terms and not fallback:
         return TrialResults()
     async with httpx.AsyncClient(timeout=30, headers={"User-Agent": "variant-trial-scope/0.1"}) as client:
         results = await asyncio.gather(*(_search(client, t) for t in terms), return_exceptions=True)
-    return assemble(terms, results, aliases)
+        found = {s.get("protocolSection", {}).get("identificationModule", {}).get("nctId")
+                 for r in results if not isinstance(r, BaseException) for s in r[0]}
+        if fallback and len(found - {None}) < MIN_VARIANT_TRIALS:
+            # Too few variant-specific trials (rare variant, or one trials don't name): add trials for
+            # the gene + disease, clearly marked as disease-level matches.
+            results += await asyncio.gather(*(_search(client, t) for t in fallback), return_exceptions=True)
+            terms = terms + fallback
+    return assemble(terms, results, aliases, disease_terms=set(fallback))
 
 
-def assemble(terms: list[str], results: list, aliases: Aliases) -> TrialResults:
+def assemble(terms: list[str], results: list, aliases: Aliases, disease_terms: set[str] | None = None) -> TrialResults:
     """Merge per-term search results into TrialResults. Separate from fetch_trials so tests can
     feed saved replies."""
     failures = [r for r in results if isinstance(r, BaseException)]
@@ -226,11 +237,18 @@ def assemble(terms: list[str], results: list, aliases: Aliases) -> TrialResults:
             if term not in by_id[trial.nct_id].matched_terms:
                 by_id[trial.nct_id].matched_terms.append(term)
 
+    disease_terms = disease_terms or set()
+    for t in by_id.values():
+        t.disease_level = bool(t.matched_terms) and all(m in disease_terms for m in t.matched_terms)
     names = _mutation_names(aliases)
-    trials = sorted(by_id.values(), key=lambda t: _sort_key(t, names))[: config.MAX_TRIALS]
+    # Variant-level matches first, then disease-level ones
+    trials = sorted(by_id.values(), key=lambda t: (t.disease_level, _sort_key(t, names)))[: config.MAX_TRIALS]
     for t in trials:
         score_trial(t, aliases)
-    for t in sorted(trials, key=lambda t: -t.score)[: config.AI_TRIALS]:
+    # The AI only gets variant-level trials; disease-level ones are context for the planner
+    for t in sorted((t for t in trials if not t.disease_level), key=lambda t: -t.score)[: config.AI_TRIALS]:
         t.sent_to_ai = True
-    stats = build_stats(trials, drugs_by_trial, total_found, terms)
+    # Searches overlap, so the true total is unknown; it's at least the largest single search and at
+    # least the number of distinct trials we merged.
+    stats = build_stats(trials, drugs_by_trial, max(total_found, len(by_id)), terms)
     return TrialResults(trials=trials, stats=stats)

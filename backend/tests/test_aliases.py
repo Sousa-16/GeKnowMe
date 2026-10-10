@@ -101,6 +101,66 @@ def test_stop_codon_and_unconvertible_forms():
     aliases = al.build_aliases(var)
     shorts = [a.name for a in aliases.names if a.type == "protein_short"]
     longs = [a.name for a in aliases.names if a.type == "protein_long"]
-    assert shorts == ["R213*"]
+    assert shorts == ["R213*", "R213fs"]  # frameshifts get a short name too (short_other)
     assert longs == ["p.Arg213Ter", "p.Arg213fs"]  # the raw form is still listed
     assert "TP53 R213*" in aliases.trial_terms and "TP53 R213" in aliases.trial_terms
+
+
+
+# ---------- deletions, frameshifts, literature names, nicknames, disease-level fallback ----------
+
+@pytest.mark.parametrize("raw, short", [
+    ("p.Phe508del", "F508del"),
+    ("p.Glu746_Ala750del", "E746_A750del"),
+    ("p.Gln1756ProfsTer74", "Q1756fs"),
+    ("p.Val600fs", "V600fs"),
+    ("p.Leu1234dup", "L1234dup"),
+    ("p.Ala767_Val769insGluLys", "A767_V769insEK"),
+    ("p.Val600_Lys601delinsGlu", "V600_K601delinsE"),
+])
+def test_short_other(raw, short):
+    assert al.short_other(raw) == short
+
+
+@pytest.mark.parametrize("raw", ["p.Val600Glu", "p.?", "c.1521_1523del", "", "p.Xyz600del"])
+def test_short_other_skips_the_rest(raw):
+    assert al.short_other(raw) is None
+
+
+@pytest.mark.parametrize("lit, forms", [
+    ("p.C130R", ["C130R"]), ("c.677C>T", ["C677T"]), ("p.F508del", ["F508del"]), ("c.5266dupC", ["c.5266dupC"]),
+])
+def test_literature_forms(lit, forms):
+    assert al.literature_forms(lit) == forms
+
+
+def test_cftr_deletion_gets_names_and_terms():
+    var = Variant(rsid="rs113993960", gene="CFTR", hgvs_p=["p.Phe508del"], literature_names=["p.F508del"])
+    a = al.build_aliases(var)
+    assert [n.name for n in a.names if n.type == "protein_short"] == ["F508del"]
+    assert a.trial_terms[0] == "CFTR F508del"
+    assert "rs113993960" in a.extra_trial_terms and "CFTR F508del" not in a.extra_trial_terms
+
+
+def test_apoe_uses_literature_name_and_nickname():
+    var = Variant(rsid="rs429358", gene="APOE", hgvs_p=["p.Cys156Arg"], literature_names=["p.C130R"])
+    a = al.build_aliases(var)
+    common = {n.name: n.derived_from for n in a.names if n.type == "common"}
+    assert "C130R" in common and "LitVar2" in common["C130R"] and "APOE4" in common
+    assert a.extra_trial_terms[:2] == ["APOE4", "APOE ε4"] and "APOE C130R" in a.extra_trial_terms
+    assert '"APOE4"' in a.pubmed_terms and '"APOE C130R"' in a.pubmed_terms
+
+
+def test_noncoding_variant_still_searches_by_rs_number():
+    a = al.build_aliases(Variant(rsid="rs7903146", gene="TCF7L2", hgvs_c=["c.450+33966C>T"]))
+    assert a.trial_terms == [] and a.extra_trial_terms == ["rs7903146"]
+
+
+def test_fallback_terms_come_from_pathogenic_clinvar_conditions():
+    from app.schemas import ClinVarRecord
+    recs = [ClinVarRecord(accession=f"RCV{i}", significance=s, condition=c, url="u") for i, (s, c) in enumerate([
+        ("Pathogenic", "Sickle cell anemia"), ("Pathogenic", "Sickle cell anemia; not provided"),
+        ("Likely pathogenic", "Beta thalassemia"), ("Benign", "Something benign"), ("Pathogenic", "not provided"),
+    ])]
+    a = al.build_aliases(Variant(rsid="rs334", gene="HBB", clinvar_records=recs))
+    assert a.fallback_trial_terms == ["HBB Sickle cell anemia", "HBB Beta thalassemia"]

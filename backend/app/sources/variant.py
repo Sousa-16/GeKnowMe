@@ -16,6 +16,10 @@ from ..schemas import ClinVarRecord, Variant
 log = logging.getLogger(__name__)
 
 MYVARIANT_URL = "https://myvariant.info/v1/variant/{rsid}"
+LITVAR_URL = "https://www.ncbi.nlm.nih.gov/research/litvar2-api/variant/autocomplete/"
+# Placeholder / non-coding locus names (LOC106099062, LINC00680, CFTR-AS1, MIR...) are never the gene a
+# planner means when a real gene is also listed.
+_PLACEHOLDER_GENE = re.compile(r"^(LOC\d+|LINC\d+|MIR\d+|SNOR|.*-AS\d*$|.*-DT$|.*-IT\d*$)")
 # Only what we read. Keeps replies ~10 KB instead of ~500 KB with fields=all.
 FIELDS = ",".join([
     "dbsnp.rsid", "dbsnp.gene.symbol", "dbsnp.gene.name",
@@ -41,27 +45,55 @@ class VariantLookupError(Exception):
 # ---------- A1/A5: fetching ----------
 
 async def fetch_variant(rsid: str) -> Variant:
-    """Look the rs number up on MyVariant. Raises VariantNotFound or VariantLookupError."""
-    last = "unknown error"
+    """Look the rs number up on MyVariant (and LitVar2 for literature names, at the same time).
+    Raises VariantNotFound or VariantLookupError."""
     async with httpx.AsyncClient(timeout=20, headers={"User-Agent": "variant-trial-scope/0.1"}) as client:
-        for attempt in range(RETRIES):
-            try:
-                resp = await client.get(MYVARIANT_URL.format(rsid=rsid), params={"fields": FIELDS})
-            except (httpx.TimeoutException, httpx.TransportError) as e:
-                last = type(e).__name__
+        variant, (lit_names, lit_gene) = await asyncio.gather(_fetch_myvariant(client, rsid), fetch_litvar(client, rsid))
+    variant.literature_names = lit_names
+    if lit_gene and (not variant.gene or _PLACEHOLDER_GENE.match(variant.gene)):
+        variant.gene = lit_gene
+    return variant
+
+
+async def fetch_litvar(client: httpx.AsyncClient, rsid: str) -> tuple[list[str], str | None]:
+    """The name(s) the literature uses for this rs number, from NCBI LitVar2, plus its gene.
+    Best effort: any failure just means no extra names."""
+    try:
+        resp = await client.get(LITVAR_URL, params={"query": rsid})
+        items = resp.json() if resp.status_code == 200 else []
+    except (httpx.HTTPError, ValueError):
+        return [], None
+    names, gene = [], None
+    for it in items if isinstance(items, list) else []:
+        if not isinstance(it, dict) or it.get("rsid") != rsid:
+            continue  # autocomplete also returns rs numbers that merely start with ours
+        if it.get("name") and it["name"] not in names:
+            names.append(it["name"])
+        genes = [g for g in _as_list(it.get("gene")) if isinstance(g, str) and not _PLACEHOLDER_GENE.match(g)]
+        gene = gene or (genes[0] if genes else None)
+    return names, gene
+
+
+async def _fetch_myvariant(client: httpx.AsyncClient, rsid: str) -> Variant:
+    last = "unknown error"
+    for attempt in range(RETRIES):
+        try:
+            resp = await client.get(MYVARIANT_URL.format(rsid=rsid), params={"fields": FIELDS})
+        except (httpx.TimeoutException, httpx.TransportError) as e:
+            last = type(e).__name__
+        else:
+            if resp.status_code == 404:
+                raise VariantNotFound(f"{rsid} was not found in MyVariant.info / dbSNP")
+            if resp.status_code == 200:
+                hits = _hits(resp)
+                if hits:
+                    return parse_hits(rsid, hits)
+                last = "empty reply"  # MyVariant sometimes answers 200 with nothing; try again
             else:
-                if resp.status_code == 404:
-                    raise VariantNotFound(f"{rsid} was not found in MyVariant.info / dbSNP")
-                if resp.status_code == 200:
-                    hits = _hits(resp)
-                    if hits:
-                        return parse_hits(rsid, hits)
-                    last = "empty reply"  # MyVariant sometimes answers 200 with nothing; try again
-                else:
-                    last = f"HTTP {resp.status_code}"
-                    if resp.status_code not in (429, 500, 502, 503, 504):
-                        break
-            await asyncio.sleep(0.5 * 2**attempt)
+                last = f"HTTP {resp.status_code}"
+                if resp.status_code not in (429, 500, 502, 503, 504):
+                    break
+        await asyncio.sleep(0.5 * 2**attempt)
     raise VariantLookupError(f"MyVariant.info lookup for {rsid} failed ({last})")
 
 
@@ -87,21 +119,25 @@ def _as_list(x) -> list:
 
 
 def _gene(hits: list[dict]) -> tuple[str | None, str | None]:
-    """Gene symbol and full name. ClinVar's symbol first, then dbSNP, snpEff, dbNSFP."""
-    symbol = name = None
+    """Gene symbol and full name. The gene with the protein change (snpEff) first, then ClinVar,
+    dbSNP and dbNSFP. Any of these can be a single item or a list. Placeholder loci (LOC..., -AS1)
+    are used only if nothing else is available."""
+    candidates: list[str] = []
+    names: dict[str, str] = {}
     for h in hits:
-        dbsnp_gene = (h.get("dbsnp") or {}).get("gene") or {}
-        candidates = [
-            (h.get("clinvar") or {}).get("gene", {}).get("symbol"),
-            dbsnp_gene.get("symbol"),
-            *[a.get("genename") for a in _as_list((h.get("snpeff") or {}).get("ann"))],
-            *_as_list((h.get("dbnsfp") or {}).get("genename")),
-        ]
-        symbol = symbol or next((c for c in candidates if c), None)
-        name = name or dbsnp_gene.get("name")
-        if symbol and name:
-            break
-    return symbol, name
+        anns = [a for a in _as_list((h.get("snpeff") or {}).get("ann")) if isinstance(a, dict)]
+        candidates += [a.get("genename") for a in anns if a.get("hgvs_p")]
+        candidates += [g.get("symbol") for g in _as_list((h.get("clinvar") or {}).get("gene")) if isinstance(g, dict)]
+        for g in _as_list((h.get("dbsnp") or {}).get("gene")):
+            if isinstance(g, dict) and g.get("symbol"):
+                candidates.append(g["symbol"])
+                if g.get("name"):
+                    names.setdefault(g["symbol"], g["name"])
+        candidates += [a.get("genename") for a in anns]
+        candidates += [g for g in _as_list((h.get("dbnsfp") or {}).get("genename")) if isinstance(g, str)]
+    candidates = [c for c in candidates if isinstance(c, str) and c]
+    symbol = next((c for c in candidates if not _PLACEHOLDER_GENE.match(c)), candidates[0] if candidates else None)
+    return symbol, names.get(symbol) if symbol else None
 
 
 def _hgvs(hit: dict) -> tuple[str | None, str | None]:

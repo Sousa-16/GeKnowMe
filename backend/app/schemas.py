@@ -29,6 +29,8 @@ class Variant(BaseModel):
     hgvs_c: list[str] = []  # ["c.1799T>A", ...]
     hgvs_p: list[str] = []  # ["p.Val600Glu", ...] raw, as MyVariant gives it
     clinvar_records: list[ClinVarRecord] = []
+    # Names the literature actually uses, from NCBI LitVar2 (e.g. "p.C130R" for APOE, "c.677C>T" for MTHFR)
+    literature_names: list[str] = []
     links: dict[str, str] = {}  # {"MyVariant": url, "ClinVar": url, "dbSNP": url}
 
 
@@ -36,7 +38,7 @@ class Variant(BaseModel):
 
 class Alias(BaseModel):
     name: str  # "V600E"
-    type: Literal["rsid", "protein_short", "protein_long", "dna"]
+    type: Literal["rsid", "protein_short", "protein_long", "dna", "common"]  # common = literature / curated nickname
     derived_from: str  # "p.Val600Glu (MyVariant)"
 
 
@@ -45,6 +47,10 @@ class Aliases(BaseModel):
     names: list[Alias] = []
     pubmed_terms: list[str] = []  # ['"BRAF V600E"', ..., "rs113488022"]
     trial_terms: list[str] = []  # ["BRAF V600E", ..., "BRAF V600"]
+    # Also searched: nicknames and literature names ("APOE4", "MTHFR C677T") and the rs number
+    extra_trial_terms: list[str] = []
+    # Disease-level searches ("HBB Sickle cell anemia"), used only when the variant searches find few trials
+    fallback_trial_terms: list[str] = []
 
 
 # ---------- [3] Papers (Person A) ----------
@@ -86,6 +92,7 @@ class Trial(BaseModel):
     matched_terms: list[str] = []
     has_results: bool = False
     randomized: bool | None = None  # None when ClinicalTrials.gov doesn't say
+    disease_level: bool = False  # found only by a disease-level fallback search, not by a variant name
     url: str  # https://clinicaltrials.gov/study/{nct_id}
     score: int = 0
     score_reasons: list[str] = []

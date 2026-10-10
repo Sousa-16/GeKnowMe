@@ -3,7 +3,7 @@ import type { Brief } from "../types";
 import { downloadCsv } from "../lib/csv";
 import { Badge, Button, DownloadIcon, ExtLink, Section, StatusNote } from "./ui";
 
-const TYPE_LABEL = { rsid: "dbSNP", protein_short: "Protein (short)", protein_long: "Protein (HGVS)", dna: "DNA (HGVS c.)" };
+const TYPE_LABEL = { rsid: "dbSNP", protein_short: "Protein (short)", protein_long: "Protein (HGVS)", dna: "DNA (HGVS c.)", common: "Common name" };
 
 function significanceTone(s: string) {
   const l = s.toLowerCase();
@@ -54,9 +54,9 @@ export function VariantSection({ brief }: { brief: Brief }) {
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
               {Object.entries(v.links).map(([name, url]) => <ExtLink key={name} href={url}>{name} ↗</ExtLink>)}
             </div>
-            {a && a.trial_terms.length > 0 && (
+            {a && (a.trial_terms.length > 0 || (a.extra_trial_terms ?? []).length > 0) && (
               <p className="text-xs text-slate-500">
-                Searched as: {a.trial_terms.map((t) => <code key={t} className="mr-1 rounded bg-slate-100 px-1 py-0.5 font-mono text-[11px] text-slate-700">{t}</code>)}
+                Trials searched as: {[...a.trial_terms, ...(a.extra_trial_terms ?? [])].map((t) => <code key={t} className="mr-1 rounded bg-slate-100 px-1 py-0.5 font-mono text-[11px] text-slate-700">{t}</code>)}
               </p>
             )}
           </div>

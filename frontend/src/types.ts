@@ -5,10 +5,13 @@ export type SectionStatus = "ok" | "empty" | "error" | "skipped" | "pending";
 export interface ClinVarRecord { accession: string; significance: string; condition: string; protein_change: string | null; url: string }
 export interface Variant {
   rsid: string; gene: string | null; gene_name: string | null; hgvs_c: string[]; hgvs_p: string[];
-  clinvar_records: ClinVarRecord[]; links: Record<string, string>;
+  clinvar_records: ClinVarRecord[]; literature_names: string[]; links: Record<string, string>;
 }
-export interface Alias { name: string; type: "rsid" | "protein_short" | "protein_long" | "dna"; derived_from: string }
-export interface Aliases { gene: string | null; names: Alias[]; pubmed_terms: string[]; trial_terms: string[] }
+export interface Alias { name: string; type: "rsid" | "protein_short" | "protein_long" | "dna" | "common"; derived_from: string }
+export interface Aliases {
+  gene: string | null; names: Alias[]; pubmed_terms: string[]; trial_terms: string[];
+  extra_trial_terms: string[]; fallback_trial_terms: string[];
+}
 
 export interface Paper {
   pmid: string; title: string; abstract: string; journal: string | null; year: number | null; authors: string[];
@@ -20,6 +23,7 @@ export interface Trial {
   nct_id: string; title: string; brief_summary: string; phases: string[]; status: string | null; conditions: string[];
   interventions: string[]; sponsor: string | null; start_date: string | null; enrollment: number | null;
   eligibility_text: string; matched_terms: string[]; has_results: boolean; randomized: boolean | null; url: string;
+  disease_level: boolean;
   score: number; score_reasons: string[]; sent_to_ai: boolean;
 }
 export interface TrialStats {

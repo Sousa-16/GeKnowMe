@@ -130,6 +130,8 @@ async def test_empty_reply_is_retried(monkeypatch):
     good = load_myvariant("myvariant_rs113488022.json")
 
     def handler(req):
+        if "litvar" in str(req.url):
+            return httpx.Response(200, json=[])
         calls.append(req.url.params["fields"])
         return httpx.Response(200, text="") if len(calls) == 1 else httpx.Response(200, json=good)
     monkeypatch.setattr(v.httpx, "AsyncClient", _client_with(handler))
@@ -148,3 +150,43 @@ async def test_server_error_is_retried_then_reported(monkeypatch):
     monkeypatch.setattr(v.httpx, "AsyncClient", _client_with(lambda req: httpx.Response(503)))
     with pytest.raises(v.VariantLookupError, match="HTTP 503"):
         await v.fetch_variant("rs113488022")
+
+
+
+# ---------- found in the first end-to-end runs ----------
+
+@pytest.mark.parametrize("rsid, gene, protein", [
+    ("rs113993960", "CFTR", "p.Phe508del"),   # dbSNP lists two genes (CFTR, CFTR-AS1): used to crash
+    ("rs1800562", "HFE", "p.Cys282Tyr"),      # same, plus several transcripts
+    ("rs334", "HBB", "p.Glu7Val"),            # ClinVar's gene is a placeholder locus (LOC106099062)
+    ("rs7903146", "TCF7L2", None),            # intronic: no protein change, ClinVar gene is LOC...
+])
+def test_gene_lists_and_placeholder_loci(rsid, gene, protein):
+    data = load_myvariant(f"myvariant_{rsid}.json")
+    var = v.parse_hits(rsid, data if isinstance(data, list) else [data])
+    assert var.gene == gene
+    if protein:
+        assert var.hgvs_p[0] == protein
+
+
+async def test_litvar_names_are_added(monkeypatch):
+    good = load_myvariant("myvariant_rs113488022.json")
+
+    def handler(req):
+        if "litvar" in str(req.url):
+            return httpx.Response(200, json=[
+                {"rsid": "rs113488022", "gene": ["BRAF"], "name": "p.V600E"},
+                {"rsid": "rs1134880221", "gene": ["X"], "name": "p.Z1Z"},  # different rs number: ignored
+            ])
+        return httpx.Response(200, json=good)
+    monkeypatch.setattr(v.httpx, "AsyncClient", _client_with(handler))
+    var = await v.fetch_variant("rs113488022")
+    assert var.literature_names == ["p.V600E"]
+
+
+async def test_litvar_down_is_harmless(monkeypatch):
+    good = load_myvariant("myvariant_rs113488022.json")
+    monkeypatch.setattr(v.httpx, "AsyncClient", _client_with(
+        lambda req: httpx.Response(503) if "litvar" in str(req.url) else httpx.Response(200, json=good)))
+    var = await v.fetch_variant("rs113488022")
+    assert var.gene == "BRAF" and var.literature_names == []
