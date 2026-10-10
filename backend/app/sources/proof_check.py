@@ -5,6 +5,9 @@ Code, not the AI, decides whether each AI row is backed by its sources:
 2. Quote check:  every quote must appear in that source's text   -> else row removed
 3. Number check: every number in the outcome must be in a quote  -> else row kept, unverified
 4. Tier check:   cited source types must support the ESCAT tier  -> else row kept, unverified
+                 (cancer rows only; ESCAT is an oncology scale)
+Every row also gets an Oxford CEBM evidence level computed here from the cited sources' designs,
+which works for any disease.
 """
 
 import re
@@ -17,6 +20,29 @@ RCT_TYPES = {"randomized controlled trial", "clinical trial, phase iii"}
 LAB_WORDS = ["cell line", "cell lines", "mice", "mouse", "xenograft", "in vitro", "in vivo", "murine", "organoid"]
 SURVIVAL_WORDS = [" survival ", " os ", " pfs ", " efs ", " dfs "]  # matched on normalized text
 VALID_TIERS = {"I-A", "I-B", "I-C", "II-A", "II-B", "III-A", "III-B", "IV", "V"}
+CANCER_WORDS = re.compile(
+    r"cancer|carcinoma|tumou?r|neoplas|malignan|oncolog|lymphoma|leuka?emia|melanoma|sarcoma|glioma|"
+    r"glioblastoma|myeloma|blastoma|mesothelioma|metasta|nsclc|sclc|crc|hcc|gist|aml|cll|cml|mds",
+    re.IGNORECASE)
+
+
+def ocebm_level_for_paper(publication_types: list[str], lab_only: bool) -> int | None:
+    """OCEBM 2011 'Does this intervention help?' level from PubMed publication types (PLAN.md section 4)."""
+    t = {x.lower() for x in publication_types}
+    if t & {"systematic review", "meta-analysis"}:
+        return 1
+    if t & RCT_TYPES:
+        return 2
+    if t & {"clinical trial, phase ii", "clinical trial, phase i", "controlled clinical trial", "observational study",
+            "clinical trial", "comparative study", "multicenter study"}:
+        return 3
+    if "case reports" in t:
+        return 4
+    return 5 if lab_only else None
+
+
+def is_cancer_setting(setting: str, ai_says_cancer: bool) -> bool:
+    return ai_says_cancer or bool(CANCER_WORDS.search(setting or ""))
 
 
 @dataclass
@@ -29,6 +55,7 @@ class SourceDoc:
     is_randomized: bool = False
     is_clinical_trial: bool = False
     is_lab_only: bool = False
+    ocebm_level: int | None = None
     _norm: str = field(default="", repr=False)
 
     @property
@@ -49,9 +76,10 @@ class RawRow:
     drug: str
     setting: str
     outcome: str
-    escat_tier: str
-    escat_reason: str
+    escat_tier: str | None
+    escat_reason: str | None
     evidence: list[RawEvidence]
+    is_cancer: bool = False
 
 
 def normalize_text(text: str) -> str:
@@ -138,23 +166,34 @@ def check_rows(rows: list[RawRow], sources: dict[str, SourceDoc]) -> TreatmentRe
         quote_numbers = set()
         for ev in evidence:
             quote_numbers.update(numbers_in(ev.quote, words=True))
-        missing = [n for n in numbers_in(row.outcome) if n not in quote_numbers]
+        # Trial phases ("phase 1", "Phase II/III") aren't results, so they don't need a quote
+        outcome_values = re.sub(r"phase\s*[0-9iv/\-]+", " ", row.outcome, flags=re.IGNORECASE)
+        missing = [n for n in numbers_in(outcome_values) if n not in quote_numbers]
         if missing:
             warnings.append(f"number(s) {', '.join(missing)} not found in the quotes")
 
-        tier = (row.escat_tier or "").strip().upper()
-        if tier not in VALID_TIERS:
-            result.removed.append(RemovedRow(drug=drug, reason=f"invalid ESCAT tier '{row.escat_tier}'"))
-            continue
-        if p := _tier_problem(tier, docs, [e.quote for e in evidence]):
-            warnings.append(p)
+        cancer = is_cancer_setting(row.setting, row.is_cancer)
+        tier: str | None = None
+        if cancer:
+            tier = (row.escat_tier or "").strip().upper()
+            if not tier:
+                warnings.append("cancer row without an ESCAT tier")
+                tier = None
+            elif tier not in VALID_TIERS:
+                result.removed.append(RemovedRow(drug=drug, reason=f"invalid ESCAT tier '{row.escat_tier}'"))
+                continue
+            elif p := _tier_problem(tier, docs, [e.quote for e in evidence]):
+                warnings.append(p)
+        levels = [d.ocebm_level for d in docs if d.ocebm_level is not None]
 
         result.rows.append(TreatmentRow(
             drug=drug,
             setting=row.setting.strip(),
             outcome=row.outcome.strip(),
+            is_cancer=cancer,
+            ocebm_level=min(levels) if levels else None,
             escat_tier=tier,
-            escat_reason=row.escat_reason.strip(),
+            escat_reason=((row.escat_reason or "").strip() or None) if cancer else None,
             evidence=evidence,
             verified=not warnings,
             warnings=warnings,

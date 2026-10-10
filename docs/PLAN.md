@@ -79,7 +79,8 @@ We use two published medical standards, each where it fits (full references in s
 | Where | Standard | Why this one |
 |---|---|---|
 | Ranking papers (this section) | **OCEBM 2011 Levels of Evidence**, "Does this intervention help?" row (Oxford Centre for Evidence-Based Medicine) | Ranks evidence by study design. Code can apply it automatically from PubMed's "publication type" labels. |
-| Evidence level in the AI table (section 5, step 6) | **ESMO ESCAT** (Mateo et al., *Annals of Oncology* 2018) | Built specifically for "how strong is the evidence that this drug works for this mutation in this cancer type", which is exactly what each table row claims. |
+| Evidence level in the AI table, **every row** (section 5, step 6) | **OCEBM 2011** level of the strongest cited source, computed by code from the sources' study designs | Works for any disease, and the AI can't inflate it. |
+| Evidence level in the AI table, **cancer rows only** | **ESMO ESCAT** (Mateo et al., *Annals of Oncology* 2018) | Built specifically for "how strong is the evidence that this drug works for this mutation in this cancer type". It's an oncology scale, so it isn't used for other diseases. |
 
 ### Papers
 
@@ -254,8 +255,10 @@ Notes: rule-based (no AI), so it's fast and can't hit rate limits. This is the p
 | drug | `Dabrafenib + trametinib` |
 | setting | `Metastatic NSCLC` |
 | outcome | `ORR 64%` |
-| escat_tier | `I-A`, `I-B`, `I-C`, `II-A`, `II-B`, `III-A`, `III-B`, `IV`, `V` (see below) |
-| escat_reason | one short sentence, e.g. `Randomized phase 3 showed longer overall survival` |
+| is_cancer | `true` if the row's setting is a cancer (AI flag, or cancer words in `setting`) |
+| ocebm_level | `1`–`5`: Oxford level of the strongest cited source, computed by code; `null` if none is rankable |
+| escat_tier | **cancer rows only:** `I-A`, `I-B`, `I-C`, `II-A`, `II-B`, `III-A`, `III-B`, `IV`, `V` (see below); otherwise `null` |
+| escat_reason | **cancer rows only:** one short sentence, e.g. `Randomized phase 3 showed longer overall survival` |
 | evidence | list of **Evidence** (below), at least one |
 | verified | `true` if all checks passed, `false` if the number check failed |
 
@@ -288,7 +291,7 @@ Notes: rule-based (no AI), so it's fast and can't hit rate limits. This is the p
 
 ESCAT tier X ("no evidence") isn't used for rows: a row with no evidence shouldn't exist.
 
-**Tier check (code, part of the proof check):** the tier must match the evidence types cited.
+**Tier check (code, part of the proof check, cancer rows only):** the tier must match the evidence types cited.
 - `I-A` needs at least one cited source that is randomized (paper type `Randomized Controlled Trial` / `Clinical Trial, Phase III`, or a randomized trial record) **and** a quote mentioning survival (`overall survival`, `progression-free survival`, `OS`, `PFS`).
 - `I-B`, `I-C`, `II-B` need at least one cited clinical trial (paper or trial record).
 - `IV` sources must be lab/animal studies.
@@ -309,7 +312,8 @@ Everything above in one JSON, plus:
 
 | Endpoint | What it does |
 |---|---|
-| `GET /api/brief/{rsid}` | Returns the full Brief. `?refresh=true` skips the cache. |
+| `GET /api/brief/{rsid}` | Returns the full Brief. `?include_ai=false` returns steps 1–5 fast with treatments `pending`. `?refresh=true` skips saved demo briefs. |
+| `GET /api/brief/{rsid}/treatments` | Only the AI treatment table (slow, 10–90 s); reuses the work from the earlier call. |
 | `GET /api/health` | Says if the server is up and keys are set. |
 
 Errors: bad input (`BRAF`, `rs12a`) → message "not a valid rs number". Unknown rs → "not found". Any other failure only marks that one section as `error`; the rest of the brief still shows.
@@ -443,7 +447,14 @@ Note: `rs121913529` is KRAS G12D/G12V/G12A, **not** G12C.
 
 - Project name
 - Who builds the website, and when
-- Whether the docs go into the public repo (right now `.gitignore` hides some of them)
+- Whether the docs go into the public repo
+
+## Changes since the plan was first written (Person B, for Person A's agent)
+
+- **Shared files changed (additions only):** `schemas.py` adds `Trial.randomized`, `TreatmentRow.is_cancer` / `ocebm_level` (ESCAT fields now cancer-only and optional), `Brief.from_demo`, `SectionStatus` `"pending"`, and `TreatmentsResponse`. `pipeline.py` / `main.py` add the separate AI-table endpoint, saved demo briefs (`app/demo_data/`), and serve the website from `frontend/dist`.
+- **Website** (`frontend/`, React + TypeScript + Tailwind) and **Render config** (`render.yaml`) exist. `scripts/make_demo_briefs.py` saves demo briefs once all steps work.
+- **Works beyond cancer:** eligibility extraction knows general genetic terms; ESCAT only applies to cancer rows.
+- **Aliases matter a lot for non-cancer variants:** trials and papers often use historical names, not HGVS ones (sickle cell = "HbS" / "E6V", not "HBB E7V"; MTHFR = "C677T"). With only HGVS names, `HBB E7V` found 2 trials. Consider adding well-known legacy names to `trial_terms` / `pubmed_terms` where they can be derived.
 
 ## 12. Standards we use (references)
 

@@ -24,7 +24,7 @@ def _trial():
 
 GOOD = ai.AIOutput(rows=[ai.AIRow(
     drug="Dabrafenib + trametinib", setting="Melanoma", outcome="ORR 64%, median PFS 11.0 months",
-    escat_tier="I-A", escat_reason="Randomized trial with survival benefit",
+    is_cancer=True, escat_tier="I-A", escat_reason="Randomized trial with survival benefit",
     evidence=[ai.AIEvidence(source_id="PMID:111",
                             quote="The overall response rate was 64% and median progression-free survival was 11.0 months")],
 )])
@@ -67,12 +67,14 @@ def test_select_sources_uses_sent_to_ai_and_skips_missing_abstracts():
     docs = ai.select_sources(papers, [_trial()])
     assert set(docs) == {"PMID:111", "NCT00000001"}
     assert docs["PMID:111"].is_randomized
+    assert docs["PMID:111"].ocebm_level == 2 and docs["NCT00000001"].ocebm_level == 3
 
 
 def test_prompt_contains_sources_and_rules():
     docs = ai.select_sources([_paper()], [_trial()])
     prompt = ai.build_prompt(Variant(rsid="rs113488022", gene="BRAF"), _aliases(), docs)
     assert "[PMID:111]" in prompt and "[NCT00000001]" in prompt and "WORD FOR WORD" in prompt and "I-A:" in prompt
+    assert '"is_cancer"' in prompt and "ESCAT is an oncology scale" in prompt
 
 
 async def test_retries_then_falls_back(monkeypatch):

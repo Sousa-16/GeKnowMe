@@ -85,3 +85,20 @@ def test_mutation_without_space_is_found():
     kras = Aliases(gene="KRAS", names=[Alias(name="G12C", type="protein_short", derived_from="x")])
     crit = extract_criteria([_trial("Inclusion Criteria:\n* Tumor must have a KRASG12C mutation")], kras)
     assert crit and crit[0].category == "biomarker_required"
+
+
+def test_non_cancer_genetic_rules():
+    from app.schemas import Alias, Aliases
+    cf = Aliases(gene="CFTR", names=[Alias(name="F508del", type="protein_short", derived_from="x")])
+    text = ("Inclusion Criteria:\n* Homozygous for the F508del CFTR mutation, confirmed by genetic testing\n"
+            "* Genotype documented by a CLIA-certified laboratory\n* Age 12 years or older\n\n"
+            "Exclusion Criteria:\n* Prior treatment with a CFTR modulator within 28 days\n"
+            "* Carrier of a second pathogenic variant in another gene\n"
+            "* Use of commercially available CFTR modulator (e.g., Kalydeco) within 14 days before screening")
+    crit = {c.text: c.category for c in extract_criteria([_trial(text)], cf)}
+    assert crit["Homozygous for the F508del CFTR mutation, confirmed by genetic testing"] == "biomarker_required"
+    assert crit["Genotype documented by a CLIA-certified laboratory"] in ("testing_method", "other_biomarker", "biomarker_required")
+    assert crit["Prior treatment with a CFTR modulator within 28 days"] == "prior_therapy"
+    assert crit["Carrier of a second pathogenic variant in another gene"] == "biomarker_excluded"
+    assert crit["Use of commercially available CFTR modulator (e.g., Kalydeco) within 14 days before screening"] == "prior_therapy"
+    assert "Age 12 years or older" not in crit

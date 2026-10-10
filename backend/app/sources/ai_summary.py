@@ -17,7 +17,7 @@ from pydantic import BaseModel
 
 from .. import config
 from ..schemas import Aliases, Paper, Trial, TreatmentResults, Variant
-from .proof_check import LAB_WORDS, RCT_TYPES, RawEvidence, RawRow, SourceDoc, check_rows
+from .proof_check import LAB_WORDS, RCT_TYPES, RawEvidence, RawRow, SourceDoc, check_rows, ocebm_level_for_paper
 from .trials import phase_label, status_label
 
 log = logging.getLogger(__name__)
@@ -49,8 +49,9 @@ class AIRow(BaseModel):
     drug: str
     setting: str
     outcome: str
-    escat_tier: str
-    escat_reason: str
+    is_cancer: bool
+    escat_tier: str | None = None
+    escat_reason: str | None = None
     evidence: list[AIEvidence]
 
 
@@ -64,13 +65,15 @@ def _paper_doc(p: Paper) -> SourceDoc:
     types_low = {t.lower() for t in p.publication_types}
     clinical = any("clinical trial" in t or "randomized" in t for t in types_low)
     text_low = f"{p.title} {p.abstract}".lower()
+    lab_only = not clinical and any(w in text_low for w in LAB_WORDS)
     return SourceDoc(
         source_id=f"PMID:{p.pmid}",
         url=p.url,
         text=f"{p.title}\n{p.abstract[:ABSTRACT_CHARS]}",
         is_randomized=bool(types_low & RCT_TYPES),
         is_clinical_trial=clinical,
-        is_lab_only=not clinical and any(w in text_low for w in LAB_WORDS),
+        is_lab_only=lab_only,
+        ocebm_level=ocebm_level_for_paper(p.publication_types, lab_only),
     )
 
 
@@ -85,8 +88,10 @@ def _trial_doc(t: Trial) -> SourceDoc:
         f"{t.brief_summary[:SUMMARY_CHARS]}"
     )
     is_trial = any(ph not in ("NA",) for ph in t.phases)
+    # A randomized trial record is OCEBM level 2; other trials and observational studies level 3
+    level = 2 if t.randomized else 3 if t.phases else None
     return SourceDoc(source_id=t.nct_id, url=t.url, text=text, is_randomized=bool(t.randomized),
-                     is_clinical_trial=is_trial)
+                     is_clinical_trial=is_trial, ocebm_level=level)
 
 
 def select_sources(papers: list[Paper], trials: list[Trial]) -> dict[str, SourceDoc]:
@@ -118,16 +123,17 @@ def build_prompt(variant: Variant, aliases: Aliases, sources: dict[str, SourceDo
     return f"""You are helping clinical trial planners (not patients) scope a new trial.
 Variant: {variant.rsid}, gene {variant.gene or aliases.gene or 'unknown'}, mutation(s): {mutations}.
 
-Task: build a table of treatments that have been tested for this mutation, using ONLY the sources below.
+Task: build a table of treatments that have been tested for this mutation (in any disease), using ONLY the sources below.
 
 Rules:
 1. Use only the sources below. Do not use outside knowledge. If the sources don't support a claim, leave it out.
 2. One row = one drug or drug combination in one cancer type/setting. Merge duplicates. 5 to 15 rows, strongest evidence first.
 3. "outcome": a short factual phrase. Use numbers exactly as written in the source (e.g. "ORR 64%, median PFS 10.9 months"). For trials without results, write e.g. "Ongoing phase 3, no results posted".
 4. "evidence": 1 to 3 items. "source_id" exactly as shown in brackets (e.g. "PMID:12345678" or "NCT01234567"). "quote" must be copied WORD FOR WORD from that source: one continuous passage of 5 to 40 words, no paraphrasing, no added words. Every number in "outcome" must appear in one of the quotes.
-5. "escat_tier": one of the ESMO ESCAT tiers below, judged only from the cited sources. "escat_reason": one sentence explaining the tier from the cited sources.
+5. "is_cancer": true only if this row's setting is a cancer (any tumour type), false for any other disease.
+6. ONLY for cancer rows: "escat_tier" is one of the ESMO ESCAT tiers below, judged only from the cited sources, and "escat_reason" is one sentence explaining the tier from the cited sources. For non-cancer rows, leave "escat_tier" and "escat_reason" empty (null); ESCAT is an oncology scale and does not apply.
 
-ESCAT tiers (Mateo et al., Annals of Oncology 2018):
+ESCAT tiers for cancer rows (Mateo et al., Annals of Oncology 2018):
 {ESCAT_TABLE}
 
 SOURCES:
@@ -225,7 +231,7 @@ async def summarize_treatments(
         _cache_set(prompt, out)
     raw = [
         RawRow(r.drug, r.setting, r.outcome, r.escat_tier, r.escat_reason,
-               [RawEvidence(e.source_id, e.quote) for e in r.evidence])
+               [RawEvidence(e.source_id, e.quote) for e in r.evidence], is_cancer=r.is_cancer)
         for r in out.rows
     ]
     return check_rows(raw, sources)
