@@ -1,0 +1,21 @@
+# Render Blueprint: one web service that runs the Python API and serves the built website.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: variant-trial-scope
+    runtime: python
+    plan: free
+    branch: main
+    autoDeployTrigger: commit
+    buildCommand: pip install -r backend/requirements.txt && cd frontend && npm ci && npm run build
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.3
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: GEMINI_API_KEY
+        sync: false # Render asks for the value when the Blueprint is created
+      - key: NCBI_API_KEY
+        sync: false
