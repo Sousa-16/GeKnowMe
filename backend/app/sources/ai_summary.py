@@ -26,6 +26,12 @@ CACHE_DIR = config.BACKEND_DIR / ".cache" / "ai"
 ABSTRACT_CHARS = 1800
 SUMMARY_CHARS = 900
 RETRYABLE = {429, 500, 502, 503, 504}
+# Measured on identical BRAF input (50 papers + 30 trials): default thinking took ~42 s, LOW took 12-23 s
+# with the same rows kept and verified. Input size barely mattered (trimming 18% saved 0.3 s).
+MAIN_THINKING = types.ThinkingLevel.LOW
+# (model, attempts, per-attempt timeout in seconds). The main model is often "overloaded" (503),
+# so we try it twice, then switch to the backup, which answers faster but gives fewer rows.
+ATTEMPTS = ((config.GEMINI_MODEL, 2, 90), (config.GEMINI_FALLBACK_MODEL, 2, 60))
 
 
 class AISummaryError(Exception):
@@ -138,40 +144,45 @@ def _retryable(exc: Exception) -> bool:
     return isinstance(exc, (httpx.TimeoutException, httpx.TransportError, asyncio.TimeoutError))
 
 
-async def _generate(client: genai.Client, model: str, prompt: str) -> AIOutput:
-    resp = await client.aio.models.generate_content(
-        model=model,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            response_schema=AIOutput,
-            temperature=0.2,
-            http_options=types.HttpOptions(timeout=120_000),
+async def _generate(client: genai.Client, model: str, prompt: str, timeout_s: int) -> AIOutput:
+    thinking = types.ThinkingConfig(thinking_level=MAIN_THINKING) if model == config.GEMINI_MODEL else None
+    resp = await asyncio.wait_for(
+        client.aio.models.generate_content(
+            model=model,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=AIOutput,
+                temperature=0.2,
+                thinking_config=thinking,
+            ),
         ),
+        timeout=timeout_s,
     )
     if usage := getattr(resp, "usage_metadata", None):
-        log.info("gemini %s tokens: in=%s out=%s", model, usage.prompt_token_count, usage.candidates_token_count)
+        log.info("gemini %s tokens: in=%s out=%s thinking=%s", model, usage.prompt_token_count,
+                 usage.candidates_token_count, usage.thoughts_token_count)
     if isinstance(resp.parsed, AIOutput):
         return resp.parsed
     return AIOutput.model_validate_json(resp.text or '{"rows": []}')
 
 
 async def call_gemini(prompt: str, client: genai.Client | None = None) -> AIOutput:
-    """Main model up to 3 tries, then the backup model up to 2 tries."""
+    """Main model, then the backup model (see ATTEMPTS)."""
     if not config.GEMINI_API_KEY and client is None:
         raise AISummaryError("Gemini API key not configured")
     client = client or genai.Client(api_key=config.GEMINI_API_KEY)
     last: Exception | None = None
-    for model, tries in ((config.GEMINI_MODEL, 3), (config.GEMINI_FALLBACK_MODEL, 2)):
+    for model, tries, timeout_s in ATTEMPTS:
         for attempt in range(tries):
             try:
-                return await _generate(client, model, prompt)
+                return await _generate(client, model, prompt, timeout_s)
             except Exception as e:  # noqa: BLE001
                 last = e
                 log.warning("gemini %s attempt %d failed: %s", model, attempt + 1, str(e)[:200])
                 if not _retryable(e):
                     break  # e.g. bad model name or bad request: go straight to the backup model
-                await asyncio.sleep(2 * (attempt + 1))
+                await asyncio.sleep(2)
     code = getattr(last, "code", None)
     reason = "busy or over quota" if code in (429, 503) else f"{type(last).__name__}"
     raise AISummaryError(f"Gemini is unavailable right now ({reason}); try again in a minute")

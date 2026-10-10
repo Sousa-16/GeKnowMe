@@ -1,9 +1,13 @@
+import asyncio
+
 import pytest
 from google.genai import errors
 
 from app import config
 from app.schemas import Paper, Trial, Variant
 from app.sources import ai_summary as ai
+
+REAL_SLEEP = asyncio.sleep  # saved before the no_sleep fixture patches it
 
 
 def _paper(pmid="111", sent=True):
@@ -32,6 +36,7 @@ class FakeModels:
         self.calls = []
 
     async def generate_content(self, model, contents, config):
+        self.configs = getattr(self, "configs", []) + [config]
         self.calls.append(model)
         out = self.outcomes.pop(0)
         if isinstance(out, Exception):
@@ -71,14 +76,14 @@ def test_prompt_contains_sources_and_rules():
 
 
 async def test_retries_then_falls_back(monkeypatch):
-    client = FakeClient([_busy(), _busy(), _busy(), GOOD])
+    client = FakeClient([_busy(), _busy(), GOOD])
     out = await ai.call_gemini("p", client=client)
     assert out == GOOD
-    assert client.aio.models.calls == [config.GEMINI_MODEL] * 3 + [config.GEMINI_FALLBACK_MODEL]
+    assert client.aio.models.calls == [config.GEMINI_MODEL] * 2 + [config.GEMINI_FALLBACK_MODEL]
 
 
 async def test_gives_friendly_error_when_everything_fails():
-    client = FakeClient([_busy()] * 5)
+    client = FakeClient([_busy()] * 4)
     with pytest.raises(ai.AISummaryError, match="busy or over quota"):
         await ai.call_gemini("p", client=client)
 
@@ -108,3 +113,27 @@ async def test_no_sources_means_no_call(monkeypatch):
 def _aliases():
     from app.schemas import Alias, Aliases
     return Aliases(gene="BRAF", names=[Alias(name="V600E", type="protein_short", derived_from="x")])
+
+
+async def test_main_model_uses_low_thinking_backup_does_not():
+    client = FakeClient([_busy(), _busy(), GOOD])
+    await ai.call_gemini("p", client=client)
+    cfgs = client.aio.models.configs
+    assert cfgs[0].thinking_config.thinking_level == ai.types.ThinkingLevel.LOW
+    assert cfgs[-1].thinking_config is None
+
+
+async def test_slow_attempt_times_out_and_falls_back(monkeypatch):
+    monkeypatch.setattr(ai, "ATTEMPTS", ((config.GEMINI_MODEL, 1, 0.05), (config.GEMINI_FALLBACK_MODEL, 1, 5)))
+
+    class SlowMain(FakeModels):
+        async def generate_content(self, model, contents, config):
+            if model == ai.config.GEMINI_MODEL:
+                await REAL_SLEEP(1)  # longer than the 0.05 s limit
+            return await super().generate_content(model, contents, config)
+
+    client = FakeClient([])
+    client.aio.models = SlowMain([GOOD, GOOD])
+    out = await ai.call_gemini("p", client=client)
+    assert out == GOOD
+    assert client.aio.models.calls == [config.GEMINI_FALLBACK_MODEL]  # main never finished
