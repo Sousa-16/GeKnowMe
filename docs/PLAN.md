@@ -123,9 +123,9 @@ Same idea: design first (randomized beats non-randomized, later phase beats earl
 
 | What we check | Points |
 |---|---|
-| Randomized (ClinicalTrials.gov allocation = randomized; confirm the field name) | +2 |
+| Randomized (`designModule.designInfo.allocation` = `RANDOMIZED`) | +2 |
 | Phase 3 / Phase 2 / Phase 1 | +3 / +2 / +1 |
-| Has posted results (confirm the field name) | +4 |
+| Has posted results (`hasResults` = true) | +4 |
 | Exact mutation in the title or the inclusion criteria | +3 |
 | Completed or active | +1 |
 | Started in the last 5 years | +1 |
@@ -383,33 +383,33 @@ Do them in order. Each step is small and ends with something you can check. Tick
 
 ### Person B
 **Trials (`trials.py`)**
-- [ ] B1. Call ClinicalTrials.gov for `BRAF V600E` and save the raw reply to a file.
-- [ ] B2. Turn each study into a Trial (all fields in section 5).
-- [ ] B3. Search every `trial_terms` entry; merge duplicates by `nct_id`; record which terms matched.
-- [ ] B4. Sort: exact-mutation matches first, then recruiting, then later phase, then newest.
-- [ ] B5. Build TrialStats, including a search link for each term.
-- [ ] B6. If one search fails, keep the others; if all fail → error.
-- [ ] B7. Get `has_results` for each trial (find out which ClinicalTrials.gov field says this).
-- [ ] B8. Score each trial with the section 4 points table; save `score` + `score_reasons`; pick the top 30 and set `sent_to_ai`.
-- [ ] B9. Tests using the saved reply (including scoring).
+- [x] B1. Call ClinicalTrials.gov for `BRAF V600E` and save the raw reply to a file.
+- [x] B2. Turn each study into a Trial (all fields in section 5).
+- [x] B3. Search every `trial_terms` entry; merge duplicates by `nct_id`; record which terms matched.
+- [x] B4. Sort: exact-mutation matches first, then recruiting, then later phase, then newest.
+- [x] B5. Build TrialStats, including a search link for each term.
+- [x] B6. If one search fails, keep the others; if all fail → error.
+- [x] B7. Get `has_results` for each trial (field: `hasResults`; randomized: `designModule.designInfo.allocation`).
+- [x] B8. Score each trial with the section 4 points table; save `score` + `score_reasons`; pick the top 30 and set `sent_to_ai`.
+- [x] B9. Tests using the saved reply (including scoring).
 
 **Eligibility (`eligibility.py`)**
-- [ ] B10. Split eligibility text into inclusion and exclusion parts.
-- [ ] B11. Split each part into single rules (numbers, bullets, new lines).
-- [ ] B12. Keep only rules about the gene, mutation, testing, or prior targeted drugs.
-- [ ] B13. Put each rule in a category (section 5 list).
-- [ ] B14. Never crash on weird text (empty, no headings, odd symbols).
-- [ ] B15. Tests with real eligibility text from the saved replies.
+- [x] B10. Split eligibility text into inclusion and exclusion parts.
+- [x] B11. Split each part into single rules (numbers, bullets, new lines).
+- [x] B12. Keep only rules about the gene, mutation, testing, or prior targeted drugs.
+- [x] B13. Put each rule in a category (section 5 list).
+- [x] B14. Never crash on weird text (empty, no headings, odd symbols).
+- [x] B15. Tests with real eligibility text from the saved replies.
 
 **AI table (`ai_summary.py` + `proof_check.py`)**
-- [ ] B16. Send one tiny test prompt to Gemini from Python; get a reply.
-- [ ] B17. Build the AI input from the papers and trials marked `sent_to_ai` (50 papers: ID, title, abstract; 30 trials: ID, phase, status, drugs, summary).
-- [ ] B18. Write the instructions: only use given sources; every row needs source ID + copied sentence; include the ESCAT tier table so the AI assigns `escat_tier` + `escat_reason`.
-- [ ] B19. Ask Gemini for JSON in the TreatmentRow shape.
-- [ ] B20. `proof_check.py`: ID check → quote check → number check (section 3) → ESCAT tier check (section 5, step 6).
-- [ ] B21. Tests for the proof check with a fake AI reply (fake ID, fake quote, wrong number, I-A tier citing only a Phase 1 trial).
-- [ ] B22. Retry on "overloaded"; then switch to backup model; then give a friendly error.
-- [ ] B23. Save AI answers so the same input doesn't call Gemini twice.
+- [x] B16. Send one tiny test prompt to Gemini from Python; get a reply.
+- [x] B17. Build the AI input from the papers and trials marked `sent_to_ai` (50 papers: ID, title, abstract; 30 trials: ID, phase, status, drugs, summary).
+- [x] B18. Write the instructions: only use given sources; every row needs source ID + copied sentence; include the ESCAT tier table so the AI assigns `escat_tier` + `escat_reason`.
+- [x] B19. Ask Gemini for JSON in the TreatmentRow shape.
+- [x] B20. `proof_check.py`: ID check → quote check → number check (section 3) → ESCAT tier check (section 5, step 6).
+- [x] B21. Tests for the proof check with a fake AI reply (fake ID, fake quote, wrong number, I-A tier citing only a Phase 1 trial).
+- [x] B22. Retry on "overloaded"; then switch to backup model; then give a friendly error.
+- [x] B23. Save AI answers so the same input doesn't call Gemini twice.
 
 ### Together, after both halves work (~8 PM)
 - [ ] T1. Run the full brief for all 3 demo rs numbers.

@@ -85,6 +85,7 @@ class Trial(BaseModel):
     eligibility_text: str = ""
     matched_terms: list[str] = []
     has_results: bool = False
+    randomized: bool | None = None  # None when ClinicalTrials.gov doesn't say
     url: str  # https://clinicaltrials.gov/study/{nct_id}
     score: int = 0
     score_reasons: list[str] = []
