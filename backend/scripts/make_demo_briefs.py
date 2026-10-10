@@ -9,7 +9,8 @@ import sys
 
 from app.pipeline import DEMO_DIR, build_brief
 
-DEMO_RSIDS = ["rs113488022", "rs121913530", "rs121434568"]  # BRAF V600E, KRAS G12C, EGFR L858R
+# BRAF V600E, KRAS G12C, EGFR L858R (cancer); SNCA E46K (Lewy body dementia); TTR V30M (hereditary amyloidosis)
+DEMO_RSIDS = ["rs113488022", "rs121913530", "rs121434568", "rs104893875", "rs28933979"]
 
 
 async def main(rsids: list[str], force: bool) -> int:

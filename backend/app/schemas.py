@@ -144,6 +144,9 @@ class TreatmentRow(BaseModel):
     # Oxford CEBM 2011 level (1 = best) of the strongest cited source, worked out by code from the
     # sources' study types. Works for any disease. None if no cited source has a rankable design.
     ocebm_level: int | None = None
+    # True if at least one cited source mentions this variant by name; False means the evidence is
+    # about the disease or gene in general (common for rare variants). None if not checked.
+    variant_specific: bool | None = None
     escat_tier: EscatTier | None = None  # cancer rows only
     escat_reason: str | None = None
     evidence: list[Evidence] = Field(min_length=1)

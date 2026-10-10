@@ -1,6 +1,6 @@
 {
  "rsid": "rs121434568",
- "generated_at": "2026-10-10T23:16:09.384688+00:00",
+ "generated_at": "2026-10-10T23:46:55.913869+00:00",
  "variant": {
   "rsid": "rs121434568",
   "gene": "EGFR",
@@ -64,6 +64,9 @@
     "url": "https://www.ncbi.nlm.nih.gov/clinvar/RCV005328198/"
    }
   ],
+  "literature_names": [
+   "p.L858R"
+  ],
   "links": {
    "MyVariant": "https://myvariant.info/v1/variant/rs121434568",
    "ClinVar": "https://www.ncbi.nlm.nih.gov/clinvar/?term=rs121434568",
@@ -122,6 +125,13 @@
    "EGFR L858R",
    "EGFR L858Q",
    "EGFR L858"
+  ],
+  "extra_trial_terms": [
+   "rs121434568"
+  ],
+  "fallback_trial_terms": [
+   "EGFR Adenocarcinoma of lung, response to tyrosine kinase inhibitor in, somatic",
+   "EGFR Nonsmall cell lung cancer, response to tyrosine kinase inhibitor in, somatic"
   ]
  },
  "papers": {
@@ -761,36 +771,6 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "37235976",
-    "title": "Phase III Study of Afatinib or Cisplatin Plus Pemetrexed in Patients With Metastatic Lung Adenocarcinoma With EGFR Mutations",
-    "abstract": "PURPOSE: The LUX-Lung 3 study investigated the efficacy of chemotherapy compared with afatinib, a selective, orally bioavailable ErbB family blocker that irreversibly blocks signaling from epidermal growth factor receptor (EGFR/ErbB1), human epidermal growth factor receptor 2 (HER2/ErbB2), and ErbB4 and has wide-spectrum preclinical activity against EGFR mutations. A phase II study of afatinib in EGFR mutation-positive lung adenocarcinoma demonstrated high response rates and progression-free survival (PFS).\nPATIENTS AND METHODS: In this phase III study, eligible patients with stage IIIB/IV lung adenocarcinoma were screened for EGFR mutations. Mutation-positive patients were stratified by mutation type (exon 19 deletion, L858R, or other) and race (Asian or non-Asian) before two-to-one random assignment to 40 mg afatinib per day or up to six cycles of cisplatin plus pemetrexed chemotherapy at standard doses every 21 days. The primary end point was PFS by independent review. Secondary end points included tumor response, overall survival, adverse events, and patient-reported outcomes (PROs).\nRESULTS: A total of 1,269 patients were screened, and 345 were randomly assigned to treatment. Median PFS was 11.1 months for afatinib and 6.9 months for chemotherapy (hazard ratio [HR], 0.58; 95% CI, 0.43 to 0.78; P = .001). Median PFS among those with exon 19 deletions and L858R EGFR mutations (n = 308) was 13.6 months for afatinib and 6.9 months for chemotherapy (HR, 0.47; 95% CI, 0.34 to 0.65; P = .001). The most common treatment-related adverse events were diarrhea, rash/acne, and stomatitis for afatinib and nausea, fatigue, and decreased appetite for chemotherapy. PROs favored afatinib, with better control of cough, dyspnea, and pain.\nCONCLUSION: Afatinib is associated with prolongation of PFS when compared with standard doublet chemotherapy in patients with advanced lung adenocarcinoma and EGFR mutations.",
-    "journal": "J Clin Oncol",
-    "year": 2023,
-    "authors": [
-     "Sequist LV",
-     "Yang JC",
-     "Yamamoto N",
-     "O'Byrne K",
-     "Hirsh V"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Clinical Trial, Phase III",
-     "Multicenter Study",
-     "Randomized Controlled Trial"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37235976/",
-    "score": 11,
-    "score_reasons": [
-     "OCEBM level 2 (randomized trial) +4",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Afatinib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
     "pmid": "41539318",
     "title": "Aumolertinib as adjuvant therapy in resected EGFR-mutated non-small-cell lung cancer (ARTS): a double-blind, multicentre, randomised, controlled, phase 3 trial",
     "abstract": "BACKGROUND: Patients with resectable non-small-cell lung cancer (NSCLC), particularly those with EGFR mutations, face a high risk of recurrence and mortality post-surgery. Aumolertinib, a third-generation EGFR tyrosine-kinase inhibitor, is approved in China for adjuvant treatment in patients with NSCLC harbouring EGFR with an exon 19 deletion (ex19del) or exon 21 substitution (Leu858Arg) mutation. The ARTS study aimed to evaluate the efficacy and safety of adjuvant therapy with aumolertinib in patients with stage II-IIIB EGFR-mutated NSCLC.\nMETHODS: This double-blind, multicentre, randomised, controlled, phase 3 trial enrolled patients from 48 hospitals in mainland China. Eligible patients were 18 years or older with stage II-IIIB NSCLC, had undergone a complete resection followed by standard adjuvant therapy, and had an EGFR ex19del or Leu858Arg mutation and an Eastern Cooperative Oncology Group performance status score of 0 or 1. Patients were stratified by EGFR mutation status and tumour stage and were randomly assigned (1:1) to receive aumolertinib 110 mg or placebo orally, once daily for 3 years or until disease recurrence or other discontinuation criteria were met. Patients were randomly allocated to groups using an interactive web response system; the double‑dummy technique masked patients, investigators, and assessors. The primary endpoint was disease-free survival in the modified intention-to treat (mITT) population (ie, all patients with stage II-IIIB NSCLC harbouring EGFR mutations who had undergone complete tumour resection and standard adjuvant therapy), assessed by blinded independent central review (BICR). Safety was assessed in all patients who received at least one dose of study treatment. Although the study is ongoing, with some patients remaining in follow-up, this analysis represents the protocol-specified primary analysis. This study is registered with ClinicalTrials.gov (NCT04687241).\nFINDINGS: Between April 30, 2021, and May 17, 2022, 399 individuals were screened for study eligibility; of these, 214 patients were randomly assigned to receive aumolertinib or placebo (107 in each group). 120 (56%) patients were female, 94 (44%) were male, median age was 59 years (IQR 54-66), and all patients were Chinese. 204 (95%) of 214 patients had received prior adjuvant chemotherapy. One patient in the aumolertinib group and three patients in the placebo group had stage I disease; therefore, 106 patients in the aumolertinib group and 104 in the placebo group were included in the mITT (primary analysis) population. As of the data cutoff date (April 15, 2024), the median duration of follow-up was 27·56 months (IQR 22·18-27·70) in the aumolertinib group and 27·63 months (22·18-27·79) in the placebo group. The BICR-assessed disease-free survival was significantly improved in the aumolertinib group compared with the placebo group, with an HR of 0·17 (95% CI 0·09-0·29, p<0·0001). The median disease-free survival per BICR in the aumolertinib group was not reached (95% CI 29·14 to not applicable), whereas it was 19·42 months (11·24-26·22) in the placebo group. The most common grade 3-4 adverse events in the aumolertinib group versus the placebo group were increased blood creatine phosphokinase (seven [7%] vs none), prolonged electrocardiogram QT interval (three [3%] vs three [3%]), hypertension (one [1%] vs five [5%]), and pneumonia (two [2%] vs three [3%]). Treatment-related serious adverse events occurred in one (1%) patient receiving aumolertinib and three (3%) patients receiving placebo. No treatment-related deaths occurred and no new safety signals were identified for aumolertinib.\nINTERPRETATION: Aumolertinib showed substantial clinical benefits as adjuvant therapy in Chinese patients with stage II-IIIB EGFR-mutated NSCLC. The manageable safety profile of aumolertinib supports its suitability in the adjuvant setting.\nFUNDING: Hansoh Pharmaceutical Group.\nTRANSLATION: For the Chinese translation of the abstract see Supplementary Materials section.",
@@ -821,25 +801,25 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "37651927",
-    "title": "A randomized phase II study of afatinib alone or combined with bevacizumab for treating chemo-naïve patients with non-small cell lung cancer harboring EGFR mutations",
-    "abstract": "BACKGROUND: Adding bevacizumab to first-generation epidermal growth factor receptor (EGFR)-tyrosine kinase inhibitors (TKIs) prolonged the progression-free survival (PFS), but limited data are available for second-generation EGFR-TKIs. AfaBev-CS is a randomized, phase II trial comparing afatinib plus bevacizumab and afatinib alone as first-line treatment.\nPATIENTS AND METHODS: Untreated patients with non-squamous non-small cell lung cancer (NSCLC) harboring EGFR mutations (Del19 or L858R) were enrolled and randomly assigned to receive either afatinib (30 mg) plus bevacizumab (AfaBev group) or afatinib (40 mg) monotherapy (Afa group). The primary endpoint was PFS. The power was >50% under the assumptions of a median PFS of 12 months for the Afa group and hazard ratio (HR) of 0.6 for the AfaBev group.\nRESULTS: Between August 2017 and September 2019, 100 patients were enrolled. There was no significant difference in PFS between the groups. The median PFS was 16.3 and 16.1 months for the AfaBev and Afa groups, respectively, with an HR of 0.865 (95% confidence interval [CI], 0.539 to 1.388; p = 0.55). In terms of overall survival, there was no significant difference between the groups (HR, 0.84; 95% CI, 0.39 to 1.83; p = 0.67). The overall response rate was 82.6% and 76.6% in the AfaBev and Afa groups, respectively (p = 0.61). Grade ≥ 3 diarrhea, hypertension, acneiform rash, paronychia, and stomatitis were frequently observed in the AfaBev group.\nCONCLUSIONS: This study failed to show efficacy of AfaBev over Afa for improving PFS in untreated patients with EGFR-mutated NSCLC.",
-    "journal": "Lung Cancer",
+    "pmid": "37235976",
+    "title": "Phase III Study of Afatinib or Cisplatin Plus Pemetrexed in Patients With Metastatic Lung Adenocarcinoma With EGFR Mutations",
+    "abstract": "PURPOSE: The LUX-Lung 3 study investigated the efficacy of chemotherapy compared with afatinib, a selective, orally bioavailable ErbB family blocker that irreversibly blocks signaling from epidermal growth factor receptor (EGFR/ErbB1), human epidermal growth factor receptor 2 (HER2/ErbB2), and ErbB4 and has wide-spectrum preclinical activity against EGFR mutations. A phase II study of afatinib in EGFR mutation-positive lung adenocarcinoma demonstrated high response rates and progression-free survival (PFS).\nPATIENTS AND METHODS: In this phase III study, eligible patients with stage IIIB/IV lung adenocarcinoma were screened for EGFR mutations. Mutation-positive patients were stratified by mutation type (exon 19 deletion, L858R, or other) and race (Asian or non-Asian) before two-to-one random assignment to 40 mg afatinib per day or up to six cycles of cisplatin plus pemetrexed chemotherapy at standard doses every 21 days. The primary end point was PFS by independent review. Secondary end points included tumor response, overall survival, adverse events, and patient-reported outcomes (PROs).\nRESULTS: A total of 1,269 patients were screened, and 345 were randomly assigned to treatment. Median PFS was 11.1 months for afatinib and 6.9 months for chemotherapy (hazard ratio [HR], 0.58; 95% CI, 0.43 to 0.78; P = .001). Median PFS among those with exon 19 deletions and L858R EGFR mutations (n = 308) was 13.6 months for afatinib and 6.9 months for chemotherapy (HR, 0.47; 95% CI, 0.34 to 0.65; P = .001). The most common treatment-related adverse events were diarrhea, rash/acne, and stomatitis for afatinib and nausea, fatigue, and decreased appetite for chemotherapy. PROs favored afatinib, with better control of cough, dyspnea, and pain.\nCONCLUSION: Afatinib is associated with prolongation of PFS when compared with standard doublet chemotherapy in patients with advanced lung adenocarcinoma and EGFR mutations.",
+    "journal": "J Clin Oncol",
     "year": 2023,
     "authors": [
-     "Ninomiya T",
-     "Ishikawa N",
-     "Kozuki T",
-     "Kuyama S",
-     "Inoue K"
+     "Sequist LV",
+     "Yang JC",
+     "Yamamoto N",
+     "O'Byrne K",
+     "Hirsh V"
     ],
     "publication_types": [
-     "Clinical Trial, Phase II",
-     "Randomized Controlled Trial",
      "Journal Article",
-     "Research Support, Non-U.S. Gov't"
+     "Clinical Trial, Phase III",
+     "Multicenter Study",
+     "Randomized Controlled Trial"
     ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37651927/",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37235976/",
     "score": 11,
     "score_reasons": [
      "OCEBM level 2 (randomized trial) +4",
@@ -999,6 +979,35 @@
      "exact mutation in abstract +1",
      "reports results with numbers +2",
      "names a drug (rezivertinib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
+    "pmid": "39166278",
+    "title": "EGFR-TKIs Combined with Allogeneic CD8+ NKT Cell Immunotherapy to Treat Patients with Advanced EGFR-Mutated Lung Cancer",
+    "abstract": "Background: To evaluate the efficacy and safety of allogenic CD8 + natural killer T (CD8+ NKT) immunotherapy combined with gefitinib in the treatment of advanced or metastatic EGFR mutant non-small cell lung cancer (NSCLC). Methods: This study is prospective. The NSCLC patients with exon 19 (Ex19del) or exon 21 L858R point mutations, and response to gefitinib treatment were enrolled into the trial to be randomly assigned into the gefitinib arm and the gefitinib/NKT arm. Allogenic CD8+ NKT cells were cultured in vitro and adaptive transferred into the patients via vein in the gefitinib/NKT arm. The primary endpoint was progression-free survival (PFS). Secondary endpoint analysis included time to disease progression (TTP), overall survival (OS), levels of serum tumour markers for carcinoembryonic antigen (CEA) and alanine aminotransferase (ALT) in the blood, the response rate and safety. From July 2017 to June 2021, 19 patients were randomly assigned to the gefitinib arm (n = 8) and the gefitinib/NKT arm (n = 11). Results: The estimated median survival PFS in the gefitinib/NKT arm was significantly longer than that of the gefitinib arm (12 months vs 7 months). Similar results were also observed for the median TTP. Moreover, the gefitinib/NKT arm had better CEA control than the gefitinib arm. Clinical grade 3 adverse reactions occurred in 64% and 39% of patients in the gefitinib/NKT arm and the gefitinib arm, respectively. The most common grade 3 adverse events in the gefitinib/NKT arm included abnormal liver function in 8 cases (73%) and diarrhoea in 1 case (9%), both of which resolved after drug intervention. Conclusion: The PFS of EGFR-mutated advanced NSCLC treated with allogenic CD8+ NKT cells combined with gefitinib was longer than that of gefitinib alone. No obvious serious adverse reactions occurred, and the patients compliance and survival status were good.",
+    "journal": "Technol Cancer Res Treat",
+    "year": 2024,
+    "authors": [
+     "Ye F",
+     "Yuan X",
+     "Yu W",
+     "Ma Y",
+     "Mao C"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Randomized Controlled Trial",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39166278/",
+    "score": 11,
+    "score_reasons": [
+     "OCEBM level 2 (randomized trial) +4",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (gefitinib) +2",
      "published in last 5 years +2"
     ],
     "sent_to_ai": true
@@ -1341,35 +1350,6 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "40957291",
-    "title": "A phase II study of afatinib in combination with pemetrexed and carboplatin in patients with EGFR mutation-positive non-squamous, advanced non-small cell lung cancer (NSCLC) refractory to first-line osimertinib treatment: NEJ025B study",
-    "abstract": "BACKGROUND: Osimertinib is commonly used as a first-line treatment for EGFR-mutated advanced non-small cell lung cancer (NSCLC). However, the optimal treatment strategy following osimertinib failure remains unclear.\nMETHODS: Patients with EGFR-mutated NSCLC and exon 19 deletion or L858R mutation after failure of osimertinib treatment were assigned to a regimen of afatinib (20 mg daily) combined with carboplatin (AUC 5 mg/mL/min) and pemetrexed (500 mg/m2) every 3 weeks followed by maintenance treatment with afatinib plus pemetrexed, until disease progression or unacceptable toxicity was noted. The primary endpoint was the rate of progression-free survival (PFS) at 6 months after initiation of treatment (6M-PFSR).\nRESULTS: Thirty-six patients were enrolled. One patient met the exclusion criteria, and the efficacy was evaluated in the remaining 35 patients. The 6M-PFSR, the primary endpoint, was 57.1 %. The confidence interval of 39.3-71.5 % exceeded the predefined threshold of 35 %, thereby meeting its primary endpoint. Notably, 28.6 % of patients achieved a long-term PFS of 1 year or longer. The objective response rate (ORR) was 51.4 %, the disease control rate (DCR) was 88.6 %, the median PFS was 8.2 months, the median duration of response (DOR) was 5.6 months, and the median overall survival (OS) was 22.5 months. The most common adverse events were diarrhea (52.8 %) and anorexia (47.2 %), both of which were predictable and manageable. Interstitial pneumonia developed in three patients (8.3 %), one of whom died. Another patient died from sepsis, bringing the total number of deaths in the study to two.\nCONCLUSIONS: The combination of afatinib and the platinum doublet demonstrated satisfactory efficacy with manageable adverse events in tumors refractory to osimertinib, meeting its primary endpoint.\nTRIAL REGISTRATION NUMBER: jRCTs021200005.",
-    "journal": "Eur J Cancer",
-    "year": 2025,
-    "authors": [
-     "Nagashima H",
-     "Fukuhara T",
-     "Utsumi Y",
-     "Suzuki A",
-     "Miyanaga A"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Clinical Trial, Phase II",
-     "Multicenter Study"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/40957291/",
-    "score": 10,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Afatinib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
     "pmid": "39999636",
     "title": "Long-term outcomes of neoadjuvant gefitinib in resectable stage II-IIIA non-small cell lung cancer: A phase II, prospective cohort study",
     "abstract": "BACKGROUND: Our previous study has showed the safety and efficacy of preoperative gefitinib in patients with stage II-IIIA resectable non-small cell lung cancer (NSCLC). This study aimed to report the long-term survival analysis and recurrent patterns.\nMETHODS: This was a single-arm, phase II clinical trial. Patients with resectable stage II-IIIA NSCLC harboring EGFR exon 19 deletion or exon 21 L858R mutations were enrolled. Patients were administrated with preoperative gefitinib (250 mg once daily for 42 days), followed by surgical resection. The primary endpoint was objective response rate (ORR); secondary endpoints included the rate of major pathologic response (MPR), disease-free survival (DFS), overall survival (OS). MPR was defined as the presence of no more than 10 % viable tumor. Chi-square test was used to assess the differences in CNS recurrence rates and recurrent patterns.\nRESULTS: Of the 33 intention-to-treat patients, ORR was 54.5 % (95 % confidence interval (CI), 37.7-70.7), and the rate of MPR was 24.2 % (95 % CI, 11.9-40.4). Among the investigated 28 patients, the median follow-up was 108.5 months. The median OS was 89.8 months (95 % CI, 44.37-NC), and the median DFS was 36.4 months (95 % CI, 18.9-NC). In addition, MPR continued to indicate significantly improved DFS, as well as OS (DFS, p = 0.015; OS, p = 0.037). The neoadjuvant gefitinib group showed prolonged DFS and OS than platinum doublet group (hazard ratio (HR) = 1.71, 95 % CI, 1.02-2.85, p = 0.038; and HR = 2.31; 95 % CI, 1.28-4.16, p = 0.0044, respectively). There was a significant difference in the distant recurrence patterns between the two groups (p = 0.032). Moreover, the gefitinib group showed similar overall brain metastasis rate than platinum doublet group (21.4 % versus 27.5 %).\nCONCLUSIONS: With satisfying prognosis benefits and acceptable brain metastasis rate in long-term follow-up, gefitinib exhibited clinical viability for operable stage II-IIIA EGFR-mutant NSCLC over chemotherapy in the neoadjuvant setting. MPR was significantly associated with both prolonged DFS and OS, manifesting its potential as an essential endpoint for future neoadjuvant trials.",
@@ -1425,36 +1405,6 @@
      "published 5-10 years ago +1"
     ],
     "sent_to_ai": true
-   },
-   {
-    "pmid": "33046516",
-    "title": "Phase I Study of the Efficacy and Safety of Ramucirumab in Combination with Osimertinib in Advanced T790M-positive EGFR-mutant Non-small Cell Lung Cancer",
-    "abstract": "PURPOSE: We report the final analysis of JVDL (NCT02789345), which examined the combination of the EGFR tyrosine kinase inhibitor (TKI) osimertinib plus the VEGFR2-directed antibody ramucirumab in patients with T790M-positive EGFR-mutant non-small cell lung cancer (NSCLC).\nPATIENTS AND METHODS: This open-label, single-arm phase I study enrolled patients with EGFR T790M-positive NSCLC, who had progressed following EGFR TKI but were third-generation EGFR TKI-naïve. A dose-limiting toxicity (DLT) period with as-needed dose deescalation was followed by an expansion cohort. Patients received daily oral osimertinib and intravenous ramucirumab every 2 weeks until progression or discontinuation.\nRESULTS: Twenty-five patients were enrolled. No DLTs were observed. Median follow-up time was 25.0 months. Common grade 3 or higher treatment-related adverse events (TRAE) were hypertension (8%) and platelet count decreased (16%); grade 5 TRAE (subdural hemorrhage) occurred in 1 patient. Patients with (N = 10) and without central nervous system (CNS) metastasis (N = 15) had similar safety outcomes. Five patients remain on treatment. Objective response rate (ORR) was 76%. Median duration of response was 13.4 months [90% confidence interval (CI): 9.6-21.2]. Median progression-free survival (PFS) was 11.0 months (90% CI: 5.5-19.3). Efficacy was observed in patients with and without CNS metastasis (ORR 60% and 87%; median PFS 10.9 and 14.7 months, respectively). Exploratory biomarker analyses in circulating tumor DNA suggested that on-treatment loss of EGFR Exon 19 deletion or L858R mutations, detectable at baseline, correlated with longer PFS, but on-treatment loss of T790M did not. Emergent genetic alterations postprogression included C797S, MET amplification, and EGFR amplification.\nCONCLUSIONS: Ramucirumab plus osimertinib demonstrated encouraging safety and antitumor activity in T790M-positive EGFR-mutant NSCLC.See related commentary by Garon, p. 905.",
-    "journal": "Clin Cancer Res",
-    "year": 2021,
-    "authors": [
-     "Yu HA",
-     "Paz-Ares LG",
-     "Yang JC",
-     "Lee KH",
-     "Garrido P"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase I",
-     "Journal Article",
-     "Multicenter Study",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33046516/",
-    "score": 10,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Osimertinib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": false
    },
    {
     "pmid": "40885102",
@@ -1980,7 +1930,7 @@
      "reports results with numbers +2",
      "names a drug (gefitinib) +2"
     ],
-    "sent_to_ai": false
+    "sent_to_ai": true
    },
    {
     "pmid": "31825714",
@@ -2213,36 +2163,6 @@
     "sent_to_ai": false
    },
    {
-    "pmid": "24439929",
-    "title": "Afatinib versus cisplatin plus gemcitabine for first-line treatment of Asian patients with advanced non-small-cell lung cancer harbouring EGFR mutations (LUX-Lung 6): an open-label, randomised phase 3 trial",
-    "abstract": "BACKGROUND: Afatinib-an oral irreversible ErbB family blocker-improves progression-free survival compared with pemetrexed and cisplatin for first-line treatment of patients with EGFR mutation-positive advanced non-small-cell lung cancer (NSCLC). We compared afatinib with gemcitabine and cisplatin-a chemotherapy regimen widely used in Asia-for first-line treatment of Asian patients with EGFR mutation-positive advanced NSCLC.\nMETHODS: This open-label, randomised phase 3 trial was done at 36 centres in China, Thailand, and South Korea. After central testing for EGFR mutations, treatment-naive patients (stage IIIB or IV cancer [American Joint Committee on Cancer version 6], performance status 0-1) were randomly assigned (2:1) to receive either oral afatinib (40 mg per day) or intravenous gemcitabine 1000 mg/m(2) on day 1 and day 8 plus cisplatin 75 mg/m(2) on day 1 of a 3-week schedule for up to six cycles. Randomisation was done centrally with a random number-generating system and an interactive internet and voice-response system. Randomisation was stratified by EGFR mutation (Leu858Arg, exon 19 deletions, or other; block size three). Clinicians and patients were not masked to treatment assignment, but the independent central imaging review group were. Treatment continued until disease progression, intolerable toxic effects, or withdrawal of consent. The primary endpoint was progression-free survival assessed by independent central review (intention-to-treat population). This study is registered with ClinicalTrials.gov, NCT01121393.\nFINDINGS: 910 patients were screened and 364 were randomly assigned (242 to afatinib, 122 to gemcitabine and cisplatin). Median progression-free survival was significantly longer in the afatinib group (11·0 months, 95% CI 9·7-13·7) than in the gemcitabine and cisplatin group (5·6 months, 5·1-6·7; hazard ratio 0·28, 95% CI 0·20-0·39; p<0·0001). The most common treatment-related grade 3 or 4 adverse events in the afatinib group were rash or acne (35 [14·6%] of 239 patients), diarrhoea (13 [5·4%]), and stomatitis or mucositis (13 [5·4%]), compared with neutropenia (30 [26·5%] of 113 patients), vomiting (22 [19·5%]), and leucopenia (17 [15·0%]) in the gemcitabine and cisplatin group. Treatment-related serious adverse events occurred in 15 (6·3%) patients in the afatinib group and nine (8·0%) patients in the gemcitabine and cisplatin group.\nINTERPRETATION: First-line afatinib significantly improves progression-free survival with a tolerable and manageable safety profile in Asian patients with EGFR mutation-positive advanced lung NSCLC. Afatinib should be considered as a first-line treatment option for this patient population.\nFUNDING: Boehringer Ingelheim.",
-    "journal": "Lancet Oncol",
-    "year": 2014,
-    "authors": [
-     "Wu YL",
-     "Zhou C",
-     "Hu CP",
-     "Feng J",
-     "Lu S"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase III",
-     "Journal Article",
-     "Multicenter Study",
-     "Randomized Controlled Trial",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24439929/",
-    "score": 9,
-    "score_reasons": [
-     "OCEBM level 2 (randomized trial) +4",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Afatinib) +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "28061541",
     "title": "A prospective, multicenter phase II trial of low-dose erlotinib as maintenance treatment after platinum doublet chemotherapy for advanced non-small cell lung cancer harboring EGFR mutation",
     "abstract": "BACKGROUND: Maintenance therapy with full-dose erlotinib for patients with advanced non-small cell lung cancer (NSCLC) has demonstrated a significant overall survival (OS) benefit. However, 150 mg/day of erlotinib seems too toxic as maintenance therapy. This study aimed to evaluate the efficacy and safety of low-dose erlotinib (25 mg/day) as maintenance treatment after platinum doublet chemotherapy in NSCLC harboring epidermal growth factor receptor (EGFR) mutation.\nMETHODS: Activated EGFR-mutation-positive NSCLC patients who did not progress after first-line platinum-doublet chemotherapy, ≥20 and ≤85 years old, with performance status (PS) 0-3 were included in this study. Low-dose erlotinib (25 mg/day) was administered until disease progression. The primary endpoint was overall response rate (ORR). Secondary endpoints included progression-free survival (PFS), OS, and safety. The required sample size was 40 patients.\nRESULTS: The study was stopped early, after achieving only 28% of planned enrollment, due to poor accrual. Between April 2011 and May 2014, 11 patients (male/female, 5/6; median age, 72 years; PS 0/1, 8/3; stage IV/relapse after surgery, 9/2; exon 19 deletions/L858R, 7/4) were enrolled and accessible in this study. Partial response (PR) was observed in 6 patients (56%). Median PFS was 14.9 months [95% confidence interval (CI), 2.7-27.1 months] and median OS was not calculable. Toxicities were generally mild. Only one patient developed grade 3 aspartate aminotransferase (AST)/alanine aminotransferase (ALT) elevation. Eight patients developed grade 1 skin rash. No treatment-related deaths were observed. Eight patients progressed, and recurrences included brain metastases (n=3), local recurrence (n=2), local recurrence plus brain metastasis (n=1), bone metastasis (n=1), and pulmonary metastasis (n=1).\nCONCLUSIONS: The study was stopped early due to poor accrual. However, our study suggests that maintenance therapy with low-dose erlotinib might be useful and tolerable in selected NSCLC patients harboring EGFR mutation.",
@@ -2267,35 +2187,6 @@
      "exact mutation in abstract +1",
      "reports results with numbers +2",
      "names a drug (Erlotinib) +2",
-     "published 5-10 years ago +1"
-    ],
-    "sent_to_ai": false
-   },
-   {
-    "pmid": "28739703",
-    "title": "Cerebrospinal Fluid Penetration Rate and Efficacy of Afatinib in Patients with EGFR Mutation-positive Non-small Cell Lung Cancer with Leptomeningeal Carcinomatosis: A Multicenter Prospective Study",
-    "abstract": "BACKGROUND: Afatinib is an effective first-line treatment for epidermal growth factor receptor (EGFR) mutation-positive advanced non-small cell lung cancer (NSCLC). However, few reports have addressed the influence of cerebrospinal fluid (CSF) penetration rate on the efficacy of afatinib in patients with central nervous system metastases. Therefore, we conducted a prospective multicenter trial to evaluate the CSF penetration rate and efficacy of afatinib in patients with EGFR mutation-positive NSCLC with leptomeningeal carcinomatosis.\nPATIENTS AND METHODS: Eleven patients with histologically-proven EGFR mutation-positive NSCLC with leptomeningeal carcinomatosis were enrolled in the study between April 2014 and November 2015. They were treated with afatinib (40 mg/day), and blood and CSF levels of afatinib were analyzed on day 8. The primary endpoint was CSF penetration rate. Secondary endpoints included the objective response rate (ORR), progression-free survival (PFS), and overall survival (OS).\nRESULTS: The median age of patients was 66 years. Five patients harbored an exon 19 deletion, three harbored a p.L858R point mutation, and three harbored an uncommon exon 18 mutation. The levels of afatinib in blood and CSF (mean±SD) were 233.26±195.40 nM and 3.16±1.95 nM, respectively. The CSF penetration rate was 2.45±2.91%. The ORR was 27.3% (three out of 11 patients), and two out of these three responders had uncommon EGFR mutations. The median PFS and OS were 2.0 and 3.8 months, respectively.\nCONCLUSION: The median CSF penetration rate of afatinib was higher than previously reported. Afatinib was effective against leptomeningeal carcinomatosis particularly in patients with NSCLC harboring uncommon EGFR mutations. The criteria for selecting a specific EGFR tyrosine kinase inhibitor for therapy of NSCLC should include its ability to penetrate CSF and its efficacy against specific mutation types.",
-    "journal": "Anticancer Res",
-    "year": 2017,
-    "authors": [
-     "Tamiya A",
-     "Tamiya M",
-     "Nishihara T",
-     "Shiroyama T",
-     "Nakao K"
-    ],
-    "publication_types": [
-     "Clinical Trial",
-     "Journal Article",
-     "Multicenter Study"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28739703/",
-    "score": 9,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Afatinib) +2",
      "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
@@ -2359,6 +2250,35 @@
     "sent_to_ai": false
    },
    {
+    "pmid": "30527191",
+    "title": "A phase II study of afatinib treatment for elderly patients with previously untreated advanced non-small-cell lung cancer harboring EGFR mutations",
+    "abstract": "OBJECTIVE: The efficacy and safety of afatinib in elderly patients with EGFR-mutated non-small-cell lung cancer (NSCLC) have not been evaluated. This study aimed to assess the efficacy and safety of afatinib in elderly chemotherapy-naive patients with NSCLC harboring sensitive EGFR mutations.\nMATERIALS AND METHODS: We prospectively assessed the clinical effects of afatinib as a first-line treatment for elderly (age ≥70 years) NSCLC patients with EGFR mutations (exon 19 deletion or exon 21 L858R mutation). All patients were initially administered afatinib (30 mg/day).\nRESULTS: Between May 2014 and August 2017, 40 patients (13 men, 27 women) with adenocarcinoma were included in our analysis. The median age was 77 years (range, 70-85 years). The dose was reduced in 19 patients. The objective overall response and disease control rates were 72.5% and 100%, respectively, and the median progression-free survival and overall survival were 12.9 months and not reached, respectively. Common adverse events (AEs) included diarrhea, rash/acne, and anemia. Major grade 3 or higher toxicities included diarrhea (12.5%), mucositis (7.5%), and pneumonitis (7.5%). Afatinib treatment was discontinued in 8 patients owing to AEs of elevated amylase (n = 1), liver dysfunction (n = 1), rash/acne (n = 1), nail change (n = 1), anorexia (n = 2), pneumonitis (n = 2), and diarrhea (n = 2). Two patients died due to treatment-related pneumonitis.\nCONCLUSIONS: This is the first study that verified the efficacy and feasibility of first-line chemotherapy with afatinib at 30 mg/day in elderly patients with advanced NSCLC harboring sensitive EGFR mutations. First-line afatinib of 30 mg/day could be a treatment option in this patient population.",
+    "journal": "Lung Cancer",
+    "year": 2018,
+    "authors": [
+     "Imai H",
+     "Kaira K",
+     "Suzuki K",
+     "Anzai M",
+     "Tsuda T"
+    ],
+    "publication_types": [
+     "Clinical Trial, Phase II",
+     "Journal Article",
+     "Multicenter Study"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30527191/",
+    "score": 9,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (Afatinib) +2",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
     "pmid": "27081078",
     "title": "Circulating cell-free DNA has a high degree of specificity to detect exon 19 deletions and the single-point substitution mutation L858R in non-small cell lung cancer",
     "abstract": "Detection of an epidermal growth factor receptor (EGFR) mutation in circulating cell-free DNA (cfDNA) is a noninvasive method to collect genetic information to guide treatment of lung cancer with tyrosine-kinase inhibitors (TKIs). However, the association between cfDNA and detection of EGFR mutations in tumor tissue remains unclear. Here, a meta-analysis was performed to determine whether cfDNA could serve as a substitute for tissue specimens for the detection of EGFR mutations. The pooled sensitivity, specificity, and areas under the curve of cfDNA were 0.60, 0.94, and 0.9208 for the detection of EGFR mutations, 0.64, 0.99, and 0.9583 for detection of the exon 19 deletion, and 0.57, 0.99, and 0.9605 for the detection of the L858R mutation, respectively. Our results showed that cfDNA has a high degree of specificity to detect exon 19 deletions and L858R mutation. Due to its high specificity and noninvasive characteristics, cfDNA analysis presents a promising method to screen for mutations in NSCLC and predict patient response to EGFR-TKI treatment, dynamically assess treatment outcome, and facilitate early detection of resistance mutations.",
@@ -2410,6 +2330,94 @@
      "exact mutation in abstract +1",
      "reports results with numbers +2",
      "names a drug (Afatinib) +2"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "20022809",
+    "title": "Gefitinib versus cisplatin plus docetaxel in patients with non-small-cell lung cancer harbouring mutations of the epidermal growth factor receptor (WJTOG3405): an open label, randomised phase 3 trial",
+    "abstract": "BACKGROUND: Patients with non-small-cell lung cancer harbouring mutations in the epidermal growth factor receptor (EGFR) gene respond well to the EGFR-specific tyrosine kinase inhibitor gefitinib. However, whether gefitinib is better than standard platinum doublet chemotherapy in patients selected by EGFR mutation is uncertain.\nMETHODS: We did an open label, phase 3 study (WJTOG3405) with recruitment between March 31, 2006, and June 22, 2009, at 36 centres in Japan. 177 chemotherapy-naive patients aged 75 years or younger and diagnosed with stage IIIB/IV non-small-cell lung cancer or postoperative recurrence harbouring EGFR mutations (either the exon 19 deletion or L858R point mutation) were randomly assigned, using a minimisation technique, to receive either gefitinib (250 mg/day orally; n=88) or cisplatin (80 mg/m(2), intravenously) plus docetaxel (60 mg/m(2), intravenously; n=89), administered every 21 days for three to six cycles. The primary endpoint was progression-free survival. Survival analysis was done with the modified intention-to-treat population. This study is registered with UMIN (University Hospital Medical Information Network in Japan), number 000000539.\nFINDINGS: Five patients were excluded (two patients were found to have thyroid and colon cancer after randomisation, one patient had an exon 18 mutation, one patient had insufficient consent, and one patient showed acute allergic reaction to docetaxel). Thus, 172 patients (86 in each group) were included in the survival analyses. The gefitinib group had significantly longer progression-free survival compared with the cisplatin plus docetaxel goup, with a median progression-free survival time of 9.2 months (95% CI 8.0-13.9) versus 6.3 months (5.8-7.8; HR 0.489, 95% CI 0.336-0.710, log-rank p<0.0001). Myelosuppression, alopecia, and fatigue were more frequent in the cisplatin plus docetaxel group, but skin toxicity, liver dysfunction, and diarrhoea were more frequent in the gefitinib group. Two patients in the gefitinib group developed interstitial lung disease (incidence 2.3%), one of whom died.\nINTERPRETATION: Patients with lung cancer who are selected by EGFR mutations have longer progression-free survival if they are treated with gefitinib than if they are treated with cisplatin plus docetaxel.\nFUNDING: West Japan Oncology Group (WJOG): a non-profit organisation supported by unrestricted donations from several pharmaceutical companies.",
+    "journal": "Lancet Oncol",
+    "year": 2010,
+    "authors": [
+     "Mitsudomi T",
+     "Morita S",
+     "Yatabe Y",
+     "Negoro S",
+     "Okamoto I"
+    ],
+    "publication_types": [
+     "Clinical Trial, Phase III",
+     "Comparative Study",
+     "Journal Article",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20022809/",
+    "score": 9,
+    "score_reasons": [
+     "OCEBM level 2 (randomized trial) +4",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (gefitinib) +2"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "30896637",
+    "title": "The clinicopathologic of pulmonary adenocarcinoma transformation to small cell lung cancer",
+    "abstract": "Transformation to small cell lung cancer (SCLC) is one of the mechanisms of resistance to epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors (TKIs). However, it is uncertain how it works and there is no standard treatment after the transformation. In this study, 7 patients with transformation of SCLC from advanced lung adenocarcinoma (ADC) were analyzed retrospectively and the clinical pathology, imaging characteristics and treatment were analyzed.We identified 7 patients with primary lung ADC that showed transformation to SCLC on second biopsy during a 6-year period. Clinicopathologic information was analyzed and EGFR mutation results were performed in initial biopsy samples.Seven patients showed transformation from ADC to SCLC, of which 6 patients were 19 del EGFR mutation, only 1 patient is L858R mutations. The imaging forms did not have the typical imaging features of primary SCLC. All patients underwent etoposide and carboplatin (EC) regimen chemotherapy after pathological transformation. However, the response rate of EC was less than primary small cell lung cancer. One of the patients was receiving EC for 4 cycles. After chemotherapy the patients performed radiation therapy and finally with erlotinib maintains treatment, the progress free survival (PFS) was more than 12 months.NSCLC can acquire a neuroendocrine phenotype with EGFR-TKI treatment. The transmutation is more common in 19del mutation patients. A comprehensive treatment based on EC regimen chemotherapy and the maintenance with EGFR-TKI is likely to be the appropriate treatment for these patients.",
+    "journal": "Medicine (Baltimore)",
+    "year": 2019,
+    "authors": [
+     "Yang H",
+     "Liu L",
+     "Zhou C",
+     "Xiong Y",
+     "Hu Y"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Observational Study"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30896637/",
+    "score": 9,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (Carboplatin) +2",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "28739703",
+    "title": "Cerebrospinal Fluid Penetration Rate and Efficacy of Afatinib in Patients with EGFR Mutation-positive Non-small Cell Lung Cancer with Leptomeningeal Carcinomatosis: A Multicenter Prospective Study",
+    "abstract": "BACKGROUND: Afatinib is an effective first-line treatment for epidermal growth factor receptor (EGFR) mutation-positive advanced non-small cell lung cancer (NSCLC). However, few reports have addressed the influence of cerebrospinal fluid (CSF) penetration rate on the efficacy of afatinib in patients with central nervous system metastases. Therefore, we conducted a prospective multicenter trial to evaluate the CSF penetration rate and efficacy of afatinib in patients with EGFR mutation-positive NSCLC with leptomeningeal carcinomatosis.\nPATIENTS AND METHODS: Eleven patients with histologically-proven EGFR mutation-positive NSCLC with leptomeningeal carcinomatosis were enrolled in the study between April 2014 and November 2015. They were treated with afatinib (40 mg/day), and blood and CSF levels of afatinib were analyzed on day 8. The primary endpoint was CSF penetration rate. Secondary endpoints included the objective response rate (ORR), progression-free survival (PFS), and overall survival (OS).\nRESULTS: The median age of patients was 66 years. Five patients harbored an exon 19 deletion, three harbored a p.L858R point mutation, and three harbored an uncommon exon 18 mutation. The levels of afatinib in blood and CSF (mean±SD) were 233.26±195.40 nM and 3.16±1.95 nM, respectively. The CSF penetration rate was 2.45±2.91%. The ORR was 27.3% (three out of 11 patients), and two out of these three responders had uncommon EGFR mutations. The median PFS and OS were 2.0 and 3.8 months, respectively.\nCONCLUSION: The median CSF penetration rate of afatinib was higher than previously reported. Afatinib was effective against leptomeningeal carcinomatosis particularly in patients with NSCLC harboring uncommon EGFR mutations. The criteria for selecting a specific EGFR tyrosine kinase inhibitor for therapy of NSCLC should include its ability to penetrate CSF and its efficacy against specific mutation types.",
+    "journal": "Anticancer Res",
+    "year": 2017,
+    "authors": [
+     "Tamiya A",
+     "Tamiya M",
+     "Nishihara T",
+     "Shiroyama T",
+     "Nakao K"
+    ],
+    "publication_types": [
+     "Clinical Trial",
+     "Journal Article",
+     "Multicenter Study"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28739703/",
+    "score": 9,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (Afatinib) +2",
+     "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
    },
@@ -2805,6 +2813,33 @@
     "sent_to_ai": false
    },
    {
+    "pmid": "29807396",
+    "title": "ASP8273 tolerability and antitumor activity in tyrosine kinase inhibitor-naïve Japanese patients with EGFR mutation-positive non-small-cell lung cancer",
+    "abstract": "Epidermal growth factor receptor (EGFR) activating mutations occur in approximately 50% of East Asian patients with non-small-cell lung cancer (NSCLC) and confer sensitivity to tyrosine kinase inhibitors (TKIs). ASP8273 is an irreversible EGFR-TKI, given orally, that inhibits EGFR activating mutations and has shown clinical activity in patients with EGFR mutation-positive NSCLC. Epidermal growth factor receptor-TKI-naïve Japanese adult patients (≥20 years) with NSCLC harboring EGFR mutations were enrolled in this open-label, single-arm, phase II study (ClinicalTrials.gov identifier NCT02500927). Patients received ASP8273 300 mg once daily until discontinuation criteria were met. The primary end-point was to determine the safety of ASP8273 300 mg; the secondary end-point was antitumor activity defined by RECIST version 1.1. Thirty-one patients (12 men and 19 women; median age, 64 years [range, 31-82 years]) with EGFR mutation-positive NSCLC were enrolled; as of 23 February 2016, 25 patients (81%) were still on study. Of the 31 patients, 27 (87%) had an exon 19 deletion (n = 13, 42%) or an L858R (n = 14, 45%) EGFR activating mutation, and two (7%) had an L861Q mutation. Five patients (16%) had other EGFR activating mutations, two had an activating mutation and the T790M resistance mutation. The most commonly reported treatment-emergent adverse event was diarrhea (n = 24, 77%). All patients had at least one post-baseline scan; one patient (3%) achieved a confirmed complete response, 13 (42%) had a confirmed partial response, and 15 (48%) had confirmed stable disease (disease control rate, 94% [n = 29/31]) per investigator assessment. Once-daily ASP8273 at 300 mg was generally well tolerated and showed antitumor activity in TKI-naïve Japanese patients with EGFR mutation-positive NSCLC.",
+    "journal": "Cancer Sci",
+    "year": 2018,
+    "authors": [
+     "Azuma K",
+     "Nishio M",
+     "Hayashi H",
+     "Kiura K",
+     "Satouchi M"
+    ],
+    "publication_types": [
+     "Clinical Trial, Phase II",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29807396/",
+    "score": 7,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
     "pmid": "30875094",
     "title": "Modulation of Fexofenadine Pharmacokinetics by Osimertinib in Patients With Advanced EGFR-Mutated Non-Small Cell Lung Cancer",
     "abstract": "Osimertinib is a potent, third-generation, irreversible, central nervous system active epidermal growth factor receptor (EGFR)-tyrosine kinase inhibitor (TKI) that selectively inhibits EGFR-TKI sensitizing and EGFR T790M resistance mutations. It is approved for first-line treatment of patients with advanced non-small cell lung cancer (NSCLC) whose tumors have EGFR exon 19 deletions or exon 21 L858R mutations, and for patients with T790M-positive advanced NSCLC whose disease has progressed on or after EGFR-TKI therapy. This study investigated the pharmacokinetics (PK) of fexofenadine (P-glycoprotein substrate) following single- and multiple-dose osimertinib in patients with advanced NSCLC who have progressed on prior EGFR-TKI therapy. This open-label, phase 1 study (NCT02908750) comprised the PK phase and continued access phase. The former comprised 2 distinct periods with a 3- to 7-day washout: treatment period 1 (n = 24, fexofenadine 120 mg, day 1) and treatment period 2 (fexofenadine 120 mg + osimertinib 80 mg single dose on days 1 and 39 and osimertinib 80 mg once daily from days 4 to 41). Patients could continue osimertinib 80 mg once daily based on investigator's discretion in the continued access phase. Fexofenadine area under the plasma concentration-time curve and maximum concentration increased by 56% (90% confidence interval [CI], 35.4-78.6) and 76% (90%CI, 49.3-108.3) following coadministration with osimertinib single dose, and by 27% (90%CI, 11.2-45.8) and 25% (90%CI, 5.6-48.1) when given with osimertinib at steady state, respectively. Following osimertinib coadministration, median fexofenadine time to maximum concentration increased by approximately 30 minutes compared with time to maximum concentration following fexofenadine alone. No new osimertinib safety findings were observed. The increase in fexofenadine exposure following osimertinib coadministration shows osimertinib as a weak P-glycoprotein inhibitor.",
@@ -3176,32 +3211,6 @@
      "exact mutation in abstract +1",
      "reports results with numbers +2",
      "names a drug (dacomitinib) +2",
-     "published 5-10 years ago +1"
-    ],
-    "sent_to_ai": false
-   },
-   {
-    "pmid": "31557965",
-    "title": "Liquid Biopsy Testing Can Improve Selection of Advanced Non-Small-Cell Lung Cancer Patients to Rechallenge with Gefitinib",
-    "abstract": "The ICARUS trial is a phase II, open label, multicenter, single arm study conducted to investigate the efficacy, safety, and tolerability of a rechallenge treatment with the first-generation tyrosine kinase inhibitor (TKI) gefitinib in advanced non-small-cell lung cancer (NSCLC) patients carrying activating mutations of the epidermal growth factor receptor (EGFR). The ICARUS trial enrolled 61 patients who were rechallenged with gefitinib at progression after second-line chemotherapy. Serum-derived circulating cell-free DNA (cfDNA) collected before the rechallenge from a cohort of 29 patients, was retrospectively analyzed for the EGFR exon 19 deletions and for the p.L858R and p.T790M single nucleotide variants (SNV). The analysis of cfDNA detected the same EGFR activating mutation reported in the tumor tissue in 20/29 patients, with a sensitivity of 69%. Moreover, a p.T790M variant was found in 14/29 patients (48.3%). The median progression-free survival (PFS) was 2.7 months for p.T790M positive patients (CI 95% 1.4-3.1 months) versus 3.5 months for the p.T790M negative patients (CI 95% 1.6-5.3 months), resulting in a statistically significant difference (Long rank test p = 0.0180). These findings confirmed the role of the p.T790M mutation in the resistance to first-generation TKIs. More importantly, our data suggest that TKI rechallenge should be guided by biomarker testing.",
-    "journal": "Cancers (Basel)",
-    "year": 2019,
-    "authors": [
-     "Esposito Abate R",
-     "Pasquale R",
-     "Sacco A",
-     "Piccirillo MC",
-     "Morabito A"
-    ],
-    "publication_types": [
-     "Journal Article"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/31557965/",
-    "score": 6,
-    "score_reasons": [
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (gefitinib) +2",
      "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
@@ -4740,6 +4749,31 @@
     "sent_to_ai": false
    },
    {
+    "pmid": "40894597",
+    "title": "Genomic Characterization of Lung Cancer in Never-Smokers Using Deep Learning",
+    "abstract": "Despite promising results in using deep learning to infer genetic features from histological whole-slide images (WSIs), no prior studies have specifically applied these methods to lung adenocarcinomas from subjects who have never smoked tobacco (NS-LUAD) - a molecularly and histologically distinct subset of lung cancer. Existing models have focused on LUAD from predominantly smoker populations, with limited molecular scope and variable performance. Here, we propose a customized deep convolutional neural network based on ResNet50 architecture, optimized for multilabel classification for NS-LUAD, enabling simultaneous prediction of 16 molecular alterations from a single H&E-stained WSI. Key architectural modifications included a simplified two-layer residual block without bottleneck layers, selective shortcut connections, and a sigmoid-based classification head for independent prediction of each alteration, designed to reduce computational complexity while maintaining predictive accuracy. The model was trained and evaluated on 495 WSIs from the Sherlock-Lung study (70% training with 10% internal test set for 10-fold cross-validation, and 30% held-out validation set for final evaluation). For the held-out validation data, our model achieved high areas under the receiver operating characteristic curve [AUROC] values =0.84-0.93 for detecting 11 features: EGFR, KRAS, TP53, RBM10 mutations, MDM2 amplification, kataegis, CDKN2A deletion, ALK fusion, whole-genome doubling, and EGFR hotspot mutations (p.L858R and p.E746_A750del). Performance was low to moderate for tumor mutational burden (AUROC=0.67), APOBEC mutational signature (AUROC=0.57), and KRAS hotspot mutations (p.G12C: AUROC=0.74, p.G12V: AUROC=0.55, p.G12D: AUROC=0.43). Compared to results from established architectures such as Inception-v3 on the same WSIs, our model demonstrated significantly improved performance for most features. With further optimization, our model could support triaging for molecular testing and inform precision treatment strategies for NS-LUAD patients.",
+    "journal": "bioRxiv",
+    "year": 2025,
+    "authors": [
+     "Saha M",
+     "Tran TV",
+     "Bhawsar PM",
+     "Zhang T",
+     "Zhao W"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Preprint"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40894597/",
+    "score": 3,
+    "score_reasons": [
+     "exact mutation in abstract +1",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": false
+   },
+   {
     "pmid": "25862853",
     "title": "Afatinib is especially effective against non-small cell lung cancer carrying an EGFR exon 19 deletion",
     "abstract": "BACKGROUND: A recent pooled analysis of the LUX-LUNG3 and LUX-LUNG6 trials suggested that afatinib (an irreversible epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI)) is especially effective against non-small cell lung cancer (NSCLC) carrying an EGFR exon 19 deletion.\nMATERIALS AND METHODS: Stable viral transfectant HEK293 cell lines carrying an exon 19 deletion (HEK293/19 del) or exon 21 L858R mutation (HEK293/ L858R)) were created and their drug sensitivities to AG1478 (a reversible EGFR-TKI) and afatinib were examined using an MTT assay. Western blot analyses were performed to estimate the phosphorylation of EGFR.\nRESULTS: In the HEK293/19 del, the 50% inhibitory concentration (IC50) of afatinib was significantly lower than that in the HEK293/ L858R. In addition, afatinib inhibited the phosphorylation of EGFR to a greater degree in the HEK293/19 del than in the HEK293/L858R.\nCONCLUSION: Our experimental findings suggest that afatinib is especially effective against NSCLC carrying an EGFR exon 19 deletion.",
@@ -4762,56 +4796,6 @@
      "OCEBM level 5 (lab/animal only) +0",
      "exact mutation in abstract +1",
      "names a drug (Afatinib) +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
-    "pmid": "33051123",
-    "title": "Inter- and Intratumor Heterogeneity of EGFR Compound Mutations in Non-Small Cell Lung Cancers: Analysis of Five Cases",
-    "abstract": "BACKGROUND: Several clinical and preclinical studies suggest that non-small cell lung cancers (NSCLCs) with EGFR compound mutations were associated with lower efficacies of first-generation EGFR inhibitors than tumors with single EGFR mutation. Some researchers hypothesize that EGFR mutation status is heterogeneous in such tumors and that second-generation EGFR inhibitors may eliminate cancer cells with uncommon EGFR mutations from tumors with EGFR compound mutations. However, this hypothesis is currently unproven; therefore, we performed the current study to determine if tumor cells with EGFR compound mutations are present in heterogeneous or homogeneous manners.\nPATIENTS AND METHODS: Multiregion analysis was performed for surgically resected primary NSCLC tumors with EGFR compound mutations to examine the intratumor heterogeneity of EGFR compound mutations. In addition, we evaluated the intertumor heterogeneity of EGFR compound mutations using 2 pleural disseminations obtained from a patient with NSCLC at exploratory thoracotomy and 9 primary or metastatic lesions obtained from 2 autopsied NSCLC patients. Digital polymerase chain reaction, target sequencing, or direct sequencing were used to detect EGFR mutations.\nRESULTS: This study included 5 NSCLC cases; their compound mutations were L858R+S768I, G719X+S768I, G719A+R776H, L858R+E709G, and L858R+I759M. Noncancerous pulmonary tissues from each patient did not harbor EGFR mutations, which revealed that all mutations were somatic. We did not detect any intra- or intertumor heterogeneity in these EGFR compound mutations.\nCONCLUSION: No intra- or intertumor heterogeneity was observed for EGFR compound mutations. Our results indicate that both EGFR mutations were truncal and selective elimination of cancer cells with uncommon EGFR mutations is unrealistic.",
-    "journal": "Clin Lung Cancer",
-    "year": 2021,
-    "authors": [
-     "Suda K",
-     "Sakai K",
-     "Obata K",
-     "Ohara S",
-     "Fujino T"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33051123/",
-    "score": 3,
-    "score_reasons": [
-     "exact mutation in abstract +1",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
-    "pmid": "32031993",
-    "title": "Concordance in molecular genetic analysis of tumour tissue, plasma, and exhaled breath condensate samples from lung cancer patients",
-    "abstract": "AIM: Lung adenocarcinoma is characterized by poor prognosis and short survival rates. Therefore, tools to identify the tumoural molecular structure and guide effective diagnosis and therapy decisions are essential. Surgical biopsies are highly invasive and not conducive for patient follow-up. To better understand disease prognosis, novel non-invasive analytic methods are needed. The aim of the present study is to identify the genetic mutations in formalin-fixed paraffin-embedded (FFPE) tissue, plasma, and exhaled breath condensate (EBC) samples by next-generation sequencing and evaluate their utility in the diagnosis and follow-up of patients with lung adenocarcinoma.\nMETHOD: FFPE, plasma, and EBC samples were collected from 12 lung adenocarcinoma patients before treatment. DNA was extracted from the specimens using an Invitrogen PureLink Genomic DNA Kit according to the manufacturer's instructions. Amplicon-based sequencing was performed using Ion AmpliSeq Colon and Lung Cancer Research Panel v2.\nRESULTS: Genetic alterations were detected in all FFPE, plasma, and EBC specimens. The mutations in PIK3CA, MET, PTEN, SMAD4, and FGFR2 genes were highly correlated in six patients. Somatic and novel mutations detected in tissue and EBC samples were highly correlated in one additional patient. The EGFR p.L858R and KRAS p.G12C driver mutations were found in both the FFPE tissue specimens and the corresponding EBC samples of the lung adenocarcinoma patients.\nCONCLUSION: The driver mutations were detected in EBC samples from lung adenocarcinoma patients. The analysis of EBC samples represents a promising non-invasive method to detect mutations in lung cancer and guide diagnosis and follow-up.",
-    "journal": "J Breath Res",
-    "year": 2020,
-    "authors": [
-     "Tetik Vardarli A",
-     "Pelit L",
-     "Aldag C",
-     "Korba K",
-     "Celebi C"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/32031993/",
-    "score": 2,
-    "score_reasons": [
-     "exact mutation in abstract +1",
-     "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
    },
@@ -5005,6 +4989,31 @@
      "Research Support, Non-U.S. Gov't"
     ],
     "url": "https://pubmed.ncbi.nlm.nih.gov/32673682/",
+    "score": 2,
+    "score_reasons": [
+     "exact mutation in abstract +1",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "32031993",
+    "title": "Concordance in molecular genetic analysis of tumour tissue, plasma, and exhaled breath condensate samples from lung cancer patients",
+    "abstract": "AIM: Lung adenocarcinoma is characterized by poor prognosis and short survival rates. Therefore, tools to identify the tumoural molecular structure and guide effective diagnosis and therapy decisions are essential. Surgical biopsies are highly invasive and not conducive for patient follow-up. To better understand disease prognosis, novel non-invasive analytic methods are needed. The aim of the present study is to identify the genetic mutations in formalin-fixed paraffin-embedded (FFPE) tissue, plasma, and exhaled breath condensate (EBC) samples by next-generation sequencing and evaluate their utility in the diagnosis and follow-up of patients with lung adenocarcinoma.\nMETHOD: FFPE, plasma, and EBC samples were collected from 12 lung adenocarcinoma patients before treatment. DNA was extracted from the specimens using an Invitrogen PureLink Genomic DNA Kit according to the manufacturer's instructions. Amplicon-based sequencing was performed using Ion AmpliSeq Colon and Lung Cancer Research Panel v2.\nRESULTS: Genetic alterations were detected in all FFPE, plasma, and EBC specimens. The mutations in PIK3CA, MET, PTEN, SMAD4, and FGFR2 genes were highly correlated in six patients. Somatic and novel mutations detected in tissue and EBC samples were highly correlated in one additional patient. The EGFR p.L858R and KRAS p.G12C driver mutations were found in both the FFPE tissue specimens and the corresponding EBC samples of the lung adenocarcinoma patients.\nCONCLUSION: The driver mutations were detected in EBC samples from lung adenocarcinoma patients. The analysis of EBC samples represents a promising non-invasive method to detect mutations in lung cancer and guide diagnosis and follow-up.",
+    "journal": "J Breath Res",
+    "year": 2020,
+    "authors": [
+     "Tetik Vardarli A",
+     "Pelit L",
+     "Aldag C",
+     "Korba K",
+     "Celebi C"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32031993/",
     "score": 2,
     "score_reasons": [
      "exact mutation in abstract +1",
@@ -5572,6 +5581,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07738172",
     "score": 10,
     "score_reasons": [
@@ -5606,6 +5616,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06674343",
     "score": 8,
     "score_reasons": [
@@ -5640,6 +5651,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06350097",
     "score": 10,
     "score_reasons": [
@@ -5674,6 +5686,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07624487",
     "score": 7,
     "score_reasons": [
@@ -5709,6 +5722,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07448116",
     "score": 7,
     "score_reasons": [
@@ -5743,6 +5757,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07505173",
     "score": 7,
     "score_reasons": [
@@ -5776,6 +5791,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07295821",
     "score": 7,
     "score_reasons": [
@@ -5811,6 +5827,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07655622",
     "score": 7,
     "score_reasons": [
@@ -5844,6 +5861,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06296745",
     "score": 7,
     "score_reasons": [
@@ -5877,6 +5895,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06206850",
     "score": 7,
     "score_reasons": [
@@ -5912,6 +5931,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06574347",
     "score": 9,
     "score_reasons": [
@@ -5951,6 +5971,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05498428",
     "score": 7,
     "score_reasons": [
@@ -5988,6 +6009,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05281406",
     "score": 7,
     "score_reasons": [
@@ -6023,6 +6045,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06641609",
     "score": 6,
     "score_reasons": [
@@ -6054,6 +6077,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07837739",
     "score": 5,
     "score_reasons": [
@@ -6082,6 +6106,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07230691",
     "score": 5,
     "score_reasons": [
@@ -6118,6 +6143,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06053099",
     "score": 5,
     "score_reasons": [
@@ -6151,6 +6177,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06304441",
     "score": 7,
     "score_reasons": [
@@ -6180,6 +6207,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06068049",
     "score": 5,
     "score_reasons": [
@@ -6213,6 +6241,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06759857",
     "score": 10,
     "score_reasons": [
@@ -6247,6 +6276,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07438600",
     "score": 7,
     "score_reasons": [
@@ -6284,6 +6314,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07709585",
     "score": 7,
     "score_reasons": [
@@ -6322,6 +6353,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07285148",
     "score": 9,
     "score_reasons": [
@@ -6356,6 +6388,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06885840",
     "score": 7,
     "score_reasons": [
@@ -6391,6 +6424,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07177092",
     "score": 9,
     "score_reasons": [
@@ -6429,6 +6463,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07461727",
     "score": 6,
     "score_reasons": [
@@ -6465,6 +6500,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05338970",
     "score": 10,
     "score_reasons": [
@@ -6500,6 +6536,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04923906",
     "score": 10,
     "score_reasons": [
@@ -6537,6 +6574,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04988295",
     "score": 14,
     "score_reasons": [
@@ -6576,6 +6614,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04351555",
     "score": 13,
     "score_reasons": [
@@ -6612,6 +6651,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04035486",
     "score": 13,
     "score_reasons": [
@@ -6647,6 +6687,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03521154",
     "score": 13,
     "score_reasons": [
@@ -6683,6 +6724,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02511106",
     "score": 13,
     "score_reasons": [
@@ -6721,6 +6763,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02411448",
     "score": 13,
     "score_reasons": [
@@ -6756,6 +6799,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06827145",
     "score": 7,
     "score_reasons": [
@@ -6799,6 +6843,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05256290",
     "score": 7,
     "score_reasons": [
@@ -6833,6 +6878,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06268210",
     "score": 9,
     "score_reasons": [
@@ -6869,6 +6915,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04619004",
     "score": 13,
     "score_reasons": [
@@ -6910,6 +6957,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04676477",
     "score": 8,
     "score_reasons": [
@@ -6944,6 +6992,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03969823",
     "score": 4,
     "score_reasons": [
@@ -6976,6 +7025,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02514174",
     "score": 11,
     "score_reasons": [
@@ -7012,6 +7062,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04248829",
     "score": 13,
     "score_reasons": [
@@ -7051,6 +7102,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02296125",
     "score": 13,
     "score_reasons": [
@@ -7087,6 +7139,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05299125",
     "score": 7,
     "score_reasons": [
@@ -7124,6 +7177,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05263947",
     "score": 7,
     "score_reasons": [
@@ -7161,6 +7215,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02424617",
     "score": 10,
     "score_reasons": [
@@ -7200,6 +7255,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01532089",
     "score": 12,
     "score_reasons": [
@@ -7235,6 +7291,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01562028",
     "score": 10,
     "score_reasons": [
@@ -7270,6 +7327,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04541407",
     "score": 5,
     "score_reasons": [
@@ -7300,6 +7358,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04609319",
     "score": 9,
     "score_reasons": [
@@ -7334,6 +7393,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04874844",
     "score": 9,
     "score_reasons": [
@@ -7369,6 +7429,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02824458",
     "score": 8,
     "score_reasons": [
@@ -7402,6 +7463,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05962021",
     "score": 6,
     "score_reasons": [
@@ -7436,6 +7498,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04988607",
     "score": 8,
     "score_reasons": [
@@ -7470,6 +7533,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04882345",
     "score": 6,
     "score_reasons": [
@@ -7502,6 +7566,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04785742",
     "score": 5,
     "score_reasons": [
@@ -7535,6 +7600,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03486496",
     "score": 5,
     "score_reasons": [
@@ -7568,6 +7634,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03267654",
     "score": 7,
     "score_reasons": [
@@ -7600,6 +7667,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03424759",
     "score": 5,
     "score_reasons": [
@@ -7632,6 +7700,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01955421",
     "score": 7,
     "score_reasons": [
@@ -7661,6 +7730,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01775943",
     "score": 3,
     "score_reasons": [
@@ -7691,6 +7761,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01776684",
     "score": 3,
     "score_reasons": [
@@ -7722,6 +7793,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02695290",
     "score": 10,
     "score_reasons": [
@@ -7756,6 +7828,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04908956",
     "score": 6,
     "score_reasons": [
@@ -7789,6 +7862,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04099836",
     "score": 9,
     "score_reasons": [
@@ -7822,6 +7896,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02770014",
     "score": 9,
     "score_reasons": [
@@ -7857,6 +7932,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02349633",
     "score": 11,
     "score_reasons": [
@@ -7891,6 +7967,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03529084",
     "score": 8,
     "score_reasons": [
@@ -7925,6 +8002,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06417008",
     "score": 7,
     "score_reasons": [
@@ -7960,6 +8038,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07206498",
     "score": 4,
     "score_reasons": [
@@ -7992,6 +8071,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06221670",
     "score": 4,
     "score_reasons": [
@@ -8028,6 +8108,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06955988",
     "score": 3,
     "score_reasons": [
@@ -8073,6 +8154,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04025541",
     "score": 1,
     "score_reasons": [
@@ -8105,6 +8187,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06970782",
     "score": 7,
     "score_reasons": [
@@ -8136,6 +8219,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06772376",
     "score": 2,
     "score_reasons": [
@@ -8169,6 +8253,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06074588",
     "score": 7,
     "score_reasons": [
@@ -8203,6 +8288,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04504071",
     "score": 3,
     "score_reasons": [
@@ -8234,6 +8320,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04511533",
     "score": 3,
     "score_reasons": [
@@ -8268,6 +8355,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02273375",
     "score": 10,
     "score_reasons": [
@@ -8302,6 +8390,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT00373425",
     "score": 10,
     "score_reasons": [
@@ -8335,6 +8424,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03239340",
     "score": 7,
     "score_reasons": [
@@ -8369,6 +8459,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03647488",
     "score": 7,
     "score_reasons": [
@@ -8402,6 +8493,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03133546",
     "score": 9,
     "score_reasons": [
@@ -8436,6 +8528,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02108964",
     "score": 7,
     "score_reasons": [
@@ -8468,6 +8561,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01310036",
     "score": 7,
     "score_reasons": [
@@ -8500,6 +8594,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01260181",
     "score": 7,
     "score_reasons": [
@@ -8528,6 +8623,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04742192",
     "score": 2,
     "score_reasons": [
@@ -8557,6 +8653,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03219970",
     "score": 1,
     "score_reasons": [
@@ -8587,6 +8684,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02847377",
     "score": 1,
     "score_reasons": [
@@ -8613,6 +8711,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02321046",
     "score": 1,
     "score_reasons": [
@@ -8646,6 +8745,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05548348",
     "score": -2,
     "score_reasons": [
@@ -8680,6 +8780,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03420079",
     "score": 2,
     "score_reasons": [
@@ -8706,6 +8807,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01717105",
     "score": 0,
     "score_reasons": [],
@@ -8734,6 +8836,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01359436",
     "score": 0,
     "score_reasons": [],
@@ -8767,6 +8870,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03838848",
     "score": 2,
     "score_reasons": [
@@ -8798,6 +8902,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06032936",
     "score": 2,
     "score_reasons": [
@@ -8829,6 +8934,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06227897",
     "score": 3,
     "score_reasons": [
@@ -8866,6 +8972,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03481842",
     "score": 3,
     "score_reasons": [
@@ -8900,6 +9007,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02274012",
     "score": 2,
     "score_reasons": [
@@ -8930,6 +9038,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05959473",
     "score": 1,
     "score_reasons": [
@@ -9005,7 +9114,8 @@
    "search_urls": {
     "EGFR L858R": "https://clinicaltrials.gov/search?term=EGFR%20L858R",
     "EGFR L858Q": "https://clinicaltrials.gov/search?term=EGFR%20L858Q",
-    "EGFR L858": "https://clinicaltrials.gov/search?term=EGFR%20L858"
+    "EGFR L858": "https://clinicaltrials.gov/search?term=EGFR%20L858",
+    "rs121434568": "https://clinicaltrials.gov/search?term=rs121434568"
    }
   }
  },
@@ -10729,45 +10839,44 @@
  "treatments": {
   "rows": [
    {
-    "drug": "Amivantamab + Lazertinib",
-    "setting": "First-line locally advanced or metastatic NSCLC",
-    "outcome": "PFS 23.7 vs 16.6 months for osimertinib, 3-year OS 60% vs 51%",
+    "drug": "Aumolertinib",
+    "setting": "locally advanced or metastatic non-small-cell lung cancer",
+    "outcome": "PFS was significantly longer with aumolertinib compared with gefitinib (hazard ratio, 0.46; 95% CI, 0.36 to 0.60; P < .0001). The median PFS with aumolertinib was 19.3 months (95% CI, 17.8 to 20.8) versus 9.9 months with gefitinib (95% CI, 8.3 to 12.6).",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-A",
-    "escat_reason": "A randomized phase III trial showed statistically significant survival improvement compared to osimertinib.",
+    "escat_reason": "Randomized phase III trial demonstrates clinically meaningful survival (progression-free survival) improvement compared with gefitinib.",
     "evidence": [
      {
-      "source_id": "PMID:38924756",
-      "quote": "The median progression-free survival was significantly longer in the amivantamab-lazertinib group than in the osimertinib group (23.7 vs. 16.6 months; hazard ratio for disease progression or death, 0.70; 95% confidence interval [CI], 0.58 to 0.85; P<0.001).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38924756/"
+      "source_id": "PMID:35580297",
+      "quote": "The median PFS with aumolertinib was 19.3 months (95% CI, 17.8 to 20.8) versus 9.9 months with gefitinib (95% CI, 8.3 to 12.6).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35580297/"
      },
      {
-      "source_id": "PMID:40923797",
-      "quote": "amivantamab-lazertinib led to significantly longer overall survival than osimertinib (hazard ratio for death, 0.75; 95% confidence interval, 0.61 to 0.92; P = 0.005); 3-year overall survival was 60% and 51%, respectively.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40923797/"
+      "source_id": "NCT04923906",
+      "quote": "To assess the efficacy and safety of Aumolertinib plus chemotherapy versus Aumolertinib alone as first-line treatment in locally advanced or metastatic non-small cell lung cancer (NSCLC) with sensitizing epidermal growth factor receptor mutations (EGFRm+).",
+      "url": "https://clinicaltrials.gov/study/NCT04923906"
      }
     ],
-    "verified": true,
-    "warnings": []
+    "verified": false,
+    "warnings": [
+     "number(s) 0.46, 0.36, 0.60, 0001 not found in the quotes"
+    ]
    },
    {
-    "drug": "Osimertinib + Chemotherapy",
-    "setting": "First-line advanced NSCLC",
-    "outcome": "Median OS 47.5 vs 37.6 months for osimertinib monotherapy, 24-month PFS rate 57% vs 41%",
+    "drug": "Osimertinib with chemotherapy",
+    "setting": "advanced non-small-cell lung cancer",
+    "outcome": "Investigator-assessed progression-free survival was significantly longer in the osimertinib-chemotherapy group than in the osimertinib group (hazard ratio for disease progression or death, 0.62; 95% confidence interval [CI], 0.49 to 0.79; P<0.001).",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-A",
-    "escat_reason": "A prospective randomized phase 3 trial demonstrated a statistically significant overall survival benefit for the combination versus osimertinib monotherapy.",
+    "escat_reason": "A randomized phase 3 international trial shows statistically significant improvement in progression-free survival and overall survival with osimertinib plus chemotherapy.",
     "evidence": [
      {
-      "source_id": "PMID:41104938",
-      "quote": "The median overall survival was 47.5 months in the osimertinib plus platinum-pemetrexed group and 37.6 months in the osimertinib monotherapy group (hazard ratio for death, 0.77; 95% confidence interval, 0.61 to 0.96; P = 0.02).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41104938/"
-     },
-     {
       "source_id": "PMID:37937763",
-      "quote": "At 24 months, 57% (95% CI, 50 to 63) of the patients in the osimertinib-chemotherapy group and 41% (95% CI, 35 to 47) of those in the osimertinib group were alive and progression-free.",
+      "quote": "Investigator-assessed progression-free survival was significantly longer in the osimertinib-chemotherapy group than in the osimertinib group (hazard ratio for disease progression or death, 0.62; 95% confidence interval [CI], 0.49 to 0.79; P<0.001).",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37937763/"
      },
      {
@@ -10780,78 +10889,33 @@
     "warnings": []
    },
    {
-    "drug": "Osimertinib",
-    "setting": "Adjuvant stage IB-IIIA resected NSCLC",
-    "outcome": "4-year DFS rate 70% vs 29% for placebo in stage II-IIIA, overall DFS HR 0.27",
+    "drug": "Amivantamab plus lazertinib",
+    "setting": "locally advanced or metastatic non-small-cell lung cancer",
+    "outcome": "The median progression-free survival was significantly longer in the amivantamab-lazertinib group than in the osimertinib group (23.7 vs. 16.6 months; hazard ratio for disease progression or death, 0.70; 95% confidence interval [CI], 0.58 to 0.85; P<0.001).",
     "is_cancer": true,
     "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A randomized trial showed significant disease-free survival benefit over placebo in resected stage IB-IIIA EGFR-mutated NSCLC.",
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A phase 3 international randomized trial demonstrates significantly improved progression-free survival and overall survival compared with osimertinib.",
     "evidence": [
      {
-      "source_id": "PMID:36720083",
-      "quote": "In the overall population, DFS HR was 0.27 (95% CI, 0.21 to 0.34); 4-year DFS rate was 73% (osimertinib) and 38% (placebo).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/36720083/"
-     },
-     {
-      "source_id": "NCT02511106",
-      "quote": "To assess the efficacy and safety of AZD9291 versus Placebo, in patients with Epidermal Growth Factor Receptor Mutation Positive stage IB-IIIA non-small cell lung carcinoma, following complete tumour resection with or without adjuvant chemotherapy",
-      "url": "https://clinicaltrials.gov/study/NCT02511106"
+      "source_id": "PMID:38924756",
+      "quote": "The median progression-free survival was significantly longer in the amivantamab-lazertinib group than in the osimertinib group (23.7 vs. 16.6 months; hazard ratio for disease progression or death, 0.70; 95% confidence interval [CI], 0.58 to 0.85; P<0.001).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38924756/"
      }
     ],
-    "verified": false,
-    "warnings": [
-     "number(s) 70, 29 not found in the quotes"
-    ]
-   },
-   {
-    "drug": "Aumolertinib",
-    "setting": "First-line locally advanced or metastatic NSCLC",
-    "outcome": "Median PFS 19.3 vs 9.9 months for gefitinib, ORR 73.8%",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A prospective randomized phase III trial demonstrated significant progression-free survival benefit compared to gefitinib.",
-    "evidence": [
-     {
-      "source_id": "PMID:35580297",
-      "quote": "The median PFS with aumolertinib was 19.3 months (95% CI, 17.8 to 20.8) versus 9.9 months with gefitinib (95% CI, 8.3 to 12.6).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/35580297/"
-     }
-    ],
-    "verified": false,
-    "warnings": [
-     "number(s) 73.8 not found in the quotes"
-    ]
-   },
-   {
-    "drug": "Amivantamab + Chemotherapy (with or without Lazertinib)",
-    "setting": "Locally advanced or metastatic NSCLC after disease progression on osimertinib",
-    "outcome": "Median PFS 6.3 and 8.3 months vs 4.2 months for chemotherapy alone, ORR 64% and 63%",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A randomized phase III trial showed statistically significant improvement in progression-free survival compared to chemotherapy.",
-    "evidence": [
-     {
-      "source_id": "PMID:37879444",
-      "quote": "PFS was significantly longer for amivantamab-chemotherapy and amivantamab-lazertinib-chemotherapy versus chemotherapy [hazard ratio (HR) for disease progression or death 0.48 and 0.44, respectively; P < 0.001 for both; median of 6.3 and 8.3 versus 4.2 months, respectively].",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37879444/"
-     }
-    ],
-    "verified": false,
-    "warnings": [
-     "number(s) 64, 63 not found in the quotes"
-    ]
+    "verified": true,
+    "warnings": []
    },
    {
     "drug": "Lazertinib",
-    "setting": "First-line locally advanced or metastatic NSCLC",
-    "outcome": "Median PFS 20.6 vs 9.7 months for gefitinib, ORR 76%",
+    "setting": "locally advanced or metastatic non-small-cell lung cancer",
+    "outcome": "Median PFS was significantly longer with lazertinib than with gefitinib (20.6 v 9.7 months; hazard ratio [HR], 0.45; 95% CI, 0.34 to 0.58; P < .001).",
     "is_cancer": true,
     "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A randomized phase III trial demonstrated significantly superior progression-free survival compared with gefitinib.",
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A global phase III study shows significantly prolonged progression-free survival compared with gefitinib.",
     "evidence": [
      {
       "source_id": "PMID:37379502",
@@ -10864,23 +10928,65 @@
       "url": "https://clinicaltrials.gov/study/NCT04248829"
      }
     ],
-    "verified": false,
-    "warnings": [
-     "number(s) 76 not found in the quotes"
-    ]
+    "verified": true,
+    "warnings": []
    },
    {
-    "drug": "Ramucirumab + Erlotinib",
-    "setting": "First-line untreated metastatic NSCLC",
-    "outcome": "Median PFS 19.4 vs 12.4 months for placebo + erlotinib, median OS 51.1 vs 46.0 months",
+    "drug": "Dacomitinib",
+    "setting": "advanced non-small-cell lung cancer",
+    "outcome": "The hazard ratio (HR) for PFS with dacomitinib versus gefitinib was 0.509 (95 % confidence interval [CI]: 0.391-0.662; 1-sided p < 0.0001; median 16.5 months [95 % CI: 12.9-18.4] vs. 9.3 months [95 % CI: 9.2-11.0]).",
     "is_cancer": true,
     "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A randomized phase 3 trial demonstrated significant improvement in progression-free survival, though overall survival was not significantly improved.",
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "Randomized phase 3 trial shows significant progression-free survival and overall survival benefit compared with gefitinib.",
+    "evidence": [
+     {
+      "source_id": "PMID:33721611",
+      "quote": "The hazard ratio (HR) for PFS with dacomitinib versus gefitinib was 0.509 (95 % confidence interval [CI]: 0.391-0.662; 1-sided p < 0.0001; median 16.5 months [95 % CI: 12.9-18.4] vs. 9.3 months [95 % CI: 9.2-11.0]).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33721611/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Afatinib",
+    "setting": "metastatic lung adenocarcinoma",
+    "outcome": "Median PFS was 11.1 months for afatinib and 6.9 months for chemotherapy (hazard ratio [HR], 0.58; 95% CI, 0.43 to 0.78; P = .001).",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A phase III study demonstrates significantly prolonged progression-free survival compared with chemotherapy.",
+    "evidence": [
+     {
+      "source_id": "PMID:37235976",
+      "quote": "Median PFS was 11.1 months for afatinib and 6.9 months for chemotherapy (hazard ratio [HR], 0.58; 95% CI, 0.43 to 0.78; P = .001).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37235976/"
+     },
+     {
+      "source_id": "NCT02514174",
+      "quote": "Continuous treatment until progression or occurence of intolerable Adverse Event (AE) or end of trial. The end of trial is one year after the last patient has entered the study.",
+      "url": "https://clinicaltrials.gov/study/NCT02514174"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Ramucirumab plus erlotinib",
+    "setting": "metastatic non-small-cell lung cancer",
+    "outcome": "median progression-free survival: 19.4 versus 12.4 mo",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A global double-blind, placebo-controlled phase 3 study demonstrated statistically significant improvement in progression-free survival.",
     "evidence": [
      {
       "source_id": "PMID:39622410",
-      "quote": "RELAY, a global double-blind, placebo-controlled phase 3 study (NCT02411448) found statistically significant improvement in progression-free survival (primary end point) for ramucirumab (RAM) plus erlotinib (ERL) (RAM + ERL) in patients with untreated EGFR-mutated metastatic NSCLC (hazard ratio [HR] = 0.59, 95% confidence interval [CI]: 0.46-0.76, p < 0.0001; median progression-free survival: 19.4 versus 12.4 mo).",
+      "quote": "median progression-free survival: 19.4 versus 12.4 mo",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39622410/"
      },
      {
@@ -10889,101 +10995,78 @@
       "url": "https://clinicaltrials.gov/study/NCT02411448"
      }
     ],
-    "verified": false,
-    "warnings": [
-     "number(s) 51.1, 46.0 not found in the quotes"
-    ]
+    "verified": true,
+    "warnings": []
    },
    {
-    "drug": "Datopotamab Deruxtecan",
-    "setting": "Pretreated advanced or metastatic EGFR-mutated NSCLC",
-    "outcome": "Confirmed ORR 43%, median PFS 5.8 months, median OS 15.6 months",
+    "drug": "Datopotamab deruxtecan",
+    "setting": "advanced or metastatic non-small-cell lung cancer",
+    "outcome": "The confirmed objective response rate was 43% (95% confidence interval [CI]: 34-52), including five complete responses (4%). Median duration of response was 7.0 months (95% CI: 4.2-9.8).",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-B",
-    "escat_reason": "Pooled prospective trial data in pretreated EGFR-mutated patients demonstrated clinically meaningful response rates and survival.",
+    "escat_reason": "Data pooled from phase II and III trials show meaningful clinical activity in pretreated patients.",
     "evidence": [
      {
       "source_id": "PMID:40516821",
-      "quote": "The confirmed objective response rate was 43% (95% confidence interval [CI]: 34-52), including five complete responses (4%). Median duration of response was 7.0 months (95% CI: 4.2-9.8). Median progression-free survival and overall survival were 5.8 (95% CI: 5.4-8.2) and 15.6 months (95% CI: 13.1-19.0), respectively.",
+      "quote": "The confirmed objective response rate was 43% (95% confidence interval [CI]: 34-52), including five complete responses (4%).",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40516821/"
-     }
-    ],
-    "verified": true,
-    "warnings": []
-   },
-   {
-    "drug": "Dacomitinib",
-    "setting": "First-line advanced EGFR-mutated NSCLC",
-    "outcome": "Median PFS 14.7 vs 9.2 months for gefitinib",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "A prospective randomized phase 3 trial showed significantly improved progression-free survival compared to gefitinib.",
-    "evidence": [
+     },
      {
-      "source_id": "PMID:28958502",
-      "quote": "Median progression-free survival according to masked independent review was 14·7 months (95% CI 11·1-16·6) in the dacomitinib group and 9·2 months (9·1-11·0) in t",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/28958502/"
-     }
-    ],
-    "verified": true,
-    "warnings": []
-   },
-   {
-    "drug": "Erlotinib",
-    "setting": "First-line advanced EGFR-mutated NSCLC",
-    "outcome": "Median OS 13.7 months for L858R mutation in cfDNA vs 30.0 months for exon 19 deletion",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "Randomized phase 3 evidence confirmed superiority of erlotinib over chemotherapy in first-line EGFR-mutated NSCLC.",
-    "evidence": [
-     {
-      "source_id": "PMID:26181014",
-      "quote": "Median OS was shorter in patients with the L858R mutation in cfDNA than in those with the exon 19 deletion (13.7 [95% CI, 7.1-17.7] vs 30.0 [95% CI, 19.3-37.7] months; P < .001).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/26181014/"
-     }
-    ],
-    "verified": true,
-    "warnings": []
-   },
-   {
-    "drug": "Afatinib",
-    "setting": "First-line stage IIIB/IV EGFR-mutated lung adenocarcinoma",
-    "outcome": "Median PFS 11.1 vs 6.9 months for chemotherapy",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective randomized phase III trial showed significant progression-free survival benefit over standard chemotherapy.",
-    "evidence": [
-     {
-      "source_id": "PMID:37235976",
-      "quote": "Median PFS was 11.1 months for afatinib and 6.9 months for chemotherapy (hazard ratio [HR], 0.58; 95% CI, 0.43 to 0.78; P = .001).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37235976/"
-     }
-    ],
-    "verified": true,
-    "warnings": []
-   },
-   {
-    "drug": "Amivantamab + Lazertinib",
-    "setting": "Previously treated EGFR-mutant lung cancer with brain or leptomeningeal metastases",
-    "outcome": "ORR 50% in BrM cohort and 33% in LMD cohort, median PFS 5.8 and 7.8 months",
-    "is_cancer": true,
-    "ocebm_level": 3,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective phase 2 trial demonstrated objective antitumor responses and CNS benefit in pretreated EGFR-mutated lung cancer.",
-    "evidence": [
-     {
-      "source_id": "PMID:41139066",
-      "quote": "The ORR by a combination of Response Evaluation Criteria in Solid Tumors and Response Assessment in Neuro-Oncology brain metastases/Response Assessment in Neuro-Oncology leptomeningeal metastases was 50% (95% confidence interval [CI], 27%-73%) for patients with BrM and 33% (95% CI, 15%-57%) for patients with LMD, respectively.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41139066/"
+      "source_id": "NCT06350097",
+      "quote": "The purpose of this study is to evaluate efficacy and safety of osimertinib (tablet) in combination with Dato-DXd (i.v. infusion) compared with osimertinib (tablet) monotherapyas a first-line therapy in participants with locally advanced or metastatic EGFRm (Ex19del and/or L858R) NSCLC.",
+      "url": "https://clinicaltrials.gov/study/NCT06350097"
      }
     ],
     "verified": false,
     "warnings": [
-     "number(s) 5.8, 7.8 not found in the quotes"
+     "number(s) 7.0, 4.2, 9.8 not found in the quotes"
+    ]
+   },
+   {
+    "drug": "Zorifertinib",
+    "setting": "advanced non-small cell lung cancer",
+    "outcome": "Median PFS was significantly longer with zorifertinib versus control (9.6 versus 6.9 months; hazard ratio [HR], 0.719; 95% confidence interval [CI], 0.580-0.893; p = 0.0024).",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A phase 3 trial demonstrates significantly improved systemic progression-free survival compared to first-generation EGFR-TKIs.",
+    "evidence": [
+     {
+      "source_id": "PMID:39389055",
+      "quote": "Median PFS was significantly longer with zorifertinib versus control (9.6 versus 6.9 months; hazard ratio [HR], 0.719; 95% confidence interval [CI], 0.580-0.893; p = 0.0024).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39389055/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Amivantamab plus chemotherapy",
+    "setting": "refractory epidermal growth factor receptor (EGFR)-mutated advanced non-small-cell lung cancer",
+    "outcome": "Objective response rate was significantly higher for amivantamab-chemotherapy and amivantamab-lazertinib-chemotherapy versus chemotherapy (64% and 63% versus",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "A global phase III trial demonstrates significantly longer progression-free survival and higher response rate compared with chemotherapy.",
+    "evidence": [
+     {
+      "source_id": "PMID:37879444",
+      "quote": "Objective response rate was significantly higher for amivantamab-chemotherapy and amivantamab-lazertinib-chemotherapy versus chemotherapy (64% and 63% versus",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37879444/"
+     },
+     {
+      "source_id": "NCT04988295",
+      "quote": "The purpose of this study is to assess the efficacy of adding lazertinib to amivantamab, carboplatin, and pemetrexed (LACP/ACP-L dosing strategies) and amivantamab, carboplatin and pemetrexed (ACP) compared with carboplatin and pemetrexed (CP) in participants with locally advanced or metastatic epidermal growth factor receptor (EGFR) Exon 19del or Exon 21 L858R substitution non-small cell lung cancer (NSCLC) after osimertinib failure.",
+      "url": "https://clinicaltrials.gov/study/NCT04988295"
+     }
+    ],
+    "verified": false,
+    "warnings": [
+     "tier not supported: I-A needs a quote about survival"
     ]
    }
   ],

@@ -258,7 +258,7 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
         <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:divide-x md:divide-slate-900/10">
           <div className="px-4 py-8 sm:px-6">
             <p className="font-serif text-lg italic text-slate-500">Try a demo</p>
-            <p className="mt-1 text-xl text-slate-900">Three well-studied cancer mutations</p>
+            <p className="mt-1 text-xl text-slate-900">Three cancer mutations and a rare dementia gene</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {DEMOS.map((d) => (
                 <button key={d.rsid} type="button" onClick={() => onSearch(d.rsid)}

@@ -136,7 +136,13 @@ def _tier_problem(tier: str, docs: list[SourceDoc], quotes: list[str]) -> str | 
     return None
 
 
-def check_rows(rows: list[RawRow], sources: dict[str, SourceDoc]) -> TreatmentResults:
+def mentions_variant(text: str, variant_names: list[str]) -> bool:
+    """True if the text names the variant (e.g. 'E46K', 'p.Glu46Lys', 'rs104893875', 'Factor V Leiden')."""
+    return any(re.search(rf"(?<![0-9A-Za-z]){re.escape(n)}(?![0-9])", text, re.IGNORECASE) for n in variant_names if n)
+
+
+def check_rows(rows: list[RawRow], sources: dict[str, SourceDoc], variant_names: list[str] | None = None) -> TreatmentResults:
+    """variant_names (from the aliases) let us flag rows whose sources never mention this variant."""
     result = TreatmentResults()
     for row in rows:
         drug = (row.drug or "").strip() or "(unnamed)"
@@ -192,6 +198,7 @@ def check_rows(rows: list[RawRow], sources: dict[str, SourceDoc]) -> TreatmentRe
             outcome=row.outcome.strip(),
             is_cancer=cancer,
             ocebm_level=min(levels) if levels else None,
+            variant_specific=any(mentions_variant(d.text, variant_names) for d in docs) if variant_names else None,
             escat_tier=tier,
             escat_reason=((row.escat_reason or "").strip() or None) if cancer else None,
             evidence=evidence,

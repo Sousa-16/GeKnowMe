@@ -151,3 +151,11 @@ async def test_slow_attempt_times_out_and_falls_back(monkeypatch):
     out = await ai.call_gemini("p", client=client)
     assert out == GOOD
     assert client.aio.models.calls == [config.GEMINI_FALLBACK_MODEL]  # main never finished
+
+
+
+def test_disease_level_trials_never_reach_the_ai():
+    t = _trial()
+    t.sent_to_ai, t.disease_level, t.score_reasons = False, True, ["phase 2 +2"]
+    docs = ai.select_sources([_paper()], [t])
+    assert set(docs) == {"PMID:111"}

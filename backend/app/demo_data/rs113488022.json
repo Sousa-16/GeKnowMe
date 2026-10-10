@@ -1,6 +1,6 @@
 {
  "rsid": "rs113488022",
- "generated_at": "2026-10-10T23:15:14.636782+00:00",
+ "generated_at": "2026-10-10T23:46:01.076234+00:00",
  "variant": {
   "rsid": "rs113488022",
   "gene": "BRAF",
@@ -157,6 +157,9 @@
     "url": "https://www.ncbi.nlm.nih.gov/clinvar/RCV001354831/"
    }
   ],
+  "literature_names": [
+   "p.V600E"
+  ],
   "links": {
    "MyVariant": "https://myvariant.info/v1/variant/rs113488022",
    "ClinVar": "https://www.ncbi.nlm.nih.gov/clinvar/?term=rs113488022",
@@ -234,6 +237,13 @@
    "BRAF V600G",
    "BRAF V600A",
    "BRAF V600"
+  ],
+  "extra_trial_terms": [
+   "rs113488022"
+  ],
+  "fallback_trial_terms": [
+   "BRAF Carcinoma of colon (CRC)",
+   "BRAF Papillary thyroid carcinoma"
   ]
  },
  "papers": {
@@ -544,6 +554,36 @@
     "sent_to_ai": true
    },
    {
+    "pmid": "35026411",
+    "title": "Dabrafenib plus trametinib in patients with BRAF V600E-mutant anaplastic thyroid cancer: updated analysis from the phase II ROAR basket study",
+    "abstract": "BACKGROUND: Combined therapy with dabrafenib plus trametinib was approved in several countries for treatment of BRAF V600E-mutant anaplastic thyroid cancer (ATC) based on an earlier interim analysis of 23 response-assessable patients in the ATC cohort of the phase II Rare Oncology Agnostic Research (ROAR) basket study. We report an updated analysis describing the efficacy and safety of dabrafenib plus trametinib in the full ROAR ATC cohort of 36 patients with ∼4 years of additional study follow-up.\nPATIENTS AND METHODS: ROAR (NCT02034110) is an open-label, nonrandomized, phase II basket study evaluating dabrafenib plus trametinib in BRAF V600E-mutant rare cancers. The ATC cohort comprised 36 patients with unresectable or metastatic ATC who received dabrafenib 150 mg twice daily plus trametinib 2 mg once daily orally until disease progression, unacceptable toxicity, or death. The primary endpoint was investigator-assessed overall response rate (ORR) per Response Evaluation Criteria in Solid Tumors version 1.1. Secondary endpoints were duration of response (DOR), progression-free survival (PFS), overall survival (OS), and safety.\nRESULTS: At data cutoff (14 September 2020), median follow-up was 11.1 months (range, 0.9-76.6 months). The investigator-assessed ORR was 56% (95% confidence interval, 38.1% to 72.1%), including three complete responses; the 12-month DOR rate was 50%. Median PFS and OS were 6.7 and 14.5 months, respectively. The respective 12-month PFS and OS rates were 43.2% and 51.7%, and the 24-month OS rate was 31.5%. No new safety signals were identified with additional follow-up, and adverse events were consistent with the established tolerability of dabrafenib plus trametinib.\nCONCLUSIONS: These updated results confirm the substantial clinical benefit and manageable toxicity of dabrafenib plus trametinib in BRAF V600E-mutant ATC. Dabrafenib plus trametinib notably improved long-term survival and represents a meaningful treatment option for this rare, aggressive cancer.",
+    "journal": "Ann Oncol",
+    "year": 2022,
+    "authors": [
+     "Subbiah V",
+     "Kreitman RJ",
+     "Wainberg ZA",
+     "Cho JY",
+     "Schellens JHM"
+    ],
+    "publication_types": [
+     "Clinical Trial, Phase II",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35026411/",
+    "score": 12,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "names a drug (Dabrafenib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
     "pmid": "34838156",
     "title": "Dabrafenib plus trametinib in patients with BRAFV600E-mutant low-grade and high-grade glioma (ROAR): a multicentre, open-label, single-arm, phase 2, basket trial",
     "abstract": "BACKGROUND: Effective treatments are needed to improve outcomes for high-grade glioma and low-grade glioma. The activity and safety of dabrafenib plus trametinib were evaluated in adult patients with recurrent or progressive BRAFV600E mutation-positive high-grade glioma and low-grade glioma.\nMETHODS: This study is part of an ongoing open-label, single-arm, phase 2 Rare Oncology Agnostic Research (ROAR) basket trial at 27 community and academic cancer centres in 13 countries (Austria, Belgium, Canada, France, Germany, Italy, Japan, the Netherlands, Norway, South Korea, Spain, Sweden, and the USA). The study enrolled patients aged 18 years or older with an Eastern Cooperative Oncology Group performance status of 0, 1, or 2. Patients with BRAFV600E mutation-positive high-grade glioma and low-grade glioma received dabrafenib 150 mg twice daily plus trametinib 2 mg once daily orally until unacceptable toxicity, disease progression, or death. In the high-grade glioma cohort, patients were required to have measurable disease at baseline using the Response Assessment in Neuro-Oncology high-grade glioma response criteria and have been treated previously with radiotherapy and first-line chemotherapy or concurrent chemoradiotherapy. Patients with low-grade glioma were required to have measurable non-enhancing disease (except pilocytic astrocytoma) at baseline using the Response Assessment in Neuro-Oncology low-grade glioma criteria. The primary endpoint, in the evaluable intention-to-treat population, was investigator-assessed objective response rate (complete response plus partial response for high-grade glioma and complete response plus partial response plus minor response for low-grade glioma). This trial is ongoing, but is closed for enrolment, NCT02034110.\nFINDINGS: Between April 17, 2014, and July 25, 2018, 45 patients (31 with glioblastoma) were enrolled into the high-grade glioma cohort and 13 patients were enrolled into the low-grade glioma cohort. The results presented here are based on interim analysis 16 (data cutoff Sept 14, 2020). In the high-grade glioma cohort, median follow-up was 12·7 months (IQR 5·4-32·3) and 15 (33%; 95% CI 20-49) of 45 patients had an objective response by investigator assessment, including three complete responses and 12 partial responses. In the low-grade glioma cohort, median follow-up was 32·2 months (IQR 25·1-47·8). Nine (69%; 95% CI 39-91) of 13 patients had an objective response by investigator assessment, including one complete response, six partial responses, and two minor responses. Grade 3 or worse adverse events were reported in 31 (53%) patients, the most common being fatigue (five [9%]), decreased neutrophil count (five [9%]), headache (three [5%]), and neutropenia (three [5%]).\nINTERPRETATION: Dabrafenib plus trametinib showed clinically meaningful activity in patients with BRAFV600E mutation-positive recurrent or refractory high-grade glioma and low-grade glioma, with a safety profile consistent with that in other indications. BRAFV600E testing could potentially be adopted in clinical practice for patients with glioma.\nFUNDING: Novartis.",
@@ -564,36 +604,6 @@
      "Research Support, Non-U.S. Gov't"
     ],
     "url": "https://pubmed.ncbi.nlm.nih.gov/34838156/",
-    "score": 12,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in title +3",
-     "reports results with numbers +2",
-     "names a drug (Dabrafenib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
-    "pmid": "35026411",
-    "title": "Dabrafenib plus trametinib in patients with BRAF V600E-mutant anaplastic thyroid cancer: updated analysis from the phase II ROAR basket study",
-    "abstract": "BACKGROUND: Combined therapy with dabrafenib plus trametinib was approved in several countries for treatment of BRAF V600E-mutant anaplastic thyroid cancer (ATC) based on an earlier interim analysis of 23 response-assessable patients in the ATC cohort of the phase II Rare Oncology Agnostic Research (ROAR) basket study. We report an updated analysis describing the efficacy and safety of dabrafenib plus trametinib in the full ROAR ATC cohort of 36 patients with ∼4 years of additional study follow-up.\nPATIENTS AND METHODS: ROAR (NCT02034110) is an open-label, nonrandomized, phase II basket study evaluating dabrafenib plus trametinib in BRAF V600E-mutant rare cancers. The ATC cohort comprised 36 patients with unresectable or metastatic ATC who received dabrafenib 150 mg twice daily plus trametinib 2 mg once daily orally until disease progression, unacceptable toxicity, or death. The primary endpoint was investigator-assessed overall response rate (ORR) per Response Evaluation Criteria in Solid Tumors version 1.1. Secondary endpoints were duration of response (DOR), progression-free survival (PFS), overall survival (OS), and safety.\nRESULTS: At data cutoff (14 September 2020), median follow-up was 11.1 months (range, 0.9-76.6 months). The investigator-assessed ORR was 56% (95% confidence interval, 38.1% to 72.1%), including three complete responses; the 12-month DOR rate was 50%. Median PFS and OS were 6.7 and 14.5 months, respectively. The respective 12-month PFS and OS rates were 43.2% and 51.7%, and the 24-month OS rate was 31.5%. No new safety signals were identified with additional follow-up, and adverse events were consistent with the established tolerability of dabrafenib plus trametinib.\nCONCLUSIONS: These updated results confirm the substantial clinical benefit and manageable toxicity of dabrafenib plus trametinib in BRAF V600E-mutant ATC. Dabrafenib plus trametinib notably improved long-term survival and represents a meaningful treatment option for this rare, aggressive cancer.",
-    "journal": "Ann Oncol",
-    "year": 2022,
-    "authors": [
-     "Subbiah V",
-     "Kreitman RJ",
-     "Wainberg ZA",
-     "Cho JY",
-     "Schellens JHM"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase II",
-     "Journal Article",
-     "Research Support, N.I.H., Extramural",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/35026411/",
     "score": 12,
     "score_reasons": [
      "OCEBM level 3 (non-randomized trial / cohort) +3",
@@ -1349,6 +1359,38 @@
     "sent_to_ai": false
    },
    {
+    "pmid": "37581616",
+    "title": "Molecular Results and Potential Biomarkers Identified from the Phase 3 MILO/ENGOT-ov11 Study of Binimetinib versus Physician Choice of Chemotherapy in Recurrent Low-Grade Serous Ovarian Cancer",
+    "abstract": "PURPOSE: We present the results of a post hoc tumor tissue analysis from the phase 3 MILO/ENGOT-ov11 study (NCT01849874).\nPATIENTS AND METHODS: Mutation/copy-number analysis was performed on tissue obtained pre-randomization. The Kaplan-Meier method was used to estimate progression-free survival (PFS). Unbiased univariate analysis, Cox regression, and binary logistic regression were used to test associations between mutation status and outcomes, including PFS and binary response by local RECIST 1.1.\nRESULTS: MILO/ENGOT-ov11 enrolled 341 patients, ranging in age from 22 to 79, from June, 2013 to April, 2016. Patients were randomized 2:1 to binimetinib or physician's choice of chemotherapy (PCC). The most commonly altered gene was KRAS (33%). In 135 patients treated with binimetinib with response rate (RR) data, other detected MAPK pathway alterations included: NRAS (n = 11, 8.1%), BRAF V600E (n = 8, 5.9%), RAF1 (n = 2, 1.5%), and NF1 (n = 7, 5.2%). In those with and without MAPK pathway alterations, the RRs with binimetinib were 41% and 13%, respectively. PFS was significantly longer in patients with, compared with those without, MAPK pathway alterations treated with binimetinib [HR, 0.5; 95% confidence interval (CI) 0.31-0.79]. There was a nonsignificant trend toward PFS improvement in PCC-treated patients with MAPK pathway alterations compared with those without (HR, 0.82; 95% CI, 0.43-1.59).\nCONCLUSIONS: Although this hypothesis-generating analysis is limited by multiple testing, higher RRs and longer PFS were seen in patients with low-grade serous ovarian cancer (LGSOC) treated with binimetinib, and to a lesser extent in those treated with PCC, who harbored MAPK pathway alterations. Somatic tumor testing should be routinely considered in patients with LGSOC and used as a future stratification factor.",
+    "journal": "Clin Cancer Res",
+    "year": 2023,
+    "authors": [
+     "Grisham RN",
+     "Vergote I",
+     "Banerjee S",
+     "Drill E",
+     "Kalbacher E"
+    ],
+    "publication_types": [
+     "Clinical Trial, Phase III",
+     "Journal Article",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Research Support, Non-U.S. Gov't",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37581616/",
+    "score": 11,
+    "score_reasons": [
+     "OCEBM level 2 (randomized trial) +4",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (Binimetinib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
     "pmid": "36252154",
     "title": "Treatment of Metastatic Colorectal Cancer: ASCO Guideline",
     "abstract": "PURPOSE: To develop recommendations for treatment of patients with metastatic colorectal cancer (mCRC).\nMETHODS: ASCO convened an Expert Panel to conduct a systematic review of relevant studies and develop recommendations for clinical practice.\nRESULTS: Five systematic reviews and 10 randomized controlled trials met the systematic review inclusion criteria.\nRECOMMENDATIONS: Doublet chemotherapy should be offered, or triplet therapy may be offered to patients with previously untreated, initially unresectable mCRC, on the basis of included studies of chemotherapy in combination with anti-vascular endothelial growth factor antibodies. In the first-line setting, pembrolizumab is recommended for patients with mCRC and microsatellite instability-high or deficient mismatch repair tumors; chemotherapy and anti-epidermal growth factor receptor therapy is recommended for microsatellite stable or proficient mismatch repair left-sided treatment-naive RAS wild-type mCRC; chemotherapy and anti-vascular endothelial growth factor therapy is recommended for microsatellite stable or proficient mismatch repair RAS wild-type right-sided mCRC. Encorafenib plus cetuximab is recommended for patients with previously treated BRAF V600E-mutant mCRC that has progressed after at least one previous line of therapy. Cytoreductive surgery plus systemic chemotherapy may be recommended for selected patients with colorectal peritoneal metastases; however, the addition of hyperthermic intraperitoneal chemotherapy is not recommended. Stereotactic body radiation therapy may be recommended following systemic therapy for patients with oligometastases of the liver who are not considered candidates for resection. Selective internal radiation therapy is not routinely recommended for patients with unilobar or bilobar metastases of the liver. Perioperative chemotherapy or surgery alone should be offered to patients with mCRC who are candidates for potentially curative resection of liver metastases. Multidisciplinary team management and shared decision making are recommended. Qualifying statements with further details related to implementation of guideline recommendations are also included.Additional information is available at www.asco.org/gastrointestinal-cancer-guidelines.",
@@ -1820,37 +1862,6 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "33947696",
-    "title": "Phase I-II Open-Label Multicenter Study of Palbociclib + Vemurafenib in BRAF V600MUT Metastatic Melanoma Patients: Uncovering CHEK2 as a Major Response Mechanism",
-    "abstract": "PURPOSE: In BRAF V600MUT metastatic melanoma, cyclin D-CDK4/6-INK4-Rb pathway alterations are involved in resistance to MAPK inhibitors, suggesting a clinical benefit of cyclin-dependent kinase 4 (CDK4) inhibitors. In this phase I-II study, we aimed to establish the MTD of palbociclib when added to vemurafenib.\nPATIENTS AND METHODS: Patients with BRAF V600E/KMUT metastatic melanoma harboring CDKN2A loss and RB1 expression were included and stratified into two groups according to previous BRAF inhibitor treatment (no:strata 1; yes:strata 2). Treatment comprised palbociclib once daily for 14 days followed by a 7-day break + continuous dosing of vemurafenib. The primary endpoint was the occurrence of dose-limiting toxicity (DLT), and the secondary endpoints included the best response, survival, pharmacokinetics, and tumor molecular profiling.\nRESULTS: Eighteen patients were enrolled, with 15 in strata 2. Characteristics at inclusion were American Joint Committee on Cancer stage IVM1c (N = 16; 88.9%), high lactate dehydrogenase (N = 9; 50.0%), and median number of previous treatments of 2. One and 5 patients experienced DLT in strata 1 and 2, respectively, defining the MTD at palbociclib 25 mg and vemurafenib 960 mg in strata 2. No significant evidence for drug-drug interactions was highlighted. The median progression-free survival was 2.8 months, and 5 (27.8%) patients showed a clinical response. The baseline differential mRNA expression analysis and in vitro data revealed the role of CHEK2 in the response to palbociclib.\nCONCLUSIONS: Although the combination of palbociclib + fixed-dose vemurafenib did not allow an increased palbociclib dosage above 25 mg, a significant clinical benefit was achieved in pretreated patients with melanoma. An association between the transcriptomic data and clinical response was highlighted.",
-    "journal": "Clin Cancer Res",
-    "year": 2021,
-    "authors": [
-     "Louveau B",
-     "Resche-Rigon M",
-     "Lesimple T",
-     "Da Meda L",
-     "Pracht M"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase I",
-     "Clinical Trial, Phase II",
-     "Journal Article",
-     "Multicenter Study",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33947696/",
-    "score": 10,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (vemurafenib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "32877599",
     "title": "Five-Year Analysis of Adjuvant Dabrafenib plus Trametinib in Stage III Melanoma",
     "abstract": "BACKGROUND: In the previously reported primary analysis of this phase 3 trial, 12 months of adjuvant dabrafenib plus trametinib resulted in significantly longer relapse-free survival than placebo in patients with resected stage III melanoma with BRAF V600E or V600K mutations. To confirm the stability of the relapse-free survival benefit, longer-term data were needed.\nMETHODS: We randomly assigned 870 patients who had resected stage III melanoma with BRAF V600E or V600K mutations to receive 12 months of oral dabrafenib (at a dose of 150 mg twice daily) plus trametinib (2 mg once daily) or two matched placebos. The primary end point was relapse-free survival. Here, we report 5-year results for relapse-free survival and survival without distant metastasis as the site of the first relapse. Overall survival was not analyzed, since the required number of events to trigger the final overall survival analysis had not been reached.\nRESULTS: The minimum duration of follow-up was 59 months (median patient follow-up, 60 months for dabrafenib plus trametinib and 58 months for placebo). At 5 years, the percentage of patients who were alive without relapse was 52% (95% confidence interval [CI], 48 to 58) with dabrafenib plus trametinib and 36% (95% CI, 32 to 41) with placebo (hazard ratio for relapse or death, 0.51; 95% CI, 0.42 to 0.61). The percentage of patients who were alive without distant metastasis was 65% (95% CI, 61 to 71) with dabrafenib plus trametinib and 54% (95% CI, 49 to 60) with placebo (hazard ratio for distant metastasis or death, 0.55; 95% CI, 0.44 to 0.70). No clinically meaningful between-group difference in the incidence or severity of serious adverse events was reported during the follow-up period.\nCONCLUSIONS: In the 5-year follow-up of a phase 3 trial involving patients who had resected stage III melanoma with BRAF V600E or V600K mutations, 12 months of adjuvant therapy with dabrafenib plus trametinib resulted in a longer duration of survival without relapse or distant metastasis than placebo with no apparent long-term toxic effects. (Funded by GlaxoSmithKline and Novartis; COMBI-AD ClinicalTrials.gov number, NCT01682083; EudraCT number, 2012-001266-15.).",
@@ -2268,35 +2279,6 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "28879519",
-    "title": "Safety, tolerability, and pharmacokinetic profile of dabrafenib in Japanese patients with BRAF V600 mutation-positive solid tumors: a phase 1 study",
-    "abstract": "Background Dabrafenib is a BRAF inhibitor that has demonstrated clinical activity with a good tolerability profile in patients with BRAF V600E mutated metastatic melanoma. This study evaluated the safety and tolerability, pharmacokinetics and preliminary efficacy of dabrafenib in Japanese patients. Methods This phase I, open-label, dose escalation study was conducted in 12 Japanese patients with BRAF V600 mutation positive solid tumours. Primary endpoint was safety, assessed by monitoring and recording of all adverse events (AEs), serious AEs, drug-related AEs; secondary endpoints were pharmacokinetic profiles and efficacy measured by tumour response. This study is registered with ClinicalTrials.gov, number NCT01582997. Results Of the 12 patients enrolled, 3 each received 75 mg and 100 mg dabrafenib while 6 received 150 mg dabrafenib twice daily orally. Melanoma and thyroid cancer were the primary tumours reported in 11 (92%) and 1 (8%) patients respectively. Most AEs were grade 1 or 2 and considered related to study treatment. Most common AEs reported in the 12 patients were alopecia in 7 (58%); pyrexia, arthralgia and leukopenia in 6 (50%) each, hyperkeratosis and nausea in 4 (33%) each. Partial response as best overall response was reported in 7 of 12 (58%) patients and in 6 (55%) with malignant melanoma. No dose-limiting toxicity (DLTs) were reported during the DLT evaluation periods. Conclusions Dabrafenib was well tolerated and rapidly absorbed administered as single- or multiple dose. Comparable safety and pharmacokinetic profiles were observed compared with non-Japanese patients. Dabrafenib has promising clinical activity in Japanese patients with BRAF mutated malignant melanoma.",
-    "journal": "Invest New Drugs",
-    "year": 2018,
-    "authors": [
-     "Fujiwara Y",
-     "Yamazaki N",
-     "Kiyohara Y",
-     "Yoshikawa S",
-     "Yamamoto N"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase I",
-     "Journal Article",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28879519/",
-    "score": 9,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (Dabrafenib) +2",
-     "published 5-10 years ago +1"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "25794603",
     "title": "Health-related quality of life impact in a randomised phase III study of the combination of dabrafenib and trametinib versus dabrafenib monotherapy in patients with BRAF V600 metastatic melanoma",
     "abstract": "AIM: To present the impact of treatments on health-related quality of life (HRQoL) from the double-blind, randomised phase III COMBI-d study that investigated the combination of dabrafenib and trametinib versus dabrafenib monotherapy in patients with BRAF V600E/K-mutant metastatic melanoma. COMBI-d showed significantly prolonged progression-free survival for the combination.\nMETHODS: HRQoL was evaluated using the European Organisation for Research and Treatment of Cancer Quality of Life Questionnaire-C30, a generic cancer questionnaire (completed at baseline, during study treatment, at progression and post progression) assessing various dimensions (global health/QoL, functional status, and symptom impact). A mixed-model, repeated-measures analyses of covariance evaluated differences between arms.\nRESULTS: Questionnaire completion rates were >95% at baseline, >85% to week 40 and >70% at disease progression. Baseline scores across both arms were comparable for all dimensions. Global health dimension scores were significantly better at weeks 8, 16 and 24 for patients receiving the combination during treatment and at progression. The majority of functional dimension scores (physical, social, role, emotional and cognitive functioning) trended in favour of the combination. Pain scores were significantly improved and clinically meaningful (6-13 point difference) for patients receiving the combination for all follow-up assessments versus those receiving dabrafenib monotherapy. For other symptom dimensions (nausea and vomiting, diarrhoea, dyspnoea, and constipation), scores trended in favour of dabrafenib monotherapy.\nCONCLUSION: This analysis demonstrates that the combination of dabrafenib and trametinib provides better preservation of HRQoL and pain improvements versus dabrafenib monotherapy while also delaying progression. (Clinicaltrials.gov registration number: NCT01584648).",
@@ -2523,36 +2505,6 @@
     "sent_to_ai": false
    },
    {
-    "pmid": "26352686",
-    "title": "Targeting Mutant BRAF in Relapsed or Refractory Hairy-Cell Leukemia",
-    "abstract": "BACKGROUND: BRAF V600E is the genetic lesion underlying hairy-cell leukemia. We assessed the safety and activity of the oral BRAF inhibitor vemurafenib in patients with hairy-cell leukemia that had relapsed after treatment with a purine analogue or who had disease that was refractory to purine analogues.\nMETHODS: We conducted two phase 2, single-group, multicenter studies of vemurafenib (at a dose of 960 mg twice daily)--one in Italy and one in the United States. The therapy was administered for a median of 16 weeks in the Italian study and 18 weeks in the U.S. study. Primary end points were the complete response rate (in the Italian trial) and the overall response rate (in the U.S. trial). Enrollment was completed (28 patients) in the Italian trial in April 2013 and is still open (26 of 36 planned patients) in the U.S. trial.\nRESULTS: The overall response rates were 96% (25 of 26 patients who could be evaluated) after a median of 8 weeks in the Italian study and 100% (24 of 24) after a median of 12 weeks in the U.S. study. The rates of complete response were 35% (9 of 26 patients) and 42% (10 of 24) in the two trials, respectively. In the Italian trial, after a median follow-up of 23 months, the median relapse-free survival was 19 months among patients with a complete response and 6 months among those with a partial response; the median treatment-free survival was 25 months and 18 months, respectively. In the U.S. trial, at 1 year, the progression-free survival rate was 73% and the overall survival rate was 91%. Drug-related adverse events were usually of grade 1 or 2, and the events most frequently leading to dose reductions were rash and arthralgia or arthritis. Secondary cutaneous tumors (treated with simple excision) developed in 7 of 50 patients. The frequent persistence of phosphorylated ERK-positive leukemic cells in bone marrow at the end of treatment suggests bypass reactivation of MEK and ERK as a resistance mechanism.\nCONCLUSIONS: A short oral course of vemurafenib was highly effective in patients with relapsed or refractory hairy-cell leukemia. (Funded by the Associazione Italiana per la Ricerca sul Cancro and others; EudraCT number, 2011-005487-13; ClinicalTrials.gov number NCT01711632.).",
-    "journal": "N Engl J Med",
-    "year": 2015,
-    "authors": [
-     "Tiacci E",
-     "Park JH",
-     "De Carolis L",
-     "Chung SS",
-     "Broccoli A"
-    ],
-    "publication_types": [
-     "Clinical Trial, Phase II",
-     "Journal Article",
-     "Multicenter Study",
-     "Research Support, N.I.H., Extramural",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26352686/",
-    "score": 8,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (vemurafenib) +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "23463675",
     "title": "The somatic affairs of BRAF: tailored therapies for advanced malignant melanoma and orphan non-V600E (V600R-M) mutations",
     "abstract": "BRAF V600R-M-D are uncommon mutations, not included in the experimental protocols of BRAF selective inhibitors. We report the evaluation of correlations among different types of BRAF somatic mutations in melanoma and their management with BRAF inhibitors. 21 patients with BRAF mutated metastatic melanoma were enrolled in the protocol with BRAF inhibitors for compassionate use at the University of Modena. Hot spot V600E mutations were found in 19 patients. V600R mutation and double (V600E -V600M) mutation were identified in two melanomas. In one case, V600K mutation was found. Two screening failures were noted. Mean progression free survival at follow-up of to 8 weeks, was 7.6 months. Five patients had a very short follow-up and the experimental protocol is still ongoing, so we cannot provide complete follow-up data. However, all of them are still under treatment and disease progression free. An objective response with few side effects was observed in all patients. in vitro studies with the aim of testing drug sensitivity.",
@@ -2570,6 +2522,61 @@
      "Journal Article"
     ],
     "url": "https://pubmed.ncbi.nlm.nih.gov/23463675/",
+    "score": 8,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in title +3",
+     "reports results with numbers +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
+    "pmid": "41980020",
+    "title": "Updated consensus guidelines for the diagnosis and management of patients with HCL and HCL variant",
+    "abstract": "Hairy cell leukemia (HCL) and HCL variant (HCLv) are distinct, rare, and chronic splenic B-cell lymphomas/leukemias that partially overlap in clinicopathologic presentation but differ in genetic basis, prognosis, and management. HCL is caused by the BRAF-V600E kinase-activating mutation in >95% of the patients, usually has excellent responses to chemotherapy with purine analogues, and is also amenable to BRAF inhibitor-based targeted treatments. In contrast, HCLv lacks BRAFV600E mutation, requires combined therapy with purine analogues in addition to rituximab, and generally shows less durable responses. Here, an international team of hematologists, experts on these rare diseases, was convened by the Hairy Cell Leukemia Foundation to update the previous guidelines (published in 2017) by providing a summary of current methods to diagnose and manage patients with HCL and HCLv as well as a prospective on newer targeted therapies to further improve outcomes.",
+    "journal": "Blood",
+    "year": 2026,
+    "authors": [
+     "Zent CS",
+     "Tiacci E",
+     "Kreitman RJ",
+     "Tadmor T",
+     "Tallman MS"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Review",
+     "Practice Guideline"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41980020/",
+    "score": 8,
+    "score_reasons": [
+     "guideline +3",
+     "exact mutation in abstract +1",
+     "names a drug (rituximab) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
+    "pmid": "24677749",
+    "title": "BRAF V600E mutational status in pediatric thyroid cancer",
+    "abstract": "BACKGROUND: Clinical outcome of papillary thyroid carcinoma (PTC) in children differs significantly from that of adults. There is no clear explanation of this difference although previous studies have demonstrated a lower prevalence of the BRAF(V600E) mutation in PTC of children. However, data are limited due to the rarity of this diagnosis. BRAF(V600E) mutation prevalence and its relationship with outcome in pediatric PTC remain unclear.\nPROCEDURE: BRAF(V600E) mutational status was determined in 27 PTC patients less than 22 years of age using restriction fragment length polymorphism (RFLP) analysis. The relationship between BRAF(V600E) mutation status, patient and tumor characteristics as well as progression-free survival (PFS) were analyzed.\nRESULTS: BRAF(V600E) was present in 63% of patients and occurred more often in male patients versus females (P = 0.033). Presence of the mutation did not correlate with any difference in extent of disease at diagnosis, tumor size, capsular invasion, vascular invasion, soft tissue invasion, or margin status. At 10 years, PFS for BRAF(V600E) positive versus negative patients was 55.5% versus 70.0%, respectively (P = 0.48). Overall survival was 100% and median follow-up was 13.9 years.\nCONCLUSIONS: This study of pediatric PTC demonstrates that BRAF(V600E) mutations occur in children at a rate comparable to adults. We found a correlation of BRAF(V600E) with the male gender, but no evidence that the mutation correlates with more extensive or aggressive disease. This analysis suggests that differences in disease course of PTC in children versus adults are not strongly dependent upon the presence of the BRAF(V600E) mutation.",
+    "journal": "Pediatr Blood Cancer",
+    "year": 2014,
+    "authors": [
+     "Henke LE",
+     "Perkins SM",
+     "Pfeifer JD",
+     "Ma C",
+     "Chen Y"
+    ],
+    "publication_types": [
+     "Clinical Trial",
+     "Comparative Study",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24677749/",
     "score": 8,
     "score_reasons": [
      "OCEBM level 3 (non-randomized trial / cohort) +3",
@@ -2716,7 +2723,7 @@
      "exact mutation in abstract +1",
      "names a drug (Trametinib) +2"
     ],
-    "sent_to_ai": true
+    "sent_to_ai": false
    },
    {
     "pmid": "29217530",
@@ -2745,7 +2752,7 @@
      "reports results with numbers +2",
      "published 5-10 years ago +1"
     ],
-    "sent_to_ai": true
+    "sent_to_ai": false
    },
    {
     "pmid": "30572540",
@@ -2772,7 +2779,7 @@
      "reports results with numbers +2",
      "published 5-10 years ago +1"
     ],
-    "sent_to_ai": true
+    "sent_to_ai": false
    },
    {
     "pmid": "26310975",
@@ -3171,33 +3178,6 @@
     "score_reasons": [
      "OCEBM level 2 (randomized trial) +4",
      "exact mutation in abstract +1"
-    ],
-    "sent_to_ai": false
-   },
-   {
-    "pmid": "30545990",
-    "title": "NCCN Guidelines Insights: Thyroid Carcinoma, Version 2.2018",
-    "abstract": "The NCCN Guidelines for Thyroid Carcinoma provide recommendations for the management of different types of thyroid carcinoma, including papillary, follicular, Hürthle cell, medullary, and anaplastic carcinomas. These NCCN Guidelines Insights summarize the panel discussion behind recent updates to the guidelines, including the expanding role of molecular testing for differentiated thyroid carcinoma, implications of the new pathologic diagnosis of noninvasive follicular thyroid neoplasm with papillary-like nuclear features, and the addition of a new targeted therapy option for BRAF V600E-mutated anaplastic thyroid carcinoma.",
-    "journal": "J Natl Compr Canc Netw",
-    "year": 2018,
-    "authors": [
-     "Haddad RI",
-     "Nasr C",
-     "Bischoff L",
-     "Busaidy NL",
-     "Byrd D"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Practice Guideline",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30545990/",
-    "score": 5,
-    "score_reasons": [
-     "guideline +3",
-     "exact mutation in abstract +1",
-     "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
    },
@@ -3772,6 +3752,32 @@
     "sent_to_ai": false
    },
    {
+    "pmid": "22870241",
+    "title": "High-throughput genotyping in metastatic esophageal squamous cell carcinoma identifies phosphoinositide-3-kinase and BRAF mutations",
+    "abstract": "BACKGROUND: Given the high incidence of metastatic esophageal squamous cell carcinoma, especially in Asia, we screened for the presence of somatic mutations using OncoMap platform with the aim of defining subsets of patients who may be potential candidate for targeted therapy.\nMETHODS AND MATERIALS: We analyzed 87 tissue specimens obtained from 80 patients who were pathologically confirmed with esophageal squamous cell carcinoma and received 5-fluoropyrimidine/platinum-based chemotherapy. OncoMap 4.0, a mass-spectrometry based assay, was used to interrogate 471 oncogenic mutations in 41 commonly mutated genes. Tumor specimens were prepared from primary cancer sites in 70 patients and from metastatic sites in 17 patients. In order to test the concordance between primary and metastatic sites from the patient for mutations, we analyzed 7 paired (primary-metastatic) specimens. All specimens were formalin-fixed paraffin embedded tissues and tumor content was >70%.\nRESULTS: In total, we have detected 20 hotspot mutations out of 80 patients screened. The most frequent mutation was PIK3CA mutation (four E545K, five H1047R and one H1047L) (N = 10, 11.5%) followed by MLH1 V384D (N = 7, 8.0%), TP53 (R306, R175H and R273C) (N = 3, 3.5%), BRAF V600E (N = 1, 1.2%), CTNNB1 D32N (N = 1, 1.2%), and EGFR P733L (N = 1, 1.2%). Distributions of somatic mutations were not different according to anatomic sites of esophageal cancer (cervical/upper, mid, lower). In addition, there was no difference in frequency of mutations between primary-metastasis paired samples.\nCONCLUSIONS: Our study led to the detection of potentially druggable mutations in esophageal SCC which may guide novel therapies in small subsets of esophageal cancer patients.",
+    "journal": "PLoS One",
+    "year": 2012,
+    "authors": [
+     "Maeng CH",
+     "Lee J",
+     "van Hummelen P",
+     "Park SH",
+     "Palescandolo E"
+    ],
+    "publication_types": [
+     "Clinical Trial",
+     "Journal Article",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22870241/",
+    "score": 4,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
     "pmid": "26005817",
     "title": "Molecular analysis of sporadic colon cancer",
     "abstract": "BACKGROUND: In Chile, colorectal cancer (CRC) is often diagnosed in late stages. Thus, surgical treatment must be complemented with chemotherapy. KRAS mutations and microsatellite instability have been detected in these tumors. However, the response to treatment in patients without KRAS mutations varies and requires a better understanding.\nAIM: To determine the frequency and distribution of somatic point mutations in KRAS, BRAF and PIK3CA genes and microsatellite instability status (MSI) in patients with colon cancer (CC).\nMATERIAL AND METHODS: A prospective observational study of patients undergoing surgery for colon cancer. Tumor-derived DNA was analyzed by polymerase chain reaction (PCR) for the most frequent mutations of KRAS, BRAF and PIK3CA. PCR was also used to analyze MSI.\nRESULTS: Fifty-eight patients with sporadic CC were analyzed, 16 showed KRAS mutations (G12R, G12D, G12V, G13D) and out of the 42 patients that did not show any mutation, 10 had mutations in BRAF (V600E) and PIK3CA (E542K, E545D, E545K, Q546E, H1047R). BRAF mutations alone or in combination with PIK3CA mutations were observed in 27% of high MSI tumors and in 2% of tumors without instability (p < 0.049). A higher percentage of high MSI tumors were located in the right colon (p < 0.001), and showed BRAF mutation (p < 0.020).\nCONCLUSIONS: The highest percentage of high MSI and BRAF mutations was observed in the right colon. Therefore, this study suggests the presence of different molecular features between right and left colon tumors that should be considered when defining the therapeutic management.",
@@ -4053,33 +4059,6 @@
     "sent_to_ai": false
    },
    {
-    "pmid": "30224756",
-    "title": "BRAF somatic mutation contributes to intrinsic epileptogenicity in pediatric brain tumors",
-    "abstract": "Pediatric brain tumors are highly associated with epileptic seizures1. However, their epileptogenic mechanisms remain unclear. Here, we show that the oncogenic BRAF somatic mutation p.Val600Glu (V600E) in developing neurons underlies intrinsic epileptogenicity in ganglioglioma, one of the leading causes of intractable epilepsy2. To do so, we developed a mouse model harboring the BRAFV600E somatic mutation during early brain development to reflect the most frequent mutation, as well as the origin and timing thereof. Therein, the BRAFV600E mutation arising in progenitor cells during brain development led to the acquisition of intrinsic epileptogenic properties in neuronal lineage cells, whereas tumorigenic properties were attributed to high proliferation of glial lineage cells. RNA sequencing analysis of patient brain tissues with the mutation revealed that BRAFV600E-induced epileptogenesis is mediated by RE1-silencing transcription factor (REST), which is a regulator of ion channels and neurotransmitter receptors associated with epilepsy. Moreover, we found that seizures in mice were significantly alleviated by an FDA-approved BRAFV600E inhibitor, vemurafenib, as well as various genetic inhibitions of Rest. Accordingly, this study provides direct evidence of a BRAF somatic mutation contributing to the intrinsic epileptogenicity in pediatric brain tumors and suggests that BRAF and REST could be treatment targets for intractable epilepsy.",
-    "journal": "Nat Med",
-    "year": 2018,
-    "authors": [
-     "Koh HY",
-     "Kim SH",
-     "Jang J",
-     "Kim H",
-     "Han S"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30224756/",
-    "score": 4,
-    "score_reasons": [
-     "OCEBM level 5 (lab/animal only) +0",
-     "exact mutation in abstract +1",
-     "names a drug (vemurafenib) +2",
-     "published 5-10 years ago +1"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "30093687",
     "title": "Identification of recurrent USP48 and BRAF mutations in Cushing's disease",
     "abstract": "Cushing's disease results from corticotroph adenomas of the pituitary that hypersecrete adrenocorticotropin (ACTH), leading to excess glucocorticoid and hypercortisolism. Mutations of the deubiquitinase gene USP8 occur in 35-62% of corticotroph adenomas. However, the major driver mutations in USP8 wild-type tumors remain elusive. Here, we report recurrent mutations in the deubiquitinase gene USP48 (predominantly encoding p.M415I or p.M415V; 21/91 subjects) and BRAF (encoding p.V600E; 15/91 subjects) in corticotroph adenomas with wild-type USP8. Similar to USP8 mutants, both USP48 and BRAF mutants enhance the promoter activity and transcription of the gene encoding proopiomelanocortin (POMC), which is the precursor of ACTH, providing a potential mechanism for ACTH overproduction in corticotroph adenomas. Moreover, primary corticotroph tumor cells harboring BRAF V600E are sensitive to the BRAF inhibitor vemurafenib. Our study thus contributes to the understanding of the molecular mechanism of the pathogenesis of corticotroph adenoma and informs therapeutic targets for this disease.",
@@ -4224,6 +4203,33 @@
     "score_reasons": [
      "OCEBM level 5 (lab/animal only) +0",
      "exact mutation in title +3",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "30224756",
+    "title": "BRAF somatic mutation contributes to intrinsic epileptogenicity in pediatric brain tumors",
+    "abstract": "Pediatric brain tumors are highly associated with epileptic seizures1. However, their epileptogenic mechanisms remain unclear. Here, we show that the oncogenic BRAF somatic mutation p.Val600Glu (V600E) in developing neurons underlies intrinsic epileptogenicity in ganglioglioma, one of the leading causes of intractable epilepsy2. To do so, we developed a mouse model harboring the BRAFV600E somatic mutation during early brain development to reflect the most frequent mutation, as well as the origin and timing thereof. Therein, the BRAFV600E mutation arising in progenitor cells during brain development led to the acquisition of intrinsic epileptogenic properties in neuronal lineage cells, whereas tumorigenic properties were attributed to high proliferation of glial lineage cells. RNA sequencing analysis of patient brain tissues with the mutation revealed that BRAFV600E-induced epileptogenesis is mediated by RE1-silencing transcription factor (REST), which is a regulator of ion channels and neurotransmitter receptors associated with epilepsy. Moreover, we found that seizures in mice were significantly alleviated by an FDA-approved BRAFV600E inhibitor, vemurafenib, as well as various genetic inhibitions of Rest. Accordingly, this study provides direct evidence of a BRAF somatic mutation contributing to the intrinsic epileptogenicity in pediatric brain tumors and suggests that BRAF and REST could be treatment targets for intractable epilepsy.",
+    "journal": "Nat Med",
+    "year": 2018,
+    "authors": [
+     "Koh HY",
+     "Kim SH",
+     "Jang J",
+     "Kim H",
+     "Han S"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30224756/",
+    "score": 4,
+    "score_reasons": [
+     "OCEBM level 5 (lab/animal only) +0",
+     "exact mutation in abstract +1",
+     "names a drug (vemurafenib) +2",
      "published 5-10 years ago +1"
     ],
     "sent_to_ai": false
@@ -5673,6 +5679,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06475989",
     "score": 10,
     "score_reasons": [
@@ -5708,6 +5715,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07688356",
     "score": 7,
     "score_reasons": [
@@ -5750,6 +5758,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07506109",
     "score": 7,
     "score_reasons": [
@@ -5783,6 +5792,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06978400",
     "score": 7,
     "score_reasons": [
@@ -5816,6 +5826,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06763029",
     "score": 7,
     "score_reasons": [
@@ -5856,6 +5867,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07110246",
     "score": 9,
     "score_reasons": [
@@ -5892,6 +5904,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06411600",
     "score": 7,
     "score_reasons": [
@@ -5926,6 +5939,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06603376",
     "score": 9,
     "score_reasons": [
@@ -5963,6 +5977,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05503797",
     "score": 7,
     "score_reasons": [
@@ -5997,6 +6012,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05706779",
     "score": 7,
     "score_reasons": [
@@ -6033,6 +6049,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06902376",
     "score": 6,
     "score_reasons": [
@@ -6077,6 +6094,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06102902",
     "score": 6,
     "score_reasons": [
@@ -6112,6 +6130,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06610682",
     "score": 6,
     "score_reasons": [
@@ -6144,6 +6163,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07617610",
     "score": 5,
     "score_reasons": [
@@ -6175,6 +6195,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06749015",
     "score": 5,
     "score_reasons": [
@@ -6218,6 +6239,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07010393",
     "score": 8,
     "score_reasons": [
@@ -6253,6 +6275,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05988697",
     "score": 5,
     "score_reasons": [
@@ -6295,6 +6318,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05710406",
     "score": 10,
     "score_reasons": [
@@ -6330,6 +6354,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05270044",
     "score": 10,
     "score_reasons": [
@@ -6366,6 +6391,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04657991",
     "score": 10,
     "score_reasons": [
@@ -6408,6 +6434,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04607421",
     "score": 13,
     "score_reasons": [
@@ -6443,6 +6470,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05195632",
     "score": 7,
     "score_reasons": [
@@ -6478,6 +6506,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04526782",
     "score": 7,
     "score_reasons": [
@@ -6517,6 +6546,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04675710",
     "score": 7,
     "score_reasons": [
@@ -6555,6 +6585,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04201457",
     "score": 6,
     "score_reasons": [
@@ -6589,6 +6620,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03839342",
     "score": 6,
     "score_reasons": [
@@ -6624,6 +6656,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02858921",
     "score": 12,
     "score_reasons": [
@@ -6665,6 +6698,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04439292",
     "score": 10,
     "score_reasons": [
@@ -6706,6 +6740,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02196181",
     "score": 8,
     "score_reasons": [
@@ -6743,6 +6778,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02231775",
     "score": 6,
     "score_reasons": [
@@ -6776,6 +6812,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04007848",
     "score": 9,
     "score_reasons": [
@@ -6811,6 +6848,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01909453",
     "score": 13,
     "score_reasons": [
@@ -6847,6 +6885,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01597908",
     "score": 13,
     "score_reasons": [
@@ -6882,6 +6921,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01227889",
     "score": 13,
     "score_reasons": [
@@ -6922,6 +6962,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05304546",
     "score": 7,
     "score_reasons": [
@@ -6958,6 +6999,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05004350",
     "score": 13,
     "score_reasons": [
@@ -7003,6 +7045,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04551521",
     "score": 7,
     "score_reasons": [
@@ -7041,6 +7084,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05039177",
     "score": 7,
     "score_reasons": [
@@ -7076,6 +7120,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03915951",
     "score": 10,
     "score_reasons": [
@@ -7111,6 +7156,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03693170",
     "score": 10,
     "score_reasons": [
@@ -7147,6 +7193,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03455764",
     "score": 10,
     "score_reasons": [
@@ -7183,6 +7230,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03101254",
     "score": 10,
     "score_reasons": [
@@ -7219,6 +7267,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02631447",
     "score": 8,
     "score_reasons": [
@@ -7254,6 +7303,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02164916",
     "score": 12,
     "score_reasons": [
@@ -7289,6 +7339,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02281760",
     "score": 10,
     "score_reasons": [
@@ -7323,6 +7374,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01677741",
     "score": 10,
     "score_reasons": [
@@ -7357,6 +7409,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01336634",
     "score": 10,
     "score_reasons": [
@@ -7390,6 +7443,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01037127",
     "score": 10,
     "score_reasons": [
@@ -7425,6 +7479,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05003622",
     "score": 10,
     "score_reasons": [
@@ -7459,6 +7514,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01582997",
     "score": 5,
     "score_reasons": [
@@ -7492,6 +7548,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01436656",
     "score": 9,
     "score_reasons": [
@@ -7523,6 +7580,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05546905",
     "score": 5,
     "score_reasons": [
@@ -7551,6 +7609,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06557291",
     "score": 5,
     "score_reasons": [
@@ -7581,6 +7640,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04911998",
     "score": 5,
     "score_reasons": [
@@ -7612,6 +7672,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04317599",
     "score": 8,
     "score_reasons": [
@@ -7642,6 +7703,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03363347",
     "score": 4,
     "score_reasons": [
@@ -7674,6 +7736,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05540951",
     "score": 6,
     "score_reasons": [
@@ -7708,6 +7771,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05092815",
     "score": 6,
     "score_reasons": [
@@ -7741,6 +7805,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03727763",
     "score": 5,
     "score_reasons": [
@@ -7774,6 +7839,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02202200",
     "score": 5,
     "score_reasons": [
@@ -7808,6 +7874,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05019534",
     "score": 5,
     "score_reasons": [
@@ -7840,6 +7907,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01417442",
     "score": 4,
     "score_reasons": [
@@ -7870,6 +7938,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02416232",
     "score": 3,
     "score_reasons": [
@@ -7904,6 +7973,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05926960",
     "score": 8,
     "score_reasons": [
@@ -7943,6 +8013,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04585815",
     "score": 9,
     "score_reasons": [
@@ -7976,6 +8047,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01978236",
     "score": 11,
     "score_reasons": [
@@ -8010,6 +8082,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01754376",
     "score": 9,
     "score_reasons": [
@@ -8042,6 +8115,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT01586195",
     "score": 9,
     "score_reasons": [
@@ -8076,6 +8150,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05743036",
     "score": 7,
     "score_reasons": [
@@ -8113,6 +8188,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04800822",
     "score": 5,
     "score_reasons": [
@@ -8147,6 +8223,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03878719",
     "score": 4,
     "score_reasons": [
@@ -8180,6 +8257,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04190628",
     "score": 4,
     "score_reasons": [
@@ -8212,6 +8290,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04739566",
     "score": 6,
     "score_reasons": [
@@ -8247,6 +8326,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02143050",
     "score": 5,
     "score_reasons": [
@@ -8283,6 +8363,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04759846",
     "score": 5,
     "score_reasons": [
@@ -8320,6 +8401,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03340506",
     "score": 4,
     "score_reasons": [
@@ -8364,6 +8446,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05768178",
     "score": 5,
     "score_reasons": [
@@ -8404,6 +8487,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05722886",
     "score": 5,
     "score_reasons": [
@@ -8437,6 +8521,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02670707",
     "score": 6,
     "score_reasons": [
@@ -8483,6 +8568,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06739395",
     "score": 4,
     "score_reasons": [
@@ -8524,6 +8610,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04511013",
     "score": 6,
     "score_reasons": [
@@ -8567,6 +8654,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04625907",
     "score": 5,
     "score_reasons": [
@@ -8602,6 +8690,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04913285",
     "score": 3,
     "score_reasons": [
@@ -8638,6 +8727,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04741997",
     "score": 5,
     "score_reasons": [
@@ -8674,6 +8764,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07431060",
     "score": 4,
     "score_reasons": [
@@ -8711,6 +8802,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07419932",
     "score": 2,
     "score_reasons": [
@@ -8743,6 +8835,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03042221",
     "score": 1,
     "score_reasons": [
@@ -8769,6 +8862,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07770074",
     "score": 2,
     "score_reasons": [
@@ -8800,6 +8894,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06553781",
     "score": 2,
     "score_reasons": [
@@ -8833,6 +8928,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06074588",
     "score": 7,
     "score_reasons": [
@@ -8871,6 +8967,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03803553",
     "score": 1,
     "score_reasons": [
@@ -8915,6 +9012,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT02997228",
     "score": 6,
     "score_reasons": [
@@ -8959,6 +9057,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03178552",
     "score": 6,
     "score_reasons": [
@@ -8991,6 +9090,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06967155",
     "score": 4,
     "score_reasons": [
@@ -9025,6 +9125,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07288203",
     "score": 4,
     "score_reasons": [
@@ -9069,6 +9170,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06784648",
     "score": 4,
     "score_reasons": [
@@ -9113,6 +9215,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03919071",
     "score": 3,
     "score_reasons": [
@@ -9156,6 +9259,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03944772",
     "score": 3,
     "score_reasons": [
@@ -9256,6 +9360,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03155620",
     "score": 7,
     "score_reasons": [
@@ -9301,6 +9406,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05538130",
     "score": 3,
     "score_reasons": [
@@ -9372,7 +9478,7 @@
      4
     ],
     [
-     "Dabrafenib Mesylate",
+     "Trametinib Dimethyl Sulfoxide",
      4
     ]
    ],
@@ -9380,7 +9486,8 @@
     "BRAF V600E": "https://clinicaltrials.gov/search?term=BRAF%20V600E",
     "BRAF V600G": "https://clinicaltrials.gov/search?term=BRAF%20V600G",
     "BRAF V600A": "https://clinicaltrials.gov/search?term=BRAF%20V600A",
-    "BRAF V600": "https://clinicaltrials.gov/search?term=BRAF%20V600"
+    "BRAF V600": "https://clinicaltrials.gov/search?term=BRAF%20V600",
+    "rs113488022": "https://clinicaltrials.gov/search?term=rs113488022"
    }
   }
  },
@@ -11181,13 +11288,14 @@
  "treatments": {
   "rows": [
    {
-    "drug": "Encorafenib, binimetinib, and cetuximab",
+    "drug": "Encorafenib + Cetuximab + Binimetinib",
     "setting": "Previously treated BRAF V600E-mutant metastatic colorectal cancer",
-    "outcome": "Median OS was 9.3 months for triplet and 5.9 months for control, confirmed ORR was 26.8% for triplet and 1.8% for control",
+    "outcome": "ORR 26.8%, median OS 9.3 months",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-A",
-    "escat_reason": "Randomized phase III trial (BEACON CRC) demonstrated a statistically significant overall survival improvement over standard of care in patients with BRAF V600E-mutant mCRC.",
+    "escat_reason": "A randomized phase 3 trial demonstrated a significant overall survival benefit for the combination compared to control.",
     "evidence": [
      {
       "source_id": "PMID:33503393",
@@ -11204,13 +11312,67 @@
     "warnings": []
    },
    {
-    "drug": "Encorafenib plus binimetinib",
-    "setting": "BRAF V600E/K-mutant metastatic melanoma",
-    "outcome": "Seven-year OS rate of 27.4% and median melanoma-specific survival of 36.8 months vs 19.3 months with vemurafenib",
+    "drug": "Encorafenib + Cetuximab",
+    "setting": "Previously treated BRAF V600E-mutant metastatic colorectal cancer",
+    "outcome": "ORR 19.5%, median OS 9.3 months",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-A",
-    "escat_reason": "Randomized phase III trial (COLUMBUS) demonstrated clinically meaningful survival improvement for encorafenib plus binimetinib compared with vemurafenib.",
+    "escat_reason": "A randomized phase 3 trial demonstrated improved overall survival for doublet therapy compared with control.",
+    "evidence": [
+     {
+      "source_id": "PMID:33503393",
+      "quote": "Median OS for doublet was 9.3 months (95% CI, 8.0 to 11.3) (HR v control, 0.61 [95% CI, 0.48 to 0.77]).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33503393/"
+     },
+     {
+      "source_id": "PMID:33503393",
+      "quote": "Confirmed ORR was 26.8% (95% CI, 21.1% to 33.1%) for triplet, 19.5% (95% CI, 14.5% to 25.4%) for doublet, and 1.8% (95% CI, 0.5% to 4.6%) for control.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33503393/"
+     },
+     {
+      "source_id": "NCT05004350",
+      "quote": "Encorafenib is currently being developed (with or without binimetinib), in combination with cetuximab, for the treatment of adult patients with B-RAF proto-oncogene, serine/threonine kinase V600E mutant (BRAF V600E) metastatic colorectal cancer (mCRC), who have received prior systemic therapy.",
+      "url": "https://clinicaltrials.gov/study/NCT05004350"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Encorafenib + Cetuximab + FOLFIRI",
+    "setting": "Previously untreated BRAF V600E-mutant metastatic colorectal cancer",
+    "outcome": "ORR 64.4%, median PFS 15.2 months",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-B",
+    "escat_reason": "A randomized study showed a statistically significant and clinically meaningful improvement in ORR and PFS.",
+    "evidence": [
+     {
+      "source_id": "PMID:42219860",
+      "quote": "EC+FOLFIRI demonstrated clinically meaningful and statistically significant improvement in ORR by BICR {64.4% versus 39.2%, odds ratio = 2.756 [95% confidence interval (CI) 1.420-5.348], one-sided P-value = 0.0011}",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42219860/"
+     },
+     {
+      "source_id": "PMID:42219860",
+      "quote": "the key secondary endpoint was met, with EC+FOLFIRI demonstrating a clinically meaningful and statistically significant PFS [hazard ratio = 0.44 (95% CI 0.27-0.70), one-sided P-value = 0.0002, 15.2 versus 8.3 months].",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42219860/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Encorafenib + Binimetinib",
+    "setting": "BRAF V600E/K-mutant advanced or metastatic melanoma",
+    "outcome": "7-year OS rate 27.4%, median melanoma-specific survival 36.8 months",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": true,
+    "escat_tier": "I-A",
+    "escat_reason": "Randomized phase 3 trial showed improved overall survival and progression-free survival compared to vemurafenib.",
     "evidence": [
      {
       "source_id": "PMID:38723373",
@@ -11219,7 +11381,7 @@
      },
      {
       "source_id": "PMID:38723373",
-      "quote": "Median melanoma-specific survival (95 % CI) was 36.8 months (27.7-51.5 months) in the encorafenib plus binimetinib arm and 19.3 months (14.8-25.9 months) in the vemurafenib arm.",
+      "quote": "Median melanoma-specific survival (95 % CI) was 36.8 months (27.7-51.5 months) in the encorafenib plus binimetinib arm",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38723373/"
      },
      {
@@ -11232,36 +11394,14 @@
     "warnings": []
    },
    {
-    "drug": "Encorafenib, cetuximab, and FOLFIRI",
-    "setting": "Previously untreated BRAF V600E-mutant metastatic colorectal cancer",
-    "outcome": "ORR by BICR of 64.4% versus 39.2% and PFS of 15.2 versus 8.3 months",
-    "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-A",
-    "escat_reason": "Randomized phase III study (BREAKWATER Cohort 3) demonstrated statistically significant and clinically meaningful improvements in response rate, progression-free survival, and overall survival.",
-    "evidence": [
-     {
-      "source_id": "PMID:42219860",
-      "quote": "EC+FOLFIRI demonstrated clinically meaningful and statistically significant improvement in ORR by BICR {64.4% versus 39.2%, odds ratio = 2.756 [95% confidence interval (CI) 1.420-5.348], one-sided P-value = 0.0011}, meeting the primary endpoint (1 March 2025, data cutoff).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42219860/"
-     },
-     {
-      "source_id": "PMID:42219860",
-      "quote": "At the 6 January 2026 data cutoff, the key secondary endpoint was met, with EC+FOLFIRI demonstrating a clinically meaningful and statistically significant PFS [hazard ratio = 0.44 (95% CI 0.27-0.70), one-sided P-value = 0.0002, 15.2 versus 8.3 months].",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42219860/"
-     }
-    ],
-    "verified": true,
-    "warnings": []
-   },
-   {
     "drug": "Vemurafenib",
-    "setting": "Previously untreated metastatic melanoma with BRAF V600E mutation",
-    "outcome": "Overall survival at 6 months was 84% in the vemurafenib group and 64% in the dacarbazine group, with response rates of 48% for vemurafenib and 5% for dacarbazine",
+    "setting": "Previously untreated BRAF V600E-mutant metastatic melanoma",
+    "outcome": "6-month OS rate 84%, response rate 48%",
     "is_cancer": true,
     "ocebm_level": 2,
+    "variant_specific": true,
     "escat_tier": "I-A",
-    "escat_reason": "Randomized phase III study demonstrated significant improvements in overall survival and progression-free survival compared to chemotherapy.",
+    "escat_reason": "A randomized phase 3 trial established improved overall and progression-free survival versus dacarbazine.",
     "evidence": [
      {
       "source_id": "PMID:21639808",
@@ -11272,28 +11412,24 @@
       "source_id": "PMID:21639808",
       "quote": "Response rates were 48% for vemurafenib and 5% for dacarbazine.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/21639808/"
-     },
-     {
-      "source_id": "NCT01227889",
-      "quote": "BRF113683 is a Phase III, randomized, open-label study comparing the efficacy, safety, and tolerability of GSK2118436 to dacarbazine (DTIC), in subjects with BRAF mutant advanced (Stage III) or metastatic (Stage IV) melanoma.",
-      "url": "https://clinicaltrials.gov/study/NCT01227889"
      }
     ],
     "verified": true,
     "warnings": []
    },
    {
-    "drug": "Dabrafenib plus trametinib",
-    "setting": "Pediatric low-grade glioma with BRAF V600 mutations",
-    "outcome": "Overall response occurred in 47% with dabrafenib plus trametinib versus 11% with chemotherapy, with median progression-free survival of 20.1 months vs. 7.4 months",
+    "drug": "Dabrafenib + Trametinib",
+    "setting": "Pediatric BRAF V600-mutated low-grade glioma",
+    "outcome": "Overall response rate 47%, median PFS 20.1 months",
     "is_cancer": true,
     "ocebm_level": 2,
-    "escat_tier": "I-A",
-    "escat_reason": "Randomized phase II study showed significantly longer progression-free survival and higher overall response rate compared with standard chemotherapy.",
+    "variant_specific": true,
+    "escat_tier": "I-B",
+    "escat_reason": "A randomized phase 2 trial in pediatric low-grade glioma demonstrated statistically significant higher response rates and longer PFS compared to chemotherapy.",
     "evidence": [
      {
       "source_id": "PMID:37733309",
-      "quote": "At a median follow-up of 18.9 months, an overall response occurred in 47% of the patients treated with dabrafenib plus trametinib and in 11% of those treated with chemotherapy (risk ratio, 4.31; 95% confidence interval [CI], 1.7 to 11.2; P<0.001).",
+      "quote": "an overall response occurred in 47% of the patients treated with dabrafenib plus trametinib and in 11% of those treated with chemotherapy",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37733309/"
      },
      {
@@ -11306,13 +11442,14 @@
     "warnings": []
    },
    {
-    "drug": "Dabrafenib plus trametinib",
+    "drug": "Dabrafenib + Trametinib",
     "setting": "BRAF V600E-mutant metastatic non-small cell lung cancer",
-    "outcome": "Overall response rate was 68.4% in pretreated patients and 63.9% in treatment-naive patients, with median overall survival of 18.2 and 17.3 months",
+    "outcome": "ORR 68.4% in pretreated, ORR 63.9% in treatment-naive, median OS 18.2 and 17.3 months",
     "is_cancer": true,
     "ocebm_level": 3,
+    "variant_specific": true,
     "escat_tier": "I-B",
-    "escat_reason": "Prospective non-randomized phase II study demonstrated durable objective clinical benefit in patients with BRAF V600E-mutant mNSCLC.",
+    "escat_reason": "Prospective phase 2 clinical trial demonstrated robust response rates and durable overall survival benefits.",
     "evidence": [
      {
       "source_id": "PMID:34455067",
@@ -11329,13 +11466,14 @@
     "warnings": []
    },
    {
-    "drug": "Dabrafenib plus trametinib",
+    "drug": "Dabrafenib + Trametinib",
     "setting": "BRAF V600E-mutant anaplastic thyroid cancer",
-    "outcome": "Confirmed overall response rate was 56%, with median PFS of 6.7 months and median OS of 14.5 months",
+    "outcome": "ORR 56%, median OS 14.5 months",
     "is_cancer": true,
     "ocebm_level": 3,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective non-randomized cohort in a basket trial demonstrated meaningful clinical activity and prolonged survival in this aggressive histology.",
+    "variant_specific": true,
+    "escat_tier": "I-C",
+    "escat_reason": "Prospective non-randomized cohort within a basket trial showed high objective response rate and durable benefit.",
     "evidence": [
      {
       "source_id": "PMID:35026411",
@@ -11346,6 +11484,107 @@
       "source_id": "PMID:35026411",
       "quote": "Median PFS and OS were 6.7 and 14.5 months, respectively.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/35026411/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Vemurafenib + Irinotecan + Cetuximab",
+    "setting": "Previously treated BRAF V600E-mutated metastatic colorectal cancer",
+    "outcome": "Response rate 17%, improved PFS (HR 0.50), disease control rate 65%",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": false,
+    "escat_tier": "I-B",
+    "escat_reason": "Randomized phase 2 trial demonstrated statistically significant improvement in progression-free survival and response rate.",
+    "evidence": [
+     {
+      "source_id": "PMID:33356422",
+      "quote": "Progression-free survival, the primary end point, was improved with the addition of vemurafenib (hazard ratio, 0.50, P = .001).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33356422/"
+     },
+     {
+      "source_id": "PMID:33356422",
+      "quote": "The response rate was 17% versus 4% (P = .05), with a disease control rate of 65% versus 21% (P < .001).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33356422/"
+     },
+     {
+      "source_id": "NCT02164916",
+      "quote": "This randomized phase II trial studies how well irinotecan hydrochloride and cetuximab with or without vemurafenib works in treating patients with colorectal cancer that has spread to nearby tissue or lymph nodes, that has spread to other places in the body, or cannot be removed by surgery.",
+      "url": "https://clinicaltrials.gov/study/NCT02164916"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Pembrolizumab + Dabrafenib + Trametinib",
+    "setting": "Previously untreated BRAF V600E/K-mutated advanced melanoma",
+    "outcome": "Median PFS 16.9 months, 24-month OS 63.0%",
+    "is_cancer": true,
+    "ocebm_level": 2,
+    "variant_specific": false,
+    "escat_tier": "II-B",
+    "escat_reason": "Randomized phase 2 trial showed higher progression-free survival and response duration without reaching formal statistical significance.",
+    "evidence": [
+     {
+      "source_id": "PMID:33361337",
+      "quote": "With 36.6 months of follow-up, median PFS was 16.9 months (95% CI 11.3 to 27.9) with triplet and 10.7 months (95% CI 7.2 to 16.8) with doublet (HR 0.53; 95% CI 0.34 to 0.83).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33361337/"
+     },
+     {
+      "source_id": "PMID:33361337",
+      "quote": "With triplet and doublet, respectively, OS at 24 months was 63.0% (95% CI 49.4% to 73.9%) and 51.7% (95% CI 38.4% to 63.4%).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33361337/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Vemurafenib + Cobimetinib",
+    "setting": "BRAF V600E-mutated papillary craniopharyngioma",
+    "outcome": "Durable objective response rate 94%, median volume reduction 91%",
+    "is_cancer": true,
+    "ocebm_level": 3,
+    "variant_specific": true,
+    "escat_tier": "I-B",
+    "escat_reason": "Prospective single-arm trial showed a high, clinically meaningful objective response rate.",
+    "evidence": [
+     {
+      "source_id": "PMID:37437144",
+      "quote": "Of the 16 patients in the study, 15 (94%; 95% confidence interval [CI], 70 to 100) had a durable objective partial response or better to therapy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37437144/"
+     },
+     {
+      "source_id": "PMID:37437144",
+      "quote": "The median reduction in the volume of the tumor was 91% (range, 68 to 99).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37437144/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Vemurafenib + Rituximab",
+    "setting": "Refractory or relapsed BRAF V600E-mutant hairy-cell leukemia",
+    "outcome": "Complete response rate 87%, 37-month PFS 78%",
+    "is_cancer": true,
+    "ocebm_level": 3,
+    "variant_specific": true,
+    "escat_tier": "I-B",
+    "escat_reason": "Prospective single-center study showed a high complete response rate and high long-term progression-free survival.",
+    "evidence": [
+     {
+      "source_id": "PMID:33979489",
+      "quote": "A complete response was observed in 26 patients (87%) in the intention-to-treat population.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33979489/"
+     },
+     {
+      "source_id": "PMID:33979489",
+      "quote": "Progression-free survival among all 30 patients was 78% at a median follow-up of 37 months; relapse-free survival among the 26 patients with a response was 85% at a median follow-up of 34 months.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33979489/"
      }
     ],
     "verified": true,

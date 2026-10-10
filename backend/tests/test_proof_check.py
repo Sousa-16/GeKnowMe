@@ -136,3 +136,18 @@ def test_phase_numbers_are_not_results():
             evidence=[RawEvidence("NCT00000001", "The objective response rate was 30% in BRAF V600E patients")])
     out = check_rows([r], SOURCES).rows[0]
     assert not any("number" in w for w in out.warnings)
+
+
+
+def test_rows_are_marked_when_sources_never_name_the_variant():
+    general = SourceDoc("PMID:444", "u", "Bosutinib was well tolerated in dementia with Lewy bodies; 26 patients enrolled.",
+                        is_randomized=True, is_clinical_trial=True, ocebm_level=2)
+    specific = SourceDoc("PMID:555", "u", "In carriers of SNCA E46K, the response rate was 26%.", is_clinical_trial=True, ocebm_level=3)
+    docs = {"PMID:444": general, "PMID:555": specific}
+    r1 = row(drug="Bosutinib", setting="Dementia with Lewy bodies", outcome="26 patients", is_cancer=False, escat_tier=None,
+             evidence=[RawEvidence("PMID:444", "Bosutinib was well tolerated in dementia with Lewy bodies")])
+    r2 = row(drug="Drug X", setting="Dementia with Lewy bodies", outcome="26%", is_cancer=False, escat_tier=None,
+             evidence=[RawEvidence("PMID:555", "In carriers of SNCA E46K, the response rate was 26%")])
+    res = check_rows([r1, r2], docs, ["E46K", "p.Glu46Lys", "rs104893875"])
+    assert [r.variant_specific for r in res.rows] == [False, True]
+    assert check_rows([r1], docs).rows[0].variant_specific is None  # not checked without names

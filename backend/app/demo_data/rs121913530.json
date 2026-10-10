@@ -1,6 +1,6 @@
 {
  "rsid": "rs121913530",
- "generated_at": "2026-10-10T23:15:44.437409+00:00",
+ "generated_at": "2026-10-10T23:46:27.755783+00:00",
  "variant": {
   "rsid": "rs121913530",
   "gene": "KRAS",
@@ -164,6 +164,9 @@
     "url": "https://www.ncbi.nlm.nih.gov/clinvar/RCV002513010/"
    }
   ],
+  "literature_names": [
+   "p.G12C"
+  ],
   "links": {
    "MyVariant": "https://myvariant.info/v1/variant/rs121913530",
    "ClinVar": "https://www.ncbi.nlm.nih.gov/clinvar/?term=rs121913530",
@@ -241,6 +244,13 @@
    "KRAS G12S",
    "KRAS G12R",
    "KRAS G12"
+  ],
+  "extra_trial_terms": [
+   "rs121913530"
+  ],
+  "fallback_trial_terms": [
+   "KRAS Non-small cell lung carcinoma (NSCLC)",
+   "KRAS RASopathy"
   ]
  },
  "papers": {
@@ -445,6 +455,38 @@
     "sent_to_ai": true
    },
    {
+    "pmid": "40783289",
+    "title": "Adagrasib versus docetaxel in KRASG12C-mutated non-small-cell lung cancer (KRYSTAL-12): a randomised, open-label, phase 3 trial",
+    "abstract": "BACKGROUND: Adagrasib is a KRASG12C inhibitor that demonstrated promising activity against KRASG12C-mutated advanced non-small-cell lung cancer (NSCLC) in a phase 2 trial. Here we aimed to compare the efficacy and safety of adagrasib versus docetaxel in patients with KRASG12C-mutated advanced NSCLC previously treated with chemotherapy and immunotherapy.\nMETHODS: KRYSTAL-12 is a randomised, multicentre, open-label, phase 3 trial conducted at 230 centres in 22 countries. Patients with Kirsten rat sarcoma viral oncogene homologue (KRAS)G12C-mutated locally advanced or metastatic NSCLC, who had previously received both platinum-based chemotherapy and anti-programmed cell death protein 1 or anti-programmed death ligand 1 therapy, were randomly allocated in a 2:1 ratio to receive 600 mg adagrasib (twice a day orally) or 75 mg/m2 docetaxel (every 3 weeks intravenously) using a centralised interactive web response system. Randomisation was stratified by region (non-Asia-Pacific vs Asia-Pacific) and previous treatment (sequential vs concurrent chemotherapy or immunotherapy). Treatment continued until disease progression, unacceptable toxicity, investigator or patient decision, or death. The primary endpoint was progression-free survival assessed by blinded independent central review in all randomised patients (intention-to-treat [ITT] population). Safety was assessed in all treated patients. This trial is registered at ClinicalTrials.gov (NCT04685135), and is active but no longer recruiting.\nFINDINGS: Between Feb 23, 2021, and Nov 16, 2023, 453 patients were randomly allocated to receive adagrasib (301 [66%]) or docetaxel (152 [34%]). In each group, 298 (99%) patients received adagrasib and 140 (92%) received docetaxel. In the ITT population (median follow-up 7·2 months [95% CI 5·8-8·7]), median progression-free survival was 5·5 months (95% CI 4·5-6·7) with adagrasib and 3·8 months (95% CI 2·7-4·7) with docetaxel (hazard ratio 0·58 [95% CI 0·45-0·76]; p<0·0001). Grade 3 and above treatment-related adverse events occurred in 140 (47%) of 298 patients treated with adagrasib and 64 (46%) of 140 with docetaxel. There were four (1%) treatment-related deaths in the adagrasib group and one (1%) treatment-related death in the docetaxel group.\nINTERPRETATION: Adagrasib demonstrated a statistically significant improvement in progression-free survival over docetaxel in patients with previously treated KRASG12C-mutated NSCLC, without new safety signals.\nFUNDING: Mirati Therapeutics, a Bristol Myers Squibb company.",
+    "journal": "Lancet",
+    "year": 2025,
+    "authors": [
+     "Barlesi F",
+     "Yao W",
+     "Duruisseaux M",
+     "Doucet L",
+     "Martínez AA"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Clinical Trial, Phase III",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Comparative Study",
+     "Research Support, Non-U.S. Gov't"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40783289/",
+    "score": 13,
+    "score_reasons": [
+     "OCEBM level 2 (randomized trial) +4",
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "names a drug (Adagrasib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
     "pmid": "37870968",
     "title": "Sotorasib plus Panitumumab in Refractory Colorectal Cancer with Mutated KRAS G12C",
     "abstract": "BACKGROUND: KRAS G12C is a mutation that occurs in approximately 3 to 4% of patients with metastatic colorectal cancer. Monotherapy with KRAS G12C inhibitors has yielded only modest efficacy. Combining the KRAS G12C inhibitor sotorasib with panitumumab, an epidermal growth factor receptor (EGFR) inhibitor, may be an effective strategy.\nMETHODS: In this phase 3, multicenter, open-label, randomized trial, we assigned patients with chemorefractory metastatic colorectal cancer with mutated KRAS G12C who had not received previous treatment with a KRAS G12C inhibitor to receive sotorasib at a dose of 960 mg once daily plus panitumumab (53 patients), sotorasib at a dose of 240 mg once daily plus panitumumab (53 patients), or the investigator's choice of trifluridine-tipiracil or regorafenib (standard care; 54 patients). The primary end point was progression-free survival as assessed by blinded independent central review according to the Response Evaluation Criteria in Solid Tumors, version 1.1. Key secondary end points were overall survival and objective response.\nRESULTS: After a median follow-up of 7.8 months (range, 0.1 to 13.9), the median progression-free survival was 5.6 months (95% confidence interval [CI], 4.2 to 6.3) and 3.9 months (95% CI, 3.7 to 5.8) in the 960-mg sotorasib-panitumumab and 240-mg sotorasib-panitumumab groups, respectively, as compared with 2.2 months (95% CI, 1.9 to 3.9) in the standard-care group. The hazard ratio for disease progression or death in the 960-mg sotorasib-panitumumab group as compared with the standard-care group was 0.49 (95% CI, 0.30 to 0.80; P = 0.006), and the hazard ratio in the 240-mg sotorasib-panitumumab group was 0.58 (95% CI, 0.36 to 0.93; P = 0.03). Overall survival data are maturing. The objective response was 26.4% (95% CI, 15.3 to 40.3), 5.7% (95% CI, 1.2 to 15.7), and 0% (95% CI, 0.0 to 6.6) in the 960-mg sotorasib-panitumumab, 240-mg sotorasib-panitumumab, and standard-care groups, respectively. Treatment-related adverse events of grade 3 or higher occurred in 35.8%, 30.2%, and 43.1% of patients, respectively. Skin-related toxic effects and hypomagnesemia were the most common adverse events observed with sotorasib-panitumumab.\nCONCLUSIONS: In this phase 3 trial of a KRAS G12C inhibitor plus an EGFR inhibitor in patients with chemorefractory metastatic colorectal cancer, both doses of sotorasib in combination with panitumumab resulted in longer progression-free survival than standard treatment. Toxic effects were as expected for either agent alone and resulted in few discontinuations of treatment. (Funded by Amgen; CodeBreaK 300 ClinicalTrials.gov number, NCT05198934.).",
@@ -500,38 +542,6 @@
      "exact mutation in title +3",
      "reports results with numbers +2",
      "names a drug (Sotorasib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
-    "pmid": "40783289",
-    "title": "Adagrasib versus docetaxel in KRASG12C-mutated non-small-cell lung cancer (KRYSTAL-12): a randomised, open-label, phase 3 trial",
-    "abstract": "BACKGROUND: Adagrasib is a KRASG12C inhibitor that demonstrated promising activity against KRASG12C-mutated advanced non-small-cell lung cancer (NSCLC) in a phase 2 trial. Here we aimed to compare the efficacy and safety of adagrasib versus docetaxel in patients with KRASG12C-mutated advanced NSCLC previously treated with chemotherapy and immunotherapy.\nMETHODS: KRYSTAL-12 is a randomised, multicentre, open-label, phase 3 trial conducted at 230 centres in 22 countries. Patients with Kirsten rat sarcoma viral oncogene homologue (KRAS)G12C-mutated locally advanced or metastatic NSCLC, who had previously received both platinum-based chemotherapy and anti-programmed cell death protein 1 or anti-programmed death ligand 1 therapy, were randomly allocated in a 2:1 ratio to receive 600 mg adagrasib (twice a day orally) or 75 mg/m2 docetaxel (every 3 weeks intravenously) using a centralised interactive web response system. Randomisation was stratified by region (non-Asia-Pacific vs Asia-Pacific) and previous treatment (sequential vs concurrent chemotherapy or immunotherapy). Treatment continued until disease progression, unacceptable toxicity, investigator or patient decision, or death. The primary endpoint was progression-free survival assessed by blinded independent central review in all randomised patients (intention-to-treat [ITT] population). Safety was assessed in all treated patients. This trial is registered at ClinicalTrials.gov (NCT04685135), and is active but no longer recruiting.\nFINDINGS: Between Feb 23, 2021, and Nov 16, 2023, 453 patients were randomly allocated to receive adagrasib (301 [66%]) or docetaxel (152 [34%]). In each group, 298 (99%) patients received adagrasib and 140 (92%) received docetaxel. In the ITT population (median follow-up 7·2 months [95% CI 5·8-8·7]), median progression-free survival was 5·5 months (95% CI 4·5-6·7) with adagrasib and 3·8 months (95% CI 2·7-4·7) with docetaxel (hazard ratio 0·58 [95% CI 0·45-0·76]; p<0·0001). Grade 3 and above treatment-related adverse events occurred in 140 (47%) of 298 patients treated with adagrasib and 64 (46%) of 140 with docetaxel. There were four (1%) treatment-related deaths in the adagrasib group and one (1%) treatment-related death in the docetaxel group.\nINTERPRETATION: Adagrasib demonstrated a statistically significant improvement in progression-free survival over docetaxel in patients with previously treated KRASG12C-mutated NSCLC, without new safety signals.\nFUNDING: Mirati Therapeutics, a Bristol Myers Squibb company.",
-    "journal": "Lancet",
-    "year": 2025,
-    "authors": [
-     "Barlesi F",
-     "Yao W",
-     "Duruisseaux M",
-     "Doucet L",
-     "Martínez AA"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Clinical Trial, Phase III",
-     "Multicenter Study",
-     "Randomized Controlled Trial",
-     "Comparative Study",
-     "Research Support, Non-U.S. Gov't"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/40783289/",
-    "score": 13,
-    "score_reasons": [
-     "OCEBM level 2 (randomized trial) +4",
-     "exact mutation in title +3",
-     "reports results with numbers +2",
-     "names a drug (Adagrasib) +2",
      "published in last 5 years +2"
     ],
     "sent_to_ai": true
@@ -986,35 +996,6 @@
     "sent_to_ai": true
    },
    {
-    "pmid": "38870979",
-    "title": "Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial",
-    "abstract": "BACKGROUND: Garsorasib (D-1553; InventisBio, Shangai, China), a potent KRASG12C inhibitor, has shown promising antitumour activity in patients with KRASG12C-mutated (ie, Gly12Cys) non-small-cell lung cancer (NSCLC) in a phase 1 study. We report results from a phase 2 study conducted to evaluate the efficacy and safety of garsorasib in patients with locally advanced or metastatic KRASG12C-mutated NSCLC.\nMETHODS: This open-label, multicentre, single-arm, phase 2 trial enrolled adult patients with KRASG12C-mutated NSCLC who had previously been treated with platinum-based chemotherapy and immune checkpoint inhibitors from 43 hospitals in China. Participants received 600 mg garsorasib orally twice per day. Tumour assessments were performed at baseline, at the end of every two cycles (of 21 days) for the first eight cycles, and at the end of every three cycles thereafter. The primary endpoint was objective response rate (ORR) as assessed by an independent review committee (IRC) following the guidelines in Response Evaluation Criteria in Solid Tumours, version 1.1. Efficacy and safety were assessed in all patients who received at least one dose of garsorasib. This trial is registered at ClinicalTrials.gov, NCT05383898, and is active but no longer recruiting.\nFINDINGS: From June 17, 2022, to May 17, 2023, of 225 patients screened for eligibility, 123 patients were enrolled and treated with garsorasib. Of these 123 participants, the median age was 64 years (IQR 59-68), 108 (88%) were male and 15 (12%) were female. At data cutoff (Nov 17, 2023), the median follow-up duration was 7·9 months (IQR 6·3-10·4), and 82 (67%) of 123 patients had discontinued treatment. The IRC-confirmed ORR was 50% (61 of 123 patients; 95% CI 41-59). 117 (95%) of 123 patients reported treatment-related adverse events, with 61 (50%) experiencing grade 3 or higher events. The most common types of adverse events of grade 3 or higher associated with garsorasib were hepatic and gastrointestinal events, including increased liver enzymes, such as aspartate aminotransferase (21 [17%] of 123 participants), alanine aminotransferase (19 [15%] of 123 participants), and gamma-glutamyltransferase (28 [23%] of 123 participants); nausea (2 [2%] of 123 participants); and vomiting (2 [2%] of 123 participants). No new safety signals were identified, and most of the adverse events were well managed.\nINTERPRETATION: The results show that garsorasib has a high response rate, long duration of response, and an acceptable and manageable safety profile in patients with previously treated KRASG12C-mutated NSCLC. Garsorasib potentially provides a promising treatment option for this patient population.\nFUNDING: InventisBio.",
-    "journal": "Lancet Respir Med",
-    "year": 2024,
-    "authors": [
-     "Li Z",
-     "Dang X",
-     "Huang D",
-     "Jin S",
-     "Li W"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Clinical Trial, Phase II",
-     "Multicenter Study"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/38870979/",
-    "score": 12,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in title +3",
-     "reports results with numbers +2",
-     "names a drug (garsorasib) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
     "pmid": "34919824",
     "title": "Sotorasib for previously treated colorectal cancers with KRASG12C mutation (CodeBreaK100): a prespecified analysis of a single-arm, phase 2 trial",
     "abstract": "BACKGROUND: Sotorasib, a specific, irreversible KRASG12C protein inhibitor, has shown monotherapy clinical activity in KRASG12C-mutated solid tumours, including colorectal cancer, in the CodeBreaK100 phase 1 trial. We aimed to investigate the activity and safety of sotorasib in phase 2 of the trial.\nMETHODS: In this single-arm, phase 2 trial, adult patients with KRASG12C-mutated advanced solid tumours were enrolled, from 59 medical centres in 11 countries, if they were aged 18 years or older, had at least one measurable lesion according to the Response Evaluation Criteria in Solid Tumours (RECIST) version 1.1, and had an Eastern Cooperative Oncology Group performance status of 1 or lower. Only data for patients with colorectal cancer, enrolled at 33 medical centres in nine countries, are presented from this basket trial. To be enrolled, the patients had to have progressed after receiving fluoropyrimidine, oxaliplatin, and irinotecan treatment. These patients were administered 960 mg sotorasib orally once per day until disease progression, development of unacceptable side-effects, withdrawal of consent, or death. The primary endpoint was objective response (complete or partial response) as assessed by blinded independent central review. Response was evaluated in patients who received at least one dose of sotorasib and had at least one measurable lesion at baseline; safety was evaluated in patients who received at least one dose of sotorasib. This analysis is a prespecified analysis triggered by the phase 2 colorectal cancer cohort. This study is registered with ClinicalTrials.gov, NCT03600883, and is active but no longer recruiting.\nFINDINGS: On March 1, 2021, at data cutoff, 62 patients with KRASG12C-mutant colorectal cancer had been enrolled between Aug 14, 2019, and May 21, 2020, and had received at least one dose of sotorasib monotherapy. Objective response was observed in six (9·7%, 95% CI 3·6-19·9) of 62 patients, all with partial response. Treatment-related adverse events at grade 3 occurred in six (10%) patients, the most common of which was diarrhoea (two [3%] of 62 patients), and at grade 4 occurred in one (2%) patient (blood creatine phosphokinase increase); no fatal events were recorded. Serious treatment-related adverse events occurred in two (3%) patients (back pain and acute kidney injury).\nINTERPRETATION: Although the 9·7% overall response rate did not reach the benchmark, oral administration of sotorasib once per day showed modest anti-tumour activity and manageable safety in these heavily pretreated chemorefractory patients. Sotorasib is under evaluation in combination with other therapeutics to increase potential activity and overcome potential resistance mechanisms.\nFUNDING: Amgen.",
@@ -1193,6 +1174,36 @@
     "sent_to_ai": true
    },
    {
+    "pmid": "41926959",
+    "title": "Fulzerasib plus cetuximab in first-line KRASG12C-mutated non-small-cell lung cancer (KROCUS): a single-arm, multicentre, phase 1b/2 trial",
+    "abstract": "BACKGROUND: Fulzerasib, a KRASG12C inhibitor, has shown clinical activity in previously treated non-small-cell lung cancer (NSCLC). Clinical studies indicate that combining a KRASG12C inhibitor with an anti-EGFR antibody is effective in colorectal cancer; however, its benefit in NSCLC remains to be explored.\nMETHODS: This single-arm, phase 1b/2 trial enrolled patients at 30 medical centres in Spain, Italy, and Greece. Eligible patients had KRASG12C-mutated NSCLC with no previous systemic anti-tumour therapy for advanced or metastatic disease and were aged 18 years and older; had at least one measurable lesion according to the Response Evaluation Criteria in Solid Tumours (RECIST) version 1.1; had an Eastern Cooperative Oncology Group performance status of 0 or 1; and had a life expectancy of 3 months or more. Enrolled patients received 600 mg oral fulzerasib twice daily plus 500 mg/m2 intravenous cetuximab every 2 weeks. The primary endpoint was investigator-assessed objective response rate per RECIST 1.1 assessed in the full response analysis set. The study was registered with ClinicalTrials.gov (NCT05756153) and is complete.\nFINDINGS: Between April 23, 2023, and April 15, 2024, a total of 60 patients were screened, and 47 patients (78%) received treatment. The median age was 68 years (IQR 59-72); 25 patients (53%) were male and 22 (47%) were female. 45 (95%) patients were current or former smokers. As of Jan 14, 2025, the median follow-up time and treatment duration were 12·8 months (90% CI 11·6-14·6) and 10·1 months (IQR 6·3-13·0) months, respectively. The confirmed objective response rate was 69% (90% CI 56-80). Treatment-related adverse events (TRAEs) occurred in 41 (87%) of the 47 patients (grade 3 in seven [15%]). No grade 4 or 5 TRAEs were observed. TRAEs led to drug discontinuation in three (6%) patients, with only cetuximab being discontinued.\nINTERPRETATION: In treatment-naive KRASG12C-mutated NSCLC, fulzerasib plus cetuximab showed encouraging activity with a favourable safety profile. The combination is currently being planned for investigation in a phase 3 study.\nFUNDING: Zhejiang GenFleet Therapeutics.",
+    "journal": "Lancet Oncol",
+    "year": 2026,
+    "authors": [
+     "Gregorc V",
+     "Majem M",
+     "Lo Russo G",
+     "Maio M",
+     "Salvagni S"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Multicenter Study",
+     "Clinical Trial, Phase I",
+     "Clinical Trial, Phase II"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41926959/",
+    "score": 12,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "names a drug (Cetuximab) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
     "pmid": "36948246",
     "title": "D-1553 (Garsorasib), a Potent and Selective Inhibitor of KRASG12C in Patients With NSCLC: Phase 1 Study Results",
     "abstract": "INTRODUCTION: D-1553 (garsorasib) is a potent and selective oral KRASG12C inhibitor. We report results from a phase I dose-escalation and dose-expansion study of D-1553 in patients with KRAS G12C-mutated NSCLC in multiple sites in the People's Republic of China.\nMETHODS: Patients with KRAS G12C-mutated NSCLC have administrated D-1553 600 mg orally once daily, 800 mg once daily, 1200 mg once daily, 400 mg twice a day, or 600 mg twice a day in dose escalation. In dose-expansion, all patients received 600 mg twice a day. The safety, pharmacokinetics, and efficacy of D-1553 were evaluated.\nRESULTS: Among a total of 79 treated patients, 75 patients (94.9%) reported treatment-related adverse events with 30 patients experiencing grade 3 or 4 events (38.0%). Most of the adverse events were manageable and the patients tolerated the study treatment well. Among 74 patients assessable for efficacy analysis, 30 patients had a partial response and 38 had stable disease with a confirmed objective response rate (ORR) and disease control rate (DCR) of 40.5% and 91.9%, respectively. The median progression-free survival was 8.2 months, and the median duration of response was 7.1 months. Among 62 patients assessable for response at the recommended phase 2 dose, partial response occurred in 24 patients (ORR, 38.7%) and stable disease in 32 patients (DCR, 90.3%). The median progression-free survival and duration of response were 7.6 months and 6.9 months, respectively. In patients with brain metastasis, ORR and DCR were 17% and 100%, respectively.\nCONCLUSIONS: D-1553 represents a promising therapeutic option for patients with KRAS G12C-mutated NSCLC with a well-tolerated safety profile and encouraging antitumor activity.",
@@ -1216,6 +1227,65 @@
      "exact mutation in title +3",
      "reports results with numbers +2",
      "names a drug (garsorasib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
+    "pmid": "38870979",
+    "title": "Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial",
+    "abstract": "BACKGROUND: Garsorasib (D-1553; InventisBio, Shangai, China), a potent KRASG12C inhibitor, has shown promising antitumour activity in patients with KRASG12C-mutated (ie, Gly12Cys) non-small-cell lung cancer (NSCLC) in a phase 1 study. We report results from a phase 2 study conducted to evaluate the efficacy and safety of garsorasib in patients with locally advanced or metastatic KRASG12C-mutated NSCLC.\nMETHODS: This open-label, multicentre, single-arm, phase 2 trial enrolled adult patients with KRASG12C-mutated NSCLC who had previously been treated with platinum-based chemotherapy and immune checkpoint inhibitors from 43 hospitals in China. Participants received 600 mg garsorasib orally twice per day. Tumour assessments were performed at baseline, at the end of every two cycles (of 21 days) for the first eight cycles, and at the end of every three cycles thereafter. The primary endpoint was objective response rate (ORR) as assessed by an independent review committee (IRC) following the guidelines in Response Evaluation Criteria in Solid Tumours, version 1.1. Efficacy and safety were assessed in all patients who received at least one dose of garsorasib. This trial is registered at ClinicalTrials.gov, NCT05383898, and is active but no longer recruiting.\nFINDINGS: From June 17, 2022, to May 17, 2023, of 225 patients screened for eligibility, 123 patients were enrolled and treated with garsorasib. Of these 123 participants, the median age was 64 years (IQR 59-68), 108 (88%) were male and 15 (12%) were female. At data cutoff (Nov 17, 2023), the median follow-up duration was 7·9 months (IQR 6·3-10·4), and 82 (67%) of 123 patients had discontinued treatment. The IRC-confirmed ORR was 50% (61 of 123 patients; 95% CI 41-59). 117 (95%) of 123 patients reported treatment-related adverse events, with 61 (50%) experiencing grade 3 or higher events. The most common types of adverse events of grade 3 or higher associated with garsorasib were hepatic and gastrointestinal events, including increased liver enzymes, such as aspartate aminotransferase (21 [17%] of 123 participants), alanine aminotransferase (19 [15%] of 123 participants), and gamma-glutamyltransferase (28 [23%] of 123 participants); nausea (2 [2%] of 123 participants); and vomiting (2 [2%] of 123 participants). No new safety signals were identified, and most of the adverse events were well managed.\nINTERPRETATION: The results show that garsorasib has a high response rate, long duration of response, and an acceptable and manageable safety profile in patients with previously treated KRASG12C-mutated NSCLC. Garsorasib potentially provides a promising treatment option for this patient population.\nFUNDING: InventisBio.",
+    "journal": "Lancet Respir Med",
+    "year": 2024,
+    "authors": [
+     "Li Z",
+     "Dang X",
+     "Huang D",
+     "Jin S",
+     "Li W"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Clinical Trial, Phase II",
+     "Multicenter Study"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38870979/",
+    "score": 12,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "names a drug (garsorasib) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
+    "pmid": "41325755",
+    "title": "Glecirasib plus sitneprotafib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 1/2a trial",
+    "abstract": "BACKGROUND: Monotherapy with KRASG12C (ie, KRAS Gly12Cys) inhibitors has emerged as a mainstream treatment for patients with KRASG12C -mutated non-small-cell lung cancer (NSCLC). Synergistic effects have been observed with the combination of a KRASG12C inhibitor and a SHP2 inhibitor in multiple xenograft models. We aimed to evaluate the safety and efficacy of the KRASG12C inhibitor glecirasib combined with the SHP2 inhibitor sitneprotafib (JAB-3312; Jacobio Pharmaceuticals, Beijing, China) in patients with KRASG12C -mutated solid tumours.\nMETHODS: We conducted an open-label, multicentre, single-arm, phase 1/2a trial at 26 hospitals across China. Patients (aged ≥18 years) with locally advanced or metastatic solid tumours harbouring a KRASG12C mutation, an Eastern Cooperative Oncology Group performance status score of 0-1, and measurable disease according to Response Evaluation Criteria in Solid Tumours (RECIST; version 1.1) were eligible for inclusion in both phases. Patients received oral glecirasib (400 mg or 800 mg once daily) in combination with oral sitneprotafib (2 mg or 3 mg once daily) in seven cohorts evaluating various dose levels and schedules of the two drugs. In phase 1, the primary endpoint was safety assessed by investigators according to the National Cancer Institute Common Terminology Criteria for Adverse Events (version 5.0) from first treatment dose to 30 days after the last dose of both agents. In phase 2a, the primary endpoint was objective response rate (ORR) between baseline and disease progression or initiation of anticancer therapy, whichever occurred first, based on the comprehensive assessment of all tumour evaluations by investigators following RECIST (version 1.1). All patients who received at least one dose of combination therapy were included in the safety and efficacy analyses. This trial is registered with ClinicalTrials.gov (NCT05288205) and is currently recruiting.\nFINDINGS: Between May 7, 2022, and Aug 20, 2024, a total of 194 patients with advanced solid tumours were enrolled, of whom 171 (88%) had NSCLC (50 [29%] in phase 1 and 121 [71%] in phase 2a). Median participant age was 65 years (IQR 59-70); 140 (82%) were men and 31 (18%) were women. At data cutoff on Aug 20, 2024, the median follow-up duration was 14·5 months (IQR 11·9-17·1), and 106 (62%) patients had discontinued treatment. Phase 1 concluded with one dose-limiting toxicity (DLT; grade 3 pneumonitis) at the highest dose level (glecirasib 800 mg plus sitneprotafib 3 mg once daily, 1 week on and 1 week off); no DLTs were observed at other dose levels. Across phase 1 and 2a, 167 patients (98%) had at least one treatment-related adverse event, which were grade 3-4 in 78 (46%) patients. The most common treatment-related adverse events (occurring in ≥20% of all 171 patients) were anaemia (105 [61%]), hypertriglyceridaemia (103 [60%]), increased aspartate aminotransferase (95 [56%]), increased alanine aminotransferase (83 [49%]), increased blood bilirubin (78 [46%]), oedema (62 [36%]), increased blood creatine phosphokinase (60 [35%]), neutropenia (54 [32%]), decreased white blood cell count (50 [29%]), and increased bodyweight (44 [26%]). Three (2%) patients discontinued glecirasib and sitneprotafib due to treatment-related adverse events. No grade 5 treatment-related adverse event was reported. The ORR was 71% (72 patients [95% CI 61-79]) in the subgroup of 102 patients with previously untreated NSCLC; 49% (19 patients [32-65]) in the 39 patients previously treated with systemic therapy but naive to KRASG12C inhibitors; and 10% (three patients [2-27]) in the 30 patients previously treated with KRASG12C inhibitor therapy.\nINTERPRETATION: Glecirasib combined with sitneprotafib showed promising efficacy and manageable safety in patients with advanced KRASG12C -mutated NSCLC, particularly among those who had not received previous treatment. These findings support the evaluation of this combination in a phase 3 trial comparing this chemotherapy-free regimen to current standard of care in this patient group.\nFUNDING: Jacobio Pharmaceuticals.\nTRANSLATION: For the Chinese translation of the abstract see Supplementary Materials section.",
+    "journal": "Lancet Respir Med",
+    "year": 2026,
+    "authors": [
+     "Zhong J",
+     "Zhao J",
+     "Duan J",
+     "Fang J",
+     "Fei K"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Multicenter Study",
+     "Clinical Trial, Phase II",
+     "Clinical Trial, Phase I"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41325755/",
+    "score": 12,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "names a drug (glecirasib) +2",
      "published in last 5 years +2"
     ],
     "sent_to_ai": true
@@ -1247,36 +1317,6 @@
      "exact mutation in title +3",
      "reports results with numbers +2",
      "names a drug (Cetuximab) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
-    "pmid": "41325755",
-    "title": "Glecirasib plus sitneprotafib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 1/2a trial",
-    "abstract": "BACKGROUND: Monotherapy with KRASG12C (ie, KRAS Gly12Cys) inhibitors has emerged as a mainstream treatment for patients with KRASG12C -mutated non-small-cell lung cancer (NSCLC). Synergistic effects have been observed with the combination of a KRASG12C inhibitor and a SHP2 inhibitor in multiple xenograft models. We aimed to evaluate the safety and efficacy of the KRASG12C inhibitor glecirasib combined with the SHP2 inhibitor sitneprotafib (JAB-3312; Jacobio Pharmaceuticals, Beijing, China) in patients with KRASG12C -mutated solid tumours.\nMETHODS: We conducted an open-label, multicentre, single-arm, phase 1/2a trial at 26 hospitals across China. Patients (aged ≥18 years) with locally advanced or metastatic solid tumours harbouring a KRASG12C mutation, an Eastern Cooperative Oncology Group performance status score of 0-1, and measurable disease according to Response Evaluation Criteria in Solid Tumours (RECIST; version 1.1) were eligible for inclusion in both phases. Patients received oral glecirasib (400 mg or 800 mg once daily) in combination with oral sitneprotafib (2 mg or 3 mg once daily) in seven cohorts evaluating various dose levels and schedules of the two drugs. In phase 1, the primary endpoint was safety assessed by investigators according to the National Cancer Institute Common Terminology Criteria for Adverse Events (version 5.0) from first treatment dose to 30 days after the last dose of both agents. In phase 2a, the primary endpoint was objective response rate (ORR) between baseline and disease progression or initiation of anticancer therapy, whichever occurred first, based on the comprehensive assessment of all tumour evaluations by investigators following RECIST (version 1.1). All patients who received at least one dose of combination therapy were included in the safety and efficacy analyses. This trial is registered with ClinicalTrials.gov (NCT05288205) and is currently recruiting.\nFINDINGS: Between May 7, 2022, and Aug 20, 2024, a total of 194 patients with advanced solid tumours were enrolled, of whom 171 (88%) had NSCLC (50 [29%] in phase 1 and 121 [71%] in phase 2a). Median participant age was 65 years (IQR 59-70); 140 (82%) were men and 31 (18%) were women. At data cutoff on Aug 20, 2024, the median follow-up duration was 14·5 months (IQR 11·9-17·1), and 106 (62%) patients had discontinued treatment. Phase 1 concluded with one dose-limiting toxicity (DLT; grade 3 pneumonitis) at the highest dose level (glecirasib 800 mg plus sitneprotafib 3 mg once daily, 1 week on and 1 week off); no DLTs were observed at other dose levels. Across phase 1 and 2a, 167 patients (98%) had at least one treatment-related adverse event, which were grade 3-4 in 78 (46%) patients. The most common treatment-related adverse events (occurring in ≥20% of all 171 patients) were anaemia (105 [61%]), hypertriglyceridaemia (103 [60%]), increased aspartate aminotransferase (95 [56%]), increased alanine aminotransferase (83 [49%]), increased blood bilirubin (78 [46%]), oedema (62 [36%]), increased blood creatine phosphokinase (60 [35%]), neutropenia (54 [32%]), decreased white blood cell count (50 [29%]), and increased bodyweight (44 [26%]). Three (2%) patients discontinued glecirasib and sitneprotafib due to treatment-related adverse events. No grade 5 treatment-related adverse event was reported. The ORR was 71% (72 patients [95% CI 61-79]) in the subgroup of 102 patients with previously untreated NSCLC; 49% (19 patients [32-65]) in the 39 patients previously treated with systemic therapy but naive to KRASG12C inhibitors; and 10% (three patients [2-27]) in the 30 patients previously treated with KRASG12C inhibitor therapy.\nINTERPRETATION: Glecirasib combined with sitneprotafib showed promising efficacy and manageable safety in patients with advanced KRASG12C -mutated NSCLC, particularly among those who had not received previous treatment. These findings support the evaluation of this combination in a phase 3 trial comparing this chemotherapy-free regimen to current standard of care in this patient group.\nFUNDING: Jacobio Pharmaceuticals.\nTRANSLATION: For the Chinese translation of the abstract see Supplementary Materials section.",
-    "journal": "Lancet Respir Med",
-    "year": 2026,
-    "authors": [
-     "Zhong J",
-     "Zhao J",
-     "Duan J",
-     "Fang J",
-     "Fei K"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Multicenter Study",
-     "Clinical Trial, Phase II",
-     "Clinical Trial, Phase I"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41325755/",
-    "score": 12,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in title +3",
-     "reports results with numbers +2",
-     "names a drug (glecirasib) +2",
      "published in last 5 years +2"
     ],
     "sent_to_ai": true
@@ -1398,36 +1438,6 @@
      "published in last 5 years +2"
     ],
     "sent_to_ai": false
-   },
-   {
-    "pmid": "41926959",
-    "title": "Fulzerasib plus cetuximab in first-line KRASG12C-mutated non-small-cell lung cancer (KROCUS): a single-arm, multicentre, phase 1b/2 trial",
-    "abstract": "BACKGROUND: Fulzerasib, a KRASG12C inhibitor, has shown clinical activity in previously treated non-small-cell lung cancer (NSCLC). Clinical studies indicate that combining a KRASG12C inhibitor with an anti-EGFR antibody is effective in colorectal cancer; however, its benefit in NSCLC remains to be explored.\nMETHODS: This single-arm, phase 1b/2 trial enrolled patients at 30 medical centres in Spain, Italy, and Greece. Eligible patients had KRASG12C-mutated NSCLC with no previous systemic anti-tumour therapy for advanced or metastatic disease and were aged 18 years and older; had at least one measurable lesion according to the Response Evaluation Criteria in Solid Tumours (RECIST) version 1.1; had an Eastern Cooperative Oncology Group performance status of 0 or 1; and had a life expectancy of 3 months or more. Enrolled patients received 600 mg oral fulzerasib twice daily plus 500 mg/m2 intravenous cetuximab every 2 weeks. The primary endpoint was investigator-assessed objective response rate per RECIST 1.1 assessed in the full response analysis set. The study was registered with ClinicalTrials.gov (NCT05756153) and is complete.\nFINDINGS: Between April 23, 2023, and April 15, 2024, a total of 60 patients were screened, and 47 patients (78%) received treatment. The median age was 68 years (IQR 59-72); 25 patients (53%) were male and 22 (47%) were female. 45 (95%) patients were current or former smokers. As of Jan 14, 2025, the median follow-up time and treatment duration were 12·8 months (90% CI 11·6-14·6) and 10·1 months (IQR 6·3-13·0) months, respectively. The confirmed objective response rate was 69% (90% CI 56-80). Treatment-related adverse events (TRAEs) occurred in 41 (87%) of the 47 patients (grade 3 in seven [15%]). No grade 4 or 5 TRAEs were observed. TRAEs led to drug discontinuation in three (6%) patients, with only cetuximab being discontinued.\nINTERPRETATION: In treatment-naive KRASG12C-mutated NSCLC, fulzerasib plus cetuximab showed encouraging activity with a favourable safety profile. The combination is currently being planned for investigation in a phase 3 study.\nFUNDING: Zhejiang GenFleet Therapeutics.",
-    "journal": "Lancet Oncol",
-    "year": 2026,
-    "authors": [
-     "Gregorc V",
-     "Majem M",
-     "Lo Russo G",
-     "Maio M",
-     "Salvagni S"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Multicenter Study",
-     "Clinical Trial, Phase I",
-     "Clinical Trial, Phase II"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41926959/",
-    "score": 12,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in title +3",
-     "reports results with numbers +2",
-     "names a drug (Cetuximab) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
    },
    {
     "pmid": "41330054",
@@ -2005,6 +2015,35 @@
     "sent_to_ai": true
    },
    {
+    "pmid": "41167214",
+    "title": "Patritumab deruxtecan (HER3-DXd) in patients with active brain metastases of non-small-cell lung cancer (TUXEDO-3): a multicentre, single-arm, phase 2 trial",
+    "abstract": "BACKGROUND: Patritumab deruxtecan (HER3-DXd) is a novel antibody-drug conjugate targeting HER3, which is overexpressed in CNS metastases of advanced non-small-cell lung cancer (NSCLC). We aimed to evaluate the activity and safety of HER3-DXd in patients with advanced NSCLC and newly diagnosed brain metastases or brain metastases progressing after local therapy.\nMETHODS: TUXEDO-3 is a multicohort, multicentre, open-label, single-arm phase 2 trial. In this cohort (2 of 3), we enrolled adults (aged ≥18 years) with histologically documented squamous or non-squamous NSCLC, radiologically documented metastatic disease, newly diagnosed brain metastases or progressing brain metastases after local treatment, at least one brain lesion, no need for immediate local therapy, and an Eastern Cooperative Oncology Group performance status of 0-2. Patients received HER3-DXd 5·6 mg/kg intravenously once every 3 weeks. The threshold to meet the primary endpoint was at least 15% of patients having an intracranial response according to Response Assessment in Neuro-Oncology Brain Metastases criteria. Activity and safety analyses were done in the full analysis set, which included all participants who received at least one dose of HER3-DXd. This trial (ClinicalTrials.govNCT05865990 and European Union Clinical Trials Register 2023-503251-10-00) is ongoing but no longer enrolling patients.\nFINDINGS: Between Dec 27, 2023, and Sept 6, 2024, 20 patients were recruited; ten (50%) were female and ten (50%) were male. 16 (80%) of 20 patients were White; race was not reported in the remaining four patients. 13 (65%) of the 20 patients had brain metastases progressing after local therapy and seven (35%) had untreated brain metastases; five (25%) had activating driver mutations. Median follow-up was 5·3 months (IQR 2·0-8·5). The primary endpoint was met, with six (30%) of 20 patients having intracranial responses (objective response rate 30·0%, 95% CI 11·9-54·3). The six responders had non-squamous advanced NSCLC (two [33%] with untreated brain metastases and four [67%] with progressing brain metastases), of whom one (17%) had an activating driver mutation (KRAS G12C). Treatment-related adverse events occurred in 16 (80%) patients, the most common of which were nausea (seven [35%] patients), and diarrhoea and asthenia (each six [30%] patients). The most common grade 3 and 4 adverse events were neutropenia in three (15%) patients and febrile neutropenia in two (10%). There were no treatment-related deaths, and no new safety signals were identified.\nINTERPRETATION: HER3-DXd showed promising clinical activity in patients with advanced NSCLC and active brain metastases, and could represent a novel treatment option in this setting.\nFUNDING: Daiichi-Sankyo and Merck Sharp & Dohme.",
+    "journal": "Lancet Oncol",
+    "year": 2025,
+    "authors": [
+     "Fuereder T",
+     "Garde-Noguera J",
+     "García-Mosquera JJ",
+     "Ruiz-Borrego M",
+     "Valero M"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Multicenter Study",
+     "Clinical Trial, Phase II"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41167214/",
+    "score": 10,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "reports results with numbers +2",
+     "names a drug (patritumab) +2",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": true
+   },
+   {
     "pmid": "40935839",
     "title": "Coinhibition of the MEK/RTK pathway has high therapeutic efficacy in KRAS-mutant non-small cell lung cancer",
     "abstract": "Oncogenic KRAS mutations are frequently detected in NSCLC. It remains a major challenge to target all KRAS mutants. MEK inhibitors are considered candidates for treating KRAS-mutant NSCLC; however, their easy adaptive resistance precludes further application. Here, we found that MEK inhibitor-trametinib treatment results in the feedback activation of multiple receptor tyrosine kinases (RTKs) and that treatment with the pan-RTK inhibitor anlotinib effectively inhibits the progression of KRAS-mutant NSCLC. Furthermore, we evaluated this strategy in a clinical study (NCT04967079) involving 33 advanced non-G12C KRAS-mutant NSCLC patients. The phase Ia containing 13 patients showed that the recommended phase 2 dose (RP2D) is trametinib (2 mg) plus anlotinib (8 mg), the objective response rate (ORR) is 69.2% (95% CI: 38.6-90.9), the median progression-free survival (PFS) is 6.9 months (95% CI: 3.9 to could not be evaluated), disease control rate (DCR) is 92% (95% CI: 64.0-99.8) and the rate of adverse events (AEs) ≥grade 3 is 23%. The phase Ib containing 20 patients demonstrated the high efficacy of this combinational therapy with RP2D, with the ORR at 65% (95% CI: 40.8-84.6), the median PFS is 11.5 months (95% CI: 8.3-15.5), the median overall survival (OS) is 15.5 months (95% CI: 15.5 to could not be evaluated), the DCR at 100% (95% CI: 83.2-100.0), the median duration of overall response (DoR) is 9.3 months (95% CI: 2.5-12.1), and the rate of AEs ≥ grade 3 at 35%. Overall, this study provides a potential combinational therapeutic strategy for KRAS-mutant NSCLC through the cotargeting of MEK and RTKs.",
@@ -2057,35 +2096,6 @@
      "exact mutation in abstract +1",
      "reports results with numbers +2",
      "names a drug (ipilimumab) +2",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": true
-   },
-   {
-    "pmid": "41167214",
-    "title": "Patritumab deruxtecan (HER3-DXd) in patients with active brain metastases of non-small-cell lung cancer (TUXEDO-3): a multicentre, single-arm, phase 2 trial",
-    "abstract": "BACKGROUND: Patritumab deruxtecan (HER3-DXd) is a novel antibody-drug conjugate targeting HER3, which is overexpressed in CNS metastases of advanced non-small-cell lung cancer (NSCLC). We aimed to evaluate the activity and safety of HER3-DXd in patients with advanced NSCLC and newly diagnosed brain metastases or brain metastases progressing after local therapy.\nMETHODS: TUXEDO-3 is a multicohort, multicentre, open-label, single-arm phase 2 trial. In this cohort (2 of 3), we enrolled adults (aged ≥18 years) with histologically documented squamous or non-squamous NSCLC, radiologically documented metastatic disease, newly diagnosed brain metastases or progressing brain metastases after local treatment, at least one brain lesion, no need for immediate local therapy, and an Eastern Cooperative Oncology Group performance status of 0-2. Patients received HER3-DXd 5·6 mg/kg intravenously once every 3 weeks. The threshold to meet the primary endpoint was at least 15% of patients having an intracranial response according to Response Assessment in Neuro-Oncology Brain Metastases criteria. Activity and safety analyses were done in the full analysis set, which included all participants who received at least one dose of HER3-DXd. This trial (ClinicalTrials.govNCT05865990 and European Union Clinical Trials Register 2023-503251-10-00) is ongoing but no longer enrolling patients.\nFINDINGS: Between Dec 27, 2023, and Sept 6, 2024, 20 patients were recruited; ten (50%) were female and ten (50%) were male. 16 (80%) of 20 patients were White; race was not reported in the remaining four patients. 13 (65%) of the 20 patients had brain metastases progressing after local therapy and seven (35%) had untreated brain metastases; five (25%) had activating driver mutations. Median follow-up was 5·3 months (IQR 2·0-8·5). The primary endpoint was met, with six (30%) of 20 patients having intracranial responses (objective response rate 30·0%, 95% CI 11·9-54·3). The six responders had non-squamous advanced NSCLC (two [33%] with untreated brain metastases and four [67%] with progressing brain metastases), of whom one (17%) had an activating driver mutation (KRAS G12C). Treatment-related adverse events occurred in 16 (80%) patients, the most common of which were nausea (seven [35%] patients), and diarrhoea and asthenia (each six [30%] patients). The most common grade 3 and 4 adverse events were neutropenia in three (15%) patients and febrile neutropenia in two (10%). There were no treatment-related deaths, and no new safety signals were identified.\nINTERPRETATION: HER3-DXd showed promising clinical activity in patients with advanced NSCLC and active brain metastases, and could represent a novel treatment option in this setting.\nFUNDING: Daiichi-Sankyo and Merck Sharp & Dohme.",
-    "journal": "Lancet Oncol",
-    "year": 2025,
-    "authors": [
-     "Fuereder T",
-     "Garde-Noguera J",
-     "García-Mosquera JJ",
-     "Ruiz-Borrego M",
-     "Valero M"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Multicenter Study",
-     "Clinical Trial, Phase II"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41167214/",
-    "score": 10,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "reports results with numbers +2",
-     "names a drug (patritumab) +2",
      "published in last 5 years +2"
     ],
     "sent_to_ai": true
@@ -3392,32 +3402,6 @@
     "sent_to_ai": false
    },
    {
-    "pmid": "40637305",
-    "title": "Biomarker testing implementation for molecularly targeted therapy in non-small cell lung cancer patients",
-    "abstract": "BACKGROUND: Recent advancements in identifying druggable molecular drivers in lung adenocarcinoma (LUAD), have transformed treatment paradigms. In recent years, Next Generation Sequencing (NGS) has gained momentum as an essential tool for in-depth simultaneous analysis of multiple genes, thereby streamlining the diagnostic process in LUAD. Despite this, the implementation of NGS testing in both the US and Europe remains suboptimal.\nAIMS: In compliance with a decree issued by the Italian Ministry of Health, Lombardy Region recently launched an initiative to implement NGS testing in patients with advanced LUAD. In this context, a real-world prospective observational study was planned to assess the efficacy of the regional network of molecular laboratories in testing nine biomarkers (KRAS p.G12C, EGFR, BRAF, HER2, MET mutations; ALK, ROS1, NTRK1-3, RET rearrangements), for on-label molecularly targeted drugs.\nRESULTS: In 2023, out of the 2784 advanced/metastatic LUAD patients expected in Lombardy, 2343 (84.2%) were successfully evaluated with an NGS panel including all the nine biomarkers for on-label drugs. Actionable aberrations were identified in 45.5% of the patients (1068/2343), predominantly involving EGFR, KRAS, and ALK genes.\nCONCLUSION: Our data provide evidence that establishing a structured network of NGS hubs is mandatory to ensure access of advanced LUAD patients to molecularly targeted treatments.",
-    "journal": "Tumori",
-    "year": 2025,
-    "authors": [
-     "Lorenzini D",
-     "Gaudioso G",
-     "Scardoni A",
-     "Blandi L",
-     "Del Gobbo A"
-    ],
-    "publication_types": [
-     "Journal Article",
-     "Observational Study"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/40637305/",
-    "score": 6,
-    "score_reasons": [
-     "OCEBM level 3 (non-randomized trial / cohort) +3",
-     "exact mutation in abstract +1",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "40907210",
     "title": "Gene actionability according to the ESMO Scale for Clinical Actionability of molecular Targets (ESCAT) in No Specific Molecular Profile (NSMP) endometrial cancer",
     "abstract": "BACKGROUND: The No Specific Molecular Profile (NSMP) subtype accounts for ∼30%-40% of endometrial cancer (EC), comprising a heterogeneous group of EC.\nPATIENTS AND METHODS: The primary outcome of this study was the prevalence of actionable genomic alterations in NSMP EC, classified according to the European Society for Medical Oncology (ESMO) Scale for Clinical Actionability of molecular Targets (ESCAT). Oncogenic and likely oncogenic alterations, pathways, and co-mutation patterns were reported. The analysis was stratified by risk group according to the European Society of Gynaecological Oncology (ESGO)-ESMO-European SocieTy for Radiotherapy and Oncology (ESTRO) guidelines. Patients with NSMP EC enrolled in the FPG500 comprehensive cancer genome profiling program (NCT06020625) were included.\nRESULTS: Two hundred and fifty-three patients with NSMP EC of any International Federation of Gynecology and Obstetrics (FIGO) stage were enrolled between 1 January 2022 and 31 December 2023. Median age was 62 years, and the most frequent histotype was endometrioid (97%). Ninety-five percent of patients were estrogen receptor positive. Two hundred and thirty-three patients (92%) had at least one ESCAT tier I-III alteration. The most frequent variants were in PTEN [88%, 95% confidence interval (CI) 84% to 92%], PIK3CA (42%, 95% CI 36% to 49%), FGFR2 (15%, 95% CI 11% to 20%), and AKT1 (6%, 95% CI 3% to 10%); 4% (95% CI 2% to 8%) of patients had an ESR1 variant, while KRAS G12C was found in 3% (95% CI 1% to 6%) of patients. The majority of PTEN variants were on the R130 hotspot. More frequent PIK3CA hotspot variants were H1047R (9%), E545D/K/Q/A (6%), and E542K (4%). In the overall population, PIK3CA with PIK3R1 (odds ratio [OR] = 0.07, P value = 4.25 × 10-14), KRAS with CTNNB1 (OR = 0.03, P value = 1.98 × 10-7), and AKT1 and PTEN (OR = 0.06, P value = 5.73 × 10-6) were mutually exclusive. Significant co-occurrence was found between PTEN and ARID1A (OR = 6.94, P value = 3.39 × 10-6) and PTEN with PIK3R1 (OR = 4.36, P value = 0.009). An alteration in the phosphatidylinositol-3 kinase (PI3K) pathway was found in 94% of patients in the overall population and in 98% of patients with an ESCAT tier I-III alteration.\nCONCLUSION: Our findings highlight potentially actionable alterations in NSMP EC patients, supporting the exploration of tailored molecular-matched therapies according to risk groups.",
@@ -3435,6 +3419,32 @@
      "Journal Article"
     ],
     "url": "https://pubmed.ncbi.nlm.nih.gov/40907210/",
+    "score": 6,
+    "score_reasons": [
+     "OCEBM level 3 (non-randomized trial / cohort) +3",
+     "exact mutation in abstract +1",
+     "published in last 5 years +2"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "40637305",
+    "title": "Biomarker testing implementation for molecularly targeted therapy in non-small cell lung cancer patients",
+    "abstract": "BACKGROUND: Recent advancements in identifying druggable molecular drivers in lung adenocarcinoma (LUAD), have transformed treatment paradigms. In recent years, Next Generation Sequencing (NGS) has gained momentum as an essential tool for in-depth simultaneous analysis of multiple genes, thereby streamlining the diagnostic process in LUAD. Despite this, the implementation of NGS testing in both the US and Europe remains suboptimal.\nAIMS: In compliance with a decree issued by the Italian Ministry of Health, Lombardy Region recently launched an initiative to implement NGS testing in patients with advanced LUAD. In this context, a real-world prospective observational study was planned to assess the efficacy of the regional network of molecular laboratories in testing nine biomarkers (KRAS p.G12C, EGFR, BRAF, HER2, MET mutations; ALK, ROS1, NTRK1-3, RET rearrangements), for on-label molecularly targeted drugs.\nRESULTS: In 2023, out of the 2784 advanced/metastatic LUAD patients expected in Lombardy, 2343 (84.2%) were successfully evaluated with an NGS panel including all the nine biomarkers for on-label drugs. Actionable aberrations were identified in 45.5% of the patients (1068/2343), predominantly involving EGFR, KRAS, and ALK genes.\nCONCLUSION: Our data provide evidence that establishing a structured network of NGS hubs is mandatory to ensure access of advanced LUAD patients to molecularly targeted treatments.",
+    "journal": "Tumori",
+    "year": 2025,
+    "authors": [
+     "Lorenzini D",
+     "Gaudioso G",
+     "Scardoni A",
+     "Blandi L",
+     "Del Gobbo A"
+    ],
+    "publication_types": [
+     "Journal Article",
+     "Observational Study"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40637305/",
     "score": 6,
     "score_reasons": [
      "OCEBM level 3 (non-randomized trial / cohort) +3",
@@ -3739,6 +3749,31 @@
      "Journal Article"
     ],
     "url": "https://pubmed.ncbi.nlm.nih.gov/31531201/",
+    "score": 6,
+    "score_reasons": [
+     "exact mutation in title +3",
+     "reports results with numbers +2",
+     "published 5-10 years ago +1"
+    ],
+    "sent_to_ai": false
+   },
+   {
+    "pmid": "32619782",
+    "title": "Real world outcomes in KRAS G12C mutation positive non-small cell lung cancer",
+    "abstract": "BACKGROUND: KRAS mutations are found in 20-30 % of non-small cell lung cancers (NSCLC) and were traditionally considered undruggable. KRASG12C mutation confers sensitivity to KRASG12C covalent inhibitors, however its prognostic impact remains unclear. This study assesses the frequency, clinical features, prevalence of brain metastases and outcomes in KRASG12C NSCLC in a real-world setting.\nMETHODS: Patients enrolled in the prospective Thoracic Malignancies Cohort (TMC) between July 2012 to October 2019 with recurrent/metastatic non-squamous NSCLC, available KRAS results, and without EGFR/ALK/ROS1 gene aberrations, were selected. Data was extracted from TMC and patient records. Clinicopathologic features, treatment and overall survival (OS) was compared for KRAS wildtype (KRASWT) and KRAS mutated (KRASmut); and KRASG12C and other (KRASother) mutations.\nRESULTS: Of 1386 NSCLC patients, 1040 were excluded: non-metastatic/recurrent (526); unknown KRAS status (356); ALK/EGFR/ROS1 positive (154); duplicate (4). Of 346 patients analysed, 144 (42 %) were KRASmut, of whom 65 (45 %) were KRASG12C. All patients with KRASG12C were active or ex-smokers, compared to 92 % of KRASother and 83 % of KRASWT. The prevalence of brain metastases during follow-up was similar between KRASmut and KRASWT (33 % vs 40 %, p = 0.17), and KRASG12C and KRASother (40 % vs 41 %, p = 0.74). The proportion of patients receiving one or multiple lines of systemic therapy was comparable. OS was similar between KRASmut and KRASWT (p = 0.54), and KRASG12C and KRASother (p = 0.39).\nCONCLUSION: Patients with KRASmut and KRASWT, and KRASG12C and KRASother NSCLC have comparable clinical features, treatment and survival. While not prognostic, KRASG12C may be an important predictive biomarker as promising KRASG12C covalent inhibitors continue to be developed.",
+    "journal": "Lung Cancer",
+    "year": 2020,
+    "authors": [
+     "Cui W",
+     "Franchini F",
+     "Alexander M",
+     "Officer A",
+     "Wong HL"
+    ],
+    "publication_types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32619782/",
     "score": 6,
     "score_reasons": [
      "exact mutation in title +3",
@@ -4971,31 +5006,6 @@
     "sent_to_ai": false
    },
    {
-    "pmid": "34992247",
-    "title": "Conformation-locking antibodies for the discovery and characterization of KRAS inhibitors",
-    "abstract": "Small molecules that stabilize inactive protein conformations are an underutilized strategy for drugging dynamic or otherwise intractable proteins. To facilitate the discovery and characterization of such inhibitors, we created a screening platform to identify conformation-locking antibodies for molecular probes (CLAMPs) that distinguish and induce rare protein conformational states. Applying the approach to KRAS, we discovered CLAMPs that recognize the open conformation of KRASG12C stabilized by covalent inhibitors. One CLAMP enables the visualization of KRASG12C covalent modification in vivo and can be used to investigate response heterogeneity to KRASG12C inhibitors in patient tumors. A second CLAMP enhances the affinity of weak ligands binding to the KRASG12C switch II region (SWII) by stabilizing a specific conformation of KRASG12C, thereby enabling the discovery of such ligands that could serve as leads for the development of drugs in a high-throughput screen. We show that combining the complementary properties of antibodies and small molecules facilitates the study and drugging of dynamic proteins.",
-    "journal": "Nat Biotechnol",
-    "year": 2022,
-    "authors": [
-     "Davies CW",
-     "Oh AJ",
-     "Mroue R",
-     "Steffek M",
-     "Bruning JM"
-    ],
-    "publication_types": [
-     "Journal Article"
-    ],
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34992247/",
-    "score": 3,
-    "score_reasons": [
-     "OCEBM level 5 (lab/animal only) +0",
-     "exact mutation in abstract +1",
-     "published in last 5 years +2"
-    ],
-    "sent_to_ai": false
-   },
-   {
     "pmid": "20542658",
     "title": "K-ras mutational status predicts poor prognosis in unresectable pancreatic cancer",
     "abstract": "OBJECTIVE: To determine the prognostic value of K-ras mutations in plasma DNA of unresectable pancreatic cancer patients.\nMETHODS: Blood samples were collected from 91 patients with unresectable pancreatic cancer prior to treatment. K-ras gene was amplified from the circulating plasma DNA. Mutations were detected by direct sequencing. The relationship between the types of K-ras gene and prognosis of unresectable pancreatic cancer was evaluated.\nRESULTS: K-Ras codon 12 mutations were found in 30 of 91(33%) plasma DNA samples, 17mutations were c.35G>A (p.G12D), 11 were c.35G>T (p.G12V) and only 2 were c.34G>C (p.G12R)). K-ras codon 12 mutations could significantly reflect the clinical parameters, including TNM tumor staging (P=0.033) and liver metastasis (P=0.014). The median survival time of patients with K-ras mutations was shorter than that of patients with wild-type K-ras gene (3.9 months vs. 10.2 months, P<0.001). K-ras codon 12 mutation from plasma DNA was an independent negative prognostic factor for survival (hazard ratio, 7.39; 95% confidence interval, 3.69-14.89).\nCONCLUSION: K-ras mutation in plasma DNA is a predictive biomarker for a poor prognosis of unresectable pancreatic cancer patients.",
@@ -5624,6 +5634,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07554339",
     "score": 10,
     "score_reasons": [
@@ -5660,6 +5671,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07541170",
     "score": 10,
     "score_reasons": [
@@ -5700,6 +5712,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06793215",
     "score": 10,
     "score_reasons": [
@@ -5741,6 +5754,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06997497",
     "score": 10,
     "score_reasons": [
@@ -5778,6 +5792,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06890598",
     "score": 10,
     "score_reasons": [
@@ -5813,6 +5828,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07174908",
     "score": 10,
     "score_reasons": [
@@ -5852,6 +5868,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06416410",
     "score": 10,
     "score_reasons": [
@@ -5887,6 +5904,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06300177",
     "score": 10,
     "score_reasons": [
@@ -5927,6 +5945,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06119581",
     "score": 10,
     "score_reasons": [
@@ -5967,6 +5986,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04613596",
     "score": 9,
     "score_reasons": [
@@ -6001,6 +6021,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07172919",
     "score": 7,
     "score_reasons": [
@@ -6035,6 +6056,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07670013",
     "score": 7,
     "score_reasons": [
@@ -6070,6 +6092,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07227025",
     "score": 7,
     "score_reasons": [
@@ -6107,6 +6130,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07492342",
     "score": 7,
     "score_reasons": [
@@ -6145,6 +6169,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07629960",
     "score": 7,
     "score_reasons": [
@@ -6178,6 +6203,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07198841",
     "score": 7,
     "score_reasons": [
@@ -6211,6 +6237,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07164170",
     "score": 7,
     "score_reasons": [
@@ -6247,6 +6274,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06248606",
     "score": 7,
     "score_reasons": [
@@ -6284,6 +6312,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06412198",
     "score": 7,
     "score_reasons": [
@@ -6322,6 +6351,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05789082",
     "score": 9,
     "score_reasons": [
@@ -6394,6 +6424,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05786924",
     "score": 7,
     "score_reasons": [
@@ -6428,6 +6459,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05398094",
     "score": 7,
     "score_reasons": [
@@ -6462,6 +6494,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07382726",
     "score": 6,
     "score_reasons": [
@@ -6498,6 +6531,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06946927",
     "score": 6,
     "score_reasons": [
@@ -6536,6 +6570,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07094204",
     "score": 6,
     "score_reasons": [
@@ -6574,6 +6609,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06720987",
     "score": 6,
     "score_reasons": [
@@ -6630,6 +6666,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06917079",
     "score": 6,
     "score_reasons": [
@@ -6672,6 +6709,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06249282",
     "score": 6,
     "score_reasons": [
@@ -6713,6 +6751,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06026410",
     "score": 6,
     "score_reasons": [
@@ -6751,6 +6790,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05504278",
     "score": 6,
     "score_reasons": [
@@ -6784,6 +6824,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05254184",
     "score": 6,
     "score_reasons": [
@@ -6823,6 +6864,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06481813",
     "score": 5,
     "score_reasons": [
@@ -6856,6 +6898,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05630989",
     "score": 5,
     "score_reasons": [
@@ -6893,6 +6936,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07822542",
     "score": 10,
     "score_reasons": [
@@ -6928,6 +6972,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07833202",
     "score": 10,
     "score_reasons": [
@@ -6963,6 +7008,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07827261",
     "score": 7,
     "score_reasons": [
@@ -7000,6 +7046,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07814417",
     "score": 7,
     "score_reasons": [
@@ -7034,6 +7081,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07463677",
     "score": 7,
     "score_reasons": [
@@ -7069,6 +7117,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07124884",
     "score": 7,
     "score_reasons": [
@@ -7103,6 +7152,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06959589",
     "score": 7,
     "score_reasons": [
@@ -7138,6 +7188,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06970132",
     "score": 7,
     "score_reasons": [
@@ -7171,6 +7222,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07615413",
     "score": 6,
     "score_reasons": [
@@ -7210,6 +7262,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07542704",
     "score": 6,
     "score_reasons": [
@@ -7252,6 +7305,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06963502",
     "score": 6,
     "score_reasons": [
@@ -7288,6 +7342,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06497556",
     "score": 10,
     "score_reasons": [
@@ -7323,6 +7378,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05132075",
     "score": 10,
     "score_reasons": [
@@ -7359,6 +7415,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04685135",
     "score": 14,
     "score_reasons": [
@@ -7396,6 +7453,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05853575",
     "score": 9,
     "score_reasons": [
@@ -7431,6 +7489,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05673187",
     "score": 7,
     "score_reasons": [
@@ -7479,6 +7538,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05726864",
     "score": 9,
     "score_reasons": [
@@ -7515,6 +7575,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06166836",
     "score": 9,
     "score_reasons": [
@@ -7563,6 +7624,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05358249",
     "score": 7,
     "score_reasons": [
@@ -7596,6 +7658,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05445843",
     "score": 11,
     "score_reasons": [
@@ -7634,6 +7697,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05609578",
     "score": 7,
     "score_reasons": [
@@ -7671,6 +7735,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05009329",
     "score": 7,
     "score_reasons": [
@@ -7709,6 +7774,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04625647",
     "score": 7,
     "score_reasons": [
@@ -7744,6 +7810,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06838338",
     "score": 6,
     "score_reasons": [
@@ -7793,6 +7860,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06447662",
     "score": 6,
     "score_reasons": [
@@ -7829,6 +7897,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05722327",
     "score": 8,
     "score_reasons": [
@@ -7871,6 +7940,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05631899",
     "score": 6,
     "score_reasons": [
@@ -7907,6 +7977,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05462717",
     "score": 6,
     "score_reasons": [
@@ -7948,6 +8019,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04449874",
     "score": 5,
     "score_reasons": [
@@ -7996,6 +8068,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04185883",
     "score": 5,
     "score_reasons": [
@@ -8030,6 +8103,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03260491",
     "score": 5,
     "score_reasons": [
@@ -8065,6 +8139,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05198934",
     "score": 14,
     "score_reasons": [
@@ -8101,6 +8176,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04303780",
     "score": 13,
     "score_reasons": [
@@ -8139,6 +8215,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06208124",
     "score": 7,
     "score_reasons": [
@@ -8173,6 +8250,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05005234",
     "score": 7,
     "score_reasons": [
@@ -8209,6 +8287,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03600883",
     "score": 8,
     "score_reasons": [
@@ -8245,6 +8324,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03040986",
     "score": 10,
     "score_reasons": [
@@ -8279,6 +8359,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06117371",
     "score": 6,
     "score_reasons": [
@@ -8313,6 +8394,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05178888",
     "score": 6,
     "score_reasons": [
@@ -8357,6 +8439,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04853017",
     "score": 10,
     "score_reasons": [
@@ -8391,6 +8474,7 @@
     ],
     "has_results": true,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04380753",
     "score": 9,
     "score_reasons": [
@@ -8422,6 +8506,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05769764",
     "score": 5,
     "score_reasons": [
@@ -8452,6 +8537,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05272423",
     "score": 5,
     "score_reasons": [
@@ -8485,6 +8571,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05367778",
     "score": 6,
     "score_reasons": [
@@ -8523,6 +8610,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05311709",
     "score": 6,
     "score_reasons": [
@@ -8555,6 +8643,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05263986",
     "score": 5,
     "score_reasons": [
@@ -8587,6 +8676,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05768321",
     "score": 5,
     "score_reasons": [
@@ -8619,6 +8709,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03634982",
     "score": 4,
     "score_reasons": [
@@ -8650,6 +8741,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05162443",
     "score": 3,
     "score_reasons": [
@@ -8693,6 +8785,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07083479",
     "score": 3,
     "score_reasons": [
@@ -8727,6 +8820,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07639242",
     "score": 6,
     "score_reasons": [
@@ -8760,6 +8854,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06333678",
     "score": 8,
     "score_reasons": [
@@ -8796,6 +8891,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06024174",
     "score": 12,
     "score_reasons": [
@@ -8830,6 +8926,7 @@
     ],
     "has_results": true,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04933695",
     "score": 12,
     "score_reasons": [
@@ -8869,6 +8966,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04975256",
     "score": 5,
     "score_reasons": [
@@ -8906,6 +9004,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT04892017",
     "score": 5,
     "score_reasons": [
@@ -8942,6 +9041,7 @@
     ],
     "has_results": true,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT03948763",
     "score": 8,
     "score_reasons": [
@@ -8976,6 +9076,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06068153",
     "score": 6,
     "score_reasons": [
@@ -9009,6 +9110,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05815186",
     "score": 6,
     "score_reasons": [
@@ -9042,6 +9144,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05634525",
     "score": 5,
     "score_reasons": [
@@ -9076,6 +9179,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT05848843",
     "score": 7,
     "score_reasons": [
@@ -9114,6 +9218,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06881784",
     "score": 7,
     "score_reasons": [
@@ -9162,6 +9267,7 @@
     ],
     "has_results": false,
     "randomized": true,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07288034",
     "score": 1,
     "score_reasons": [
@@ -9204,6 +9310,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07415031",
     "score": 4,
     "score_reasons": [
@@ -9238,6 +9345,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT07640295",
     "score": -1,
     "score_reasons": [
@@ -9274,6 +9382,7 @@
     ],
     "has_results": false,
     "randomized": false,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06973564",
     "score": -1,
     "score_reasons": [
@@ -9310,6 +9419,7 @@
     ],
     "has_results": false,
     "randomized": null,
+    "disease_level": false,
     "url": "https://clinicaltrials.gov/study/NCT06895031",
     "score": 4,
     "score_reasons": [
@@ -9390,7 +9500,8 @@
     "KRAS G12C": "https://clinicaltrials.gov/search?term=KRAS%20G12C",
     "KRAS G12S": "https://clinicaltrials.gov/search?term=KRAS%20G12S",
     "KRAS G12R": "https://clinicaltrials.gov/search?term=KRAS%20G12R",
-    "KRAS G12": "https://clinicaltrials.gov/search?term=KRAS%20G12"
+    "KRAS G12": "https://clinicaltrials.gov/search?term=KRAS%20G12",
+    "rs121913530": "https://clinicaltrials.gov/search?term=rs121913530"
    }
   }
  },
@@ -11156,27 +11267,28 @@
  "treatments": {
   "rows": [
    {
-    "drug": "Sotorasib and panitumumab",
-    "setting": "Metastatic colorectal cancer",
-    "outcome": "Objective response 26.4%, median progression-free survival 5.6 months",
+    "drug": "Sotorasib plus panitumumab",
+    "setting": "Refractory KRAS G12C-mutated metastatic colorectal cancer",
+    "outcome": "Median PFS 5.6 months, ORR 26.4%",
     "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-A",
-    "escat_reason": "Randomized clinical trials demonstrate a statistically significant and clinically meaningful progression-free survival improvement in metastatic colorectal cancer.",
+    "ocebm_level": 1,
+    "variant_specific": true,
+    "escat_tier": "I-B",
+    "escat_reason": "Randomized phase 3 trial demonstrated significant progression-free survival improvement compared with standard care.",
     "evidence": [
+     {
+      "source_id": "PMID:40116975",
+      "quote": "Combining sotorasib with panitumumab, especially at higher doses, raised its ORR to 26.4%.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40116975/"
+     },
      {
       "source_id": "PMID:37870968",
       "quote": "median progression-free survival was 5.6 months (95% confidence interval [CI], 4.2 to 6.3) and 3.9 months (95% CI, 3.7 to 5.8) in the 960-mg sotorasib-panitumumab and 240-mg sotorasib-panitumumab groups, respectively",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37870968/"
      },
      {
-      "source_id": "PMID:37870968",
-      "quote": "The objective response was 26.4%",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37870968/"
-     },
-     {
       "source_id": "NCT05198934",
-      "quote": "The aim of the study is to compare progression-free survival (PFS) in previously treated participants with Kirsten rat sarcoma (KRAS) p.G12C mutated colorectal cancer (CRC) receiving sotorasib 240 mg once daily (QD) and panitumumab vs investigator's choice",
+      "quote": "The aim of the study is to compare progression-free survival (PFS) in previously treated participants with Kirsten rat sarcoma (KRAS) p.G12C mutated colorectal cancer (CRC) receiving sotorasib 240 mg once daily (QD) and panitumumab vs investigator's choice (trifluridine and tipiracil, or regorafenib), and sotorasib 960 mg QD and panitumumab vs investigator's choice (trifluridine and tipiracil, or regorafenib).",
       "url": "https://clinicaltrials.gov/study/NCT05198934"
      }
     ],
@@ -11184,41 +11296,43 @@
     "warnings": []
    },
    {
-    "drug": "Adagrasib and cetuximab",
-    "setting": "Metastatic colorectal cancer",
-    "outcome": "Objective response rate 46%, median progression-free survival 6.9 months",
+    "drug": "Adagrasib",
+    "setting": "Previously treated advanced KRAS G12C-mutated non-small-cell lung cancer",
+    "outcome": "Confirmed ORR 42.9%, median PFS 6.5 months, median OS 12.6 months",
     "is_cancer": true,
-    "ocebm_level": 2,
+    "ocebm_level": 3,
+    "variant_specific": false,
     "escat_tier": "I-B",
-    "escat_reason": "Non-randomized prospective trial data show clinically meaningful benefit and high response rates in metastatic colorectal cancer.",
+    "escat_reason": "Prospective clinical trials demonstrated durable objective response rate and survival benefit in previously treated KRAS G12C-mutated NSCLC.",
     "evidence": [
      {
-      "source_id": "PMID:36546659",
-      "quote": "In the combination-therapy group (28 evaluable patients), the response was 46% (95% CI, 28 to 66).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/36546659/"
+      "source_id": "PMID:35658005",
+      "quote": "Of 112 patients with measurable disease at baseline, 48 (42.9%) had a confirmed objective response.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35658005/"
      },
      {
-      "source_id": "PMID:36546659",
-      "quote": "the median progression-free survival was 6.9 months (95% CI, 5.4 to 8.1).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/36546659/"
+      "source_id": "PMID:35658005",
+      "quote": "The median duration of response was 8.5 months (95% confidence interval [CI], 6.2 to 13.8), and the median progression-free survival was 6.5 months (95% CI, 4.7 to 8.4).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35658005/"
      },
      {
-      "source_id": "NCT05722327",
-      "quote": "To find the recommended dose of MRTX849 that can be given in combination with cetuximab and irinotecan to patients with colorectal cancer that have a mutation (genetic change) called KRAS G12C.",
-      "url": "https://clinicaltrials.gov/study/NCT05722327"
+      "source_id": "PMID:35658005",
+      "quote": "As of January 15, 2022 (median follow-up, 15.6 months), the median overall survival was 12.6 months (95% CI, 9.2 to 19.2).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35658005/"
      }
     ],
     "verified": true,
     "warnings": []
    },
    {
-    "drug": "Divarasib and cetuximab",
-    "setting": "Colorectal cancer",
-    "outcome": "Objective response rate 62.5%, median progression-free survival 8.1 months",
+    "drug": "Divarasib plus cetuximab",
+    "setting": "KRAS G12C-positive metastatic colorectal cancer",
+    "outcome": "ORR 62.5%, median PFS 8.1 months",
     "is_cancer": true,
     "ocebm_level": 3,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective trial results show significant benefit and high response rates in colorectal cancer.",
+    "variant_specific": true,
+    "escat_tier": "II-B",
+    "escat_reason": "Prospective phase 1b study showed high objective response rates and progression-free survival benefit without randomized survival data.",
     "evidence": [
      {
       "source_id": "PMID:38052910",
@@ -11229,67 +11343,68 @@
       "source_id": "PMID:38052910",
       "quote": "The median progression-free survival was 8.1 months (95% confidence interval: 5.5, 12.3).",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38052910/"
-     },
-     {
-      "source_id": "PMID:38052910",
-      "quote": "ClinicalTrials.gov identifier: NCT04449874.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38052910/"
      }
     ],
     "verified": true,
     "warnings": []
    },
    {
-    "drug": "Sotorasib",
-    "setting": "Non-small-cell lung cancer",
-    "outcome": "Objective response rate 37%, median progression-free survival 6.40 months",
+    "drug": "Divarasib",
+    "setting": "Advanced or metastatic KRAS G12C-mutated non-small-cell lung cancer",
+    "outcome": "Confirmed ORR 53.4%, median PFS 13.1 months",
     "is_cancer": true,
-    "ocebm_level": 1,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective clinical trials demonstrate clinically meaningful benefit in non-small-cell lung cancer.",
+    "ocebm_level": 3,
+    "variant_specific": true,
+    "escat_tier": "II-B",
+    "escat_reason": "Prospective trial showed marked tumor response rates and progression-free survival in KRAS G12C-mutated NSCLC.",
     "evidence": [
      {
-      "source_id": "PMID:37950424",
-      "quote": "For patients with NSCLC, the objective response rate (ORR) of drugs targeting KRASG12C mutation was 37% (95%CI 31-43)",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37950424/"
-     },
-     {
-      "source_id": "PMID:37950424",
-      "quote": "median progression-free survival (PFS) was 6.40 months (95%CI 5.86-6.93).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37950424/"
-     },
-     {
-      "source_id": "NCT04303780",
-      "quote": "A Phase 3 Study to Compare AMG 510 with Docetaxel in Non Small Cell Lung Cancer (NSCLC) subjects with KRAS p. G12c mutation",
-      "url": "https://clinicaltrials.gov/study/NCT04303780"
+      "source_id": "PMID:37611121",
+      "quote": "Among patients with NSCLC, a confirmed response was observed in 53.4% of patients (95% confidence interval [CI], 39.9 to 66.7), and the median progression-free survival was 13.1 months (95% CI, 8.8 to could not be estimated).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37611121/"
      }
     ],
     "verified": true,
     "warnings": []
    },
    {
-    "drug": "Adagrasib",
-    "setting": "Non-small-cell lung cancer",
-    "outcome": "Objective response rate 42.9%, median progression-free survival 6.5 months",
+    "drug": "Fulzerasib plus cetuximab",
+    "setting": "First-line KRAS G12C-mutated non-small-cell lung cancer",
+    "outcome": "Confirmed ORR 69%",
     "is_cancer": true,
-    "ocebm_level": 2,
-    "escat_tier": "I-B",
-    "escat_reason": "Registrational prospective trial demonstrates clinically meaningful benefit in non-small-cell lung cancer.",
+    "ocebm_level": 3,
+    "variant_specific": false,
+    "escat_tier": "II-B",
+    "escat_reason": "Prospective phase 1b/2 trial demonstrated high objective response rates in treatment-naive KRAS G12C NSCLC.",
     "evidence": [
      {
-      "source_id": "PMID:35658005",
-      "quote": "Of 112 patients with measurable disease at baseline, 48 (42.9%) had a confirmed objective response.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/35658005/"
+      "source_id": "PMID:41926959",
+      "quote": "The confirmed objective response rate was 69% (90% CI 56-80).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41926959/"
+     }
+    ],
+    "verified": true,
+    "warnings": []
+   },
+   {
+    "drug": "Glecirasib",
+    "setting": "KRAS G12C-mutated pancreatic ductal adenocarcinoma and rare solid tumors",
+    "outcome": "Confirmed ORR 50.9% overall, ORR 46.9% in PDAC, median PFS 6.9 months",
+    "is_cancer": true,
+    "ocebm_level": 3,
+    "variant_specific": true,
+    "escat_tier": "I-C",
+    "escat_reason": "Pooled prospective trials across multiple rare KRAS G12C solid tumor types demonstrated consistent clinical response.",
+    "evidence": [
+     {
+      "source_id": "PMID:41037823",
+      "quote": "Of the 53 efficacy-evaluable patients, the confirmed ORR was 50.9% (95% confidence interval [CI], 36.8%-64.9%), with an ORR of 46.9% (95% CI, 29.1%-65.3%) in PDAC patients.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41037823/"
      },
      {
-      "source_id": "PMID:35658005",
-      "quote": "and the median progression-free survival was 6.5 months (95% CI, 4.7 to 8.4).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/35658005/"
-     },
-     {
-      "source_id": "NCT04685135",
-      "quote": "This Phase 3 study will evaluate the efficacy of the investigational agent MRTX849 (adagrasib) versus docetaxel in patients who have been previously treated for metastatic NSCLC with a KRAS G12C mutation.",
-      "url": "https://clinicaltrials.gov/study/NCT04685135"
+      "source_id": "PMID:41037823",
+      "quote": "Median progression-free survival and median overall survival were 6.9 and 10.8 months, respectively, in the overall population, and 5.5 and 10.8 m",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41037823/"
      }
     ],
     "verified": true,
@@ -11297,31 +11412,29 @@
    },
    {
     "drug": "Selumetinib",
-    "setting": "Pancreatic ductal adenocarcinoma",
-    "outcome": "Median progression-free survival 3.0 months, median overall survival 9 months, no objective partial response",
+    "setting": "Advanced KRAS G12R-mutant pancreatic ductal adenocarcinoma",
+    "outcome": "ORR 0%, median PFS 3.0 months, median OS 9 months",
     "is_cancer": true,
     "ocebm_level": 3,
-    "escat_tier": "I-B",
-    "escat_reason": "Prospective biomarker-driven trial evaluated this agent in KRAS-mutant pancreatic cancer.",
+    "variant_specific": true,
+    "escat_tier": "V",
+    "escat_reason": "Prospective phase 2 trial showed no partial responses and lack of single-agent therapeutic efficacy.",
     "evidence": [
      {
       "source_id": "PMID:33405090",
-      "quote": "No patients achieved an objective partial response.",
+      "quote": "No patients achieved an objective partial response. Median progression-free survival (PFS) was 3.0 months (95% CI, 0.8-8.2) and median overall survival (OS) 9 months (95% CI, 2.5-20.9).",
       "url": "https://pubmed.ncbi.nlm.nih.gov/33405090/"
      },
      {
-      "source_id": "PMID:33405090",
-      "quote": "Median progression-free survival (PFS) was 3.0 months (95% CI, 0.8-8.2) and median overall survival (OS) 9 months (95% CI, 2.5-20.9).",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/33405090/"
-     },
-     {
-      "source_id": "PMID:33405090",
-      "quote": "This two-stage, phase II study (NCT03040986) patients with advanced pancreas cancer harboring somatic KRASG12R variants",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/33405090/"
+      "source_id": "NCT03040986",
+      "quote": "This phase II trial studies how well selumetinib sulfate works in treating patients with pancreatic cancer with Kirsten rat sarcoma (KRAS) G12R mutations that has spread from where it started to nearby tissue or lymph nodes or other places in the body.",
+      "url": "https://clinicaltrials.gov/study/NCT03040986"
      }
     ],
-    "verified": true,
-    "warnings": []
+    "verified": false,
+    "warnings": [
+     "number(s) 0 not found in the quotes"
+    ]
    }
   ],
   "removed": []

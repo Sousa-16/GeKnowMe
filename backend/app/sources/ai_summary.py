@@ -96,8 +96,13 @@ def _trial_doc(t: Trial) -> SourceDoc:
 
 def select_sources(papers: list[Paper], trials: list[Trial]) -> dict[str, SourceDoc]:
     """Papers/trials marked sent_to_ai. If scoring hasn't run yet, fall back to the first ones."""
-    chosen_papers = [p for p in papers if p.sent_to_ai] or papers[: config.AI_PAPERS]
-    chosen_trials = [t for t in trials if t.sent_to_ai] or trials[: config.AI_TRIALS]
+    # Fall back to the first ones only if scoring never ran (no item has score reasons). If scoring
+    # ran and picked nothing (e.g. every trial is a disease-level match), send nothing.
+    papers_scored = any(p.score_reasons for p in papers)
+    trials_scored = any(t.score_reasons for t in trials)
+    chosen_papers = [p for p in papers if p.sent_to_ai] or ([] if papers_scored else papers[: config.AI_PAPERS])
+    chosen_trials = [t for t in trials if t.sent_to_ai] or (
+        [] if trials_scored else [t for t in trials if not t.disease_level][: config.AI_TRIALS])
     docs = [_paper_doc(p) for p in chosen_papers if p.abstract.strip()]
     docs += [_trial_doc(t) for t in chosen_trials]
     return {d.source_id: d for d in docs}
@@ -235,4 +240,5 @@ async def summarize_treatments(
                [RawEvidence(e.source_id, e.quote) for e in r.evidence], is_cancer=r.is_cancer)
         for r in out.rows
     ]
-    return check_rows(raw, sources)
+    names = [a.name for a in aliases.names if a.type in ("protein_short", "protein_long", "common", "rsid")]
+    return check_rows(raw, sources, names)

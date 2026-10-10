@@ -50,7 +50,7 @@ export function TrialsSection({ brief }: { brief: Brief }) {
         <>
           {diseaseLevel > 0 && (
             <p className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-              Few trials name this exact variant, so {diseaseLevel} trial{diseaseLevel === 1 ? "" : "s"} for the same gene and disease
+              {diseaseLevel === trials.length ? "No trials" : "Few trials"} name this exact variant, so {diseaseLevel} trial{diseaseLevel === 1 ? "" : "s"} for the same gene and disease
               {" "}({(brief.aliases?.fallback_trial_terms ?? []).join(", ")}) {diseaseLevel === 1 ? "is" : "are"} included and marked <b>Disease-level match</b>.
               They aren't specific to this variant and aren't sent to the AI summary.
             </p>

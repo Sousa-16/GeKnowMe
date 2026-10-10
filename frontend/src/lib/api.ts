@@ -5,6 +5,7 @@ export const DEMOS = [
   { rsid: "rs113488022", label: "BRAF V600E" },
   { rsid: "rs121913530", label: "KRAS G12C" },
   { rsid: "rs121434568", label: "EGFR L858R" },
+  { rsid: "rs104893875", label: "SNCA E46K · Lewy body dementia" },
 ];
 
 export class ApiError extends Error {

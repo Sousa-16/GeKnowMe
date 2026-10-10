@@ -46,8 +46,8 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
   const sentTrials = brief.trials.trials.filter((t) => t.sent_to_ai).length;
 
   const exportCsv = () => downloadCsv(`${brief.rsid}-treatments.csv`,
-    ["drug", "setting", "outcome", "is_cancer", "oxford_level", "escat_tier", "escat_reason", "verified", "warnings", "sources", "quotes", "urls"],
-    rows.map((r) => [r.drug, r.setting, r.outcome, r.is_cancer, r.ocebm_level, r.escat_tier, r.escat_reason, r.verified, r.warnings.join("; "),
+    ["drug", "setting", "outcome", "variant_specific", "is_cancer", "oxford_level", "escat_tier", "escat_reason", "verified", "warnings", "sources", "quotes", "urls"],
+    rows.map((r) => [r.drug, r.setting, r.outcome, r.variant_specific, r.is_cancer, r.ocebm_level, r.escat_tier, r.escat_reason, r.verified, r.warnings.join("; "),
       r.evidence.map((e) => e.source_id).join("; "), r.evidence.map((e) => e.quote).join(" | "), r.evidence.map((e) => e.url).join("; ")]));
 
   return (
@@ -70,6 +70,11 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
               <Badge tone="green">✓ {verified} fully verified</Badge>
               {rows.length - verified > 0 && <Badge tone="amber">! {rows.length - verified} need a check</Badge>}
               {removed.length > 0 && <Badge tone="red">✕ {removed.length} removed by the proof check</Badge>}
+              {rows.some((r) => r.variant_specific === false) && (
+                <Badge tone="amber" title="Their sources discuss the disease or gene in general, not carriers of this variant">
+                  {rows.filter((r) => r.variant_specific === false).length} not specific to this variant
+                </Badge>
+              )}
             </div>
             <div className="overflow-x-auto rounded-xl ring-1 ring-slate-200">
               <table className="w-full min-w-[760px] table-fixed text-sm">
@@ -88,6 +93,9 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
                       <td className="px-3 py-3">
                         <p className="font-medium text-slate-900">{r.drug}</p>
                         <p className="text-xs text-slate-500">{r.setting}</p>
+                        {r.variant_specific === false && (
+                          <p className="mt-1"><Badge tone="amber" title="None of the cited sources mention this variant: the evidence is about the disease or gene in general, not carriers of this variant.">Not specific to this variant</Badge></p>
+                        )}
                       </td>
                       <td className="px-3 py-3 text-slate-700">
                         {r.outcome}

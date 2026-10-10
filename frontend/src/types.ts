@@ -39,6 +39,7 @@ export type EscatTier = "I-A" | "I-B" | "I-C" | "II-A" | "II-B" | "III-A" | "III
 export interface Evidence { source_id: string; quote: string; url: string }
 export interface TreatmentRow {
   drug: string; setting: string; outcome: string; is_cancer: boolean; ocebm_level: number | null;
+  variant_specific?: boolean | null;
   escat_tier: EscatTier | null; escat_reason: string | null;
   evidence: Evidence[]; verified: boolean; warnings: string[];
 }
