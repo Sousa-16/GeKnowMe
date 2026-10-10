@@ -102,3 +102,11 @@ def test_non_cancer_genetic_rules():
     assert crit["Carrier of a second pathogenic variant in another gene"] == "biomarker_excluded"
     assert crit["Use of commercially available CFTR modulator (e.g., Kalydeco) within 14 days before screening"] == "prior_therapy"
     assert "Age 12 years or older" not in crit
+
+
+def test_drug_interaction_rules_are_skipped(braf_aliases):
+    text = ("Exclusion Criteria:\n* Current use of strong inhibitors or inducers of CYP3A4\n"
+            "* Concomitant anticoagulation with oral anticoagulants or platelet inhibitors\n"
+            "* Prior treatment with a BRAF inhibitor")
+    crit = {c.text: c.category for c in extract_criteria([_trial(text)], braf_aliases)}
+    assert list(crit) == ["Prior treatment with a BRAF inhibitor"]

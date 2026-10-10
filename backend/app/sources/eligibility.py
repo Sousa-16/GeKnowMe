@@ -41,6 +41,10 @@ OTHER_MARKERS = ["EGFR", "ALK", "ROS1", "KRAS", "NRAS", "HRAS", "BRAF", "MET", "
                  "PIK3CA", "BRCA1", "BRCA2", "IDH1", "IDH2", "FGFR", "KIT", "PDGFRA", "MSI", "dMMR", "PD-L1", "TMB"]
 GENETIC_WORDS = ["genotype", "genotyp", "genetic", "allele", "homozygous", "heterozygous", "mutation", "carrier",
                  "pathogenic", "germline", "somatic"]
+# Drug-interaction / general-medication rules ("no strong CYP3A4 inhibitors", "no anticoagulants") are
+# about the study drug's safety, not the variant, so they're skipped unless they name the gene or mutation.
+INTERACTION = re.compile(r"cyp\d|p-gp|p-glycoprotein|inducers?\b|anticoagul|platelet inhibitor|proton pump|"
+                         r"warfarin|herbal|grapefruit|qt[- ]prolong", re.IGNORECASE)
 PRIOR_WORDS = ["prior", "previous", "previously", "received", "pretreated", "pre-treated", "treated with", "progressed on",
                "use of", "currently receiving", "currently taking", "concomitant", "ongoing treatment"]
 
@@ -107,6 +111,8 @@ def categorize(rule: str, kind: str, gene: str | None, mutation_res: list[re.Pat
     mentions_alteration = _has(low, ALTERATION_WORDS)
     mentions_testing = _has(low, TESTING_WORDS)
 
+    if INTERACTION.search(rule) and not (mentions_gene or mentions_mutation):
+        return None
     if _has(low, PRIOR_WORDS) and _has(low, THERAPY_WORDS) and (
         mentions_gene or mentions_mutation or _has(low, ["inhibitor", "targeted", "modulator", "gene therapy",
                                                          "gene editing", "enzyme replacement", "antisense"])
