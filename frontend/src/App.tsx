@@ -240,7 +240,6 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
     <div className="flex-1">
       <div className="relative -mt-16 overflow-hidden border-b border-slate-200 bg-slate-50 pt-16">
         <Suspense fallback={null}><DnaHelix className="absolute inset-0" /></Suspense>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-50/95 via-slate-50/40 to-transparent md:from-slate-50/85 md:via-transparent" />
       <section className="relative">
         <div className="relative mx-auto flex min-h-[calc(100svh-4rem-12rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[600px]">
           <p className="font-serif text-xl italic text-brand-700">For clinical trial planners</p>

@@ -26,12 +26,10 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
     el.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.Fog(0xf8fafc, 19, 38);
     const pmrem = new THREE.PMREMGenerator(renderer);
     scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
-    const camera = new THREE.PerspectiveCamera(21, 1, 0.1, 100);
-    camera.position.set(0, 0, 24);
+    const camera = new THREE.PerspectiveCamera(21, 1, 0.1, 400);
 
     const key = new THREE.DirectionalLight(0xffffff, 2.2);
     key.position.set(-5, 12, 9);
@@ -39,47 +37,52 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
     fill.position.set(8, -4, 6);
     scene.add(key, fill, new THREE.HemisphereLight(0xffffff, 0x94a3b8, 0.9));
 
-    // Two strands of touching beads along a gently curving helix
-    const BEAD = 0.62, RADIUS = 2.2, RISE = 3.2, STEP = 1.12;
-    const T0 = -22, T1 = 22;
-    const perStrand = Math.floor((T1 - T0) / STEP);
+    // Proportions measured from the reference: bead diameter ~ 1/10 of the page width, helix radius
+    // ~ 2.7 bead radii, one crossing-to-crossing "lens" ~ 6 bead diameters long, tightly packed beads.
+    const BEAD = 0.9, RADIUS = 2.45, LENS = 11, STEP = 1.55;
+    const DX = STEP / Math.sqrt(1 + (RADIUS * Math.PI / LENS) ** 2); // spacing along the axis
+    const X = LENS * 1.7; // strands run well past both screen edges
+    const perStrand = Math.floor((2 * X) / DX);
     const count = perStrand * 2;
     const geo = new THREE.SphereGeometry(BEAD, small ? 24 : 40, small ? 16 : 28);
     const mat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.62, metalness: 0, clearcoat: 0.1, clearcoatRoughness: 0.7, sheen: 0.3, sheenRoughness: 0.9, envMapIntensity: 0.55 });
     const beads = new THREE.InstancedMesh(geo, mat, count);
-    const white = new THREE.Color(0xf3f5f7), teal = new THREE.Color(0x99f6e4), tealDeep = new THREE.Color(0x2dd4bf);
-    for (let i = 0; i < count; i++) {
-      const accent = i % 17 === 5 ? teal : i % 29 === 13 ? tealDeep : white;
-      beads.setColorAt(i, accent);
-    }
+    // All white except one teal bead, placed right of centre so it stays in view
+    const tealIndex = Math.round((X + LENS * 0.3) / DX);
+    for (let i = 0; i < count; i++) beads.setColorAt(i, new THREE.Color(i === tealIndex ? 0x5eead4 : 0xf3f5f7));
     const helix = new THREE.Group();
     helix.add(beads);
-    helix.rotation.z = small ? 1.05 : 0.48;
-    const SCALE = small ? 0.9 : 1.3;
-    helix.scale.setScalar(SCALE);
-    helix.position.set(small ? 0.2 : 2.8, small ? -3.6 : -0.5, 0);
+    helix.rotation.z = 0.24; // rises gently to the right
     scene.add(helix);
 
-    const m = new THREE.Matrix4(), p = new THREE.Vector3();
+    const m = new THREE.Matrix4();
     const place = (phase: number) => {
       for (let s = 0; s < 2; s++) {
         for (let k = 0; k < perStrand; k++) {
-          const t = T0 + k * STEP;
-          const a = t / RISE + phase + s * Math.PI;
-          const bend = 0.02 * t * t; // gentle sweep, like a loose strand
-          p.set(t * 0.62, RADIUS * Math.cos(a) - bend * 0.25, RADIUS * Math.sin(a));
-          m.makeTranslation(p.x, p.y, p.z);
+          const x = -X + k * DX;
+          const a = (x * Math.PI) / LENS + phase + s * Math.PI;
+          m.makeTranslation(x, RADIUS * Math.cos(a), RADIUS * Math.sin(a));
           beads.setMatrixAt(s * perStrand + k, m);
         }
       }
       beads.instanceMatrix.needsUpdate = true;
     };
 
+    // Fit the camera so about 0.5 + 1 + 0.5 lenses span the width (fewer on narrow screens),
+    // with the helix running through the vertical middle of the hero.
+    let baseY = 0;
     const resize = () => {
       const { clientWidth: w, clientHeight: h } = el;
       if (!w || !h) return;
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
+      const span = w < 768 ? LENS * 1.15 : LENS * 1.8;
+      const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      camera.position.z = span / (2 * tan * camera.aspect);
+      const viewH = 2 * camera.position.z * tan;
+      baseY = -viewH * (w < 768 ? -0.02 : 0.04);
+      helix.position.set(w < 768 ? 0 : LENS * 0.05, baseY, 0);
+      scene.fog = new THREE.Fog(0xf8fafc, camera.position.z - RADIUS, camera.position.z + RADIUS * 4);
       camera.updateProjectionMatrix();
     };
     resize();
@@ -99,9 +102,9 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
       last = now;
       phase += dt * 0.3;
       place(phase);
-      helix.rotation.x += (pointer.y * 0.12 - helix.rotation.x) * 0.04;
-      helix.rotation.y += (pointer.x * 0.18 - helix.rotation.y) * 0.04;
-      helix.position.y += ((small ? -3.6 : -0.5) + Math.sin(now / 2400) * 0.2 - helix.position.y) * 0.05;
+      helix.rotation.x += (pointer.y * 0.1 - helix.rotation.x) * 0.04;
+      helix.rotation.y += (pointer.x * 0.12 - helix.rotation.y) * 0.04;
+      helix.position.y += (baseY + Math.sin(now / 2400) * 0.2 - helix.position.y) * 0.05;
       renderer.render(scene, camera);
       if (!shown) { shown = true; setReady(true); }
     };
