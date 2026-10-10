@@ -7,13 +7,18 @@ Shared file: agree with your teammate before changing it.
 import asyncio
 import logging
 import re
+import time
+from pathlib import Path
 
-from .schemas import Brief
+from .schemas import Brief, TreatmentsResponse
 from .sources import ai_summary, aliases, eligibility, papers, trials, variant
 
 log = logging.getLogger(__name__)
 
 RSID_RE = re.compile(r"^rs\d{1,12}$")
+DEMO_DIR = Path(__file__).parent / "demo_data"
+PARTIAL_TTL = 3600  # seconds a brief without the AI table is kept for the follow-up /treatments call
+_partial: dict[str, tuple[float, Brief]] = {}
 
 
 class InvalidRsid(ValueError):
@@ -39,9 +44,57 @@ def _fail(brief: Brief, section: str, exc: BaseException) -> None:
         brief.warnings.append(f"{section}: failed ({type(exc).__name__}: {exc})")
 
 
-async def build_brief(raw_rsid: str) -> Brief:
-    """Raises InvalidRsid or variant.VariantNotFound. Everything else becomes a warning."""
+def load_demo(rsid: str) -> Brief | None:
+    """Pre-generated briefs (PLAN.md task T3), so the demo works without internet or Gemini."""
+    path = DEMO_DIR / f"{rsid}.json"
+    if not path.exists():
+        return None
+    brief = Brief.model_validate_json(path.read_text())
+    brief.from_demo = True
+    return brief
+
+
+async def build_brief(raw_rsid: str, include_ai: bool = True, use_demo: bool = True) -> Brief:
+    """Raises InvalidRsid or variant.VariantNotFound. Everything else becomes a warning.
+
+    include_ai=False returns steps 1-5 right away and marks treatments "pending"; the website then
+    calls build_treatments() for the slow AI table.
+    """
     rsid = normalize_rsid(raw_rsid)
+    if use_demo and (demo := load_demo(rsid)):
+        return demo
+    brief = await _build_without_ai(rsid)
+    if include_ai:
+        await _add_treatments(brief)
+    elif brief.variant is None or brief.aliases is None:
+        brief.status["treatments"] = "skipped"
+    else:
+        brief.status["treatments"] = "pending"
+        now = time.time()
+        for key in [k for k, (t, _) in _partial.items() if now - t > PARTIAL_TTL]:
+            del _partial[key]
+        _partial[rsid] = (now, brief)
+    return brief
+
+
+async def build_treatments(raw_rsid: str, use_demo: bool = True) -> TreatmentsResponse:
+    """The AI table on its own. Reuses the brief from the earlier build_brief(include_ai=False) call."""
+    rsid = normalize_rsid(raw_rsid)
+    if use_demo and (demo := load_demo(rsid)):
+        brief = demo
+    else:
+        saved = _partial.pop(rsid, None)
+        brief = saved[1] if saved and time.time() - saved[0] < PARTIAL_TTL else await _build_without_ai(rsid)
+        await _add_treatments(brief)
+    return TreatmentsResponse(
+        rsid=rsid,
+        status=brief.status.get("treatments", "skipped"),
+        treatments=brief.treatments,
+        warnings=[w for w in brief.warnings if w.startswith("treatments")],
+    )
+
+
+async def _build_without_ai(rsid: str) -> Brief:
     brief = Brief(rsid=rsid)
 
     # [1] Variant: needed for everything else
@@ -93,7 +146,14 @@ async def build_brief(raw_rsid: str) -> Brief:
     except Exception as e:
         _fail(brief, "eligibility", e)
 
+    return brief
+
+
+async def _add_treatments(brief: Brief) -> None:
     # [6] AI treatment table: only if there is something to cite
+    if brief.variant is None or brief.aliases is None:
+        brief.status["treatments"] = "skipped"
+        return
     if brief.papers.papers or brief.trials.trials:
         try:
             brief.treatments = await ai_summary.summarize_treatments(
@@ -104,5 +164,3 @@ async def build_brief(raw_rsid: str) -> Brief:
             _fail(brief, "treatments", e)
     else:
         brief.status["treatments"] = "skipped"
-
-    return brief

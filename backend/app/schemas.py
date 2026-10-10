@@ -152,7 +152,7 @@ class TreatmentResults(BaseModel):
 
 # ---------- Final output ----------
 
-SectionStatus = Literal["ok", "empty", "error", "skipped"]
+SectionStatus = Literal["ok", "empty", "error", "skipped", "pending"]
 
 
 class Brief(BaseModel):
@@ -167,3 +167,13 @@ class Brief(BaseModel):
     status: dict[str, SectionStatus] = {}
     warnings: list[str] = []
     disclaimer: str = DISCLAIMER
+    from_demo: bool = False  # served from a pre-generated demo file
+
+
+class TreatmentsResponse(BaseModel):
+    """GET /api/brief/{rsid}/treatments: the slow AI table on its own."""
+
+    rsid: str
+    status: SectionStatus
+    treatments: TreatmentResults = TreatmentResults()
+    warnings: list[str] = []

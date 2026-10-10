@@ -7,8 +7,8 @@ Then open http://localhost:8000/docs
 from fastapi import FastAPI, HTTPException
 
 from . import config
-from .pipeline import InvalidRsid, build_brief
-from .schemas import Brief
+from .pipeline import InvalidRsid, build_brief, build_treatments
+from .schemas import Brief, TreatmentsResponse
 from .sources.variant import VariantNotFound
 
 app = FastAPI(title="Variant Trial Scope API", version="0.1.0")
@@ -25,10 +25,22 @@ async def health():
 
 
 @app.get("/api/brief/{rsid}", response_model=Brief)
-async def get_brief(rsid: str, refresh: bool = False):
-    # refresh=true will skip the cache once caching exists (PLAN.md step T3 / B23)
+async def get_brief(rsid: str, refresh: bool = False, include_ai: bool = True):
+    """The full brief. include_ai=false returns in ~1-2 s with treatments "pending";
+    then call /api/brief/{rsid}/treatments. refresh=true skips the pre-generated demo briefs."""
     try:
-        return await build_brief(rsid)
+        return await build_brief(rsid, include_ai=include_ai, use_demo=not refresh)
+    except InvalidRsid as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except VariantNotFound as e:
+        raise HTTPException(status_code=404, detail=str(e) or "rs number not found")
+
+
+@app.get("/api/brief/{rsid}/treatments", response_model=TreatmentsResponse)
+async def get_treatments(rsid: str, refresh: bool = False):
+    """Only the AI treatment table (slow: 10-90 s depending on Gemini load)."""
+    try:
+        return await build_treatments(rsid, use_demo=not refresh)
     except InvalidRsid as e:
         raise HTTPException(status_code=400, detail=str(e))
     except VariantNotFound as e:
