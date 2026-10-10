@@ -24,7 +24,7 @@ def _trial():
 
 GOOD = ai.AIOutput(rows=[ai.AIRow(
     drug="Dabrafenib + trametinib", setting="Melanoma", outcome="ORR 64%, median PFS 11.0 months",
-    escat_tier="I-A", escat_reason="Randomized trial with survival benefit",
+    is_cancer=True, escat_tier="I-A", escat_reason="Randomized trial with survival benefit",
     evidence=[ai.AIEvidence(source_id="PMID:111",
                             quote="The overall response rate was 64% and median progression-free survival was 11.0 months")],
 )])
@@ -67,6 +67,7 @@ def test_select_sources_uses_sent_to_ai_and_skips_missing_abstracts():
     docs = ai.select_sources(papers, [_trial()])
     assert set(docs) == {"PMID:111", "NCT00000001"}
     assert docs["PMID:111"].is_randomized
+    assert docs["PMID:111"].ocebm_level == 2 and docs["NCT00000001"].ocebm_level == 3
 
 
 def test_prompt_contains_sources_and_rules():
@@ -74,13 +75,15 @@ def test_prompt_contains_sources_and_rules():
     prompt = ai.build_prompt(Variant(rsid="rs113488022", gene="BRAF"), _aliases(), docs)
     assert "[PMID:111]" in prompt and "[NCT00000001]" in prompt and "WORD FOR WORD" in prompt and "I-A:" in prompt
     assert "ClinicalTrials.gov records" in prompt  # asks the AI to cite matching trial records too
+    assert '"is_cancer"' in prompt and "ESCAT is an oncology scale" in prompt
 
 
 def test_cache_round_trips_non_ascii_text():
     # Windows' default file encoding (cp1252) can't store characters like these
     out = ai.AIOutput(rows=[ai.AIRow(
         drug="Dabrafenib + trametinib", setting="Patients ≥18 years", outcome="ORR 64% (95% CI 52–75)",
-        escat_tier="I-B", escat_reason="Phase 2 trial in 患者", evidence=[ai.AIEvidence(source_id="PMID:1", quote="≥ 64%")],
+        is_cancer=True, escat_tier="I-B", escat_reason="Phase 2 trial in 患者",
+        evidence=[ai.AIEvidence(source_id="PMID:1", quote="≥ 64%")],
     )])
     ai._cache_set("prompt with ≥", out)
     assert ai._cache_get("prompt with ≥") == out

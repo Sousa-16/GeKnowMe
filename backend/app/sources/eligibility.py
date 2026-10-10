@@ -16,8 +16,11 @@ _HEADER = re.compile(
 )
 _BULLET = re.compile(r"^\s*(?:[*\-•·▪◦]|\d{1,3}[.)]|[a-z][.)]|\(?[ivx]{1,4}\))\s+", re.IGNORECASE)
 
+# Cancer-style testing (tissue, ctDNA...) and general genetic testing (genotyping, carrier testing...)
 TESTING_WORDS = [
     "ngs", "next-generation sequencing", "next generation sequencing", "sequencing", "pcr",
+    "genetic test", "genetic testing", "genetically confirmed", "genetic confirmation", "genotyping", "genotyped",
+    "molecular test", "molecular testing", "molecular diagnosis", "dna analysis", "newborn screening",
     "ctdna", "cfdna", "liquid biopsy", "plasma", "tissue", "biopsy", "central lab", "central laboratory",
     "local lab", "local laboratory", "local assay", "fda-approved test", "fda approved test",
     "companion diagnostic", "assay", "clia", "validated test", "archival", "tumor sample", "tumour sample",
@@ -25,12 +28,21 @@ TESTING_WORDS = [
 ALTERATION_WORDS = [
     "mutation", "mutant", "mutated", "alteration", "variant", "fusion", "amplification", "rearrangement",
     "wild-type", "wild type", "wildtype", "co-mutation", "biomarker",
+    # general genetics (any disease)
+    "genotype", "allele", "homozygous", "heterozygous", "hemizygous", "compound heterozygous", "carrier",
+    "pathogenic", "likely pathogenic", "deletion", "duplication", "insertion", "nonsense", "missense", "splice",
 ]
-THERAPY_WORDS = ["inhibitor", "targeted", "therapy", "therapies", "treatment", "treated", "regimen", "agent"]
-# Other common cancer biomarkers (case-sensitive gene symbols)
+THERAPY_WORDS = ["inhibitor", "targeted", "therapy", "therapies", "treatment", "treated", "regimen", "agent", "drug",
+                 "medication", "commercially available",
+                 "modulator", "gene therapy", "gene editing", "enzyme replacement", "antisense", "transplant"]
+# Other common biomarkers, mostly cancer (case-sensitive gene symbols). Other genes in exclusion rules are
+# still caught by the "known ... mutation/variant" rule below, so this list doesn't limit non-cancer genes.
 OTHER_MARKERS = ["EGFR", "ALK", "ROS1", "KRAS", "NRAS", "HRAS", "BRAF", "MET", "RET", "NTRK", "HER2", "ERBB2",
                  "PIK3CA", "BRCA1", "BRCA2", "IDH1", "IDH2", "FGFR", "KIT", "PDGFRA", "MSI", "dMMR", "PD-L1", "TMB"]
-PRIOR_WORDS = ["prior", "previous", "previously", "received", "pretreated", "pre-treated", "treated with", "progressed on"]
+GENETIC_WORDS = ["genotype", "genotyp", "genetic", "allele", "homozygous", "heterozygous", "mutation", "carrier",
+                 "pathogenic", "germline", "somatic"]
+PRIOR_WORDS = ["prior", "previous", "previously", "received", "pretreated", "pre-treated", "treated with", "progressed on",
+               "use of", "currently receiving", "currently taking", "concomitant", "ongoing treatment"]
 
 
 def split_sections(text: str) -> tuple[str, str]:
@@ -96,17 +108,21 @@ def categorize(rule: str, kind: str, gene: str | None, mutation_res: list[re.Pat
     mentions_testing = _has(low, TESTING_WORDS)
 
     if _has(low, PRIOR_WORDS) and _has(low, THERAPY_WORDS) and (
-        mentions_gene or mentions_mutation or "inhibitor" in low or "targeted" in low
+        mentions_gene or mentions_mutation or _has(low, ["inhibitor", "targeted", "modulator", "gene therapy",
+                                                         "gene editing", "enzyme replacement", "antisense"])
     ):
         return "prior_therapy"
     if mentions_mutation or (mentions_gene and mentions_alteration):
         return "biomarker_required" if kind == "inclusion" else "biomarker_excluded"
-    if mentions_testing and mentions_gene:
+    # Testing rules must be about genetics: name the gene, or use clearly genetic words
+    # (so "SARS-CoV-2 variants by RT-PCR" doesn't count)
+    if mentions_testing and (mentions_gene or _has(low, GENETIC_WORDS)):
         return "testing_method"
     other_marker = any(re.search(rf"(?<![A-Za-z0-9]){m}(?![A-Za-z0-9])", rule) for m in OTHER_MARKERS)
     if mentions_alteration and other_marker:
         return "biomarker_excluded" if kind == "exclusion" else "other_biomarker"
-    if kind == "exclusion" and mentions_alteration and ("wild" in low or "known" in low or "driver" in low):
+    if kind == "exclusion" and mentions_alteration and _has(low, ["wild", "known", "driver", "second", "another",
+                                                                  "additional", "other "]):
         return "biomarker_excluded"
     return None
 

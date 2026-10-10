@@ -1,13 +1,13 @@
 from app.sources.proof_check import (RawEvidence, RawRow, SourceDoc, check_rows, normalize_source_id,
-                                     quote_in_source)
+                                     ocebm_level_for_paper, quote_in_source)
 
 RCT = SourceDoc("PMID:111", "https://pubmed.ncbi.nlm.nih.gov/111/",
                 "Dabrafenib plus trametinib. Median overall survival was 25.1 months versus 18.7 months; "
                 "the overall response rate was 64% (95% CI 46–79).",
-                is_randomized=True, is_clinical_trial=True)
+                is_randomized=True, is_clinical_trial=True, ocebm_level=2)
 PH1 = SourceDoc("NCT00000001", "https://clinicaltrials.gov/study/NCT00000001",
                 "A phase 1 dose escalation study. The objective response rate was 30% in BRAF V600E patients.",
-                is_clinical_trial=True)
+                is_clinical_trial=True, ocebm_level=3)
 SOURCES = {d.source_id: d for d in (RCT, PH1)}
 
 
@@ -83,3 +83,56 @@ def test_spelled_out_numbers_count():
     r = row(outcome="7-year OS 27.4%", evidence=[RawEvidence("PMID:222", "Seven-year overall survival was 27.4%")])
     res = check_rows([r], {"PMID:222": doc})
     assert res.rows[0].verified, res.rows[0].warnings
+
+
+CF = SourceDoc("PMID:333", "u", "Ivacaftor improved lung function: FEV1 increased by 10.6 percentage points in patients "
+               "with cystic fibrosis.", is_randomized=True, is_clinical_trial=True, ocebm_level=2)
+
+
+def test_non_cancer_row_gets_oxford_level_and_no_escat():
+    r = row(drug="Ivacaftor", setting="Cystic fibrosis", outcome="FEV1 +10.6 percentage points",
+            escat_tier=None, escat_reason=None, is_cancer=False,
+            evidence=[RawEvidence("PMID:333", "FEV1 increased by 10.6 percentage points")])
+    res = check_rows([r], {"PMID:333": CF})
+    out = res.rows[0]
+    assert out.verified and not out.is_cancer and out.escat_tier is None and out.ocebm_level == 2
+
+
+def test_escat_given_for_non_cancer_row_is_dropped():
+    r = row(drug="Ivacaftor", setting="Cystic fibrosis", outcome="FEV1 +10.6 percentage points", is_cancer=False,
+            evidence=[RawEvidence("PMID:333", "FEV1 increased by 10.6 percentage points")])
+    out = check_rows([r], {"PMID:333": CF}).rows[0]
+    assert out.escat_tier is None and out.escat_reason is None and out.verified
+
+
+def test_cancer_detected_from_setting_even_if_ai_says_no():
+    out = check_rows([row(is_cancer=False)], SOURCES).rows[0]
+    assert out.is_cancer and out.escat_tier == "I-A"
+
+
+def test_cancer_row_without_tier_is_flagged():
+    out = check_rows([row(escat_tier=None)], SOURCES).rows[0]
+    assert not out.verified and "cancer row without an ESCAT tier" in out.warnings
+
+
+def test_oxford_level_is_best_cited_source():
+    r = row(outcome="ORR 64%, ORR 30%", evidence=[
+        RawEvidence("NCT00000001", "The objective response rate was 30% in BRAF V600E patients"),
+        RawEvidence("PMID:111", "the overall response rate was 64%")])
+    assert check_rows([r], SOURCES).rows[0].ocebm_level == 2
+
+
+def test_ocebm_levels_from_publication_types():
+    assert ocebm_level_for_paper(["Meta-Analysis", "Journal Article"], False) == 1
+    assert ocebm_level_for_paper(["Randomized Controlled Trial"], False) == 2
+    assert ocebm_level_for_paper(["Clinical Trial, Phase II"], False) == 3
+    assert ocebm_level_for_paper(["Case Reports"], False) == 4
+    assert ocebm_level_for_paper(["Journal Article"], True) == 5
+    assert ocebm_level_for_paper(["Review"], False) is None
+
+
+def test_phase_numbers_are_not_results():
+    r = row(outcome="Ongoing phase 1 trial; ORR 30%", escat_tier="I-B",
+            evidence=[RawEvidence("NCT00000001", "The objective response rate was 30% in BRAF V600E patients")])
+    out = check_rows([r], SOURCES).rows[0]
+    assert not any("number" in w for w in out.warnings)

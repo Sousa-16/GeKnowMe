@@ -34,7 +34,8 @@ export interface Criterion { nct_id: string; kind: "inclusion" | "exclusion"; ca
 export type EscatTier = "I-A" | "I-B" | "I-C" | "II-A" | "II-B" | "III-A" | "III-B" | "IV" | "V";
 export interface Evidence { source_id: string; quote: string; url: string }
 export interface TreatmentRow {
-  drug: string; setting: string; outcome: string; escat_tier: EscatTier; escat_reason: string;
+  drug: string; setting: string; outcome: string; is_cancer: boolean; ocebm_level: number | null;
+  escat_tier: EscatTier | null; escat_reason: string | null;
   evidence: Evidence[]; verified: boolean; warnings: string[];
 }
 export interface RemovedRow { drug: string; reason: string }

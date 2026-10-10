@@ -16,6 +16,18 @@ export const ESCAT: Record<EscatTier, string> = {
   "V": "Responses seen, but no meaningful benefit on its own",
 };
 
+export const OCEBM: Record<number, string> = {
+  1: "Systematic review / meta-analysis of randomized trials",
+  2: "Randomized trial",
+  3: "Non-randomized or observational study",
+  4: "Case series / case report",
+  5: "Lab or animal evidence only",
+};
+
+function levelTone(l: number) {
+  return l <= 2 ? "green" as const : l === 3 ? "blue" as const : "slate" as const;
+}
+
 function tierTone(t: EscatTier) {
   if (t.startsWith("I-")) return "green" as const;
   if (t.startsWith("II-")) return "blue" as const;
@@ -34,15 +46,15 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
   const sentTrials = brief.trials.trials.filter((t) => t.sent_to_ai).length;
 
   const exportCsv = () => downloadCsv(`${brief.rsid}-treatments.csv`,
-    ["drug", "setting", "outcome", "escat_tier", "escat_reason", "verified", "warnings", "sources", "quotes", "urls"],
-    rows.map((r) => [r.drug, r.setting, r.outcome, r.escat_tier, r.escat_reason, r.verified, r.warnings.join("; "),
+    ["drug", "setting", "outcome", "is_cancer", "oxford_level", "escat_tier", "escat_reason", "verified", "warnings", "sources", "quotes", "urls"],
+    rows.map((r) => [r.drug, r.setting, r.outcome, r.is_cancer, r.ocebm_level, r.escat_tier, r.escat_reason, r.verified, r.warnings.join("; "),
       r.evidence.map((e) => e.source_id).join("; "), r.evidence.map((e) => e.quote).join(" | "), r.evidence.map((e) => e.url).join("; ")]));
 
   return (
     <Section id="treatments" title="AI treatment summary"
       subtitle={<>Written by Gemini from the {sentPapers} highest-scoring papers and {sentTrials} trials only. Every claim cites a source and a word-for-word quote, which code checks.</>}
       actions={<>
-        <Button variant="ghost" onClick={() => setShowLegend(!showLegend)}>{showLegend ? "Hide" : "What do the tiers mean?"}</Button>
+        <Button variant="ghost" onClick={() => setShowLegend(!showLegend)}>{showLegend ? "Hide" : "What do the levels mean?"}</Button>
         {rows.length > 0 && <Button onClick={exportCsv}><DownloadIcon />Treatments CSV</Button>}
       </>}>
       {showLegend && <EscatLegend />}
@@ -66,7 +78,7 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
                   <tr>
                     <th className="px-3 py-2 font-medium">Treatment</th>
                     <th className="px-3 py-2 font-medium">Reported outcome</th>
-                    <th className="px-3 py-2 font-medium">Evidence (ESCAT)</th>
+                    <th className="px-3 py-2 font-medium">Evidence level</th>
                     <th className="px-3 py-2 font-medium">Sources &amp; quotes</th>
                   </tr>
                 </thead>
@@ -84,8 +96,14 @@ export function TreatmentsSection({ brief, treatments, status, warnings, started
                           : r.warnings.map((w) => <p key={w} className="mt-1 text-xs font-medium text-amber-700">! {w}</p>)}
                       </td>
                       <td className="px-3 py-3">
-                        <Badge tone={tierTone(r.escat_tier)} title={ESCAT[r.escat_tier]}>ESCAT {r.escat_tier}</Badge>
-                        <p className="mt-1 text-xs text-slate-500">{r.escat_reason}</p>
+                        <div className="flex flex-wrap gap-1">
+                          {r.ocebm_level != null
+                            ? <Badge tone={levelTone(r.ocebm_level)} title={`Oxford CEBM level ${r.ocebm_level}: ${OCEBM[r.ocebm_level]} (from the cited sources' study design)`}>Oxford {r.ocebm_level}</Badge>
+                            : <Badge title="No cited source has a rankable study design (e.g. narrative reviews)">Oxford n/a</Badge>}
+                          {r.is_cancer && r.escat_tier && <Badge tone={tierTone(r.escat_tier)} title={ESCAT[r.escat_tier]}>ESCAT {r.escat_tier}</Badge>}
+                        </div>
+                        {r.ocebm_level != null && <p className="mt-1 text-xs text-slate-500">{OCEBM[r.ocebm_level]}</p>}
+                        {r.is_cancer && r.escat_reason && <p className="mt-1 text-xs text-slate-500">{r.escat_reason}</p>}
                       </td>
                       <td className="px-3 py-3">
                         <ul className="space-y-2">
@@ -146,10 +164,23 @@ function Pending({ startedAt }: { startedAt: number | null }) {
 
 function EscatLegend() {
   return (
-    <div className="mb-4 rounded-xl bg-slate-50 p-4 text-sm ring-1 ring-slate-200">
-      <p className="mb-2 text-slate-600">
-        Evidence levels follow the <ExtLink href="https://doi.org/10.1093/annonc/mdy263">ESMO Scale for Clinical Actionability of molecular Targets (ESCAT)</ExtLink>,
-        judged per drug and cancer type. Code checks that the cited sources can support the tier (e.g. I-A needs a randomized trial and a survival result).
+    <div className="mb-4 space-y-4 rounded-xl bg-slate-50 p-4 text-sm ring-1 ring-slate-200">
+      <div>
+        <p className="mb-2 text-slate-600">
+          <span className="font-medium text-slate-800">Every row: </span>
+          <ExtLink href="https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence">Oxford CEBM 2011 level</ExtLink> of
+          the strongest cited source, worked out by code from each source's study design (not by the AI). Works for any disease.
+        </p>
+        <dl className="grid gap-x-6 gap-y-1 sm:grid-cols-2">
+          {Object.entries(OCEBM).map(([l, text]) => (
+            <div key={l} className="flex gap-2"><dt><Badge tone={levelTone(Number(l))}>Oxford {l}</Badge></dt><dd className="text-slate-600">{text}</dd></div>
+          ))}
+        </dl>
+      </div>
+      <p className="text-slate-600">
+        <span className="font-medium text-slate-800">Cancer rows only: </span>
+        <ExtLink href="https://doi.org/10.1093/annonc/mdy263">ESMO ESCAT</ExtLink> tier, judged per drug and cancer type. ESCAT is an
+        oncology scale, so it isn't shown for other diseases. Code checks that the cited sources can support the tier (e.g. I-A needs a randomized trial and a survival result).
       </p>
       <dl className="grid gap-x-6 gap-y-1 sm:grid-cols-2">
         {(Object.keys(ESCAT) as EscatTier[]).map((t) => (

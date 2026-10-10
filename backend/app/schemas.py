@@ -133,8 +133,12 @@ class TreatmentRow(BaseModel):
     drug: str
     setting: str
     outcome: str
-    escat_tier: EscatTier
-    escat_reason: str
+    is_cancer: bool = False  # ESCAT only applies to cancer
+    # Oxford CEBM 2011 level (1 = best) of the strongest cited source, worked out by code from the
+    # sources' study types. Works for any disease. None if no cited source has a rankable design.
+    ocebm_level: int | None = None
+    escat_tier: EscatTier | None = None  # cancer rows only
+    escat_reason: str | None = None
     evidence: list[Evidence] = Field(min_length=1)
     verified: bool = False  # all checks passed
     warnings: list[str] = []  # e.g. "tier not supported", "number 64 not found in quotes"

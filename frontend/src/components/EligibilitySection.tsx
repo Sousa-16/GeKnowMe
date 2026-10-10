@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Brief, CriterionCategory } from "../types";
 import { downloadCsv } from "../lib/csv";
-import { countPatterns, PATTERNS } from "../lib/patterns";
+import { countPatterns, isOncology, PATTERNS } from "../lib/patterns";
 import { Badge, Button, DownloadIcon, ExtLink, Section, StatusNote } from "./ui";
 
 export const CATEGORY: Record<CriterionCategory, { label: string; tone: "brand" | "red" | "blue" | "violet" | "slate" }> = {
@@ -22,7 +22,8 @@ export function EligibilitySection({ brief }: { brief: Brief }) {
   const [pattern, setPattern] = useState<string | null>(null);
   const [limit, setLimit] = useState(PAGE);
 
-  const { trialsWithRules, counts } = useMemo(() => countPatterns(criteria, gene), [criteria, gene]);
+  const oncology = useMemo(() => isOncology(brief.trials.trials.map((t) => t.conditions)), [brief.trials.trials]);
+  const { trialsWithRules, counts } = useMemo(() => countPatterns(criteria, gene, oncology), [criteria, gene, oncology]);
   const byCategory = useMemo(() => {
     const m = new Map<CriterionCategory, { rules: number; trials: Set<string> }>();
     for (const c of criteria) {
