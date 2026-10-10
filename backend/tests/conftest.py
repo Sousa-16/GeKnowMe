@@ -9,7 +9,7 @@ FIXTURES = Path(__file__).parent / "fixtures"
 
 
 def load_fixture(name: str) -> tuple[list[dict], int]:
-    data = json.loads((FIXTURES / name).read_text())
+    data = json.loads((FIXTURES / name).read_text(encoding="utf-8"))
     return data["studies"], data["totalCount"]
 
 
