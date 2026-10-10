@@ -29,6 +29,14 @@ export default function App() {
   const [tx, setTx] = useState<{ data: TreatmentResults; status: SectionStatus; warnings: string[]; startedAt: number | null }>(
     { data: { rows: [], removed: [] }, status: "pending", warnings: [], startedAt: null });
   const abort = useRef<AbortController | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const onLanding = !rsid && !error;
 
   const loadTreatments = useCallback(async (id: string, ctrl: AbortController) => {
     setTx({ data: { rows: [], removed: [] }, status: "pending", warnings: [], startedAt: Date.now() });
@@ -95,8 +103,9 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6">
+      <header className={`sticky top-0 z-30 border-b transition-colors duration-300 ${onLanding && !scrolled
+        ? "border-slate-900/10 bg-transparent" : "border-slate-200 bg-white/90 backdrop-blur"}`}>
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
           <button type="button" onClick={goHome} className="flex shrink-0 items-center gap-2">
             <Logo />
             <span className="hidden font-semibold text-slate-900 sm:inline">{APP_NAME}</span>
@@ -115,8 +124,8 @@ export default function App() {
         </div>
       </header>
 
-      {!rsid && !error && <Landing onSearch={search} />}
-      <main className={`mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 ${!rsid && !error ? "hidden" : ""}`}>
+      {onLanding && <Landing onSearch={search} />}
+      <main className={`mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 ${onLanding ? "hidden" : ""}`}>
         {error && <ErrorPanel message={error} onSearch={search} />}
         {loading && <LoadingPanel rsid={rsid} />}
         {brief && !loading && <BriefView brief={brief} tx={tx} onRetryTx={() => { const c = new AbortController(); abort.current = c; void loadTreatments(brief.rsid, c); }} />}
@@ -229,10 +238,11 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
   ];
   return (
     <div className="flex-1">
-      <section className="relative overflow-hidden border-b border-slate-200 bg-slate-50">
+      <div className="relative -mt-16 overflow-hidden border-b border-slate-200 bg-slate-50 pt-16">
         <Suspense fallback={null}><DnaHelix className="absolute inset-0" /></Suspense>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/70 to-transparent md:via-slate-50/40" />
-        <div className="relative mx-auto flex min-h-[calc(100svh-4rem-12rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[560px]">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-50/95 via-slate-50/40 to-transparent md:from-slate-50/85 md:via-transparent" />
+      <section className="relative">
+        <div className="relative mx-auto flex min-h-[calc(100svh-4rem-12rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[600px]">
           <p className="font-serif text-xl italic text-brand-700">For clinical trial planners</p>
           <h1 className="mt-3 max-w-3xl text-[2.6rem] font-normal leading-[1.05] tracking-tight text-slate-900 sm:text-7xl sm:leading-[1.02]">
             From mutation to <br className="hidden sm:block" />trial brief.
@@ -245,8 +255,8 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:divide-x md:divide-slate-200">
+      <section className="relative border-t border-slate-900/10 bg-white/35">
+        <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:divide-x md:divide-slate-900/10">
           <div className="px-4 py-8 sm:px-6">
             <p className="font-serif text-lg italic text-slate-500">Try a demo</p>
             <p className="mt-1 text-xl text-slate-900">Three well-studied cancer mutations</p>
@@ -259,13 +269,14 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
               ))}
             </div>
           </div>
-          <div className="border-t border-slate-200 px-4 py-8 sm:px-6 md:border-t-0 md:pl-10">
+          <div className="border-t border-slate-900/10 px-4 py-8 sm:px-6 md:border-t-0 md:pl-10">
             <p className="font-serif text-lg italic text-slate-500">Why it's different</p>
             <p className="mt-1 max-w-md text-xl text-slate-900">Every AI claim is cited, and code checks the quote against its source.</p>
             <a href="#honest" className="mt-5 inline-block rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700">See how it works</a>
           </div>
         </div>
       </section>
+      </div>
 
       <section id="how" className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <p className="font-serif text-lg italic text-brand-700">What you get</p>

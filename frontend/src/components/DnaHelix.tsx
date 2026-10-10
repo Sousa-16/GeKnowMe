@@ -26,7 +26,7 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
     el.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.Fog(0xf8fafc, 21, 36);
+    scene.fog = new THREE.Fog(0xf8fafc, 19, 38);
     const pmrem = new THREE.PMREMGenerator(renderer);
     scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
@@ -54,8 +54,10 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
     }
     const helix = new THREE.Group();
     helix.add(beads);
-    helix.rotation.z = small ? 1.05 : 0.5;
-    helix.position.set(small ? 0.9 : 3.4, small ? -3.4 : -0.4, 0);
+    helix.rotation.z = small ? 1.05 : 0.48;
+    const SCALE = small ? 0.9 : 1.3;
+    helix.scale.setScalar(SCALE);
+    helix.position.set(small ? 0.2 : 2.8, small ? -3.6 : -0.5, 0);
     scene.add(helix);
 
     const m = new THREE.Matrix4(), p = new THREE.Vector3();
@@ -95,11 +97,11 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
       if (!visible || document.hidden) { last = now; return; }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
-      phase += dt * 0.12;
+      phase += dt * 0.3;
       place(phase);
       helix.rotation.x += (pointer.y * 0.12 - helix.rotation.x) * 0.04;
       helix.rotation.y += (pointer.x * 0.18 - helix.rotation.y) * 0.04;
-      helix.position.y += ((small ? -3.4 : -0.4) + Math.sin(now / 2400) * 0.15 - helix.position.y) * 0.05;
+      helix.position.y += ((small ? -3.6 : -0.5) + Math.sin(now / 2400) * 0.2 - helix.position.y) * 0.05;
       renderer.render(scene, camera);
       if (!shown) { shown = true; setReady(true); }
     };
