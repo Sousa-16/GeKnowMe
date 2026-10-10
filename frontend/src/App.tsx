@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
+import { lazy, Suspense, useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import type { Brief, SectionStatus, TreatmentResults } from "./types";
 import { ApiError, DEMOS, fetchBrief, fetchTreatments } from "./lib/api";
 import { formatDate, nf, OPEN_STATUSES } from "./lib/format";
@@ -7,7 +7,10 @@ import { TrialsSection } from "./components/TrialsSection";
 import { EligibilitySection } from "./components/EligibilitySection";
 import { TreatmentsSection } from "./components/TreatmentsSection";
 import { PapersSection } from "./components/PapersSection";
-import { Badge, Kpi, Spinner } from "./components/ui";
+import { Badge, ExtLink, Kpi, Spinner } from "./components/ui";
+
+const DnaHelix = lazy(() => import("./components/DnaHelix"));
+const REPO_URL = "https://github.com/Sousa-16/hackathon-26";
 
 export const APP_NAME = "Variant Trial Scope";
 const RSID_RE = /^(rs)?\d{1,12}$/i;
@@ -98,12 +101,22 @@ export default function App() {
             <Logo />
             <span className="hidden font-semibold text-slate-900 sm:inline">{APP_NAME}</span>
           </button>
-          {(rsid || error) && <SearchBox compact initial={rsid} onSearch={search} />}
+          {(rsid || error) ? <SearchBox compact initial={rsid} onSearch={search} /> : (
+            <>
+              <nav className="ml-4 hidden items-center gap-7 border-l border-slate-200 pl-8 text-sm text-slate-600 md:flex">
+                <a href="#how" className="hover:text-slate-900">How it works ↓</a>
+                <a href="#honest" className="hover:text-slate-900">How it stays honest ↓</a>
+                <a href="#standards" className="hover:text-slate-900">Data &amp; standards ↓</a>
+              </nav>
+              <a href={REPO_URL} target="_blank" rel="noopener noreferrer"
+                className="ml-auto rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700">GitHub</a>
+            </>
+          )}
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6">
-        {!rsid && !error && <Landing onSearch={search} />}
+      {!rsid && !error && <Landing onSearch={search} />}
+      <main className={`mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 ${!rsid && !error ? "hidden" : ""}`}>
         {error && <ErrorPanel message={error} onSearch={search} />}
         {loading && <LoadingPanel rsid={rsid} />}
         {brief && !loading && <BriefView brief={brief} tx={tx} onRetryTx={() => { const c = new AbortController(); abort.current = c; void loadTreatments(brief.rsid, c); }} />}
@@ -208,36 +221,108 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
     ["Publications", "PubMed papers ranked by study design (Oxford CEBM levels) and relevance."],
     ["Verified AI summary", "A treatment table where code checks every cited ID, quote, number and ESCAT tier."],
   ];
+  const checks = [
+    ["Real source", "Every row must cite a PubMed or ClinicalTrials.gov ID we actually gave the AI. Anything else is removed."],
+    ["Word-for-word quote", "Each claim carries a quote; code finds it in the source text or removes the row."],
+    ["Numbers match", "Every number in the outcome must appear in a quote, or the row is flagged for a human check."],
+    ["Evidence tier fits", "ESMO ESCAT tiers are checked against the sources, e.g. I-A needs a randomized trial with survival data."],
+  ];
   return (
-    <div className="py-8 sm:py-14">
-      <div className="mx-auto max-w-3xl text-center">
-        <Badge tone="brand">For clinical trial planners, researchers &amp; biostatisticians</Badge>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">From a mutation to a cited trial scoping brief</h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Planning a trial for a genetic mutation means searching PubMed and ClinicalTrials.gov under every name the mutation goes by.
-          Enter a dbSNP rs number and get the landscape in seconds, with a source for every fact.
-        </p>
-        <div className="mt-8 flex justify-center"><SearchBox onSearch={onSearch} /></div>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-sm text-slate-500">
-          <span>Try:</span>
-          {DEMOS.map((d) => (
-            <button key={d.rsid} type="button" onClick={() => onSearch(d.rsid)}
-              className="rounded-full bg-white px-3 py-1 font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition hover:ring-brand-400">
-              {d.label} <span className="font-mono text-xs text-slate-400">{d.rsid}</span>
-            </button>
-          ))}
+    <div className="flex-1">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-slate-50">
+        <Suspense fallback={null}><DnaHelix className="absolute inset-0" /></Suspense>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/70 to-transparent md:via-slate-50/40" />
+        <div className="relative mx-auto flex min-h-[calc(100svh-4rem-12rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[560px]">
+          <p className="font-serif text-xl italic text-brand-700">For clinical trial planners</p>
+          <h1 className="mt-3 max-w-3xl text-[2.6rem] font-normal leading-[1.05] tracking-tight text-slate-900 sm:text-7xl sm:leading-[1.02]">
+            From mutation to <br className="hidden sm:block" />trial brief.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-slate-600">
+            Enter a dbSNP rs number. Get the papers, the trial landscape, how other trials screened patients, and a
+            treatment summary where every claim is cited and checked.
+          </p>
+          <div className="mt-8 max-w-xl"><SearchBox onSearch={onSearch} /></div>
         </div>
-      </div>
-      <div className="mx-auto mt-14 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {steps.map(([title, text], i) => (
-          <div key={title} className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-            <p className="text-xs font-semibold text-brand-700">{i + 1}</p>
-            <p className="mt-1 font-semibold text-slate-900">{title}</p>
-            <p className="mt-1 text-sm text-slate-600">{text}</p>
+      </section>
+
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:divide-x md:divide-slate-200">
+          <div className="px-4 py-8 sm:px-6">
+            <p className="font-serif text-lg italic text-slate-500">Try a demo</p>
+            <p className="mt-1 text-xl text-slate-900">Three well-studied cancer mutations</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {DEMOS.map((d) => (
+                <button key={d.rsid} type="button" onClick={() => onSearch(d.rsid)}
+                  className="rounded-md border border-slate-900 px-4 py-2 text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                  {d.label} <span className="ml-1 font-mono text-xs opacity-60">{d.rsid}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-      <p className="mx-auto mt-10 max-w-2xl text-center text-xs text-slate-400">Research tool for clinical trial planning. Not medical advice.</p>
+          <div className="border-t border-slate-200 px-4 py-8 sm:px-6 md:border-t-0 md:pl-10">
+            <p className="font-serif text-lg italic text-slate-500">Why it's different</p>
+            <p className="mt-1 max-w-md text-xl text-slate-900">Every AI claim is cited, and code checks the quote against its source.</p>
+            <a href="#honest" className="mt-5 inline-block rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700">See how it works</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <p className="font-serif text-lg italic text-brand-700">What you get</p>
+        <h2 className="mt-1 text-3xl tracking-tight text-slate-900">One brief instead of days of searching</h2>
+        <p className="mt-3 max-w-2xl text-slate-600">
+          Planning a trial for a mutation means searching PubMed and ClinicalTrials.gov under every name it goes by, then
+          reading protocols to see how others screened patients. This does it in seconds.
+        </p>
+        <ol className="mt-8 grid gap-px overflow-hidden rounded-2xl bg-slate-200 ring-1 ring-slate-200 sm:grid-cols-2 lg:grid-cols-5">
+          {steps.map(([title, text], i) => (
+            <li key={title} className="bg-white p-5">
+              <p className="font-mono text-xs text-brand-700">0{i + 1}</p>
+              <p className="mt-2 font-medium text-slate-900">{title}</p>
+              <p className="mt-1 text-sm text-slate-600">{text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section id="honest" className="border-y border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+          <p className="font-serif text-lg italic text-brand-700">How it stays honest</p>
+          <h2 className="mt-1 text-3xl tracking-tight text-slate-900">The AI writes. Code checks.</h2>
+          <p className="mt-3 max-w-2xl text-slate-600">
+            The AI only sees the highest-ranked papers and trials, and must quote them word for word. Before anything is shown,
+            four checks run on every row. Rows that fail are removed, and you can see why.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {checks.map(([title, text], i) => (
+              <div key={title} className="rounded-2xl border border-slate-200 p-5">
+                <p className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700">{i + 1}</p>
+                <p className="mt-3 font-medium text-slate-900">{title}</p>
+                <p className="mt-1 text-sm text-slate-600">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="standards" className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div>
+            <p className="font-serif text-lg italic text-brand-700">Data &amp; standards</p>
+            <h2 className="mt-1 text-2xl tracking-tight text-slate-900">Public data, published standards</h2>
+          </div>
+          <dl className="grid gap-6 text-sm sm:grid-cols-2 md:col-span-2">
+            <div><dt className="font-medium text-slate-900">Data sources</dt>
+              <dd className="mt-1 text-slate-600">MyVariant.info and ClinVar (variant), PubMed (papers), ClinicalTrials.gov (trials), Google Gemini (summary).</dd></div>
+            <div><dt className="font-medium text-slate-900">Ranking papers</dt>
+              <dd className="mt-1 text-slate-600"><ExtLink href="https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence">Oxford CEBM 2011 Levels of Evidence</ExtLink>, by study design.</dd></div>
+            <div><dt className="font-medium text-slate-900">Treatment evidence</dt>
+              <dd className="mt-1 text-slate-600"><ExtLink href="https://doi.org/10.1093/annonc/mdy263">ESMO ESCAT</ExtLink> tiers (Mateo et al., Annals of Oncology 2018).</dd></div>
+            <div><dt className="font-medium text-slate-900">Not medical advice</dt>
+              <dd className="mt-1 text-slate-600">A research tool for planning trials. Results can be incomplete; check every claim against its source.</dd></div>
+          </dl>
+        </div>
+      </section>
     </div>
   );
 }
