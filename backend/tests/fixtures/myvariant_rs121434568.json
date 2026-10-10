@@ -1,0 +1,910 @@
+[
+ {
+  "_id": "chr7:g.55259515T>A",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": {
+    "evidenceItems": [
+     {
+      "id": 10040
+     }
+    ]
+   },
+   "name": "L858Q"
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "EGFR",
+    "EGFR",
+    "EGFR"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "epidermal growth factor receptor",
+    "symbol": "EGFR"
+   },
+   "rsid": "rs121434568"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": [
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2EB2:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITN:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITP:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITQ:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITW:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITX:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2J5F:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3UG1:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3UG2:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3VJN:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3VJO:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4G5J:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4I23:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4I24:B_745-B_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4LI5:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4WKQ:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4WRG:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "cdna": {
+      "length": "5600",
+      "position": "2819"
+     },
+     "cds": {
+      "length": "3633",
+      "position": "2573"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_005228.3",
+     "feature_type": "transcript",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "hgvs_p": "p.Leu858Gln",
+     "protein": {
+      "length": "1210",
+      "position": "858"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "sequence_feature",
+     "feature_id": "NM_005228.3",
+     "feature_type": "helix:combinatorial_evidence_used_in_manual_assertion",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>A",
+     "putative_impact": "LOW",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "distance_to_feature": "2873",
+     "effect": "upstream_gene_variant",
+     "feature_id": "NR_047551.1",
+     "feature_type": "transcript",
+     "gene_id": "EGFR-AS1",
+     "genename": "EGFR-AS1",
+     "hgvs_c": "n.-2873A>T",
+     "putative_impact": "MODIFIER",
+     "transcript_biotype": "pseudogene"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "chr7:g.55259515T>G",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": [
+    {
+     "evidenceItems": [
+      {
+       "id": 275
+      },
+      {
+       "id": 276
+      },
+      {
+       "id": 347
+      },
+      {
+       "id": 968
+      },
+      {
+       "id": 1665
+      },
+      {
+       "id": 3811
+      },
+      {
+       "id": 2630
+      },
+      {
+       "id": 2623
+      },
+      {
+       "id": 2631
+      },
+      {
+       "id": 2626
+      },
+      {
+       "id": 2624
+      },
+      {
+       "id": 2628
+      },
+      {
+       "id": 2632
+      },
+      {
+       "id": 4295
+      },
+      {
+       "id": 4291
+      },
+      {
+       "id": 4285
+      },
+      {
+       "id": 4292
+      },
+      {
+       "id": 2634
+      },
+      {
+       "id": 2629
+      },
+      {
+       "id": 4860
+      },
+      {
+       "id": 5922
+      },
+      {
+       "id": 4287
+      },
+      {
+       "id": 4290
+      },
+      {
+       "id": 4293
+      },
+      {
+       "id": 4286
+      },
+      {
+       "id": 229
+      },
+      {
+       "id": 4284
+      },
+      {
+       "id": 885
+      },
+      {
+       "id": 982
+      },
+      {
+       "id": 2994
+      },
+      {
+       "id": 2627
+      },
+      {
+       "id": 2621
+      },
+      {
+       "id": 2997
+      },
+      {
+       "id": 4288
+      },
+      {
+       "id": 8053
+      },
+      {
+       "id": 879
+      },
+      {
+       "id": 883
+      },
+      {
+       "id": 6183
+      },
+      {
+       "id": 4294
+      },
+      {
+       "id": 12203
+      },
+      {
+       "id": 4265
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11098
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11240
+      },
+      {
+       "id": 7363
+      },
+      {
+       "id": 3791
+      },
+      {
+       "id": 11241
+      },
+      {
+       "id": 11219
+      },
+      {
+       "id": 4759
+      },
+      {
+       "id": 2156
+      },
+      {
+       "id": 11239
+      },
+      {
+       "id": 12015
+      },
+      {
+       "id": 12144
+      },
+      {
+       "id": 12156
+      },
+      {
+       "id": 12131
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11408
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11486
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11599
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 12206
+      }
+     ]
+    }
+   ],
+   "name": "L858R"
+  },
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "1956",
+    "symbol": "EGFR"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000018084",
+     "clinical_significance": "drug response",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C1851577"
+      },
+      "name": "Adenocarcinoma of lung, response to tyrosine kinase inhibitor in, somatic"
+     },
+     "last_evaluated": "2005-05-19",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000018083",
+     "clinical_significance": "drug response",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C4016032"
+      },
+      "name": "Nonsmall cell lung cancer, response to tyrosine kinase inhibitor in, somatic"
+     },
+     "last_evaluated": "2005-05-19",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000150629",
+     "clinical_significance": "drug response",
+     "conditions": {
+      "identifiers": {
+       "medgen": "CN225347"
+      },
+      "name": "Tyrosine kinase inhibitor response",
+      "synonyms": [
+       "Protein-tyrosine kinase inhibitor response"
+      ]
+     },
+     "last_evaluated": "2006-10-28",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000211323",
+     "clinical_significance": "drug response",
+     "conditions": {
+      "identifiers": {
+       "medgen": "CN322733"
+      },
+      "name": "gefitinib response - Efficacy"
+     },
+     "last_evaluated": "2021-03-24",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "reviewed by expert panel"
+    },
+    {
+     "accession": "RCV000418019",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030078",
+       "medgen": "C0152013",
+       "mesh": "D000077192",
+       "mondo": "MONDO:0005061"
+      },
+      "name": "Lung adenocarcinoma",
+      "synonyms": [
+       "Adenocarcinoma of lung",
+       "Adenocarcinoma of lung, somatic"
+      ]
+     },
+     "last_evaluated": "2022-06-06",
+     "number_submitters": 2,
+     "origin": "somatic",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV000987885",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0684249",
+       "mondo": "MONDO:0005138"
+      },
+      "name": "Lung carcinoma"
+     },
+     "last_evaluated": "2019-05-28",
+     "number_submitters": 1,
+     "origin": "unknown",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV005328198",
+     "clinical_significance": "Uncertain significance",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0027672",
+       "mesh": "D009386",
+       "mondo": "MONDO:0015356"
+      },
+      "name": "Hereditary cancer-predisposing syndrome",
+      "synonyms": [
+       "Neoplastic Syndromes, Hereditary",
+       "Tumor predisposition",
+       "Cancer predisposition",
+       "Hereditary neoplastic syndrome",
+       "Hereditary Cancer Syndrome"
+      ]
+     },
+     "last_evaluated": "2025-03-10",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_005228.5(EGFR):c.2573T>G (p.Leu858Arg)",
+     "review_status": "criteria provided, single submitter"
+    }
+   ],
+   "variant_id": 16609
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "EGFR",
+    "EGFR",
+    "EGFR"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "epidermal growth factor receptor",
+    "symbol": "EGFR"
+   },
+   "rsid": "rs121434568"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": [
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2EB2:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITN:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITP:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITQ:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITW:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2ITX:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "2J5F:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3UG1:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3UG2:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3VJN:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "3VJO:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4G5J:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4I23:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4I24:B_745-B_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4LI5:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4WKQ:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "structural_interaction_variant",
+     "feature_id": "4WRG:A_836-A_858:NM_005228.3",
+     "feature_type": "interaction",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "HIGH",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "cdna": {
+      "length": "5600",
+      "position": "2819"
+     },
+     "cds": {
+      "length": "3633",
+      "position": "2573"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_005228.3",
+     "feature_type": "transcript",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "hgvs_p": "p.Leu858Arg",
+     "protein": {
+      "length": "1210",
+      "position": "858"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "effect": "sequence_feature",
+     "feature_id": "NM_005228.3",
+     "feature_type": "helix:combinatorial_evidence_used_in_manual_assertion",
+     "gene_id": "EGFR",
+     "genename": "EGFR",
+     "hgvs_c": "c.2573T>G",
+     "putative_impact": "LOW",
+     "rank": "21",
+     "total": "28",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "distance_to_feature": "2873",
+     "effect": "upstream_gene_variant",
+     "feature_id": "NR_047551.1",
+     "feature_type": "transcript",
+     "gene_id": "EGFR-AS1",
+     "genename": "EGFR-AS1",
+     "hgvs_c": "n.-2873A>C",
+     "putative_impact": "MODIFIER",
+     "transcript_biotype": "pseudogene"
+    }
+   ]
+  }
+ }
+]

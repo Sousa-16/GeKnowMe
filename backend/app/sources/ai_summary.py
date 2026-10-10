@@ -126,6 +126,7 @@ Rules:
 3. "outcome": a short factual phrase. Use numbers exactly as written in the source (e.g. "ORR 64%, median PFS 10.9 months"). For trials without results, write e.g. "Ongoing phase 3, no results posted".
 4. "evidence": 1 to 3 items. "source_id" exactly as shown in brackets (e.g. "PMID:12345678" or "NCT01234567"). "quote" must be copied WORD FOR WORD from that source: one continuous passage of 5 to 40 words, no paraphrasing, no added words. Every number in "outcome" must appear in one of the quotes.
 5. "escat_tier": one of the ESMO ESCAT tiers below, judged only from the cited sources. "escat_reason": one sentence explaining the tier from the cited sources.
+6. The sources include ClinicalTrials.gov records (IDs starting with "NCT"), listed after the papers. Whenever a trial record tests the same drug in the same setting as a row, add it as one of that row's evidence items, quoting the trial record word for word. Planners use these records to find the actual trials.
 
 ESCAT tiers (Mateo et al., Annals of Oncology 2018):
 {ESCAT_TABLE}
@@ -196,7 +197,7 @@ def _cache_path(prompt: str) -> Path:
 
 def _cache_get(prompt: str) -> AIOutput | None:
     try:
-        return AIOutput.model_validate_json(_cache_path(prompt).read_text())
+        return AIOutput.model_validate_json(_cache_path(prompt).read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return None
 
@@ -204,7 +205,7 @@ def _cache_get(prompt: str) -> AIOutput | None:
 def _cache_set(prompt: str, out: AIOutput) -> None:
     try:
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        _cache_path(prompt).write_text(out.model_dump_json())
+        _cache_path(prompt).write_text(out.model_dump_json(), encoding="utf-8")
     except OSError:
         pass
 

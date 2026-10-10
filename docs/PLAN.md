@@ -201,6 +201,11 @@ Key job: convert `p.Val600Glu` → `V600E`.
 Also return `search_url`: a PubMed link that reruns the same search.
 Notes: use PubMed search sorted by relevance (LitVar2 returns 32,000+ unsorted IDs for BRAF V600E; use it only for the total count). Fetch up to **200** papers (details in batches). Scoring: section 4.
 
+How the search is actually built (changed after checking the top 50 in step A22):
+- Each phrase in `pubmed_terms` is searched as separate words in the title/abstract, e.g. `"BRAF V600E"` → `(BRAF[tiab] AND V600E[tiab])`. This finds everything the exact phrase finds, plus papers that write "BRAF(V600E)" or "L858R mutation in EGFR". The rs number is searched in all fields.
+- Two searches run. The first is the plain search above. The second is the same search limited to trial, review and guideline publication types (up to 100 IDs), and its results go first. Without it, PubMed's relevance order for a big topic like BRAF V600E is mostly case reports, and the landmark trials never make the 200.
+- `search_url` and the total count describe the plain search.
+
 ### [4] Trials (Person B)
 **In:** Aliases
 **Out:** list of **Trial** + **TrialStats**

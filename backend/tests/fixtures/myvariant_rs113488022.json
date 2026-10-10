@@ -1,0 +1,975 @@
+[
+ {
+  "_id": "chr7:g.140453136A>G",
+  "_version": 1,
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "BRAF",
+    "BRAF",
+    "BRAF",
+    "BRAF"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "B-Raf proto-oncogene, serine/threonine kinase",
+    "symbol": "BRAF"
+   },
+   "rsid": "rs113488022"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": {
+    "cdna": {
+     "length": "2946",
+     "position": "1860"
+    },
+    "cds": {
+     "length": "2301",
+     "position": "1799"
+    },
+    "effect": "missense_variant",
+    "feature_id": "NM_004333.4",
+    "feature_type": "transcript",
+    "gene_id": "BRAF",
+    "genename": "BRAF",
+    "hgvs_c": "c.1799T>C",
+    "hgvs_p": "p.Val600Ala",
+    "protein": {
+     "length": "766",
+     "position": "600"
+    },
+    "putative_impact": "MODERATE",
+    "rank": "15",
+    "total": "18",
+    "transcript_biotype": "protein_coding"
+   }
+  }
+ },
+ {
+  "_id": "chr7:g.140453136A>T",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": [
+    {
+     "evidenceItems": [
+      {
+       "id": 79
+      },
+      {
+       "id": 95
+      },
+      {
+       "id": 104
+      },
+      {
+       "id": 106
+      },
+      {
+       "id": 107
+      },
+      {
+       "id": 105
+      },
+      {
+       "id": 463
+      },
+      {
+       "id": 2123
+      },
+      {
+       "id": 2128
+      },
+      {
+       "id": 86
+      },
+      {
+       "id": 2124
+      },
+      {
+       "id": 2125
+      },
+      {
+       "id": 2127
+      },
+      {
+       "id": 2133
+      },
+      {
+       "id": 2129
+      },
+      {
+       "id": 1405
+      },
+      {
+       "id": 2131
+      },
+      {
+       "id": 2132
+      },
+      {
+       "id": 103
+      },
+      {
+       "id": 1430
+      },
+      {
+       "id": 1398
+      },
+      {
+       "id": 1410
+      },
+      {
+       "id": 2139
+      },
+      {
+       "id": 1579
+      },
+      {
+       "id": 1698
+      },
+      {
+       "id": 1902
+      },
+      {
+       "id": 2894
+      },
+      {
+       "id": 3742
+      },
+      {
+       "id": 3740
+      },
+      {
+       "id": 3745
+      },
+      {
+       "id": 3747
+      },
+      {
+       "id": 7454
+      },
+      {
+       "id": 3748
+      },
+      {
+       "id": 3749
+      },
+      {
+       "id": 3751
+      },
+      {
+       "id": 3752
+      },
+      {
+       "id": 2503
+      },
+      {
+       "id": 3753
+      },
+      {
+       "id": 3756
+      },
+      {
+       "id": 3759
+      },
+      {
+       "id": 3768
+      },
+      {
+       "id": 3769
+      },
+      {
+       "id": 3770
+      },
+      {
+       "id": 3773
+      },
+      {
+       "id": 3774
+      },
+      {
+       "id": 3775
+      },
+      {
+       "id": 3776
+      },
+      {
+       "id": 3782
+      },
+      {
+       "id": 2116
+      },
+      {
+       "id": 3780
+      },
+      {
+       "id": 3785
+      },
+      {
+       "id": 3786
+      },
+      {
+       "id": 3788
+      },
+      {
+       "id": 3789
+      },
+      {
+       "id": 3750
+      },
+      {
+       "id": 5902
+      },
+      {
+       "id": 5903
+      },
+      {
+       "id": 5904
+      },
+      {
+       "id": 5960
+      },
+      {
+       "id": 6123
+      },
+      {
+       "id": 2120
+      },
+      {
+       "id": 656
+      },
+      {
+       "id": 80
+      },
+      {
+       "id": 6938
+      },
+      {
+       "id": 11770
+      },
+      {
+       "id": 7156
+      },
+      {
+       "id": 7762
+      },
+      {
+       "id": 11672
+      },
+      {
+       "id": 99
+      },
+      {
+       "id": 8507
+      },
+      {
+       "id": 2362
+      },
+      {
+       "id": 8646
+      },
+      {
+       "id": 1749
+      },
+      {
+       "id": 3757
+      },
+      {
+       "id": 3787
+      },
+      {
+       "id": 3743
+      },
+      {
+       "id": 7191
+      },
+      {
+       "id": 6975
+      },
+      {
+       "id": 11427
+      },
+      {
+       "id": 11436
+      },
+      {
+       "id": 11244
+      },
+      {
+       "id": 10328
+      },
+      {
+       "id": 10329
+      },
+      {
+       "id": 11303
+      },
+      {
+       "id": 11309
+      },
+      {
+       "id": 11310
+      },
+      {
+       "id": 11311
+      },
+      {
+       "id": 11312
+      },
+      {
+       "id": 126
+      },
+      {
+       "id": 2135
+      },
+      {
+       "id": 5961
+      },
+      {
+       "id": 11313
+      },
+      {
+       "id": 3744
+      },
+      {
+       "id": 8952
+      },
+      {
+       "id": 2143
+      },
+      {
+       "id": 11315
+      },
+      {
+       "id": 2144
+      },
+      {
+       "id": 2142
+      },
+      {
+       "id": 2146
+      },
+      {
+       "id": 3772
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 73
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 9885
+      },
+      {
+       "id": 92
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 6262
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11060
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 6952
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11098
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11314
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11316
+      },
+      {
+       "id": 12016
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11670
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11681
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11696
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11712
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 12072
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 90
+      }
+     ]
+    }
+   ],
+   "name": "V600E"
+  },
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "673",
+    "symbol": "BRAF"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000014992",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0699790",
+       "mondo": "MONDO:0002032"
+      },
+      "name": "Carcinoma of colon (CRC)",
+      "synonyms": [
+       "Colonic carcinoma",
+       "Colon carcinoma"
+      ]
+     },
+     "last_evaluated": "2014-09-04",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000014993",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0002895",
+       "medgen": "C0238463",
+       "mesh": "D000077273",
+       "mondo": "MONDO:0005075",
+       "orphanet": "146"
+      },
+      "name": "Papillary thyroid carcinoma",
+      "synonyms": [
+       "NONMEDULLARY THYROID CARCINOMA, PAPILLARY",
+       "Thyroid carcinoma, papillary, somatic",
+       "Thyroid gland papillary carcinoma"
+      ]
+     },
+     "last_evaluated": "2014-09-04",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000014994",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C2674727"
+      },
+      "name": "Astrocytoma, low-grade, somatic"
+     },
+     "last_evaluated": "2014-09-04",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000022677",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C1266158",
+       "mondo": "MONDO:0021656"
+      },
+      "name": "Nongerminomatous germ cell tumor",
+      "synonyms": [
+       "NONSEMINOMATOUS GERM CELL TUMORS, SOMATIC",
+       "Germ cell tumor, nonseminomatous",
+       "Non-seminomatous germ-cell tumors"
+      ]
+     },
+     "last_evaluated": "2014-09-04",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000037936",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030358",
+       "medgen": "C0007131",
+       "mesh": "D002289",
+       "mondo": "MONDO:0005233"
+      },
+      "name": "Non-small cell lung carcinoma (NSCLC)",
+      "synonyms": [
+       "Non-small cell lung cancer"
+      ]
+     },
+     "last_evaluated": "2009-05-29",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000067669",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0007474",
+       "medgen": "C0025202",
+       "mesh": "D008545",
+       "mondo": "MONDO:0005105"
+      },
+      "name": "Melanoma"
+     },
+     "last_evaluated": "2014-09-04",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000080903",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3661900"
+      },
+      "name": "not provided",
+      "synonyms": [
+       "none provided",
+       "RECLASSIFIED - ADRA2C POLYMORPHISM",
+       "RECLASSIFIED - ADRB1 POLYMORPHISM"
+      ]
+     },
+     "last_evaluated": "2014-07-11",
+     "number_submitters": 4,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "criteria provided, multiple submitters, no conflicts"
+    },
+    {
+     "accession": "RCV000208763",
+     "clinical_significance": "not provided",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C1275081",
+       "mondo": "MONDO:0015280",
+       "omim": "PS115150",
+       "orphanet": "1340"
+      },
+      "name": "Cardio-facio-cutaneous syndrome",
+      "synonyms": [
+       "Cardiofaciocutaneous syndrome",
+       "CFC syndrome"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion provided"
+    },
+    {
+     "accession": "RCV000430562",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0006775",
+       "medgen": "C0026764",
+       "mesh": "D009101",
+       "mondo": "MONDO:0009693",
+       "omim": "254500",
+       "orphanet": "85443"
+      },
+      "name": "Multiple myeloma (MM)",
+      "synonyms": [
+       "Plasma cell myeloma",
+       "Kahler disease",
+       "Myelomatosis",
+       "Plasma cell dyscrasia",
+       "Multiple myeloma, somatic"
+      ]
+     },
+     "last_evaluated": "2019-08-31",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000662278",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "name": "Cystic epithelial invagination containing papillae lined by columnar epithelium"
+     },
+     "last_evaluated": "2015-05-07",
+     "number_submitters": 2,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000860020",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0002408",
+       "medgen": "C0917804",
+       "mondo": "MONDO:0007154",
+       "omim": "108010",
+       "orphanet": "46724"
+      },
+      "name": "Cerebral arteriovenous malformation (BAVM)",
+      "synonyms": [
+       "CEREBRAL ARTERIOVENOUS MALFORMATIONS",
+       "Arteriovenous malformations of the brain"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV001248834",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0000115",
+       "medgen": "C0027708",
+       "mesh": "D009396",
+       "mondo": "MONDO:0006058"
+      },
+      "name": "Nephroblastoma",
+      "synonyms": [
+       "Wilms tumor",
+       "Wilms' tumor"
+      ]
+     },
+     "last_evaluated": "2019-02-15",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV001254874",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0006826",
+       "mondo": "MONDO:0004992"
+      },
+      "name": "Malignant neoplastic disease",
+      "synonyms": [
+       "Cancer"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "unknown",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV002051586",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0100764",
+       "medgen": "C0024221",
+       "mondo": "MONDO:0002013"
+      },
+      "name": "Lymphangioma"
+     },
+     "last_evaluated": "2022-02-09",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV003458334",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0158570",
+       "mondo": "MONDO:0024291"
+      },
+      "name": "Vascular malformation",
+      "synonyms": [
+       "Vascular malformations"
+      ]
+     },
+     "last_evaluated": "2023-10-22",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV004018627",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "CN230736"
+      },
+      "name": "Cardiovascular phenotype"
+     },
+     "last_evaluated": "2022-05-23",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV005089260",
+     "clinical_significance": "Uncertain significance",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C5555857",
+       "mondo": "MONDO:0021060"
+      },
+      "name": "RASopathy",
+      "synonyms": [
+       "rasopathies",
+       "Noonan spectrum disorder"
+      ]
+     },
+     "last_evaluated": "2025-01-23",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)",
+     "review_status": "criteria provided, single submitter"
+    }
+   ],
+   "variant_id": 13961
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "BRAF",
+    "BRAF",
+    "BRAF",
+    "BRAF"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "B-Raf proto-oncogene, serine/threonine kinase",
+    "symbol": "BRAF"
+   },
+   "rsid": "rs113488022"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": {
+    "cdna": {
+     "length": "2946",
+     "position": "1860"
+    },
+    "cds": {
+     "length": "2301",
+     "position": "1799"
+    },
+    "effect": "missense_variant",
+    "feature_id": "NM_004333.4",
+    "feature_type": "transcript",
+    "gene_id": "BRAF",
+    "genename": "BRAF",
+    "hgvs_c": "c.1799T>A",
+    "hgvs_p": "p.Val600Glu",
+    "protein": {
+     "length": "766",
+     "position": "600"
+    },
+    "putative_impact": "MODERATE",
+    "rank": "15",
+    "total": "18",
+    "transcript_biotype": "protein_coding"
+   }
+  }
+ },
+ {
+  "_id": "chr7:g.140453136A>C",
+  "_version": 2,
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "673",
+    "symbol": "BRAF"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000208774",
+     "clinical_significance": "not provided",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C1275081",
+       "mondo": "MONDO:0015280",
+       "omim": "PS115150",
+       "orphanet": "1340"
+      },
+      "name": "Cardio-facio-cutaneous syndrome",
+      "synonyms": [
+       "Cardiofaciocutaneous syndrome",
+       "CFC syndrome"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)",
+     "review_status": "no assertion provided"
+    },
+    {
+     "accession": "RCV000798913",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C5555857",
+       "mondo": "MONDO:0021060"
+      },
+      "name": "RASopathy",
+      "synonyms": [
+       "rasopathies",
+       "Noonan spectrum disorder"
+      ]
+     },
+     "last_evaluated": "2020-06-25",
+     "number_submitters": 2,
+     "origin": "germline",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)",
+     "review_status": "reviewed by expert panel"
+    },
+    {
+     "accession": "RCV001354831",
+     "clinical_significance": "Uncertain significance",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3661900"
+      },
+      "name": "not provided",
+      "synonyms": [
+       "none provided",
+       "RECLASSIFIED - ADRA2C POLYMORPHISM",
+       "RECLASSIFIED - ADRB1 POLYMORPHISM"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "unknown",
+     "preferred_name": "NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)",
+     "review_status": "no assertion criteria provided"
+    }
+   ],
+   "variant_id": 40389
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "BRAF",
+    "BRAF",
+    "BRAF",
+    "BRAF"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "B-Raf proto-oncogene, serine/threonine kinase",
+    "symbol": "BRAF"
+   },
+   "rsid": "rs113488022"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": {
+    "cdna": {
+     "length": "2946",
+     "position": "1860"
+    },
+    "cds": {
+     "length": "2301",
+     "position": "1799"
+    },
+    "effect": "missense_variant",
+    "feature_id": "NM_004333.4",
+    "feature_type": "transcript",
+    "gene_id": "BRAF",
+    "genename": "BRAF",
+    "hgvs_c": "c.1799T>G",
+    "hgvs_p": "p.Val600Gly",
+    "protein": {
+     "length": "766",
+     "position": "600"
+    },
+    "putative_impact": "MODERATE",
+    "rank": "15",
+    "total": "18",
+    "transcript_biotype": "protein_coding"
+   }
+  }
+ }
+]

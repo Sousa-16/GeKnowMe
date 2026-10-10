@@ -1,0 +1,1074 @@
+[
+ {
+  "_id": "chr12:g.25398285C>T",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": {
+    "evidenceItems": [
+     {
+      "id": 4008
+     },
+     {
+      "id": 2274
+     },
+     {
+      "id": 2269
+     },
+     {
+      "id": 2277
+     },
+     {
+      "id": 2275
+     },
+     {
+      "id": 2276
+     },
+     {
+      "id": 2278
+     },
+     {
+      "id": 2279
+     },
+     {
+      "id": 2273
+     },
+     {
+      "id": 7168
+     },
+     {
+      "id": 4005
+     },
+     {
+      "id": 4004
+     },
+     {
+      "id": 4003
+     },
+     {
+      "id": 4000
+     },
+     {
+      "id": 4001
+     },
+     {
+      "id": 4014
+     },
+     {
+      "id": 4018
+     },
+     {
+      "id": 4019
+     },
+     {
+      "id": 4020
+     },
+     {
+      "id": 4013
+     },
+     {
+      "id": 4017
+     },
+     {
+      "id": 4010
+     },
+     {
+      "id": 4011
+     },
+     {
+      "id": 4007
+     },
+     {
+      "id": 4009
+     },
+     {
+      "id": 6314
+     },
+     {
+      "id": 4002
+     },
+     {
+      "id": 7050
+     },
+     {
+      "id": 7178
+     },
+     {
+      "id": 4012
+     },
+     {
+      "id": 4006
+     }
+    ]
+   },
+   "name": "G12S"
+  },
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "3845",
+    "symbol": "KRAS"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000013414",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0012126",
+       "medgen": "C0024623",
+       "mesh": "D013274",
+       "mondo": "MONDO:0001056",
+       "omim": "613659"
+      },
+      "name": "Gastric cancer",
+      "synonyms": [
+       "Stomach cancer",
+       "Malignant tumor of stomach"
+      ]
+     },
+     "last_evaluated": "2007-06-15",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000038264",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030358",
+       "medgen": "C0007131",
+       "mesh": "D002289",
+       "mondo": "MONDO:0005233"
+      },
+      "name": "Non-small cell lung carcinoma (NSCLC)",
+      "synonyms": [
+       "Non-small cell lung cancer"
+      ]
+     },
+     "last_evaluated": "2011-09-02",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV000119790",
+     "clinical_significance": "not provided",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0100615",
+       "medgen": "C0919267",
+       "mesh": "D010051",
+       "mondo": "MONDO:0021068"
+      },
+      "name": "Ovarian neoplasm",
+      "synonyms": [
+       "Neoplasm of ovary",
+       "Ovarian tumor",
+       "Ovarian Neoplasms"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "no assertion provided"
+    },
+    {
+     "accession": "RCV000144971",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0012209",
+       "medgen": "C0349639",
+       "mondo": "MONDO:0011908",
+       "omim": "607785",
+       "orphanet": "86834"
+      },
+      "name": "Juvenile myelomonocytic leukemia (JMML)",
+      "synonyms": [
+       "LEUKEMIA, JUVENILE MYELOMONOCYTIC, SOMATIC"
+      ]
+     },
+     "last_evaluated": "2007-06-15",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000782191",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3661900"
+      },
+      "name": "not provided",
+      "synonyms": [
+       "none provided",
+       "RECLASSIFIED - ADRA2C POLYMORPHISM",
+       "RECLASSIFIED - ADRB1 POLYMORPHISM"
+      ]
+     },
+     "last_evaluated": "2023-02-26",
+     "number_submitters": 4,
+     "origin": "germline",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "criteria provided, multiple submitters, no conflicts"
+    },
+    {
+     "accession": "RCV001851824",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C5555857",
+       "mondo": "MONDO:0021060"
+      },
+      "name": "RASopathy",
+      "synonyms": [
+       "rasopathies",
+       "Noonan spectrum disorder"
+      ]
+     },
+     "last_evaluated": "2025-01-13",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV004562205",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0158570",
+       "mondo": "MONDO:0024291"
+      },
+      "name": "Vascular malformation",
+      "synonyms": [
+       "Vascular malformations"
+      ]
+     },
+     "last_evaluated": "2024-04-10",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV004795403",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3809005",
+       "mondo": "MONDO:0014112",
+       "omim": "615278",
+       "orphanet": "1340"
+      },
+      "name": "Cardiofaciocutaneous syndrome 2 (CFC2)"
+     },
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>A (p.Gly12Ser)",
+     "review_status": "criteria provided, single submitter"
+    }
+   ],
+   "variant_id": 12584
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "KRAS",
+    "KRAS",
+    "KRAS",
+    "KRAS"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "KRAS proto-oncogene, GTPase",
+    "symbol": "KRAS"
+   },
+   "rsid": "rs121913530"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": [
+    {
+     "cdna": {
+      "length": "5889",
+      "position": "226"
+     },
+     "cds": {
+      "length": "570",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_033360.3",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>A",
+     "hgvs_p": "p.Gly12Ser",
+     "protein": {
+      "length": "189",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "6",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "cdna": {
+      "length": "5765",
+      "position": "226"
+     },
+     "cds": {
+      "length": "567",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_004985.4",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>A",
+     "hgvs_p": "p.Gly12Ser",
+     "protein": {
+      "length": "188",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "5",
+     "transcript_biotype": "protein_coding"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "chr12:g.25398285C>G",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": [
+    {
+     "evidenceItems": [
+      {
+       "id": 1298
+      },
+      {
+       "id": 2267
+      },
+      {
+       "id": 2265
+      },
+      {
+       "id": 2266
+      },
+      {
+       "id": 3993
+      },
+      {
+       "id": 3992
+      },
+      {
+       "id": 3986
+      },
+      {
+       "id": 3988
+      },
+      {
+       "id": 3990
+      },
+      {
+       "id": 3989
+      },
+      {
+       "id": 3997
+      },
+      {
+       "id": 3999
+      },
+      {
+       "id": 3995
+      },
+      {
+       "id": 3998
+      },
+      {
+       "id": 3984
+      },
+      {
+       "id": 7310
+      },
+      {
+       "id": 3991
+      },
+      {
+       "id": 3987
+      },
+      {
+       "id": 2264
+      },
+      {
+       "id": 3985
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11330
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11711
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11710
+      }
+     ]
+    }
+   ],
+   "name": "G12R"
+  },
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "3845",
+    "symbol": "KRAS"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000013407",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030359",
+       "medgen": "C0149782",
+       "mondo": "MONDO:0005097"
+      },
+      "name": "Squamous cell lung carcinoma",
+      "synonyms": [
+       "Lung cancer, squamous cell, somatic",
+       "Squamous cell carcinoma of lung"
+      ]
+     },
+     "last_evaluated": "1984-02-17",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>C (p.Gly12Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000013408",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0005684",
+       "mondo": "MONDO:0001187",
+       "omim": "109800"
+      },
+      "name": "Malignant tumor of urinary bladder",
+      "synonyms": [
+       "Urinary bladder cancer",
+       "Urinary Bladder Neoplasms",
+       "Bladder cancer"
+      ]
+     },
+     "last_evaluated": "1984-02-17",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>C (p.Gly12Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000154401",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030358",
+       "medgen": "C0007131",
+       "mesh": "D002289",
+       "mondo": "MONDO:0005233"
+      },
+      "name": "Non-small cell lung carcinoma (NSCLC)",
+      "synonyms": [
+       "Non-small cell lung cancer"
+      ]
+     },
+     "last_evaluated": "2014-08-28",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>C (p.Gly12Arg)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV001356365",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3661900"
+      },
+      "name": "not provided",
+      "synonyms": [
+       "none provided",
+       "RECLASSIFIED - ADRA2C POLYMORPHISM",
+       "RECLASSIFIED - ADRB1 POLYMORPHISM"
+      ]
+     },
+     "last_evaluated": "2022-02-01",
+     "number_submitters": 2,
+     "origin": "unknown",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>C (p.Gly12Arg)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV002513010",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C5555857",
+       "mondo": "MONDO:0021060"
+      },
+      "name": "RASopathy",
+      "synonyms": [
+       "rasopathies",
+       "Noonan spectrum disorder"
+      ]
+     },
+     "last_evaluated": "2022-07-04",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>C (p.Gly12Arg)",
+     "review_status": "criteria provided, single submitter"
+    }
+   ],
+   "variant_id": 12579
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "KRAS",
+    "KRAS",
+    "KRAS",
+    "KRAS"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "KRAS proto-oncogene, GTPase",
+    "symbol": "KRAS"
+   },
+   "rsid": "rs121913530"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": [
+    {
+     "cdna": {
+      "length": "5889",
+      "position": "226"
+     },
+     "cds": {
+      "length": "570",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_033360.3",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>C",
+     "hgvs_p": "p.Gly12Arg",
+     "protein": {
+      "length": "189",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "6",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "cdna": {
+      "length": "5765",
+      "position": "226"
+     },
+     "cds": {
+      "length": "567",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_004985.4",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>C",
+     "hgvs_p": "p.Gly12Arg",
+     "protein": {
+      "length": "188",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "5",
+     "transcript_biotype": "protein_coding"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "chr12:g.25398285C>A",
+  "_version": 2,
+  "civic": {
+   "_license": "http://bit.ly/2FqS871",
+   "molecularProfiles": [
+    {
+     "evidenceItems": [
+      {
+       "id": 227
+      },
+      {
+       "id": 1217
+      },
+      {
+       "id": 1216
+      },
+      {
+       "id": 2262
+      },
+      {
+       "id": 2258
+      },
+      {
+       "id": 2259
+      },
+      {
+       "id": 2260
+      },
+      {
+       "id": 2256
+      },
+      {
+       "id": 2254
+      },
+      {
+       "id": 2255
+      },
+      {
+       "id": 7455
+      },
+      {
+       "id": 2257
+      },
+      {
+       "id": 5927
+      },
+      {
+       "id": 3965
+      },
+      {
+       "id": 3975
+      },
+      {
+       "id": 3968
+      },
+      {
+       "id": 3962
+      },
+      {
+       "id": 3969
+      },
+      {
+       "id": 3970
+      },
+      {
+       "id": 3971
+      },
+      {
+       "id": 3972
+      },
+      {
+       "id": 3980
+      },
+      {
+       "id": 3982
+      },
+      {
+       "id": 3983
+      },
+      {
+       "id": 3976
+      },
+      {
+       "id": 3977
+      },
+      {
+       "id": 2261
+      },
+      {
+       "id": 11652
+      },
+      {
+       "id": 8039
+      },
+      {
+       "id": 3964
+      },
+      {
+       "id": 9961
+      },
+      {
+       "id": 9959
+      },
+      {
+       "id": 9960
+      },
+      {
+       "id": 9965
+      },
+      {
+       "id": 11680
+      },
+      {
+       "id": 8068
+      },
+      {
+       "id": 7572
+      },
+      {
+       "id": 3973
+      },
+      {
+       "id": 2253
+      },
+      {
+       "id": 9146
+      },
+      {
+       "id": 3974
+      },
+      {
+       "id": 11521
+      },
+      {
+       "id": 2263
+      },
+      {
+       "id": 1173
+      },
+      {
+       "id": 3966
+      },
+      {
+       "id": 3981
+      },
+      {
+       "id": 3967
+      },
+      {
+       "id": 3963
+      },
+      {
+       "id": 2212
+      },
+      {
+       "id": 7387
+      },
+      {
+       "id": 9958
+      },
+      {
+       "id": 9962
+      },
+      {
+       "id": 9963
+      },
+      {
+       "id": 9964
+      },
+      {
+       "id": 10110
+      },
+      {
+       "id": 1142
+      },
+      {
+       "id": 9431
+      },
+      {
+       "id": 12063
+      },
+      {
+       "id": 12264
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11572
+      }
+     ]
+    },
+    {
+     "evidenceItems": [
+      {
+       "id": 11573
+      }
+     ]
+    }
+   ],
+   "name": "G12C"
+  },
+  "clinvar": {
+   "_license": "http://bit.ly/2SQdcI0",
+   "gene": {
+    "id": "3845",
+    "symbol": "KRAS"
+   },
+   "rcv": [
+    {
+     "accession": "RCV000013406",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0684249",
+       "mondo": "MONDO:0005138"
+      },
+      "name": "Lung carcinoma"
+     },
+     "last_evaluated": "2001-09-15",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000038265",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030358",
+       "medgen": "C0007131",
+       "mesh": "D002289",
+       "mondo": "MONDO:0005233"
+      },
+      "name": "Non-small cell lung carcinoma (NSCLC)",
+      "synonyms": [
+       "Non-small cell lung cancer"
+      ]
+     },
+     "last_evaluated": "2007-12-07",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV000119791",
+     "clinical_significance": "not provided",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0012114",
+       "medgen": "C0476089",
+       "mondo": "MONDO:0002447",
+       "omim": "608089"
+      },
+      "name": "Endometrial carcinoma",
+      "synonyms": [
+       "Endometrial carcinoma, somatic"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion provided"
+    },
+    {
+     "accession": "RCV000431049",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "human_phenotype_ontology": "HP:0030078",
+       "medgen": "C0152013",
+       "mesh": "D000077192",
+       "mondo": "MONDO:0005061"
+      },
+      "name": "Lung adenocarcinoma",
+      "synonyms": [
+       "Adenocarcinoma of lung",
+       "Adenocarcinoma of lung, somatic"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV001292543",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0153452",
+       "mondo": "MONDO:0005411"
+      },
+      "name": "Gallbladder cancer"
+     },
+     "last_evaluated": "2020-10-30",
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV001355787",
+     "clinical_significance": "Pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C3661900"
+      },
+      "name": "not provided",
+      "synonyms": [
+       "none provided",
+       "RECLASSIFIED - ADRA2C POLYMORPHISM",
+       "RECLASSIFIED - ADRB1 POLYMORPHISM"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "unknown",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    },
+    {
+     "accession": "RCV003654176",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C5555857",
+       "mondo": "MONDO:0021060"
+      },
+      "name": "RASopathy",
+      "synonyms": [
+       "rasopathies",
+       "Noonan spectrum disorder"
+      ]
+     },
+     "last_evaluated": "2023-02-23",
+     "number_submitters": 1,
+     "origin": "germline",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "criteria provided, single submitter"
+    },
+    {
+     "accession": "RCV003996092",
+     "clinical_significance": "Likely pathogenic",
+     "conditions": {
+      "identifiers": {
+       "medgen": "C0242379",
+       "mondo": "MONDO:0008903",
+       "omim": "211980"
+      },
+      "name": "Lung cancer",
+      "synonyms": [
+       "Lung cancer, somatic",
+       "Malignant tumor of lung"
+      ]
+     },
+     "number_submitters": 1,
+     "origin": "somatic",
+     "preferred_name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+     "review_status": "no assertion criteria provided"
+    }
+   ],
+   "variant_id": 12578
+  },
+  "dbnsfp": {
+   "_license": "http://bit.ly/2VLnQBz",
+   "genename": [
+    "KRAS",
+    "KRAS",
+    "KRAS",
+    "KRAS"
+   ]
+  },
+  "dbsnp": {
+   "_license": "http://bit.ly/2AqoLOc",
+   "gene": {
+    "name": "KRAS proto-oncogene, GTPase",
+    "symbol": "KRAS"
+   },
+   "rsid": "rs121913530"
+  },
+  "snpeff": {
+   "_license": "http://bit.ly/2suyRKt",
+   "ann": [
+    {
+     "cdna": {
+      "length": "5889",
+      "position": "226"
+     },
+     "cds": {
+      "length": "570",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_033360.3",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>T",
+     "hgvs_p": "p.Gly12Cys",
+     "protein": {
+      "length": "189",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "6",
+     "transcript_biotype": "protein_coding"
+    },
+    {
+     "cdna": {
+      "length": "5765",
+      "position": "226"
+     },
+     "cds": {
+      "length": "567",
+      "position": "34"
+     },
+     "effect": "missense_variant",
+     "feature_id": "NM_004985.4",
+     "feature_type": "transcript",
+     "gene_id": "KRAS",
+     "genename": "KRAS",
+     "hgvs_c": "c.34G>T",
+     "hgvs_p": "p.Gly12Cys",
+     "protein": {
+      "length": "188",
+      "position": "12"
+     },
+     "putative_impact": "MODERATE",
+     "rank": "2",
+     "total": "5",
+     "transcript_biotype": "protein_coding"
+    }
+   ]
+  }
+ }
+]
