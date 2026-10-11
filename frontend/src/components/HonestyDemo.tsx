@@ -71,11 +71,11 @@ export function HonestyDemo() {
     return () => clearTimeout(id);
   }, [seenAt, reduced, step, paused, c]);
 
-  const pick = (i: number) => { setC(i); setStep(reduced ? 5 : 0); };
+  const pick = (i: number) => { setC(i); setStep(reduced ? 5 : 0); setPaused(true); };
   const verdict = STYLE[cur.tone];
 
   return (
-    <div ref={ref} className="mt-10" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div ref={ref} className="mt-10">
       <div className="flex flex-wrap gap-2" role="tablist">
         {CASES.map((k, i) => (
           <button key={k.tab} type="button" role="tab" aria-selected={i === c} onClick={() => pick(i)}

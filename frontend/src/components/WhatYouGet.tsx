@@ -27,14 +27,13 @@ export function WhatYouGet() {
   }, [running, active]);
 
   return (
-    <div ref={ref} className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10"
-      onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div ref={ref} className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
       <ol className="flex flex-col">
         {ITEMS.map((it, i) => {
           const on = i === active;
           return (
             <li key={it.title}>
-              <button type="button" onClick={() => setActive(i)} aria-pressed={on}
+              <button type="button" onClick={() => { setActive(i); setPaused(true); }} aria-pressed={on}
                 className={`relative w-full overflow-hidden border-t border-slate-200 py-4 pl-1 pr-3 text-left transition-colors ${on ? "" : "hover:bg-slate-50"}`}>
                 <p className={`text-lg transition-colors ${on ? "font-semibold text-slate-900" : "text-slate-500"}`}>{it.title}</p>
                 <p className={`grid transition-all duration-300 ${on ? "mt-1 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
