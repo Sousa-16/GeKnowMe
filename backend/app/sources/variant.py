@@ -47,7 +47,7 @@ class VariantLookupError(Exception):
 async def fetch_variant(rsid: str) -> Variant:
     """Look the rs number up on MyVariant (and LitVar2 for literature names, at the same time).
     Raises VariantNotFound or VariantLookupError."""
-    async with httpx.AsyncClient(timeout=20, headers={"User-Agent": "variant-trial-scope/0.1"}) as client:
+    async with httpx.AsyncClient(timeout=20, headers={"User-Agent": "geknowme/0.1"}) as client:
         variant, (lit_names, lit_gene) = await asyncio.gather(_fetch_myvariant(client, rsid), fetch_litvar(client, rsid))
     variant.literature_names = lit_names
     if lit_gene and (not variant.gene or _PLACEHOLDER_GENE.match(variant.gene)):

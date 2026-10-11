@@ -73,7 +73,7 @@ limiter = RateLimiter()  # one per process: all PubMed calls share the quota
 
 
 async def _get(client: httpx.AsyncClient, endpoint: str, params: dict) -> httpx.Response:
-    params = {**params, "db": "pubmed", "tool": "variant-trial-scope"}
+    params = {**params, "db": "pubmed", "tool": "geknowme"}
     if config.NCBI_API_KEY:
         params["api_key"] = config.NCBI_API_KEY
     last = "unknown error"
@@ -246,7 +246,7 @@ async def fetch_papers(aliases: Aliases) -> PaperResults:
     queries = candidate_queries(aliases)
     if not queries:
         return PaperResults()
-    async with httpx.AsyncClient(timeout=30, headers={"User-Agent": "variant-trial-scope/0.1"}) as client:
+    async with httpx.AsyncClient(timeout=30, headers={"User-Agent": "geknowme/0.1"}) as client:
         ids: list[str] = []
         count = 0
         query = queries[0]

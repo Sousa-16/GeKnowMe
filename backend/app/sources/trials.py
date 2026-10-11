@@ -197,7 +197,7 @@ async def fetch_trials(aliases: Aliases) -> TrialResults:
     fallback = [t for t in aliases.fallback_trial_terms if t not in terms]
     if not terms and not fallback:
         return TrialResults()
-    async with httpx.AsyncClient(timeout=30, headers={"User-Agent": "variant-trial-scope/0.1"}) as client:
+    async with httpx.AsyncClient(timeout=30, headers={"User-Agent": "geknowme/0.1"}) as client:
         results = await asyncio.gather(*(_search(client, t) for t in terms), return_exceptions=True)
         found = {s.get("protocolSection", {}).get("identificationModule", {}).get("nctId")
                  for r in results if not isinstance(r, BaseException) for s in r[0]}

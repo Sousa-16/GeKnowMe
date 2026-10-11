@@ -15,7 +15,7 @@ from .pipeline import InvalidRsid, build_brief, build_treatments
 from .schemas import Brief, TreatmentsResponse
 from .sources.variant import VariantNotFound
 
-app = FastAPI(title="Variant Trial Scope API", version="0.1.0")
+app = FastAPI(title="GeKnowMe API", version="0.1.0")
 
 
 @app.get("/api/health")

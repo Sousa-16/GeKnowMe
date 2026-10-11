@@ -15,7 +15,7 @@ import { clinvarVerdict } from "./lib/clinvar";
 const DnaHelix = lazy(() => import("./components/DnaHelix"));
 const REPO_URL = "https://github.com/Sousa-16/hackathon-26";
 
-export const APP_NAME = "Variant Trial Scope";
+export const APP_NAME = "GeKnowMe";
 const RSID_RE = /^(rs)?\d{1,12}$/i;
 
 type LoadedBrief = Brief & { offlineSample?: boolean };
