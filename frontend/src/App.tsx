@@ -262,8 +262,9 @@ function Landing({ onSearch }: { onSearch: (v: string) => void }) {
             <div className="mt-5 flex flex-wrap gap-2">
               {DEMOS.map((d) => (
                 <button key={d.rsid} type="button" onClick={() => onSearch(d.rsid)}
-                  className="rounded-md border border-slate-900 px-4 py-2 text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                  className="rounded-md border border-slate-900 px-4 py-2 text-left text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white">
                   {d.label} <span className="ml-1 font-mono text-xs opacity-60">{d.rsid}</span>
+                  <span className="block text-xs font-normal opacity-60">{d.disease}</span>
                 </button>
               ))}
             </div>

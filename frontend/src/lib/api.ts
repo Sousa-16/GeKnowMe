@@ -2,10 +2,10 @@ import type { Brief, TreatmentsResponse } from "../types";
 
 export const SAMPLE_RSID = "rs113488022";
 export const DEMOS = [
-  { rsid: "rs113488022", label: "BRAF V600E" },
-  { rsid: "rs121913530", label: "KRAS G12C" },
-  { rsid: "rs113993960", label: "CFTR F508del · cystic fibrosis" },
-  { rsid: "rs104893877", label: "SNCA A53T · Parkinson's / Lewy body dementia" },
+  { rsid: "rs113488022", label: "BRAF V600E", disease: "Melanoma, colorectal & lung cancer" },
+  { rsid: "rs121913530", label: "KRAS G12C", disease: "Lung & colorectal cancer" },
+  { rsid: "rs113993960", label: "CFTR F508del", disease: "Cystic fibrosis" },
+  { rsid: "rs104893877", label: "SNCA A53T", disease: "Parkinson's / Lewy body dementia" },
 ];
 
 export class ApiError extends Error {
