@@ -105,17 +105,20 @@ export function Pyramid({ levels, selected, onSelect }: {
   return (
     <div ref={ref}>
       {levels.map((l, i) => {
-        const top = 18 + i * 16, bottom = 18 + (i + 1) * 16;
+        const top = i * 20, bottom = (i + 1) * 20;
         const dim = selected != null && selected !== l.level;
         return (
           <button key={l.level} type="button" disabled={!l.count} onClick={() => onSelect(l.level)}
             className={`grid h-12 w-full grid-cols-[minmax(0,12rem)_1fr] items-center gap-4 rounded-lg px-1 text-left transition enabled:hover:bg-slate-50 disabled:opacity-40 ${dim ? "opacity-40" : ""}`}>
             <span className="relative flex h-full justify-center">
-              <span className={`flex h-full items-center justify-center text-sm font-semibold tabular-nums transition-[width,opacity] duration-700 ease-out ${LEVEL_SHADES[l.level]}`}
+              <span className={`h-full transition-[width,opacity] duration-700 ease-out ${LEVEL_SHADES[l.level]}`}
                 style={{
                   width: seenAt == null ? "0%" : "100%", opacity: seenAt == null ? 0 : 1, transitionDelay: `${i * 90}ms`,
                   clipPath: `polygon(${50 - top / 2}% 0, ${50 + top / 2}% 0, ${50 + bottom / 2}% 100%, ${50 - bottom / 2}% 100%)`,
-                }}>{l.count}</span>
+                }} />
+              <span className={`pointer-events-none absolute inset-x-0 flex justify-center text-sm font-semibold tabular-nums ${i === 0 ? "bottom-0" : "inset-y-0 items-center"} ${l.level <= 3 ? "text-white" : "text-ink"}`}>
+                {l.count}
+              </span>
             </span>
             <span className="min-w-0 text-sm leading-tight">
               <span className="font-medium text-slate-800">Level {l.level}</span>
