@@ -233,8 +233,8 @@ function BriefView({ brief, tx, onRetryTx }: {
         </div>
 
         <Reveal delay={320}><VariantSection brief={brief} /></Reveal>
-        <Reveal delay={420}><TreatmentsSection brief={brief} treatments={tx.data} status={tx.status} warnings={tx.warnings} startedAt={tx.startedAt} onRetry={onRetryTx} /></Reveal>
-        <Reveal delay={520}><TrialsSection brief={brief} /></Reveal>
+        <Reveal delay={420}><TrialsSection brief={brief} /></Reveal>
+        <Reveal delay={520}><TreatmentsSection brief={brief} treatments={tx.data} status={tx.status} warnings={tx.warnings} startedAt={tx.startedAt} onRetry={onRetryTx} /></Reveal>
         <Reveal delay={620}><EligibilitySection brief={brief} /></Reveal>
         <Reveal delay={720}><PapersSection brief={brief} /></Reveal>
 
@@ -247,8 +247,8 @@ function BriefView({ brief, tx, onRetryTx }: {
 
 const NAV: { id: string; label: string; accent: Accent }[] = [
   { id: "variant", label: "Variant", accent: "pine" },
-  { id: "treatments", label: "Treatments", accent: "turquoise" },
   { id: "trials", label: "Trials", accent: "ink" },
+  { id: "treatments", label: "Treatments", accent: "turquoise" },
   { id: "eligibility", label: "Eligibility", accent: "shadow" },
   { id: "papers", label: "Publications", accent: "alabaster" },
 ];
