@@ -67,7 +67,7 @@ def load_demo(rsid: str) -> Brief | None:
     path = DEMO_DIR / f"{rsid}.json"
     if not path.exists():
         return None
-    brief = Brief.model_validate_json(path.read_text())
+    brief = Brief.model_validate_json(path.read_text(encoding="utf-8"))
     brief.from_demo = True
     return brief
 

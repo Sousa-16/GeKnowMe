@@ -26,7 +26,7 @@ async def main(rsids: list[str], force: bool) -> int:
             print(f"SKIPPED {rsid}: {problems} | {summary}")
             failed += 1
             continue
-        (DEMO_DIR / f"{rsid}.json").write_text(brief.model_dump_json(indent=1))
+        (DEMO_DIR / f"{rsid}.json").write_text(brief.model_dump_json(indent=1), encoding="utf-8")
         print(f"saved {rsid}: {summary}" + (f" | problems: {problems}" if problems else ""))
     return failed
 

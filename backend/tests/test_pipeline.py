@@ -72,7 +72,7 @@ async def test_treatments_without_earlier_call_still_works(fake_sources):
 
 
 async def test_demo_brief_is_served_first(fake_sources, tmp_path):
-    (tmp_path / "rs113488022.json").write_text(Brief(rsid="rs113488022", warnings=["demo"]).model_dump_json())
+    (tmp_path / "rs113488022.json").write_text(Brief(rsid="rs113488022", warnings=["demo"]).model_dump_json(), encoding="utf-8")
     b = await pipeline.build_brief("rs113488022")
     assert b.from_demo and b.warnings == ["demo"] and fake_sources["trials"] == 0
     live = await pipeline.build_brief("rs113488022", use_demo=False)
