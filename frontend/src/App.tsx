@@ -9,6 +9,7 @@ import { EligibilitySection } from "./components/EligibilitySection";
 import { TreatmentsSection } from "./components/TreatmentsSection";
 import { PapersSection } from "./components/PapersSection";
 import { WhatYouGet } from "./components/WhatYouGet";
+import { HonestyDemo } from "./components/HonestyDemo";
 import { ACCENTS, Badge, CollapseContext, CountUp, ExtLink, Kpi, Reveal, Spinner, TONES, useCopy, type Accent } from "./components/ui";
 import { Icon } from "./components/icons";
 import { clinvarVerdict } from "./lib/clinvar";
@@ -373,12 +374,6 @@ function RotatingAudience() {
 }
 
 function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLElement | null) => void; leaving: boolean }) {
-  const checks = [
-    ["Real source", "Every row must cite a PubMed or ClinicalTrials.gov ID we actually gave the AI. Anything else is removed."],
-    ["Word-for-word quote", "Each claim carries a quote; code finds it in the source text or removes the row."],
-    ["Numbers match", "Every number in the outcome must appear in a quote, or the row is flagged for a human check."],
-    ["Evidence tier fits", "ESMO ESCAT tiers are checked against the sources, e.g. I-A needs a randomized trial with survival data."],
-  ];
   return (
     <div className="flex-1">
       <div className="relative -mt-16 overflow-hidden border-b border-slate-200 bg-slate-50 pt-16">
@@ -433,20 +428,12 @@ function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLEleme
       <section id="honest" className="border-y border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
           <p className="font-serif text-lg italic text-brand-700">How it stays honest</p>
-          <h2 className="mt-1 text-3xl tracking-tight text-slate-900">The AI writes. Code checks.</h2>
+          <h2 className="mt-1 text-3xl tracking-tight text-slate-900">Every claim double-checked against its source</h2>
           <p className="mt-3 max-w-2xl text-slate-600">
-            The AI only sees the highest-ranked papers and trials, and must quote them word for word. Before anything is shown,
-            four checks run on every row. Rows that fail are removed, and you can see why.
+            The AI only sees the highest-ranked papers and trials, and must quote them word for word. Then our code, not the AI,
+            runs four checks on every row before you see it. Watch three rows go through:
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {checks.map(([title, text], i) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-5">
-                <p className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700">{i + 1}</p>
-                <p className="mt-3 font-medium text-slate-900">{title}</p>
-                <p className="mt-1 text-sm text-slate-600">{text}</p>
-              </div>
-            ))}
-          </div>
+          <HonestyDemo />
         </div>
       </section>
 
