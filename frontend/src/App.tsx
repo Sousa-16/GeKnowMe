@@ -410,7 +410,7 @@ function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLEleme
           <div className="border-t border-slate-900/10 px-4 py-8 sm:px-6 md:border-t-0 md:pl-10">
             <p className="font-serif text-lg italic text-slate-500">Why it's different</p>
             <p className="mt-1 max-w-md text-xl text-slate-900">Every AI claim is cited, and code checks the quote against its source.</p>
-            <a href="#honest" className="mt-5 inline-block rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700">See how it works</a>
+            <a href="#honest" className="mt-5 inline-block rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700">See why</a>
           </div>
         </div>
       </section>
