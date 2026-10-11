@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Arimo", "Helvetica Neue", Helvetica, Arial, ui-sans-serif, sans-serif;
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-serif: "Fraunces", ui-serif, Georgia, serif;
   --color-turquoise: #5eead4;
@@ -99,8 +99,6 @@ mark.highlight-sweep {
   }
 }
 
-/* Serif: Fraunces with its "soft" axis turned up, for a rounded, retro display look */
-.font-serif { font-variation-settings: "SOFT" 100, "WONK" 1; }
 
 /* Landing "What you get" tour */
 @keyframes wyg-in { from { opacity: 0; transform: translateY(8px); } }
@@ -114,3 +112,6 @@ mark.highlight-sweep {
 @media (prefers-reduced-motion: reduce) {
   .wyg-in, .wyg-bar, .wyg-mark, .wyg-progress { animation: none; }
 }
+
+/* Serif: Fraunces with its "soft" axis turned up, for a rounded, retro display look */
+.font-serif { font-variation-settings: "SOFT" 100, "WONK" 1; }
