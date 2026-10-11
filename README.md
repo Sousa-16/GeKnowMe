@@ -51,7 +51,7 @@ KRAS G12C (`rs121913530`), EGFR L858R (`rs121434568`), SNCA E46K (`rs104893875`)
 |---|---|
 | **Utility & relevance:** solves a real bottleneck in medicines development | Finding which trials exist for a variant, at what phase, and how they screen patients takes hours of searching across PubMed, ClinicalTrials.gov and ClinVar under every name the variant goes by. GeKnowMe does it in seconds, for clinicians deciding what to do for a patient and for teams scoping a drug program (including cancer therapeutics: see the BRAF V600E demo). |
 | **Readiness:** functional, replicable, ready to deploy | Live at https://hackathon-26-ijj5.onrender.com · public GitHub repo · [MIT license](LICENSE) · runs locally with a few commands ([below](#run-it-locally)) · 180 automated tests that run offline · single-service deploy via `render.yaml` · every failure of an outside service is contained to its own section |
-| **Design & packaging:** demo video, slide deck, intuitive UX, clear docs | [Slide deck](docs/GeKnowMe_slides.pptx) · demo video: [link] · four one-click demo variants on the home page · every claim links to its source and every section exports to CSV · this README |
+| **Design & packaging:** demo video, slide deck, intuitive UX, clear docs | [Slide deck](docs/GeKnowMe_slides.pptx) · demo video: [https://vimeo.com/1234774935?share=copy&fl=sv&fe=ci] · four one-click demo variants on the home page · every claim links to its source and every section exports to CSV · this README |
 
 ## Why the trial phase matters
 
