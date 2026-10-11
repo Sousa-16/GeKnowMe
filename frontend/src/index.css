@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Arimo", "Helvetica Neue", Helvetica, Arial, ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
   --color-turquoise: #5eead4;
   --color-pine: #297373;
   --color-ink: #03192a;
@@ -97,4 +97,20 @@ mark.highlight-sweep {
     transition-duration: 1ms !important;
     transition-delay: 0ms !important;
   }
+}
+
+/* Serif: Fraunces with its "soft" axis turned up, for a rounded, retro display look */
+.font-serif { font-variation-settings: "SOFT" 100, "WONK" 1; }
+
+/* Landing "What you get" tour */
+@keyframes wyg-in { from { opacity: 0; transform: translateY(8px); } }
+@keyframes wyg-bar { from { height: 0; } }
+@keyframes wyg-mark { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@keyframes wyg-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.wyg-in { animation: wyg-in 0.5s ease-out both; }
+.wyg-bar { animation: wyg-bar 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.wyg-mark { background-image: linear-gradient(#a9f2e6, #a9f2e6); background-repeat: no-repeat; background-size: 100% 100%; animation: wyg-mark 0.8s ease-out 0.5s both; }
+.wyg-progress { animation: wyg-progress linear both; }
+@media (prefers-reduced-motion: reduce) {
+  .wyg-in, .wyg-bar, .wyg-mark, .wyg-progress { animation: none; }
 }

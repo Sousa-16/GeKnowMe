@@ -8,6 +8,7 @@ import { TrialsSection } from "./components/TrialsSection";
 import { EligibilitySection } from "./components/EligibilitySection";
 import { TreatmentsSection } from "./components/TreatmentsSection";
 import { PapersSection } from "./components/PapersSection";
+import { WhatYouGet } from "./components/WhatYouGet";
 import { ACCENTS, Badge, CollapseContext, CountUp, ExtLink, Kpi, Reveal, Spinner, TONES, useCopy, type Accent } from "./components/ui";
 import { Icon } from "./components/icons";
 import { clinvarVerdict } from "./lib/clinvar";
@@ -372,13 +373,6 @@ function RotatingAudience() {
 }
 
 function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLElement | null) => void; leaving: boolean }) {
-  const steps = [
-    ["Variant & aliases", "Gene, every notation (rs, p., c., short form) and ClinVar significance, each with its source."],
-    ["Trial landscape", "Matching ClinicalTrials.gov studies by phase, status and drug, ranked by evidence."],
-    ["Eligibility benchmark", "The biomarker inclusion/exclusion rules other trials used, quoted word for word."],
-    ["Publications", "PubMed papers ranked by study design (Oxford CEBM levels) and relevance."],
-    ["Verified AI summary", "A treatment table where code checks every cited ID, quote, number and ESCAT tier."],
-  ];
   const checks = [
     ["Real source", "Every row must cite a PubMed or ClinicalTrials.gov ID we actually gave the AI. Anything else is removed."],
     ["Word-for-word quote", "Each claim carries a quote; code finds it in the source text or removes the row."],
@@ -429,20 +423,11 @@ function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLEleme
 
       <section id="how" className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <p className="font-serif text-lg italic text-brand-700">What you get</p>
-        <h2 className="mt-1 text-3xl tracking-tight text-slate-900">One brief instead of days of searching</h2>
+        <h2 className="mt-1 text-3xl tracking-tight text-slate-900">Type one rs number. Here's what comes back.</h2>
         <p className="mt-3 max-w-2xl text-slate-600">
-          Planning a trial for a mutation means searching PubMed and ClinicalTrials.gov under every name it goes by, then
-          reading protocols to see how others screened patients. This does it in seconds.
+          Everything below is from the real brief for BRAF V600E, a mutation behind many melanomas and colorectal cancers.
         </p>
-        <ol className="mt-8 grid gap-px overflow-hidden rounded-2xl bg-slate-200 ring-1 ring-slate-200 sm:grid-cols-2 lg:grid-cols-5">
-          {steps.map(([title, text], i) => (
-            <li key={title} className="bg-white p-5">
-              <p className="font-mono text-xs text-brand-700">0{i + 1}</p>
-              <p className="mt-2 font-medium text-slate-900">{title}</p>
-              <p className="mt-1 text-sm text-slate-600">{text}</p>
-            </li>
-          ))}
-        </ol>
+        <WhatYouGet />
       </section>
 
       <section id="honest" className="border-y border-slate-200 bg-white">
