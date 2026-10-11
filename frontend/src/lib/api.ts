@@ -4,8 +4,8 @@ export const SAMPLE_RSID = "rs113488022";
 export const DEMOS = [
   { rsid: "rs113488022", label: "BRAF V600E" },
   { rsid: "rs121913530", label: "KRAS G12C" },
-  { rsid: "rs121434568", label: "EGFR L858R" },
-  { rsid: "rs104893875", label: "SNCA E46K · Lewy body dementia" },
+  { rsid: "rs113993960", label: "CFTR F508del · cystic fibrosis" },
+  { rsid: "rs104893877", label: "SNCA A53T · Parkinson's / Lewy body dementia" },
 ];
 
 export class ApiError extends Error {

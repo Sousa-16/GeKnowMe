@@ -9,8 +9,10 @@ import sys
 
 from app.pipeline import DEMO_DIR, build_brief
 
-# BRAF V600E, KRAS G12C, EGFR L858R (cancer); SNCA E46K (Lewy body dementia); TTR V30M (hereditary amyloidosis)
-DEMO_RSIDS = ["rs113488022", "rs121913530", "rs121434568", "rs104893875", "rs28933979"]
+# Demo buttons: BRAF V600E, KRAS G12C (cancer), CFTR F508del (cystic fibrosis), SNCA A53T (Parkinson's / Lewy
+# body dementia). Also saved: EGFR L858R, SNCA E46K, TTR V30M (instant if searched).
+DEMO_RSIDS = ["rs113488022", "rs121913530", "rs113993960", "rs104893877",
+              "rs121434568", "rs104893875", "rs28933979"]
 
 
 async def main(rsids: list[str], force: bool) -> int:
