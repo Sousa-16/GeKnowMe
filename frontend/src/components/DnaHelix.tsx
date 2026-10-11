@@ -4,9 +4,11 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 
 /** Soft matte bead double helix for the landing page. Loaded lazily so Three.js only ships there.
  * Pauses when off-screen or in a background tab; renders one still frame for reduced-motion users. */
-export default function DnaHelix({ className = "" }: { className?: string }) {
+export default function DnaHelix({ className = "", boost = false }: { className?: string; boost?: boolean }) {
   const host = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const boostRef = useRef(boost);
+  useEffect(() => { boostRef.current = boost; }, [boost]);
 
   useEffect(() => {
     const el = host.current;
@@ -33,9 +35,9 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
 
     const key = new THREE.DirectionalLight(0xffffff, 2.2);
     key.position.set(-5, 12, 9);
-    const fill = new THREE.DirectionalLight(0xe2e8f0, 0.5);
+    const fill = new THREE.DirectionalLight(0xe6e6e6, 0.5);
     fill.position.set(8, -4, 6);
-    scene.add(key, fill, new THREE.HemisphereLight(0xffffff, 0x94a3b8, 0.9));
+    scene.add(key, fill, new THREE.HemisphereLight(0xffffff, 0x9b9bab, 0.9));
 
     // Proportions measured from the reference: bead diameter ~ 1/10 of the page width, helix radius
     // ~ 2.7 bead radii, one crossing-to-crossing "lens" ~ 6 bead diameters long, tightly packed beads.
@@ -82,7 +84,7 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
       const viewH = 2 * camera.position.z * tan;
       baseY = -viewH * (w < 768 ? -0.02 : 0.04);
       helix.position.set(w < 768 ? 0 : LENS * 0.05, baseY, 0);
-      scene.fog = new THREE.Fog(0xf8fafc, camera.position.z - RADIUS, camera.position.z + RADIUS * 4);
+      scene.fog = new THREE.Fog(0xf7f7f8, camera.position.z - RADIUS, camera.position.z + RADIUS * 4);
       camera.updateProjectionMatrix();
     };
     resize();
@@ -94,14 +96,18 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
       pointer.y = e.clientY / window.innerHeight - 0.5;
     };
 
-    let visible = true, raf = 0, last = performance.now(), phase = 0.6, shown = false;
+    let visible = true, raf = 0, last = performance.now(), phase = 0.6, shown = false, speed = 0.3, zoom = 0;
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame);
       if (!visible || document.hidden) { last = now; return; }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
-      phase += dt * 0.3;
+      const b = boostRef.current ? 1 : 0;
+      speed += (0.3 + b * 6 - speed) * 0.12;
+      zoom += (b * 0.3 - zoom) * 0.1;
+      phase += dt * speed;
       place(phase);
+      helix.scale.setScalar(1 + zoom);
       helix.rotation.x += (pointer.y * 0.1 - helix.rotation.x) * 0.04;
       helix.rotation.y += (pointer.x * 0.12 - helix.rotation.y) * 0.04;
       helix.position.y += (baseY + Math.sin(now / 2400) * 0.2 - helix.position.y) * 0.05;
@@ -136,6 +142,6 @@ export default function DnaHelix({ className = "" }: { className?: string }) {
 
   return (
     <div ref={host} aria-hidden
-      className={`pointer-events-none transition-opacity duration-1000 [&>canvas]:block [&>canvas]:h-full [&>canvas]:w-full ${ready ? "opacity-100" : "opacity-0"} ${className}`} />
+      className={`pointer-events-none transition-opacity duration-1000 [&>canvas]:block [&>canvas]:h-full [&>canvas]:w-full ${!ready ? "opacity-0" : boost ? "opacity-50" : "opacity-100"} ${className}`} />
   );
 }

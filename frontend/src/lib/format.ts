@@ -12,15 +12,6 @@ export function statusLabel(s: string | null): string {
 
 export const OPEN_STATUSES = new Set(["RECRUITING", "NOT_YET_RECRUITING", "ENROLLING_BY_INVITATION"]);
 
-export function statusTone(s: string | null): "green" | "blue" | "slate" | "red" | "amber" {
-  if (!s) return "slate";
-  if (OPEN_STATUSES.has(s)) return "green";
-  if (s === "ACTIVE_NOT_RECRUITING") return "blue";
-  if (s === "COMPLETED") return "slate";
-  if (["TERMINATED", "WITHDRAWN", "SUSPENDED"].includes(s)) return "red";
-  return "amber";
-}
-
 export function formatDate(iso: string): string {
   const d = new Date(iso);
   return isNaN(d.getTime()) ? iso : d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
