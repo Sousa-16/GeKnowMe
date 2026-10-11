@@ -9,9 +9,9 @@ import sys
 
 from app.pipeline import DEMO_DIR, build_brief
 
-# Demo buttons: BRAF V600E, KRAS G12C (cancer), CFTR F508del (cystic fibrosis), SNCA A53T (Parkinson's / Lewy
-# body dementia). Also saved: EGFR L858R, SNCA E46K, TTR V30M (instant if searched).
-DEMO_RSIDS = ["rs113488022", "rs121913530", "rs113993960", "rs104893877",
+# Demo buttons: BRAF V600E (cancer), COMT V158M (pain / psychiatry), CFTR F508del (cystic fibrosis), SNCA A53T (Parkinson's / Lewy
+# body dementia). Also saved: KRAS G12C, EGFR L858R, SNCA E46K, TTR V30M (instant if searched).
+DEMO_RSIDS = ["rs113488022", "rs4680", "rs113993960", "rs104893877", "rs121913530",
               "rs121434568", "rs104893875", "rs28933979"]
 
 
