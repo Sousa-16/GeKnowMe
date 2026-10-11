@@ -348,6 +348,29 @@ function SearchBox({ onSearch, initial = "", compact = false }: { onSearch: (v: 
   );
 }
 
+const AUDIENCES = ["clinicians", "clinical planners", "biotech companies", "diagnostics companies"] as const;
+
+function RotatingAudience() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((n) => (n + 1) % AUDIENCES.length), 2200);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <p className="font-serif text-xl italic text-brand-700">
+      For{" "}
+      <span className="relative inline-grid align-bottom">
+        {AUDIENCES.map((label, n) => (
+          <span key={label} aria-hidden={n !== i}
+            className={`col-start-1 row-start-1 whitespace-nowrap motion-safe:transition-opacity motion-safe:duration-500 ${n === i ? "opacity-100" : "opacity-0"}`}>
+            {label}
+          </span>
+        ))}
+      </span>
+    </p>
+  );
+}
+
 function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLElement | null) => void; leaving: boolean }) {
   const steps = [
     ["Variant & aliases", "Gene, every notation (rs, p., c., short form) and ClinVar significance, each with its source."],
@@ -368,7 +391,7 @@ function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLEleme
         <Suspense fallback={null}><DnaHelix className="absolute inset-0" boost={leaving} /></Suspense>
       <section className="relative">
         <div className="relative mx-auto flex min-h-[calc(100svh-4rem-12rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[600px]">
-          <p className="font-serif text-xl italic text-brand-700">For clinical trial planners</p>
+          <RotatingAudience />
           <h1 className="mt-3 max-w-3xl text-[2.6rem] font-normal leading-[1.05] tracking-tight text-slate-900 sm:text-7xl sm:leading-[1.02]">
             From mutation to <br className="hidden sm:block" />trial brief.
           </h1>
