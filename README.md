@@ -4,26 +4,26 @@
 
 Enter a dbSNP rs number and GeKnowMe builds a cited brief: whether the variant matters, which clinical trials are studying it and at what phase, how those trials screen patients, the best published evidence, and an AI treatment summary where code checks every claim against its source.
 
-**Live:** https://hackathon-26-ijj5.onrender.com · Built at HackRU 2026 for the Regeneron track (open-source tools for clinical trials).
+**Live:** https://hackathon-26-ijj5.onrender.com · Built at HackRU 2026.
 
 ![GeKnowMe landing page](docs/screenshots/landing.png)
 
 ## The problem
 
-Clinical trial information is scattered. Trials, papers and variant records live in separate databases, and each one names the same variant differently: `rs113488022`, `V600E`, `p.Val600Glu` and `c.1799T>A` are all one mutation. A doctor who sees an unfamiliar variant on a test result has to search each database under every name, then read trial records one by one. For many of these diseases, time matters.
+Clinical trial information is scattered. Trials, papers and variant records live in separate databases, and each one names the same variant differently: `rs113488022`, `V600E`, `p.Val600Glu` and `c.1799T>A` are all one mutation. A doctor who sees an unfamiliar variant on a test result has to search each database under every name, then read trial records one by one. That can take hours, and for many of these diseases speed is key to treatment. GeKnowMe puts it in one place: type the variant's rs number (its standard ID) and get the whole picture in seconds.
 
 ## Who it's for
 
 - **Clinicians (main user).** A PCR or genetic test comes back with an unfamiliar mutation. Is it a meaningful marker for the disease being treated? If so, what trials are studying it, how far along are they, and could the patient enroll?
 - **Small biotech and diagnostics companies.** A fast first look at a variant's trial landscape, without a full genomics team.
-- **Large pharma.** A quick preliminary scan of competing programs before committing to a drug.
+- **Large pharma.** A quick preliminary scan of competing programs before committing to a drug target.
 
 ## What you get from one rs number
 
 | Section | What it shows |
 |---|---|
-| **Variant & names** | Gene, every notation (rs, protein short and long form, DNA change, names used in the literature) and ClinVar significance, each with where it came from |
-| **Trial landscape** | Every matching ClinicalTrials.gov study by phase, status and drug, with filters for open trials |
+| **Variant & names** | Gene, every notation (rs, protein short and long form, DNA change, names used in the literature) and ClinVar significance, with a one-line verdict (e.g. "pathogenic or likely pathogenic, 16 of 20 ClinVar records") and where each name came from |
+| **Trial landscape** | Every matching ClinicalTrials.gov study: a phase pipeline, the trials recruiting now, which ones stopped early, and the most-tested drugs, with filters for open trials |
 | **Eligibility benchmark** | The biomarker inclusion and exclusion rules other trials used, quoted word for word, and how often each screening pattern appears |
 | **Publications** | Up to 200 PubMed papers, ranked by study design (Oxford CEBM levels) and relevance |
 | **AI treatment summary** | A treatment table written by Gemini from the top sources only, where code checks every source ID, quote, number and evidence tier |
@@ -44,6 +44,39 @@ The demo buttons on the home page load saved briefs instantly:
 | COMT V158M | `rs4680` | A common variant that ClinVar calls benign, with no open drug trials: the brief answers "probably not a treatment target" |
 
 KRAS G12C (`rs121913530`), EGFR L858R (`rs121434568`), SNCA E46K (`rs104893875`) and TTR V30M (`rs28933979`) are also saved. Any other rs number is built live, in about 3 seconds plus 10 to 60 seconds for the AI table.
+
+## How GeKnowMe meets the judging criteria
+
+| Criterion | Where to see it |
+|---|---|
+| **Utility & relevance:** solves a real bottleneck in medicines development | Finding which trials exist for a variant, at what phase, and how they screen patients takes hours of searching across PubMed, ClinicalTrials.gov and ClinVar under every name the variant goes by. GeKnowMe does it in seconds, for clinicians deciding what to do for a patient and for teams scoping a drug program (including cancer therapeutics: see the BRAF V600E demo). |
+| **Readiness:** functional, replicable, ready to deploy | Live at https://hackathon-26-ijj5.onrender.com · public GitHub repo · [MIT license](LICENSE) · runs locally with a few commands ([below](#run-it-locally)) · 180 automated tests that run offline · single-service deploy via `render.yaml` · every failure of an outside service is contained to its own section |
+| **Design & packaging:** demo video, slide deck, intuitive UX, clear docs | [Slide deck](docs/GeKnowMe_slides.pptx) · demo video: [link] · four one-click demo variants on the home page · every claim links to its source and every section exports to CSV · this README |
+
+## Why the trial phase matters
+
+The phase of each trial tells a clinician what they can actually do next, so GeKnowMe puts it front and center:
+
+| What the brief shows | What it means for the patient |
+|---|---|
+| **Recruiting, Phase 3** | A treatment close to standard care; an eligible patient may want to enroll |
+| **Recruiting, Phase 1 or 2** | Early access to a new treatment, often for patients who are out of options |
+| **Completed, with results** | Findings that can inform treatment today |
+| **Stopped early** (terminated, withdrawn) | Paths that already failed, so no time is wasted on them |
+| **Observational only** | Studies of the disease, not of a treatment: nothing to try yet |
+
+The shape of the pipeline matters too. For SNCA A53T, almost nothing has reached the later phases, so an early trial, or the center running it, may be the realistic path.
+
+## How it compares
+
+| Tools | What they do | Built for |
+|---|---|---|
+| Tempus (TIME), Deep 6 AI, Genotrial | Mine health records and genomic data to match patients to trials and speed up recruitment | Trial sponsors and sites |
+| Citeline Trialtrove, Medidata, Veeva, IQVIA | Trial strategy, benchmarking and operations | Pharma running trials |
+| OncoKB, CIViC | Curated evidence on what a cancer variant means for treatment | Oncology, cancer variants only |
+| **GeKnowMe** | The trial landscape and evidence for one variant, cited and checked | The clinician and the patient, for any disease |
+
+GeKnowMe needs **no patient data**, just an rs number. It covers any variant, uses live trial data, and is free and open source.
 
 ## How it works
 
@@ -70,6 +103,48 @@ rs number
 ```
 
 The website first loads steps 1 to 5 (fast) and then the AI table on its own, so everything else is usable while the AI works. If an outside service fails, only that section shows an error; the rest of the brief still loads.
+
+## Eligibility rules: how other trials screen
+
+For every matching trial, GeKnowMe reads the eligibility criteria and pulls out the rules that are about the variant, so a planner or clinician can see how comparable trials screen patients. This part is **rule-based, with no AI**: it is instant, free, gives the same answer every time, and every rule is quoted word for word with a link to its trial.
+
+What the code does, in order:
+
+1. **Splits** the criteria into inclusion and exclusion, using the section headers ("Inclusion Criteria", "Key Exclusion Criteria", ...).
+2. **Splits each section into single rules** at bullets, numbers and line breaks, and drops lead-in lines such as "Patients must meet all of the following:".
+3. **Keeps only rules about the variant**: rules that name the gene or any of the variant's names (including the codon-level form, e.g. "BRAF V600"), genetic testing, or prior targeted therapy.
+4. **Skips drug-interaction and general medication rules** (CYP3A4 inhibitors, P-gp, anticoagulants, proton pump inhibitors, QT-prolonging drugs, ...) unless they name the gene or variant, because they are about the study drug's safety, not the variant.
+5. **Puts each rule in one category**, checking the most specific first:
+
+| Category | A rule goes here when it... | Example (BRAF V600E) |
+|---|---|---|
+| **Prior therapy** | mentions previous or current treatment with a targeted drug, inhibitor, modulator, gene therapy, or a drug for this gene | "Patients who have previously received BRAF inhibitors or irinotecan liposomes" (NCT06763029) |
+| **Mutation required** | is an inclusion rule that names the variant, or the gene together with an alteration | "Documented BRAF V600E mutation in tumor and/or liquid biopsy detected by an analytically validated test." (NCT05503797) |
+| **Other alteration excluded** | is an exclusion rule that names the variant or gene, another known driver (EGFR, ALK, KRAS, ...), or "known / another / additional" mutations | "Known co-occurring NF1 and/or RAS-related alteration known to cause resistance." (NCT06610682) |
+| **Testing method** | says how the variant must be confirmed (NGS, PCR, ctDNA, central or local lab, FDA-approved or validated test) and is clearly about genetics | Rare for BRAF: most trials put the test inside the "mutation required" rule, as in the example above |
+| **Other biomarker** | is an inclusion rule about another biomarker (EGFR, PD-L1, MSI, TMB, ...) | "RET activating point mutation (e.g., M918T)" (NCT07010393) |
+
+6. **Caps** each trial at 8 rules, so one long protocol can't dominate.
+
+The website then counts **screening patterns** across all trials and shows the share of trials using each one: require genetic confirmation, specify zygosity, accept blood-based testing (ctDNA), mention tumour tissue testing, require central lab confirmation, accept local lab results, require an FDA-approved or validated test, exclude prior gene-targeted therapy, require or allow prior therapy, and exclude other genetic alterations. The two cancer-only patterns (blood-based and tissue testing) are hidden for non-cancer variants. Click a pattern to see the quoted rules behind it.
+
+For BRAF V600E this gives 256 rules from 88 trials: 115 "mutation required", 96 "prior therapy", 34 "other alteration excluded", 9 "other biomarker" and 2 "testing method". A protocol team can use it to benchmark a draft: if its rules are stricter than most comparable trials, the eligible patient pool shrinks.
+
+### How trials and papers are ranked
+
+Code, not the AI, decides which sources are strongest, and every score is shown on the site with its reasons.
+
+| Trials: rule | Points |
+|---|---|
+| Randomized | +2 |
+| Phase 3 or later / Phase 2 / Phase 1 | +3 / +2 / +1 |
+| Has posted results | +4 |
+| Names the exact variant in the title or inclusion criteria | +3 |
+| Names the variant **only** in the exclusion criteria | −5 |
+| Completed or active | +1 |
+| Started in the last 5 years | +1 |
+
+The top 30 trials go to the AI. Trials found only by a gene + disease search (when few trials name the variant) are shown and labelled "Disease-level match", but never sent to the AI. Papers are scored by study design (OCEBM level, below) plus relevance: the exact variant in the title (+3) or abstract (+1), results reported with numbers (+2), a named drug (+2), and recency (+2 for the last 5 years, +1 for 5 to 10). Papers about the gene but not the exact variant lose a point. The top 50 papers with an abstract go to the AI, at most 8 about the same drug.
 
 ## How the AI stays honest
 
