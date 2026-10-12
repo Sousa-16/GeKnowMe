@@ -396,7 +396,7 @@ function Landing({ onSearch, leaving }: { onSearch: (v: string, from?: HTMLEleme
         <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:divide-x md:divide-slate-900/10">
           <div className="px-4 py-8 sm:px-6">
             <p className="font-serif text-lg italic text-slate-500">Try a demo</p>
-            <p className="mt-1 text-xl text-slate-900">Cancer, cystic fibrosis, psychiatry and Lewy body dementia</p>
+            <p className="mt-1 text-xl text-slate-900">Search through saved results from variants linked to complications</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {DEMOS.map((d) => (
                 <button key={d.rsid} type="button" onClick={(e) => onSearch(d.rsid, e.currentTarget.querySelector("span"))}
